@@ -1,11 +1,12 @@
 # Description
 
-This course provides a practical introduction to the writing of Python
-programs for the complete novice. Participants are lead through the
-core aspects of Python illustrated by a series of example
-programs. Upon completion of the course, attentive participants will
-be able to write simple Python programs from scratch and to customize
-more complex code to fit their needs.
+This course provides a practical introduction to the writing
+of [Python](https://www.python.org/) programs for the complete
+novice. Participants are lead through the core aspects of Python
+illustrated by a series of example programs. Upon completion of the
+course, attentive participants will be able to write simple Python
+programs from scratch and to customize more complex code to fit their
+needs.
 
 # Important Dates
 
@@ -37,7 +38,7 @@ During this course, you will learn about:
 * Writing functions and best-practice ways of making them usable
 * Reading from and writing to files
 * Code packaging and Python libraries
-* How to work with biological data using BioPython
+* How to work with biological data using external libraries.
 
 # Learning Objectives
 
