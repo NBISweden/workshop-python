@@ -7,13 +7,13 @@ programs. Upon completion of the course, attentive participants will
 be able to write simple Python programs from scratch and to customize
 more complex code to fit their needs.
 
-# Important dates
+# Important Dates
 
 * Application open: November 2nd, 2016
 * Application deadline: December 4th, 2016
 * Acceptance Confirmation: December 11th, 2016
 
-If you don’t receive information according to the above dates, contact education@scilifelab.uu.se.
+If you don’t receive information according to the above dates, please contact education@scilifelab.uu.se.
 
 # Audience and Prerequisites
 
@@ -27,7 +27,7 @@ If you don’t receive information according to the above dates, contact educati
   exercises. Otherwise, please contact us at
   education@scilifelab.uu.se before you apply.
 
-# Course content
+# Course Content
 
 During this course, you will learn about:
 
@@ -64,6 +64,6 @@ a book will also prove useful for your programming tasks, after the
 course is over. It is however not required, and material will be
 presented in class.
 
-# Related courses
+# Related Courses
 
 [Perl Programming with Application to Bioinformatics, 2 hp](https://www.scilifelab.se/events/perlht16/)
