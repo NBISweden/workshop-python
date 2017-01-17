@@ -1,31 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import time
-from functools import wraps
-
-def time_function(func):
-    @wraps(func)
-    def wrapper(*args, **kwargs):
-        start = time.time()
-        retval = func(*args, **kwargs)
-        end = time.time()
-        print("Time for %s: %.2f seconds" % (func.__qualname__,end-start))
-        return retval
-    return wrapper
-
 
 # http://www2.sluh.org/bioweb/bi100/tutorials/thegeneticcode/codonwheel2.jpg
 # https://en.wikipedia.org/wiki/Protein_primary_structure
 
 from pprint import pprint
 
-_debug = False
-
 class RNATranslationTableBase():
     _store = None
     def print(self):
         pprint(self._store)
+    def translate(self,key):
+        pass
 
 class RNATranslationTable(RNATranslationTableBase):
     _store = {
@@ -135,29 +122,21 @@ class RNATranslationTable(RNATranslationTableBase):
         }
     }
     
-    def translate(self,k):
-        if _debug:
-            print('Getting translation for ',k)
-        assert(len(k)==3)
-        k1 = k[0].upper()
-        k2 = k[1].upper()
-        k3 = k[2].upper()
-        if k1 == 'T':
-            k1 = 'U'
-        if k2 == 'T':
-            k2 = 'U'
-        if k3 == 'T':
-            k3 = 'U'
-        res=None
+    # @print_args
+    # @print_retval
+    def translate(self,codon):
+        assert(len(codon)==3)
+        k = codon.upper().replace('T','U')
+        k1,k2,k3 = k[0], k[1], k[2]
+        if k1 == 'N' or k2 == 'N' or k3 == 'N':
+            raise ValueError('Eh... N??')
+
         level1 = self._store.get(k1,None)
         if level1:
             level2 = level1.get(k2,None)
             if level2:
-                res = level2.get(k3,None)
-        if _debug and res is None:
-            print('\t ie {}{}{}',(k1,k2,k3))
-            print('\tFound ',res)
-        return res
+                return level2.get(k3,None)
+        return none
 
     def print(self):
         print('===== RNA table =====')
@@ -237,5 +216,10 @@ class RNATranslationTableFlat(RNATranslationTable):
     
     def translate(self,k):
         return self._store.get(k,None)
+
+    def print(self):
+        print('===== RNA table =====')
+        for codon,value in self._store.items():
+            print(codon,' => ',value)
 
         

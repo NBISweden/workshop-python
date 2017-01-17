@@ -2,152 +2,140 @@
 # -*- coding: utf-8 -*-
 
 
-from utils import time_function, RNATranslationTable
-import re
-from pprint import pprint
+from utils import time_me, print_args, print_retval
+from utils import get_gtf_value
+from utils.rna import RNATranslationTable
+import re, sys
+from os.path import splitext
+import logging
+logger = logging.getLogger() # root logger
+logging.basicConfig(level=logging.INFO,format='%(message)s')
 
-@time_function
-def dna_length():
-
-    with open("Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa", mode="rt") as fasta:
-        count=0
-        for line in fasta:
-            if not line.startswith('>'):
-                count+=len(line)
-        print("Chr7 length: %d" % (count))
-
-@time_function
-def count_genes():
-
-    with open("Homo_sapiens.GRCh38.87.gtf", mode="rt") as gtf:
-        counter=0
-        for line in gtf:
-            blocks = line.split("\t")
-            if ( 
-                    len(blocks) == 9        # not a comment, thanks
-                    and blocks[0] == "7"    # for Chr7 
-                    and blocks[2] == "gene" # only gene, please
-            ): 
-                counter+=1
-        print("%d genes for chromosome 7" % counter)
-
-# awk '$1 == "7" && $3 == "gene" {count++} END{print count}' Homo_sapiens.GRCh38.87.gtf
-# 
-
-regexps = {
-    'transcript_id': re.compile(r'transcript_id\s+"?(\w+)"?'),
-    'exon_id': re.compile(r'exon_id\s+"?(\w+)"?')
-}
-
-def get_value(v,attr):
-    regex = regexps.get(v,None)
-    if re:
-        match=regex.search(attr)
-        if match:
-            return match.group(1)
-    return None
-
-
-longest_transcript = None
-
-def get_longest_transcript(chr='7',gene='ENSG00000001626'):
+@time_me
+@print_args
+def get_all_transcripts(filename="Homo_sapiens.GRCh38.87.gtf", chromosome='7', gene='ENSG00000001626'):
     
-    global longest_transcript
-    if longest_transcript:
-        return
-
     transcripts = {}
     
-    # First pass: Fetch all transcripts for that gene
-    with open("Homo_sapiens.GRCh38.87.gtf", mode="rt") as gtf:
+    # First pass: Fetch all transcripts for the given gene and chromosome
+    # ===================================================================
+    logger.debug('First pass on file %s' % filename)
+    logger.debug('Chr %s | Gene %s' % (chromosome,gene))
+    with open(filename, mode="rt") as gtf:
         #gene_id = 'gene_id "%s"' % gene
         gene_re = re.compile(r'gene_id\s+"?{}"?'.format(gene))
         for line in gtf:
             blocks = line.split("\t")
-            # Only Chr 7 and no comments, please
+            # Only that chromosome and 
             if (
-                    len(blocks) < 9 or
-                    blocks[0] != chr or
-                    blocks[2] != 'transcript' or
-                    not gene_re.search(blocks[8])
+                    len(blocks) < 9 or             # no comments, please
+                    blocks[0] != chromosome or     # only that chromosome. Careful: not comparing integers!
+                    blocks[2] != 'transcript' or   # the line should be a transcript
+                    not gene_re.search(blocks[8])  # Is that the right gene?
             ): 
-                continue
+                continue # skip to the next line
             
+            # Otherwise, it is a transcript for the given gene and chromosome
             attributes = blocks[8]
-            transcript_id = get_value('transcript_id',attributes)
+            transcript_id = get_gtf_value('transcript_id',attributes)
 
             assert( transcript_id ) # is not None
             assert (transcript_id not in transcripts), ("How come I see transcript %s already? \n\nLine:\n\n%s" % (transcript_id,line))
 
-            start=int(blocks[3])
-            end=int(blocks[4])
-            strand = 1
-            if blocks[6] == '-':
-                strand = -1
-            # exons will be added in the second pass
-            transcripts[transcript_id]={'start':start, 'end':end, 'strand':strand,
-                                        'exons':{}, 'start_codon':None, 'stop_codon':None }
+            start  = int(blocks[3])
+            end    = int(blocks[4])
+            strand = 1 if blocks[6] == '+' else -1
 
+            # Adding it to the table
+            transcripts[transcript_id] = {
+                'start':start,
+                'end':end,
+                'strand':strand,
+                'exons':{}, # exons will be added in the second pass. Empty so far.
+                'start_codon': None,
+                'stop_codon': None
+            }
+            logger.debug('Added record: {} => {}'.format(transcript_id,transcripts[transcript_id]))
+
+    logger.debug('Transcripts after first pass')
+    logger.debug(transcripts)
+            
     # Second pass, fetching the exons for those transcripts
-    with open("Homo_sapiens.GRCh38.87.gtf", mode="rt") as gtf:
+    # Must rescan, can't reuse the gtf iterator: it's at the end already.
+    # ===================================================================
+    logger.debug('Second pass')
+    with open(filename, mode="rt") as gtf:
         for line in gtf:
             blocks = line.split("\t")
-            # Only Chr 7 and no comments, please
+            
             if (
-                    len(blocks) < 9 or
-                    blocks[0] != chr or
+                    len(blocks) < 9 or          # no comments, please
+                    blocks[0] != chromosome or  # only that chromosome
                     not (blocks[2] == "exon" or blocks[2] == "start_codon" or blocks[2] == "stop_codon")
             ): 
-                continue
+                continue # Skip that line
 
             feature = blocks[2]
             attributes = blocks[8]
 
-            transcript_id = get_value('transcript_id',attributes)
+            transcript_id = get_gtf_value('transcript_id',attributes)
 
             if transcript_id not in transcripts: # checking the keys
-                continue
+                continue # Skip cuz not a transcript for that given gene
                 
-            assert( gene_re.search(attributes) )
+            if not gene_re.search(attributes):
+                print("Weird! I should have a gene_id {gene} in {attr}".format(gene=gene,attr=attributes))
+
 
             if feature == "exon":
-                exon_id = get_value('exon_id',attributes)
+                logger.debug('Found an exon')
+                exon_id = get_gtf_value('exon_id',attributes)
                 exons = transcripts[transcript_id].get('exons',None)
                 assert( exons is not None )
                 if exon_id in exons:
                     print("Weird! Have I seen that exon %s before?" % exon_id) 
 
-                start=int(blocks[3])
-                end=int(blocks[4])
-                strand = 1
-                if blocks[6] == '-':
-                    strand = -1
-                record = {'start':start, 'end':end, 'strand':strand }
-                exons[exon_id]=record
-                # No need to update the transcripts dict, it's a hashtable
+                start  = int(blocks[3])
+                end    = int(blocks[4])
+                strand = 1 if blocks[6] == '+' else -1
+                exons[exon_id]={'start':start, 'end':end, 'strand':strand }
+                # No need to update the transcripts table, it's a hashtable
 
             if feature == "start_codon" or feature == "stop_codon":
-                start=int(blocks[3])
-                end=int(blocks[4])
-                strand = 1
-                if blocks[6] == '-':
-                    strand = -1
-                record = {'start':start, 'end':end, 'strand':strand }
-                assert( transcripts[transcript_id].get(feature,None) is None )
-                transcripts[transcript_id][feature] = record
+                logger.debug('Found a start/stop codon')
+                start  = int(blocks[3])
+                end    = int(blocks[4])
+                strand = 1 if blocks[6] == '+' else -1
+                
+                assert( transcripts[transcript_id].get(feature,None) is None ) # Note: that should not return None!
+                transcripts[transcript_id][feature] = {'start':start, 'end':end, 'strand':strand }
 
+    return transcripts
+
+@time_me
+@print_args
+def get_longest_transcript(filename="Homo_sapiens.GRCh38.87.gtf", chromosome='7', gene='ENSG00000001626'):
+
+    logger.info('Searching for longest transcript')
+    transcripts = get_all_transcripts(**locals())
+
+    logger.debug('Got transcripts')
     # Find the longest transcript
-    transcript_count = len(transcripts.keys())
+    # ============================
+    # We have a temporary variable that keeps the longest we've seen so far,
+    # we scan the others and update if we find a longer one.
     longest_transcript_id=None
-    longest=0
+    longest=-1
 
     for transcript_id,transcript_info in transcripts.items():
+        logger.debug('Going through transcript %s => %s' % (transcript_id,transcript_info))
         transcript_start = transcript_info['start']
         transcript_end = transcript_info['end']
         transcript_exons = transcript_info['exons']
 
         transcript_length=0
         for exon_info in transcript_exons.values():
+            logger.debug('\tGoing through exon %s' % (exon_info))
             exon_start = exon_info['start']
             exon_end = exon_info['end']
 
@@ -157,114 +145,241 @@ def get_longest_transcript(chr='7',gene='ENSG00000001626'):
             assert( exon_info['strand'] > 0 and transcript_info['strand'] > 0 )
             transcript_length+=abs(end-start+1)
 
-        if transcript_length > longest:
+        if transcript_length > longest: # Got a longer one
+            logger.debug('\tfound a longer one')
             longest = transcript_length
             longest_transcript_id = transcript_id
  
-
+    assert( longest > 0 )
     assert( longest_transcript_id is not None )
-    longest_transcript = transcripts.get(longest_transcript_id)
+    return transcripts.get(longest_transcript_id)
 
-    print("%d transcripts for gene %s (on Chr %s)" % (transcript_count,gene,chr))
-    print("Transcript %s has the longest mRNA (%d bp)" % (longest_transcript_id,longest))
-    #pprint(longest_transcript)
+@time_me
+@print_args
+def fetch_dna(filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa",chromosome=7,output=None):
 
-dna = None
-def fetch_dna(chr=7):
-
-    global dna
-    if dna:
-        return
-
+    logger.info('Fetching DNA as string')
+    dna = None # if problem opening file
     # Get DNA as a looooooooooooooong string
-    with open("Homo_sapiens.GRCh38.dna_sm.chromosome.%d.fa" % chr, mode="rt") as fasta:
+    with open(filename, mode="rt") as fasta:
         # Filter out the line that starts with >
         # I'm safe here, there is only one, the rest is the DNA sequence
-        dna = ''.join(item.strip(' \n') for item in fasta if not item.startswith('>'))
+        dna = ''.join(line.strip(' \n') for line in fasta if not line.startswith('>'))
         
-    print("Length of Chr %d: %d" % (chr,len(dna)))
-    with open('dna.fa','w') as f:
-        f.write(dna)
-    
+    if output:
+        with open(output,'wt') as f:
+            f.write(dna)
 
-mRNA = None
-def get_mRNA(just_protein=False):
+    return dna
 
-    global mRNA
-    if mRNA:
-        return
 
-    global dna
-    fetch_dna()
+@time_me
+@print_args
+def get_mRNA(dna_filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa", 
+             gtf_filename="Homo_sapiens.GRCh38.87.gtf",
+             chromosome='7',
+             gene='ENSG00000001626',
+             transcript=None,
+             cds=False,
+             mRNA_output=None
+):
 
-    global longest_transcript
-    get_longest_transcript()
+    if cds:
+        logger.info('From DNA to CDS')
+    else:
+        logger.info('From DNA to mRNA')
 
-    start_codon = longest_transcript['start_codon']['start'] # It should have those keys
-    stop_codon = longest_transcript['stop_codon']['end']
-    exons = longest_transcript['exons'] 
+    dna = fetch_dna(filename=dna_filename, chromosome=chromosome)
+    #print("Length of Chr %d: %d" % (chromosome,len(dna)))
+
+    # If we are not given a transcript data structure: go get the one for the longest transcript
+    if transcript is None:
+        transcript = get_longest_transcript(filename=gtf_filename, chromosome=chromosome, gene=gene)
+        # transcript should be id 'ENST00000003084'
+
+    logger.debug('Using transcript: %s' % transcript)
+
+    start_codon = transcript['start_codon']['start'] # It should have those keys
+    stop_codon = transcript['stop_codon']['end']
+    exons = transcript['exons'] 
     sorted_exons = sorted(exons.values(), # Iterate through the exon dicts
                           key=lambda exon: exon['start']
                           )
 
-    #print("Exons from the longest transcript")
-    #pprint(sorted_exons)
+    logger.debug('Concatenating exons')
 
-    if just_protein:
-        mRNA = ''.join(dna[
+    if cds: # I cut the little bits before and after the start/stop codons
+        content = ''.join(dna[
             max(start_codon, exon['start']) - 1
             :
             min(stop_codon, exon['end']) # +1 -1
         ] for exon in sorted_exons)
-    else:
-        mRNA = ''.join(dna[ exon['start']-1 : (exon['end']) ] for exon in sorted_exons)
+    else: # I take the whole concatenation of the exons
+        content = ''.join(dna[
+            exon['start']-1
+            :
+            exon['end']
+        ] for exon in sorted_exons)
+    # Note: we need to shift the index to the left, since the string 'dna' is zero-based.
 
-    name = 'mRNA.fasta'
-    if just_protein:
-        name = 'mRNA.protein.fasta'
-        #mRNA = mRNA.replace('T','U')
+    if mRNA_output:
+        logger.debug('Outputing to file')
+        # # Get the .ext at the end
+        # # put .mrna.ext or .cds.ext 
+        # v = splitext(mRNA_output)
+        # output = "%s.cds%s" % v if cds else "%s.mrna%s" % v
+        with open(mRNA_output,'wt') as f:
+            f.write(content.upper())
+            f.write('\n')
 
-    with open(name,'w') as f:
-        f.write(mRNA)
-        f.write('\n')
+    return content
 
-codons = []
-AminoAcids = []
-def get_protein():
+@time_me
+@print_args
+def get_protein(dna_filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa", 
+                gtf_filename="Homo_sapiens.GRCh38.87.gtf",
+                chromosome='7',
+                gene='ENSG00000001626',
+                transcript = None,
+                output = None,
+                mRNA_output = None
+):
 
-    global AminoAcids
-    if AminoAcids:
-        return
+    # Using **locals() does unfortunately bring output with it...
+    seq = get_mRNA( dna_filename=dna_filename,
+                    gtf_filename=gtf_filename,
+                    chromosome=chromosome,
+                    gene=gene,
+                    transcript = None,
+                    cds=True,
+                    mRNA_output = mRNA_output)
 
-    get_mRNA(just_protein=True)
+    logger.debug("\n===== mRNA: %d (mod 3: %d)" % (len(seq),len(seq) % 3))
 
-    # print("\n===== mRNA: %d (mod 3: %d)" % (len(mRNA),len(mRNA) % 3))
+    logger.info('From CDS to PROTEIN')
     
-    global codons
-    codons = [mRNA[i:i+3] for i in range(0, len(mRNA), 3)]
+    codons = [seq[i:i+3] for i in range(0, len(seq), 3)]
     # print("\n===== Codons ======")
     # pprint(codons)
-
+    
+    #if table is None:
     table = RNATranslationTable()
+    #table.print()
 
+    AminoAcids=[]
     for codon in codons:
-        AminoAcid = table.translate(codon)
+        AminoAcid = table.translate(codon) # uppercase already
         if AminoAcid == '*': # Stoping if meeting a stop codon
             break
         AminoAcids.append(AminoAcid)
 
     protein = ''.join( AminoAcids )
 
-    print("Protein length %d" % ( len(protein) ))
-    with open('protein.fasta','w') as f:
-        f.write(protein)
-        f.write('\n')
+    if output:
+        with open(output,'w') as f:
+            f.write(protein)
+            f.write('\n')
+
+    return protein
+
+@time_me
+@print_args
+@print_retval
+def dna_length(filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa"):
+
+    with open(filename, mode="rt") as fasta:
+        return sum( 
+            # Generator expression
+            (len(line.strip(' \n')) for line in fasta if not line.startswith('>')),
+            0 # start value
+        )
+    return -1 # if problem opening file
+
+@time_me
+@print_args
+@print_retval
+def genes_count(filename="Homo_sapiens.GRCh38.87.gtf",chromosome='7',gene='ENSG00000001626'):
+
+    with open(filename, mode="rt") as gtf:
+        counter=0
+        for line in gtf:
+            blocks = line.split("\t")
+            if ( 
+                    len(blocks) == 9        # not a comment, thanks
+                    and blocks[0] == "7"    # for Chr7 
+                    and blocks[2] == "gene" # only gene, please
+            ): 
+                counter+=1
+        return counter
+    return -1 # if problem opening file
+
+if __name__ == "__main__":
+    import argparse
+    #_ = genes_count() # ignore the value
+    # Compare that to the 58s of:
+    # awk '$1 == "7" && $3 == "gene" {count++} END{print count}' Homo_sapiens.GRCh38.87.gtf
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--debug','-d', action='store_true', help='Adds debug messages',                         default=False )
+    parser.add_argument('--quiet','-q', action='store_true', help='Suppress debug messages',                     default=False )
+    parser.add_argument('--log',        action='store',      help='Where to log the output (along with stdout)', default=None  )
     
 
-# if __name__ == "__main__":
-#     start = time.time()
-#     #count_genes()
-#     #fasta_length()
-#     get_mRNA()
-#     end = time.time()
-#     print("Time for mRNA: %.2f seconds" % (end-start))
+    parser.add_argument('--dna-file',         action='store', default="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa", help='DNA file [Default: %(default)s]' )
+    parser.add_argument('--gtf-file',         action='store', default="Homo_sapiens.GRCh38.87.gtf",                 help='GTF file [Default: %(default)s]' )
+    parser.add_argument('--chromosome', '-c', action='store', default='7',               help='Chromosome Number [Default: %(default)s]', type=str         )
+    parser.add_argument('--gene', '-g',       action='store', default='ENSG00000001626', help='Gene ID [Default: %(default)s]'                             )
+
+    #parser.add_argument('--transcript', '-t', action='store', default=None,              help='Transcript. If not specified, it finds the longest one'     )
+    parser.add_argument('--cds',              action='store_true', default=False,        help='output CDS only to file'                                    )
+    parser.add_argument('--mRNA',             action='store', default=None,              help='output nRNA to file. It also skips the Protein step'        )
+    parser.add_argument('--protein',          action='store', default='protein.fasta',   help='Output protein to file (CDS: true) [Default: %(default)s]'  )
+    
+    args = parser.parse_args()
+
+    logger.debug(args)
+    
+    if args.quiet:
+        #logger.setLevel(logging.CRITICAL)
+        #logger.propagate = False
+        logger.handlers = [logging.NullHandler()]
+
+    if args.log:
+        logger.addHandler(logging.FileHandler(args.log, 'a'))
+
+    if args.debug:
+        #logging.basicConfig(level=logging.DEBUG,format='%(levelname)s:\t%(message)s')
+        logger.setLevel(logging.DEBUG)
+        formatter = logging.Formatter('%(levelname)s:\t%(message)s')
+        for ch in logger.handlers:
+            ch.setLevel(logging.DEBUG)
+            ch.setFormatter(formatter)
+
+    logger.debug('==== Starting the job')
+
+    if args.mRNA:
+        _ = get_mRNA( dna_filename=args.dna_file, 
+                      gtf_filename=args.gtf_file,
+                      chromosome=args.chromosome,
+                      gene=args.gene,
+                      transcript=None,
+                      #transcript=args.transcript,
+                      cds=args.cds,
+                      mRNA_output=args.mRNA)
+        if args.cds:
+            print('CDS file created: %s' % args.mRNA)
+        else:
+            print('mRNA file created: %s' % args.mRNA)
+    else:
+        _ = get_protein(dna_filename=args.dna_file, 
+                        gtf_filename=args.gtf_file,
+                        chromosome=args.chromosome,
+                        gene=args.gene,
+                        transcript=None,
+                        #transcript=args.transcript,
+                        output=args.protein,
+                        mRNA_output=args.mRNA)
+        print('Protein file created: %s' % args.protein)
+
+    logger.debug('==== Job done!')
+
