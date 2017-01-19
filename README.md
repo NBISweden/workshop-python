@@ -5,6 +5,6 @@ by [NBIS](https://www.nbis.se).
 
 We use a branch for each course instance.
 
-The [first instance of the course](tree/vt17/README.md) is given at
+The [first instance of the course](../vt17/README.md) is given at
 SciLifeLab (Uppsala) in February 2017.
 
