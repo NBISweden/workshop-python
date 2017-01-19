@@ -108,7 +108,10 @@ header {
     position:relative; z-index:10;
 
     img { display:block; max-width:100%; }
-    h1 {text-align:center; margin:1em; }
+    h1 {
+	text-align:center; margin:1em;
+	a { text-decoration:underline; }
+    }
     h2 {text-align:center; margin:0.5em; }
 }
 
