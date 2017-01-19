@@ -1,0 +1,23 @@
+###########
+# site.url, site.title
+
+url:   'https://nbisweden.github.io/PythonCourse'
+
+#google_analytics: 'UA-23985298-11'
+
+########
+# more settings
+
+exclude:
+- README.md
+
+sass:
+  sass_dir: css
+  style:    expanded
+  
+# enable emojis
+gems:
+  - jemoji
+
+safe: true
+lsi: false

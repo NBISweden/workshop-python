@@ -4,3 +4,4 @@
 test/
 tmp/
 .ipynb_checkpoints/
+*.old
