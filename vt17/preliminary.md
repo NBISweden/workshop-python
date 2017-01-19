@@ -1,5 +1,4 @@
 ---
-layout: vt17
 title: 'Before the first lecture...'
 ---
 

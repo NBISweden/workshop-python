@@ -1,5 +1,5 @@
 ---
-layout: vt17
+title: ''
 ---
 
 

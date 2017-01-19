@@ -5,6 +5,21 @@ url:   'https://nbisweden.github.io/PythonCourse'
 
 #google_analytics: 'UA-23985298-11'
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: default
+  -
+    scope:
+      path: "vt17"
+    values:
+      layout: vt17
+
+
+
 ########
 # more settings
 
