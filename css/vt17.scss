@@ -106,29 +106,37 @@ header {
     padding:1em;
     border-radius:1em 1em 0 0;
     position:relative; z-index:10;
+
+    img { display:block; max-width:100%; }
+    h1 {text-align:center; margin:1em; }
+    h2 {text-align:center; margin:0.5em; }
 }
-header img { display:block; max-width:100%; }
-header h1 {text-align:center; margin:1em; }
+
 footer {
     background-color:#2b5b84; color:white; 
     border-radius:0 0 1em 1em;
     position:relative; z-index:10;
     text-align:center; 
     padding:1em;
+    a {
+	color:white; text-decoration:none;
+	&:hover { text-decoration:underline; }
+    }
+    
 }
-footer a { color:white; text-decoration:none; }
-footer a:hover { text-decoration:underline; }
 
 main {
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
     padding:1em;
+
+    img { 
+	/* display:block;  */
+	max-width:100%;
+    }
+    
 }
 
 
-main img { 
-    /* display:block;  */
-    max-width:100%;
-}
 
 
 

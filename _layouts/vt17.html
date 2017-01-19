@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Introduction to Python | VT17 @ NBIS</title>
+	<title>{{ page.title }}{% if page.title %} | {% endif %}Introduction to Python | VT17 @ NBIS</title>
 
         <meta name="description" content="Python Course given by NBIS in VT17">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,7 +22,8 @@
 
 	<header>
 	  <img src="https://nbisweden.github.io/PythonCourse/img/python-nbis.png" alt="Banner" />
-          <h1>Introduction to Python | VT17 @ NBIS</h1>
+          <h1>Introduction to Python - VT17 @ NBIS</h1>
+	  {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
 	</header>
 	<main>
           {{ content }}
