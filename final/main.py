@@ -5,8 +5,9 @@
 from utils import time_me, print_args, print_retval
 from utils import get_gtf_value
 from utils.rna import RNATranslationTable
-import re, sys
-from os.path import splitext
+import re
+#from os.path import splitext
+
 import logging
 logger = logging.getLogger() # root logger
 logging.basicConfig(level=logging.INFO,format='%(message)s')
@@ -222,17 +223,7 @@ def get_mRNA(dna_filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa",
         ] for exon in sorted_exons)
     # Note: we need to shift the index to the left, since the string 'dna' is zero-based.
 
-    if mRNA_output:
-        logger.debug('Outputing to file')
-        # # Get the .ext at the end
-        # # put .mrna.ext or .cds.ext 
-        # v = splitext(mRNA_output)
-        # output = "%s.cds%s" % v if cds else "%s.mrna%s" % v
-        with open(mRNA_output,'wt') as f:
-            f.write(content.upper())
-            f.write('\n')
-
-    return content
+    return content.upper()
 
 @time_me
 @print_args
@@ -240,25 +231,22 @@ def get_protein(dna_filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa",
                 gtf_filename="Homo_sapiens.GRCh38.87.gtf",
                 chromosome='7',
                 gene='ENSG00000001626',
-                transcript = None,
-                output = None,
-                mRNA_output = None
+                transcript = None
 ):
 
     # Using **locals() does unfortunately bring output with it...
-    seq = get_mRNA( dna_filename=dna_filename,
+    cds = get_mRNA( dna_filename=dna_filename,
                     gtf_filename=gtf_filename,
                     chromosome=chromosome,
                     gene=gene,
                     transcript = None,
-                    cds=True,
-                    mRNA_output = mRNA_output)
+                    cds=True)
 
-    logger.debug("\n===== mRNA: %d (mod 3: %d)" % (len(seq),len(seq) % 3))
+    logger.debug("\n===== CDS: %d (mod 3: %d)" % (len(cds),len(cds) % 3))
 
     logger.info('From CDS to PROTEIN')
     
-    codons = [seq[i:i+3] for i in range(0, len(seq), 3)]
+    codons = [cds[i:i+3] for i in range(0, len(cds), 3)]
     # print("\n===== Codons ======")
     # pprint(codons)
     
@@ -273,14 +261,8 @@ def get_protein(dna_filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa",
             break
         AminoAcids.append(AminoAcid)
 
-    protein = ''.join( AminoAcids )
+    return ''.join( AminoAcids )
 
-    if output:
-        with open(output,'w') as f:
-            f.write(protein)
-            f.write('\n')
-
-    return protein
 
 @time_me
 @print_args
@@ -331,10 +313,13 @@ if __name__ == "__main__":
     parser.add_argument('--gene', '-g',       action='store', default='ENSG00000001626', help='Gene ID [Default: %(default)s]'                             )
 
     #parser.add_argument('--transcript', '-t', action='store', default=None,              help='Transcript. If not specified, it finds the longest one'     )
-    parser.add_argument('--cds',              action='store_true', default=False,        help='output CDS only to file'                                    )
-    parser.add_argument('--mRNA',             action='store', default=None,              help='output nRNA to file. It also skips the Protein step'        )
-    parser.add_argument('--protein',          action='store', default='protein.fasta',   help='Output protein to file (CDS: true) [Default: %(default)s]'  )
-    
+
+    group = parser.add_mutually_exclusive_group(required=True)
+    group.add_argument('--mRNA',             action='store', default=None,         help='output nRNA to file'                         )
+    group.add_argument('--protein',          action='store', default=None,         help='Output protein to file (Note: --cds is on)'  )
+    # Either you pass --mRNA or you pass --protein, but you need one!
+    parser.add_argument('--cds',              action='store_true', default=False,  help='output the CDS part of the mRNA'             )
+
     args = parser.parse_args()
 
     logger.debug(args)
@@ -358,28 +343,44 @@ if __name__ == "__main__":
     logger.debug('==== Starting the job')
 
     if args.mRNA:
-        _ = get_mRNA( dna_filename=args.dna_file, 
-                      gtf_filename=args.gtf_file,
-                      chromosome=args.chromosome,
-                      gene=args.gene,
-                      transcript=None,
-                      #transcript=args.transcript,
-                      cds=args.cds,
-                      mRNA_output=args.mRNA)
+        mRNA = get_mRNA( dna_filename=args.dna_file, 
+                         gtf_filename=args.gtf_file,
+                         chromosome=args.chromosome,
+                         gene=args.gene,
+                         transcript=None,
+                         #transcript=args.transcript,
+                         cds=args.cds)
         if args.cds:
-            print('CDS file created: %s' % args.mRNA)
+            logger.debug('Outputing CDS to file: %s' % args.mRNA)
         else:
-            print('mRNA file created: %s' % args.mRNA)
-    else:
-        _ = get_protein(dna_filename=args.dna_file, 
-                        gtf_filename=args.gtf_file,
-                        chromosome=args.chromosome,
-                        gene=args.gene,
-                        transcript=None,
-                        #transcript=args.transcript,
-                        output=args.protein,
-                        mRNA_output=args.mRNA)
-        print('Protein file created: %s' % args.protein)
+            logger.debug('Outputing mRNA to file: %s' % args.mRNA)
+        # # Get the .ext at the end
+        # # put .mrna.ext or .cds.ext 
+        # v = splitext(mRNA_output)
+        # output = "%s.cds%s" % v if cds else "%s.mrna%s" % v
+        with open(args.mRNA,'wt') as f:
+            f.write(mRNA)
+            f.write('\n')
+            if args.cds:
+                print('CDS file created: %s' % args.mRNA)
+            else:
+                print('mRNA file created: %s' % args.mRNA)
+
+
+    if args.protein:
+        protein = get_protein(dna_filename=args.dna_file, 
+                              gtf_filename=args.gtf_file,
+                              chromosome=args.chromosome,
+                              gene=args.gene,
+                              transcript=None,
+                              #transcript=args.transcript,
+                              )
+
+        logger.debug('Outputing protein to file: %s' % args.protein)
+        with open(args.protein,'wt') as f:
+            f.write(protein)
+            #f.write('\n')
+            print('Protein file created: %s' % args.protein)
 
     logger.debug('==== Job done!')
 
