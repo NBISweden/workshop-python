@@ -302,9 +302,9 @@ if __name__ == "__main__":
     # awk '$1 == "7" && $3 == "gene" {count++} END{print count}' Homo_sapiens.GRCh38.87.gtf
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--debug','-d', action='store_true', help='Adds debug messages',                         default=False )
-    parser.add_argument('--quiet','-q', action='store_true', help='Suppress debug messages',                     default=False )
-    parser.add_argument('--log',        action='store',      help='Where to log the output (along with stdout)', default=None  )
+    parser.add_argument('--debug','-d', action='store_true', help='Adds debug messages to the output (stdout and/or file)',    default=False )
+    parser.add_argument('--quiet','-q', action='store_true', help='Suppress debug messages (from stdout)',                     default=False )
+    parser.add_argument('--log',        action='store',      help='Where to log the output',                                   default=None  )
     
 
     parser.add_argument('--dna-file',         action='store', default="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa", help='DNA file [Default: %(default)s]' )
