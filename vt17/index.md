@@ -13,25 +13,24 @@ course, attentive participants will be able to write simple Python
 programs from scratch and to customize more complex code to fit their
 needs.
 
-# Important Dates
-
-* Application open: November 2nd, 2016
-* Application deadline: December 4th, 2016
-* Acceptance Confirmation: December 11th, 2016
-
-If you don’t receive information according to the above dates, please contact education@scilifelab.uu.se.
-
-# Audience and Prerequisites
-
 * The course is suitable for complete beginners and assumes no prior
   programming experience (beyond the ability to use a text editor).
 * A very basic knowledge of UNIX would be an advantage, such as
   navigating through folders and issuing commands at a shell
   prompt. We will not teach Unix in detail: Other course are available
   at SciLifeLab for it.
-* Bring your own laptop (Linux, or Mac) for the practical
-  exercises. Otherwise, please contact us at
-  education@scilifelab.uu.se before you apply.
+
+    > Before the first lecture, we require you to follow
+    > these [preliminary steps](preliminary).
+
+# Schedule
+
+From Monday February 6<sup>th</sup>, to Friday February 10<sup>th</sup> 2017 (week 6).
+
+* 09:00 - 12:00: Lectures + Hands-on (including a Fika break)
+* 12.00 - 13:00: Lunch
+* 13:00 - 15:00: Lectures + Hands-on
+* 15:00 - 17:00: Practice time (with assistants)
 
 # Course Content
 
@@ -45,7 +44,7 @@ During this course, you will learn about:
 * Code packaging and Python libraries
 * How to work with biological data using external libraries.
 
-# Learning Objectives
+# Learning Outcomes
 
 After this course you should be able to:
 
@@ -53,6 +52,16 @@ After this course you should be able to:
 * Write file-processing python programs that produce output to the terminal and/or external files.
 * Create stand-alone python programs to process biological data
 * Know how to develop your skills in Python after the course (including debugging)
+
+### Learning objectives (ie goals for the teachers)
+
+* Increase the student's toolbelt for better quality and performance at work
+* Make students understand that there is more to programming than only
+  _knowing_ the syntax of a language. <br/>The craft of programming is
+  about taking design decisions to avoid overwhelming complexity and
+  permit easy maintenance over time, insuring reliability (which goes
+  beyond debugging) and utilizing computer resources efficiently. <br/>
+  This design expertise is precisely what [NBIS](https://nbis.se) provides.
 
 # Format
 
@@ -70,6 +79,8 @@ suggestions:
 Such a book can prove useful for your programming tasks, even after the
 course is over.
 
-# Related Courses
+# Location
 
-[Perl Programming with Application to Bioinformatics, 2 hp](https://www.scilifelab.se/events/perlht16/)
+Lectures and exercises will take place in room `E10:1309` at
+
+Uppsala Biomedical Centre (BMC), Husargatan 3, SciLifeLab entrance (C11).

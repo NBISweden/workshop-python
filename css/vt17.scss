@@ -109,8 +109,10 @@ header {
 
     img { display:block; max-width:100%; }
     h1 {
-	text-align:center; margin:1em;
-	a { text-decoration:underline; }
+	text-align:center; margin:1em 2ex 1em 0;
+	a { text-decoration:none; color:inherit; }
+	a:before { content:'\00AB'; margin-right:1ex; visibility:hidden; }
+	a:hover:before { visibility:visible; }
     }
     h2 {text-align:center; margin:0.5em; }
 }
@@ -121,11 +123,12 @@ footer {
     position:relative; z-index:10;
     text-align:center; 
     padding:1em;
+    display:flex; justify-content: space-around;
+    
     a {
 	color:white; text-decoration:none;
 	&:hover { text-decoration:underline; }
     }
-    
 }
 
 main {

@@ -2,7 +2,19 @@
 title: 'Before the first lecture...'
 ---
 
-If you want to use your own laptop during this course, we would like you to install Python _before_ the first lecture.
+We require you to have a laptop (with Linux, or Mac) for the practical
+exercises. If you do not have one, or want to borrow one from us,
+please contact us at education@scilifelab.uu.se before the beginning
+of the course.
+
+_Before_ the first lecture, we have a 3 following requirements:
+
+1. Of course, [install Python](#how-to-install-python) on your machine,
+2. Check that the installation went fine, by [running a given simple script](#running-a-simple-script),
+3. Make sure you have a [proper text editor](#using-a-proper-text-editor)
+
+
+# How to install Python
 
 On the [Python website](https://www.python.org/downloads/), the latest
 version available is `3.6.0`. Please, choose to install the version
@@ -13,10 +25,7 @@ on
 or [Linux/Unix](https://www.python.org/downloads/source/).
 
 
-
-# How to install Python 3.5.0
-
-## On Windows
+### On Windows
 
 You can borrow a Linux laptop where we have installed Python 3.5+ for you.
 If you insist on using your own Windows machine, here are the [installation steps on Windows](https://docs.python.org/3.5/using/windows.html#installation-steps).
@@ -24,7 +33,7 @@ The installer should look like:
 
 ![Installing Python with a Windows MSI](../img/Python-3.5.0-Installer-Windows.png)
 
-## On Mac OS X
+### On Mac OS X
 
 Since Mac OS X 10.8, Python 2.7 is pre-installed by Apple. This is an incompatible version with this course.
 You should instead [download the installer](https://www.python.org/ftp/python/3.5.0/python-3.5.0-macosx10.6.pkg) for the version 3.5.0 (or choose a newer one), double-click and follow the instructions.
@@ -43,7 +52,7 @@ More information can be found on https://docs.python.org/3.5/using/mac.html
 > 
 > $ pyenv install 3.5.0
 
-## On Linux/Unix
+### On Linux/Unix
 
 You probably
 know [what to do](https://docs.python.org/3.5/using/unix.html) if we
@@ -72,9 +81,14 @@ Upon successful installation, you should see something like
 
 ![upon successful installation](../img/python-in-terminal.png)
 
-# Optional tools
+## Running a simple script
 
-## Using a proper Text Editor
+Download the script from the NBIS GitHub location for this instance of
+the course, and in your terminal, run `$ python
+testing-installation.py` (whilst following the instructions of the
+script).
+
+# Using a proper Text Editor
 
 We are going to type (a lot of) Python code, so you'd better have a
 good text editor. This is useful for several reasons: The text editor
@@ -83,13 +97,13 @@ regarding tabulations (which we will introduce in the course).
 
 Emacs and Vim are probably the best text editors, albeit for
 tech-savvy people. If you are not the latter
-kind, [Sublime Text](https://www.sublimetext.com/) is a excellent
-cross-platform alternative. You should probably customize it to your
-taste first.
+kind, [Sublime Text](https://www.sublimetext.com/)
+or [Atom](https://atom.io/) are excellent cross-platform
+alternative. You should probably customize it to your taste first.
 
 ![Sublime Text and Python](https://camo.githubusercontent.com/adf6408a6a64d72440aff6d5e84e82d94865dd40/68747470733a2f2f636f6c6f727375626c696d652e6769746875622e696f2f436f6c6f727375626c696d652d506c7567696e2f636f6c6f727375626c696d652e676966)
 
-## Jupyter: a tool to quickly demonstrate some code
+# (Optional) Jupyter: a tool to quickly demonstrate some code
 
 In the course, we will write Python code as standalone files. However,
 during the lecture, we will also use Jupyter
