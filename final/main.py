@@ -379,7 +379,7 @@ if __name__ == "__main__":
         logger.debug('Outputing protein to file: %s' % args.protein)
         with open(args.protein,'wt') as f:
             f.write(protein)
-            #f.write('\n')
+            f.write('\n')
             print('Protein file created: %s' % args.protein)
 
     logger.debug('==== Job done!')
