@@ -10,7 +10,7 @@ of the course.
 _Before_ the first lecture, we have the 3 following requirements:
 
 1. [Install Python](#how-to-install-python) on your machine (obviously),
-2. Check that the installation went fine, by [running a given simple script](#running-a-simple-script),
+2. Check that the installation went fine, by [running a given simple script](#testing-your-installation),
 3. Make sure you have a [proper text editor](#using-a-proper-text-editor)
 
 
