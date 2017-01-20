@@ -3,7 +3,7 @@ title: ''
 ---
 
 
-# Description
+[//]: # (# Description)
 
 This course provides a practical introduction to the writing
 of [Python](https://www.python.org/) programs for the complete
@@ -13,6 +13,11 @@ course, attentive participants will be able to write simple Python
 programs from scratch and to customize more complex code to fit their
 needs.
 
+> The craft of programming is about taking design decisions to avoid
+> overwhelming complexity and permit easy maintenance over time,
+> insuring reliability (which goes beyond debugging) and utilizing
+> computer resources efficiently.
+
 * The course is suitable for complete beginners and assumes no prior
   programming experience (beyond the ability to use a text editor).
 * A very basic knowledge of UNIX would be an advantage, such as
@@ -20,8 +25,8 @@ needs.
   prompt. We will not teach Unix in detail: Other course are available
   at SciLifeLab for it.
 
-    > Before the first lecture, we require you to follow
-    > these [preliminary steps](preliminary).
+> Before the first lecture, we require you to follow
+> these [preliminary steps](preliminary).
 
 # Schedule
 
@@ -57,11 +62,8 @@ After this course you should be able to:
 
 * Increase the student's toolbelt for better quality and performance at work
 * Make students understand that there is more to programming than only
-  _knowing_ the syntax of a language. <br/>The craft of programming is
-  about taking design decisions to avoid overwhelming complexity and
-  permit easy maintenance over time, insuring reliability (which goes
-  beyond debugging) and utilizing computer resources efficiently. <br/>
-  This design expertise is precisely what [NBIS](https://nbis.se) provides.
+  _knowing_ the syntax of a language. This expertise is precisely
+  what [NBIS](https://nbis.se) provides.
 
 # Format
 
@@ -69,18 +71,19 @@ After this course you should be able to:
 * Practical exercises (either as lab assignments with assistants or on your own).
 
 We do not require you to buy a companion book, as there are already
-lots of resources online. However, if you insist, here are some
-suggestions:
-
-* ["Programming Python"](http://shop.oreilly.com/product/9780596158118.do),
-* ["Learning Python"](http://shop.oreilly.com/product/0636920028154.do), and
-* [Programming in Python 3](https://www.amazon.com/Programming-Python-Complete-Introduction-Language/dp/0321680561)
-
-Such a book can prove useful for your programming tasks, even after the
+lots of resources online. However, if you insist, we can
+suggest
+[_Programming Python_](http://shop.oreilly.com/product/9780596158118.do),
+[_Learning Python_](http://shop.oreilly.com/product/0636920028154.do),
+or
+[_Programming in Python 3_](https://www.amazon.com/Programming-Python-Complete-Introduction-Language/dp/0321680561). Such
+books can prove useful for your programming tasks, even after the
 course is over.
 
 # Location
 
 Lectures and exercises will take place in room `E10:1309` at
 
-Uppsala Biomedical Centre (BMC), Husargatan 3, SciLifeLab entrance (C11).
+[Uppsala Biomedical Centre (BMC), Husargatan 3, SciLifeLab entrance (C11)](https://goo.gl/maps/43FaEXxJwK92).
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.4372529916532!2d17.634863916512266!3d59.84187827686214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fcbe73e7bb4db%3A0xe416eb883a90dd5c!2sSciLifeLab+Uppsala!5e0!3m2!1sen!2sus!4v1484919755570" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

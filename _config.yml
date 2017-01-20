@@ -29,6 +29,9 @@ exclude:
 sass:
   sass_dir: css
   style:    expanded
+
+# pygments: true
+# highlighter: rouge
   
 # enable emojis
 gems:

@@ -139,6 +139,65 @@ main {
 	/* display:block;  */
 	max-width:100%;
     }
+
+    p { margin-bottom:1em; }
+
+    pre {
+	padding: 16px;
+	overflow: auto;
+	font-size: 85%;
+	line-height: 1.45;
+	background-color: #f7f7f7;
+	border-radius: 3px;
+
+	code {
+	    display: inline;
+	    max-width: auto;
+	    padding: 0;
+	    margin: 0;
+	    overflow: visible;
+	    line-height: inherit;
+	    word-wrap: normal;
+	    background-color: transparent;
+	    border: 0;
+	}
+    }
+
+    blockquote {
+	padding: 0 1em;
+	color: #777;
+	border-left: 0.25em solid #ddd;
+    }
+
+    code {
+	padding: 0;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	margin: 0;
+	font-size: 85%;
+	background-color: rgba(0,0,0,0.04);
+	border-radius: 3px
+    }
+
+    a {
+	color: #4078c0;
+	text-decoration: none; cursor:pointer;
+	&:hover { text-decoration: underline; }
+    }
+
+    hr { display:none;
+ 	/* height: 0.25em; */
+	/* padding: 0; */
+	/* margin: 24px 0; */
+	/* background-color: #e7e7e7; */
+	/* border: 0; */
+    }
+
+    > h1 {
+	position:relative; left:-0.5em; margin-right:-1em; padding-left:0.5em; /* cuz font-size: 2em */
+	background-color:#2b5b84; color:white; 
+	&:before {content:"\00BB"; display:inline; margin-right:1ex;}
+    }
     
 }
 
