@@ -59,6 +59,7 @@ video {
   vertical-align: baseline; /* 2 */
 }
 
+
 /**
  * Prevent modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
@@ -67,6 +68,21 @@ video {
 audio:not([controls]) {
   display: none;
   height: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
 }
 
 /**
@@ -213,6 +229,7 @@ hr {
   box-sizing: content-box;
   height: 0;
 }
+
 
 /**
  * Contain overflow in all browsers.
@@ -374,10 +391,14 @@ input[type="search"]::-webkit-search-decoration {
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  /* border: 1px solid #c0c0c0; */
+  /* margin: 0 2px; */
+  /* padding: 0.35em 0.625em 0.75em; */
 }
+
 
 /**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
@@ -391,10 +412,13 @@ legend {
 
 /**
  * Remove default vertical scrollbar in IE 8/9/10/11.
+ * Allow only vertical resizing of textareas.
  */
 
 textarea {
   overflow: auto;
+  resize: vertical;
+
 }
 
 /**
@@ -422,3 +446,7 @@ td,
 th {
   padding: 0;
 }
+
+
+
+

@@ -32,10 +32,12 @@ sass:
 
 # pygments: true
 # highlighter: rouge
+
   
-# enable emojis
+# enable vendor prefixes
 gems:
-  - jemoji
+  - octopress-autoprefixer
+#  - autoprefixer-rails
 
 safe: true
 lsi: false
