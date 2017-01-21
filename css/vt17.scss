@@ -40,11 +40,22 @@ header {
 	    color: #ffffff;
 	    padding:0.3em 1em;
 	    background: #3c3c3c;
-	    background: linear-gradient(top, #3c3c3c 0%, #222222 100%);
+	    background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 50%, #3c3c3c 100%);
+	    background: linear-gradient(0deg, #3c3c3c 0%, #222222 50%, #3c3c3c 100%);
 
 	    i { margin-right:0.5ex; }
-	    &.active, &:hover { background: #080808; }
 
+	    &:hover {
+		background: #080808;
+		background: -webkit-linear-gradient(top, #3c3c3c 0%, #080808 50%, #3c3c3c 100%);
+		background: linear-gradient(0deg, #3c3c3c 0%, #080808 50%, #3c3c3c 100%);
+	    }
+	    &.active {
+		background: #947878;
+		background: -webkit-linear-gradient(top, #3c3c3c 0%, #947878 50%, #3c3c3c 100%);
+		background: linear-gradient(0deg, #3c3c3c 0%, #947878 50%, #3c3c3c 100%);
+	    }
+	    
 	    &:first-child { margin-right:auto; border:0; background:transparent;  }
 	    &:last-child {  margin-left:auto; border:0; background:transparent;  }
 	    &:nth-child(3) { border-radius: 1ex 0 0 1ex; border-left:1px solid #080808; }
