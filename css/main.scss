@@ -126,13 +126,17 @@ main {
 
 
 
+	  /* <img src="https://nbisweden.github.io/PythonCourse/img/python-nbis.png" alt="Banner" /> */
 
 
-
-
-
-
-
+body#error404 main {
+    min-height:320px;
+    padding-top:100px;
+    padding-right:300px;
+    background-image:url('../img/doh.png');
+    background-position:center right;
+    background-repeat:no-repeat;
+}
 
 
 
