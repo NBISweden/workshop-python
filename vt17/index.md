@@ -32,10 +32,10 @@ needs.
 
 From Monday February 6<sup>th</sup>, to Friday February 10<sup>th</sup> 2017 (week 6).
 
-* 09:00 - 12:00: Lectures + Hands-on (including a Fika break)
-* 12.00 - 13:00: Lunch
-* 13:00 - 15:00: Lectures + Hands-on
-* 15:00 - 17:00: Practice time (with assistants)
+* **09:00 - 12:00**: Lectures + Hands-on (including a Fika break)
+* **12.00 - 13:00**: Lunch
+* **13:00 - 15:00**: Lectures + Hands-on
+* **15:00 - 17:00**: Practice time (with assistants)
 
 # Course Content
 
