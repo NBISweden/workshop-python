@@ -1,5 +1,6 @@
 ---
 title: 'Before the first lecture...'
+menu: preliminary
 ---
 
 We require you to have a laptop (with Linux, or Mac) for the practical

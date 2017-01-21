@@ -13,17 +13,48 @@
 
         <link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
         <link rel="stylesheet" href="{{ site.url }}/css/vt17.css">
+	<link rel="stylesheet" href="{{ site.url }}/css/font-awesome-4.7.0/css/font-awesome.min.css">
         <script src="{{ site.url }}/js/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browserupgrade">
+	      You are using an <strong>outdated</strong> browser.
+	      Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+	    </p>
         <![endif]-->
 
 	<header>
-	  <img src="https://nbisweden.github.io/PythonCourse/img/python-nbis.png" alt="Banner" />
-          <h1><a href="{{ site.url }}/vt17/">Introduction to Python - VT17 @ NBIS</a></h1>
+	  <nav>
+	    <a href="https://www.scilifelab.se/education/courses/">
+	      <img src="{{ site.url }}/img/scilifelab.png" alt="SciLifeLab courses" />
+	    </a>
+	    <a href="{{ site.url }}/vt17/"><i class="fa fa-fw fa-home"></i></a>
+	    <a {% if page.menu == 'preliminary' %}class="active"{% endif %} href="{{ site.url }}/vt17/preliminary">
+	      <i class="fa fa-fw fa-hourglass-start"></i></i>Preliminaries
+	    </a>
+	    <a {% if page.menu == 'topics' %}class="active"{% endif %} href="{{ site.url }}/vt17/topics">
+	      <i class="fa fa-fw fa-tasks"></i>
+	      <!-- <i class="fa fa-fw fa-bars"> -->
+	      Topics
+	    </a>
+	    <a {% if page.menu == 'project' %}class="active"{% endif %} href="{{ site.url }}/vt17/project">
+	      <i class="fa fa-briefcase"></i>
+	      <!-- <i class="fa fa-code-fork"></i> -->
+	      Project
+	    </a>
+	    <a {% if page.menu == 'help' %}class="active"{% endif %} href="{{ site.url }}/vt17/help">
+	      <!-- <i class="fa fa-fw fa-medkit"></i> -->
+	      <i class="fa fa-fw fa-support"></i>
+	      Help
+	    </a>
+	    <a href="https://nbis.se">
+	      <img src="{{ site.url }}/img/nbis.png" alt="NBIS" />
+	    </a>
+	  </nav>
+
 	  {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+          <h1>Introduction to Python<small>VT17</small></a></h1>
 	</header>
 	<main>
           {{ content }}
