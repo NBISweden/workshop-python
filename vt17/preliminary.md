@@ -11,8 +11,8 @@ of the course.
 _Before_ the first lecture, we have the 3 following requirements:
 
 1. [Install Python](#how-to-install-python) on your machine (obviously),
-2. Check that the installation went fine, by [running a given simple script](#testing-your-installation),
-3. Make sure you have a [proper text editor](#using-a-proper-text-editor)
+2. Check that the installation went fine, by [running a given simple script](#test),
+3. Make sure you have a [proper text editor](#text-editor)
 
 
 ----
@@ -72,7 +72,7 @@ are surely familiar with the classic cycle:
 
 ----
 
-# Testing your installation
+# Testing your installation {#test}
 
 Start your favorite terminal and check the Python version. Type at the
 prompt (ie where the `$` sign is):
@@ -102,9 +102,13 @@ should see the current time printed with "big digits" ;)
 
 ![successful test](../img/python-test.png)
 
+Alternatively, copy-paste that line at the prompt
+
+	curl -s https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/test.py | python
+
 ----
 
-# Using a proper Text Editor
+# Using a proper Text Editor {#text-editor}
 
 We are going to type (a lot of) Python code, so you'd better have a
 good text editor. This is useful for several reasons: The text editor
@@ -122,6 +126,7 @@ alternative. You should probably customize it to your taste first.
 ----
 
 # (Optional) Jupyter notebooks
+{:.collapse-trigger}
 
 In the course, we will write Python code as standalone files. However,
 during the lecture, we will also use Jupyter

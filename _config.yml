@@ -23,6 +23,8 @@ defaults:
 ########
 # more settings
 
+markdown: kramdown
+
 exclude:
 - README.md
 

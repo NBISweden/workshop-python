@@ -170,9 +170,75 @@ main {
 
 
     > h1 {
+	clear:both;
 	position:relative; left:-0.5em; margin-right:-1em; padding-left:0.5em; /* cuz font-size: 2em */
 	background-color:#2b5b84; color:white; 
-	&:before {content:"\00BB"; display:inline; margin-right:1ex;}
+
+	&:before {content:"\00BB"; display:inline; margin-right:1ex; }
+	&.collapse-trigger { cursor: pointer; }
+
+
+	&.collapse-trigger + section { display: none; }
+	&.collapse-trigger.open + section { display: block; }
+
+	&.collapse-trigger:before { content:"\25B6"; font-size:50%; vertical-align:middle; }
+	&.collapse-trigger.open:before { content:"\25BC"; }
+
+
     }
+
+    .collapse-menu { float:right; display:block; margin-left:1ex; position:relative; top:-1ex; }
+    .collapse-menu:hover { cursor:pointer; color:red; }
+
+
+}
+
+
+body main nav {
+    display:flex; flex-flow: row wrap; justify-content:center;
+    /* border-top:1px solid #47c9af; */
+    padding:0 1em;
+    margin-top: -1em; /* compensate for body top padding */
+    
+    a {
+	position:relative;
+	padding: 0.3em 1em;
+	margin:0 0.5em;
+	text-decoration: none;
+	color: #444444;
+	/* margin-right: -4px; */
+	display:block;
+	-webkit-transition: color .2s ease;
+	transition: color .2s ease;
+
+	&:hover  { color: #fff; background: #47c9af; text-decoration:none; border-bottom:1px solid black; z-index: 1; }
+	&.active { color: #000; background: #47c9af; border-bottom:1px solid black; z-index: 2; }
+	
+	&:hover:before,
+	&.active:before {
+	    content: "";
+	    position: absolute; top: 0; bottom: 0; left:-10px;
+	    z-index: 3; width: 15px; height:100%;
+	    transform: skewX(10deg);
+	    border-radius: 0 0 0 1ex;
+	    background: #47c9af;
+	    border-bottom:1px solid black;
+	    border-left:1px solid black;
+	}
+
+	&:hover:after,
+	&.active:after {
+	    content: "";
+	    position: absolute; top: 0; bottom: 0; right:-10px;
+	    z-index: 3; width: 15px; height:100%;
+	    transform: skewX(-10deg);
+	    border-radius: 0 0 1ex 0;
+	    background: #47c9af;
+	    border-bottom:1px solid black;
+	    border-right:1px solid black;
+	}
+
+    }
+    
     
 }
