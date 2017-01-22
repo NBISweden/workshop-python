@@ -181,8 +181,17 @@ main {
 	&.collapse-trigger + section { display: none; }
 	&.collapse-trigger.open + section { display: block; }
 
-	&.collapse-trigger:before { content:"\25B6"; font-size:50%; vertical-align:middle; }
+	&.collapse-trigger:before { content:"\25B6"; font-size:50%; vertical-align:middle; display:inline-block; transform-origin:50% 50%;}
 	&.collapse-trigger.open:before { content:"\25BC"; }
+
+	@keyframes rotate {
+	    0%   { transform: rotate(0deg); }
+	    100%   { transform: rotate(90deg); }
+	}
+	&.collapse-trigger:hover:before {
+	    animation:         rotate .15s infinite; /* IE 10+, Fx 29+ */
+	}
+
 
 
     }
