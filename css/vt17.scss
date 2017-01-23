@@ -9,7 +9,7 @@
 
 html { color: #222; font-size: 1em; line-height: 1.4; }
 body {
-    margin:1em 0;
+    /* margin-bottom:1em; */
     min-width:1045px;
 }
 
@@ -22,11 +22,12 @@ body {
    ========================================================================== */
 header {
     box-sizing: border-box;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-    background-color:#2b5b84; color:white;
+    /* box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75); */
+    background-color:#2b5b84;
+    background: linear-gradient(0deg, white 30%, #2b5b84 40%);
+    color:white;
     padding:1em 3em 0 3em;
-    border-bottom:1px solid #2b5b84;
-    /* border-radius:1em 1em 0 0; */
+    /* border-bottom:1px solid #2b5b84; */
     position:relative; z-index:10;
 
     nav {
@@ -40,19 +41,16 @@ header {
 	    color: #ffffff;
 	    padding:0.3em 1em;
 	    background: #3c3c3c;
-	    background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 50%, #3c3c3c 100%);
 	    background: linear-gradient(0deg, #3c3c3c 0%, #222222 50%, #3c3c3c 100%);
 
 	    i { margin-right:0.5ex; }
 
 	    &:hover {
 		background: #080808;
-		background: -webkit-linear-gradient(top, #3c3c3c 0%, #080808 50%, #3c3c3c 100%);
 		background: linear-gradient(0deg, #3c3c3c 0%, #080808 50%, #3c3c3c 100%);
 	    }
 	    &.active {
 		background: #947878;
-		background: -webkit-linear-gradient(top, #3c3c3c 0%, #947878 50%, #3c3c3c 100%);
 		background: linear-gradient(0deg, #3c3c3c 0%, #947878 50%, #3c3c3c 100%);
 	    }
 	    
@@ -70,6 +68,8 @@ header {
     }
     
     > img { display:block; max-width:100%; }
+    > h1 { color: black; }
+    > h2 { color: black; }
     h1,h2 {
 	text-align:center; margin:0.3em 0;
 	small {
@@ -81,7 +81,7 @@ header {
 
 }
 
-header h2 + h1 { position:absolute; top:0; font-size:0.8em; left:50%; transform:translate(-50%,0%); }
+header h2 + h1 { position:absolute; top:0; font-size:0.8em; left:50%; transform:translate(-50%,0%); color:white; }
 header h2 + h1 small { font-size:100%; }
 
 /* ==========================================================================
@@ -89,12 +89,13 @@ header h2 + h1 small { font-size:100%; }
    ========================================================================== */
 footer {
     box-sizing: border-box;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    /* box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75); */
     background-color:#2b5b84; color:white; 
+    background: linear-gradient(180deg, white 0%, #2b5b84 50%);
     /* border-radius:0 0 1em 1em; */
     position:relative; z-index:10;
     text-align:center; 
-    padding:1em 3em;
+    padding:2em 3em 1em 3em;
     display:flex; justify-content: space-around;
     
     a {
@@ -174,6 +175,7 @@ main {
 	clear:both;
 	position:relative; left:-0.5em; margin-right:-1em; padding-left:0.5em; /* cuz font-size: 2em */
 	background-color:#2b5b84; color:white; 
+	background: linear-gradient(270deg, white 0%, #2b5b84 50%);
 
 	&:before {content:"\00BB"; display:inline; margin-right:1ex; }
 	&.collapse-trigger { cursor: pointer; }

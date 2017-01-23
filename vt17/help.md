@@ -48,7 +48,7 @@ For both keys and values
 
 The `with` statement takes care of closing the file in case an error occurs in the `for` loop.
 
-# Defining a function with position or named arguments
+# Defining a function 
 {:.collapse-trigger}
 
 	def functionName(arg1, arg2, arg3=None, arg4='', arg5=0):
