@@ -64,7 +64,10 @@ main {
 	&:hover { text-decoration: underline; }
     }
 
-    ul { list-style:disc; }
+    ul li {
+	list-style:circle;
+	/* &.active { list-style:"square"; } */
+    }
 
     h1,h2 { margin-bottom:0.5em; }
     dl {

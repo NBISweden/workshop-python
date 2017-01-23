@@ -125,7 +125,7 @@ alternative. You should probably customize it to your taste first.
 
 ----
 
-# (Optional) Jupyter notebooks
+# Jupyter notebooks
 {:.collapse-trigger}
 
 In the course, we will write Python code as standalone files. However,
@@ -135,7 +135,7 @@ allows us to evaluate our code line by line.  The Jupyter files are
 called
 [notebooks](//jupyter.readthedocs.io/en/latest/running.html) and
 will serve a single purpose in this course: a _quick demonstration_ of
-Python code. It is therefore useful, though optional,
+Python code. It is therefore convenient, though optional,
 to
 [install Jupyter](//jupyter.readthedocs.io/en/latest/install.html) in
 advance.

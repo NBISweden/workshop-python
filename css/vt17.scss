@@ -68,8 +68,8 @@ header {
     }
     
     > img { display:block; max-width:100%; }
-    > h1 { color: black; }
-    > h2 { color: black; }
+    > h1 { color: black; /* font-size: 2em; */ }
+    > h2 { color: black; /* font-size: 2em; */ }
     h1,h2 {
 	text-align:center; margin:0.3em 0;
 	small {
@@ -170,6 +170,7 @@ main {
 
     iframe { max-width:100%; }
 
+    ul li { list-style:circle; }
 
     > h1 {
 	clear:both;
