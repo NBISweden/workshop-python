@@ -54,4 +54,4 @@ lsi: false
 
 
 # https://github.com/jekyll/jekyll/issues/302
-permalink: pretty
+#permalink: pretty
