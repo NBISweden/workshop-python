@@ -270,11 +270,13 @@ body main nav {
     header {
 	display:flex;
 	flex-direction:column;
+	background: linear-gradient(0deg, white 0%, #2b5b84 25%);
+
 	nav { display:none; }
 	justify-content:space-between;
 	padding:0;
 
-	h1 { font-size:1em; text-align:center; margin:1em 0; }
+	h1 { font-size:1em; text-align:center; margin:1em 0; color:white; }
 	h2 + h1 { position:static; order:1; transform:none; text-align:center; }
 	h2 { order:2; }
 
