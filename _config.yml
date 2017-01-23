@@ -8,6 +8,12 @@ url:   'https://nbisweden.github.io/PythonCourse'
 defaults:
   -
     scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: default
+  -
+    scope:
       path: "vt17"
     values:
       layout: vt17
@@ -17,16 +23,7 @@ defaults:
 ########
 # more settings
 
-encoding:     "utf-8"
-markdown_ext: "md"
-
 markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    css_class: 'codehilite'
 
 exclude:
 - README.md
@@ -46,3 +43,13 @@ gems:
 
 safe: true
 lsi: false
+
+# encoding:     "utf-8"
+# #markdown_ext: "md"
+
+# kramdown:
+#   input: GFM
+#   syntax_highlighter: rouge
+#   syntax_highlighter_opts:
+#     css_class: 'codehilite'
+
