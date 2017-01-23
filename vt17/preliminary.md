@@ -19,19 +19,19 @@ _Before_ the first lecture, we have the 3 following requirements:
 
 # How to install Python
 
-On the [Python website](https://www.python.org/downloads/), the latest
+On the [Python website](//www.python.org/downloads/), the latest
 version available is `3.6.0`. Please, choose to install the version
 `3.5.0` or above.  You can install the latest Python
 on
-[Windows](https://www.python.org/downloads/windows/),
-[Mac OS X](https://www.python.org/downloads/mac-osx/)
-or [Linux/Unix](https://www.python.org/downloads/source/).
+[Windows](//www.python.org/downloads/windows/),
+[Mac OS X](//www.python.org/downloads/mac-osx/)
+or [Linux/Unix](//www.python.org/downloads/source/).
 
 
 ### On Windows
 
 You can borrow a Linux laptop where we have installed Python 3.5+ for you.
-If you insist on using your own Windows machine, here are the [installation steps on Windows](https://docs.python.org/3.5/using/windows.html#installation-steps).
+If you insist on using your own Windows machine, here are the [installation steps on Windows](//docs.python.org/3.5/using/windows.html#installation-steps).
 The installer should look like:
 
 ![Installing Python with a Windows MSI](../img/Python-3.5.0-Installer-Windows.png)
@@ -39,17 +39,17 @@ The installer should look like:
 ### On Mac OS X
 
 Since Mac OS X 10.8, Python 2.7 is pre-installed by Apple. This is an incompatible version with this course.
-You should instead [download the installer](https://www.python.org/ftp/python/3.5.0/python-3.5.0-macosx10.6.pkg) for the version 3.5.0 (or choose a newer one), double-click and follow the instructions.
+You should instead [download the installer](//www.python.org/ftp/python/3.5.0/python-3.5.0-macosx10.6.pkg) for the version 3.5.0 (or choose a newer one), double-click and follow the instructions.
 
 ![Installing Python on Mac OS X](../img/Python-3.5.0-Installer-OSX.png)
                                             
-More information can be found on https://docs.python.org/3.5/using/mac.html
+More information can be found on [docs.python.org/3.5](//docs.python.org/3.5/using/mac.html)
 
 > IMPORTANT NOTE: If you are not interested in a system-wide version
 > of Python3, you can use `pyenv` to easily switch between multiple
 > versions of Python. You
 > can
-> [install pyenv from GitHub](https://github.com/yyuu/pyenv#installation). After
+> [install pyenv from GitHub](//github.com/yyuu/pyenv#installation). After
 > installation, you can install version 3.5.0 by issuing the following
 > command in your Terminal.
 > 
@@ -58,10 +58,10 @@ More information can be found on https://docs.python.org/3.5/using/mac.html
 ### On Linux/Unix
 
 You probably
-know [what to do](https://docs.python.org/3.5/using/unix.html) if we
+know [what to do](//docs.python.org/3.5/using/unix.html) if we
 give you
 the
-[Python 3.5.0 sources](https://www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz). You
+[Python 3.5.0 sources](//www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz). You
 are surely familiar with the classic cycle:
 
 	./configure
@@ -91,7 +91,7 @@ or start the python interpretor
 
 Download
 this
-[test script](https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/test.py) (from
+[test script](//raw.githubusercontent.com/NBISweden/PythonCourse/vt17/test.py) (from
 the NBIS GitHub location for this instance of the course), and in your
 terminal, run
 
@@ -117,11 +117,11 @@ regarding tabulations (which we will introduce in the course).
 
 Emacs and Vim are probably the best text editors, albeit for
 tech-savvy people. If you are not the latter
-kind, [Sublime Text](https://www.sublimetext.com/)
-or [Atom](https://atom.io/) are excellent cross-platform
+kind, [Sublime Text](//www.sublimetext.com/)
+or [Atom](//atom.io/) are excellent cross-platform
 alternative. You should probably customize it to your taste first.
 
-![Sublime Text and Python](https://camo.githubusercontent.com/adf6408a6a64d72440aff6d5e84e82d94865dd40/68747470733a2f2f636f6c6f727375626c696d652e6769746875622e696f2f436f6c6f727375626c696d652d506c7567696e2f636f6c6f727375626c696d652e676966)
+![Sublime Text and Python](//camo.githubusercontent.com/adf6408a6a64d72440aff6d5e84e82d94865dd40/68747470733a2f2f636f6c6f727375626c696d652e6769746875622e696f2f436f6c6f727375626c696d652d506c7567696e2f636f6c6f727375626c696d652e676966)
 
 ----
 
@@ -130,17 +130,17 @@ alternative. You should probably customize it to your taste first.
 
 In the course, we will write Python code as standalone files. However,
 during the lecture, we will also use Jupyter
-notebooks. [Jupyter](http://jupyter.org/) is a web-based tool which
+notebooks. [Jupyter](//jupyter.org/) is a web-based tool which
 allows us to evaluate our code line by line.  The Jupyter files are
 called
-[notebooks](http://jupyter.readthedocs.io/en/latest/running.html) and
+[notebooks](//jupyter.readthedocs.io/en/latest/running.html) and
 will serve a single purpose in this course: a _quick demonstration_ of
 Python code. It is therefore useful, though optional,
 to
-[install Jupyter](http://jupyter.readthedocs.io/en/latest/install.html) in
+[install Jupyter](//jupyter.readthedocs.io/en/latest/install.html) in
 advance.
 
-![Running the notebook](http://jupyter.readthedocs.io/en/latest/_images/tryjupyter_file.png)
+![Running the notebook](//jupyter.readthedocs.io/en/latest/_images/tryjupyter_file.png)
 
 
 ----
@@ -148,6 +148,6 @@ advance.
 # Impatient about the first lecture?
 
 Whet your appetite on
-the [Python tutorial](https://docs.python.org/3/tutorial/) or
+the [Python tutorial](//docs.python.org/3/tutorial/) or
 an
-[informal introduction to Python](https://docs.python.org/3/tutorial/introduction.html).
+[informal introduction to Python](//docs.python.org/3/tutorial/introduction.html).
