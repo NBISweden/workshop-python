@@ -8,12 +8,6 @@ url:   'https://nbisweden.github.io/PythonCourse'
 defaults:
   -
     scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: default
-  -
-    scope:
       path: "vt17"
     values:
       layout: vt17

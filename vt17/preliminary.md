@@ -126,7 +126,6 @@ alternative. You should probably customize it to your taste first.
 ----
 
 # Jupyter notebooks
-{:.collapse-trigger}
 
 In the course, we will write Python code as standalone files. However,
 during the lecture, we will also use Jupyter
