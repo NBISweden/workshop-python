@@ -106,9 +106,15 @@ header {
     padding:1em;
     border-radius:1em 1em 0 0;
     position:relative; z-index:10;
+
+    display:flex; flex-flow: row no-wrap; justify-content:center; align-items:center;
+    
+    img { display:inline-block; }
+    img:first-child {margin-right:10px; }
+    img:last-child { margin-left:14px; }
+
+
 }
-header img { display:block; max-width:100%; }
-header h1 {text-align:center; margin:1em; }
 footer {
     background-color:#2b5b84; color:white; 
     border-radius:0 0 1em 1em;
@@ -122,9 +128,31 @@ footer a:hover { text-decoration:underline; }
 main {
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
     padding:1em;
+
+    p { margin-bottom:1em; }
+
+    blockquote {
+	padding: 0 1em;
+	color: #777;
+	border-left: 0.25em solid #ddd;
+    }
+
+    a {
+	color: #4078c0;
+	text-decoration: none; cursor:pointer;
+	&:hover { text-decoration: underline; }
+    }
+
+    ul { list-style:disc; }
+
+    h1,h2 { margin-bottom:0.5em; }
+    dl {
+	dt { margin-bottom:1ex; font-weight:bold; }
+	dt:before { content: '\00BB'; margin-right:1ex; }
+	dd { margin-bottom:1em; }
+    }
+
 }
-
-
 
 	  /* <img src="https://nbisweden.github.io/PythonCourse/img/python-nbis.png" alt="Banner" /> */
 

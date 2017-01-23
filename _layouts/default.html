@@ -5,7 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Python Courses @ NBIS</title>
 
-        <meta name="description" content="{{ site.meta_description }}">
+        <meta name="description" content="Python Courses offered by NBIS">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="{{ site.url }}/img/apple-touch-icon.png">
@@ -13,7 +13,6 @@
 
         <link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
         <link rel="stylesheet" href="{{ site.url }}/css/main.css">
-        <script src="{{ site.url }}/js/modernizr-2.8.3.min.js"></script>
     </head>
     <body{{ page.body_tags }}>
         <!--[if lt IE 8]>
@@ -21,15 +20,14 @@
         <![endif]-->
 
 	<header>
-	  <img src="https://nbisweden.github.io/PythonCourse/img/python-nbis.png" alt="Banner" />
-          <h1>Python Courses @ NBIS</h1>
+	  <img src="{{ site.url }}/img/python-logo.png" alt="Python Logo" />@<a href="//nbis.se"><img src="{{ site.url }}/img/nbis.png" alt="NBIS logo" /></a>
 	</header>
 	<main>
           {{ content }}
 	</main>
 
 	<footer>
-	  <a href="https://www.nbis.se">NBIS</a>
+	  <a href="//www.nbis.se">NBIS</a>
 	</footer>
 	  
 	{% include analytics.html %}
