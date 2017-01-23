@@ -18,6 +18,7 @@ defaults:
 # more settings
 
 encoding:     "utf-8"
+markdown_ext: "md"
 
 markdown: kramdown
 
@@ -32,7 +33,7 @@ exclude:
 
 sass:
   sass_dir: css
-  style:    expanded
+  style:    compressed # nested|expanded|compact|compressed
 
 # pygments: true
 # highlighter: rouge
@@ -45,7 +46,3 @@ gems:
 
 safe: true
 lsi: false
-
-
-# https://github.com/jekyll/jekyll/issues/302
-permalink: pretty
