@@ -167,6 +167,7 @@ main {
  	 /* height: 0.25em; border: 0; padding: 0; margin: 24px 0; background-color: #e7e7e7;  */
     }
 
+    iframe { max-width:100%; }
 
 
     > h1 {
@@ -249,5 +250,53 @@ body main nav {
 
     }
     
+    
+}
+
+/* ==========================================================================
+   Media Queries for Responsive Design.
+   Target: iPhone 5
+   ========================================================================== */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+
+    body {
+	margin:0; padding:0;
+	min-width:auto;
+    }
+    main,header,footer { width:auto; border-radius:0; }
+    header {
+	display:flex;
+	flex-direction:column;
+	nav { display:none; }
+	justify-content:space-between;
+	padding:0;
+
+	h1 { font-size:1em; text-align:center; margin:1em 0; }
+	h2 + h1 { position:static; order:1; transform:none; text-align:center; }
+	h2 { order:2; }
+
+    }
+
+    main {
+	box-shadow:0;
+	padding:1ex;
+	h1,h2 { font-size:1em; padding-top:0.3em; padding-bottom:0.3em; }
+	h1:before { content:''; display:none; }
+
+	blockquote {
+	    color: #777;
+	    border:0; padding:1ex;
+	    /* border: 1px solid #ddd; */
+	    border-radius:3px;
+	    margin:1ex;
+	    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+
+	    p { margin:0; }
+
+	}
+
+
+    }
     
 }
