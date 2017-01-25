@@ -190,7 +190,8 @@ main {
 	}
     }
 
-    #extra-task { border-top: 2px solid #ccc; padding-top:1em; margin-top:2em; }
+    #extra-task { border-top: 2px solid #ccc; padding-top:1em; margin-top:2em; text-align:right; }
+    #extra-task ~ p { text-align:right; }
 
     a {
 	color: #4078c0;
