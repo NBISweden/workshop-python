@@ -47,8 +47,8 @@ lsi: false
 # encoding:     "utf-8"
 # #markdown_ext: "md"
 
-# kramdown:
-#   input: GFM
+kramdown:
+  input: GFM
 #   syntax_highlighter: rouge
 #   syntax_highlighter_opts:
 #     css_class: 'codehilite'
