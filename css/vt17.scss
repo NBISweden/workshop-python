@@ -160,7 +160,7 @@ main {
 	position:relative;
 	font-size:0.8em;
 	margin-top:0.5ex;
-	summary { outline:0; }
+	summary { outline:0; cursor:pointer; }
 
 	&[open] { 
 	    summary {
@@ -183,9 +183,10 @@ main {
 	    content:'Goal'; font-variant:small-caps;
 	    display:block;
 	    position: absolute; top:0; left:0;
-	    transform:translate(-25%,-25%) rotate(-30deg);
+	    transform:translate(-30%,-20%) rotate(-30deg);
 	    transform-origin:50% 50%;
 	    background:#2b5b84; color:yellow; padding:0 1ex;
+	    border-radius:1em;
 	}
     }
 

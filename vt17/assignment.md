@@ -61,7 +61,7 @@ All the following tasks are now related to the particular gene with id
    </section>
    </details>
 
-1. What are the position of the `start_codon` and `stop_codon` from that transcript
+1. What are the position of the `start_codon` and `stop_codon` from that transcript?
 
    <details>
    <summary>Check</summary>
