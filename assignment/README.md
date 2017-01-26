@@ -1,6 +1,6 @@
 You are given:
-* a [DNA file](org/Homo_sapiens.GRCh38.87.gtf.gz) and
-* a [GTF file](org/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz).
+* a [DNA file](data/Homo_sapiens.GRCh38.87.gtf.gz) and
+* a [GTF file](data/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz).
 
 Your task is to implement a python program, that
 extracts the protein from a particular transcript.
