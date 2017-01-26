@@ -1,44 +1,66 @@
-# Tasks
+You are given:
+* a [DNA file](org/Homo_sapiens.GRCh38.87.gtf.gz) and
+* a [GTF file](org/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz).
 
-* Find length of DNA.
-* Find length of all genes.
-* Compare what fraction of the Chr is annotated as genes.
+Your task is to implement a python program, that
+extracts the protein from a particular transcript.
 
-# All tasks are related to gene "blabla"
+The task is divided in several steps.
 
-* Fetch DNA from fasta for gene with id "ENSG00000001626"
-* How many transcripts can this gene generate?
+## Warm up
 
-* Select the longest transcripts (answer: id ENST00000003084.10, length: 6132 bp)
-Ensembl data: http://www.ensembl.org/Homo_sapiens/Transcript/Summary?db=core;g=ENSG00000001626;r=7:117465784-117715971;t=ENST00000003084
+1. What is the length of the given DNA sequence?
 
-$9 should contain "protein_coding"
+2. How many genes are annotated in the GTF file?
 
-* Fetch all the exons for that transcript (splicing)
-Answer: https://www.ncbi.nlm.nih.gov/nuccore/NM_000492
+3. What fraction of the chromosome is annotated as genes?
 
-Transcript [117479963:117668665]
+## The real deal
 
-* Extract the start and stop codons from that transcript
-** Check that the start_codon is ATG, and stop_codon is TTT 
+All the following tasks are now related to the particular gene with id `ENSG00000001626` on chromosome `7`.
+
+4. How many transcripts can this gene generate?
+
+5. What is the longest transcript in term of base pairs?
+
+   __Answer__: The transcript with id `ENST00000003084` has 6132 bp and is the longest among 11 other transcripts.
+   
+   You can have a look at its [Ensembl data](http://www.ensembl.org/Homo_sapiens/Transcript/Summary?db=core;g=ENSG00000001626;r=7:117465784-117715971;t=ENST00000003084).
+   
+   Notice that the last column in the GTF on the line defining that transcript should contain `protein_coding`.
+
+6. Fetch the DNA sequence for that gene
+
+7. Fetch all the exons for that transcript (splicing)
+
+   __Answer__: Your answer can be output to a file and compare to [the result files](results/) (also [available online](https://www.ncbi.nlm.nih.gov/nuccore/NM_000492))
+
+8. What are the position of the `start_codon` and `stop_codon` from that transcript?
+
+9. Translate to the corresponding protein.
+
+   An implementation of the [translation table](http://shawmst.org/biology/article/rna-translation-table/) is given in the [utils.rna](utils/rna.py) package.
+   
+   You can output your results in different files and check the difference with the [given results](results/) or online [here](http://www.uniprot.org/uniprot/A0A024R730.fasta) or [here](https://www.ncbi.nlm.nih.gov/nuccore/NM_000492).
+
+10. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
+
+   __Prodecure__: Start by [parsing a fasta file with BioPython](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc11).
+   
+   Have a look at [the transcription step](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc24),
+   
+   and the [translation step](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc25) using the built-in [translation tables](http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc26).
 
 
-* Translate to protein, using the given translation table.
-Table: http://shawmst.org/biology/article/rna-translation-table/
-or from BioPython
+## Extra task
 
-start_codon [117480095:117480097]
-stop_codon  [117667106:117667108]
+What if the sequence was on the reverse strand?<br>
+You need implement that as well!<br>
+So ..._no!_ Use the BioPython module, it does that job!
 
-http://www.uniprot.org/uniprot/A0A024R730.fasta
-https://www.ncbi.nlm.nih.gov/nuccore/NM_000492 (and look for CDS link)
+## Extra task (again)
 
-====================================================================
-What if the sequence was on the reverse strand?
-Gotta implement that as well!
-So ...no! Use the BioPython module, it does that job!
-
-* Use the other gene with id
+See how your code holds when using another gene
 
 
 

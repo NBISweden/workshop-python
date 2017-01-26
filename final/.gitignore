@@ -1,5 +1,4 @@
 *.gtf
 *.fa
-*.fasta
 *.log
 test.py
