@@ -5,10 +5,10 @@ title: 'About your main assignment'
 
 <blockquote class="task">
 Given a <a
-href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/org/Homo_sapiens.GRCh38.87.gtf.gz">DNA
+href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.87.gtf.gz">DNA
 file</a> and a <a
-href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/org/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz">GTF
-file</a>, your main task is to implement a python program, that
+href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz">GTF
+file</a>, your task is to implement a python program, that
 extracts the protein from a particular transcript.
 </blockquote>
 
@@ -64,7 +64,7 @@ All the following tasks are now related to the particular gene with id
 1. What are the position of the `start_codon` and `stop_codon` from that transcript?
 
    <details>
-   <summary>Check</summary>
+   <summary>Tip</summary>
    <section>
    <p>Check that the <code>start_codon</code> is <code>ATG</code>, and <code>stop_codon</code> is <code>TTT</code></p>
    </section>
@@ -83,6 +83,15 @@ All the following tasks are now related to the particular gene with id
    </details>
 
 1. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
+
+   <details>
+   <summary>Procedure</summary>
+   <section>
+   <p>Start by <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc11">parsing a fasta file with BioPython</a>.</p>
+   <p>Have a look at <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc24">the transcription step</a>,</p>
+   <p>and the <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc25">translation step</a> using the built-in <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc26">translation tables</a>.</p>
+   </section>
+   </details>
 
 
 ### Extra tasks {#extra-task}
