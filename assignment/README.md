@@ -1,6 +1,6 @@
 You are given:
-* a [DNA file](data/Homo_sapiens.GRCh38.87.gtf.gz) and
-* a [GTF file](data/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz).
+* a [Sequence file](data/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz) and
+* a [GTF file](data/Homo_sapiens.GRCh38.87.gtf.gz).
 
 Your task is to implement a python program, that
 extracts the protein from a particular transcript.
@@ -21,7 +21,7 @@ All the following tasks are now related to the particular gene with id `ENSG0000
 
 4. How many transcripts can this gene generate?
 
-5. What is the longest transcript in term of base pairs?
+5. What is the longest transcript in nucleotides?
 
    __Answer__: The transcript with id `ENST00000003084` has 6132 bp and is the longest among 11 other transcripts.
    
@@ -37,7 +37,7 @@ All the following tasks are now related to the particular gene with id `ENSG0000
 
 8. What are the position of the `start_codon` and `stop_codon` from that transcript?
 
-9. Translate to the corresponding protein.
+9. Translate into amino-acids.
 
    An implementation of the [translation table](http://shawmst.org/biology/article/rna-translation-table/) is given in the [utils.rna](utils/rna.py) package.
    
