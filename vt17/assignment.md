@@ -5,9 +5,9 @@ title: 'About your main assignment'
 
 <blockquote class="task">
 Given a <a
-href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.87.gtf.gz">DNA
+href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz">Sequence
 file</a> and a <a
-href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz">GTF
+href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.87.gtf.gz">GTF
 file</a>, your task is to implement a python program, that
 extracts the protein from a particular transcript.
 </blockquote>
@@ -17,19 +17,19 @@ questions first:
 
 1. What is the length of the given DNA sequence?
 
-1. How many genes are annotated in the GTF file?
+2. How many genes are annotated in the GTF file?
 
-1. What fraction of the chromosome is annotated as genes?
+3. What fraction of the chromosome is annotated as genes?
 
 All the following tasks are now related to the particular gene with id
 `ENSG00000001626` on chromosome `7`.
 
 {:start="4"}
-1. How many transcripts can this gene generate?
+4. How many transcripts can this gene generate?
 
    <details><summary>Answer</summary><section>11</section></details>
 
-1. What is the longest transcript in term of base pairs?
+5. What is the longest transcript in nucleotides?
 
    <details>
    <summary>Answer</summary>
@@ -40,7 +40,7 @@ All the following tasks are now related to the particular gene with id
    </section>
    </details>
 
-1. Fetch the DNA sequence for that gene
+6. Fetch the DNA sequence for that gene
 
    <details>
    <summary>Tip</summary>
@@ -52,7 +52,7 @@ All the following tasks are now related to the particular gene with id
    </section>
    </details>
 
-1. Fetch all the exons for that transcript (splicing)
+7. Fetch all the exons for that transcript (splicing)
 
    <details>
    <summary>Answer</summary>
@@ -61,7 +61,7 @@ All the following tasks are now related to the particular gene with id
    </section>
    </details>
 
-1. What are the position of the `start_codon` and `stop_codon` from that transcript?
+8. What are the position of the `start_codon` and `stop_codon` from that transcript?
 
    <details>
    <summary>Tip</summary>
@@ -70,19 +70,19 @@ All the following tasks are now related to the particular gene with id
    </section>
    </details>
 
-1. Translate to the corresponding protein.
+9. Translate into amino-acids.
 
    <details>
    <summary>Tip</summary>
    <section>
    <p>The translation table is <a href="http://shawmst.org/biology/article/rna-translation-table/">depicted here</a>, and given to you in the utils.rna package</p>
-   <p>You can output your results in different files and check the difference with the given results in the <a href="https://github.com/NBISweden/PythonCourse/tree/vt17">GitHub repository</a>) or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a>) or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>).</p>
+   <p>You can output your results in different files and check the difference with the <a href="https://github.com/NBISweden/PythonCourse/tree/vt17/assignment/results">given results</a> or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a> or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>.</p>
    <pre class="highlight"><code>diff filename-1 filename-2</code></pre>
    will output nothing when the files are identical.
    </section>
    </details>
 
-1. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
+10. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
 
    <details>
    <summary>Procedure</summary>
