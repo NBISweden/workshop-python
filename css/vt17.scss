@@ -7,7 +7,7 @@
    Author's custom styles
    ========================================================================== */
 
-html { color: #222; font-size: 1em; line-height: 1.4; height:100%; }
+html { color: #222; font-size: 1em; line-height: 1.4em; height:100%; }
 body {
     /* margin-bottom:1em; */
     min-width:1045px;
@@ -32,7 +32,7 @@ header {
     color:white;
     padding:1em 3em 0 3em;
     /* border-bottom:1px solid #2b5b84; */
-    position:relative; z-index:10;
+    /* position:relative; z-index:10; */
 
     nav {
 	display:flex; justify-content:center; align-items:center;
@@ -72,10 +72,10 @@ header {
     }
     
     > img { display:block; max-width:100%; }
-    > h1 { color: black; /* font-size: 2em; */ }
-    > h2 { color: black; /* font-size: 2em; */ }
+    > h1 { color: black; font-size: 1.5em; }
+    > h2 { color: black; font-size: 1.5em; }
     h1,h2 {
-	text-align:center; margin:0.3em 0;
+	text-align:center; margin:0.4em 0;
 	small {
 	    font-size:70%;
 	    &:before { content:'-'; margin:0 1ex; }
@@ -85,7 +85,7 @@ header {
 
 }
 
-header h2 + h1 { position:absolute; top:0; font-size:0.8em; left:50%; transform:translate(-50%,0%); color:white; }
+header h2 + h1 { font-size:0.8em; position:absolute; top:0; left:50%; transform:translate(-50%,0%); color:white; margin:0; padding:0; }
 header h2 + h1 small { font-size:100%; }
 
 /* ==========================================================================
@@ -95,7 +95,7 @@ footer {
     box-sizing: border-box;
     background-color:#2b5b84; color:white;
     background: linear-gradient(180deg, white 0%, #2b5b84 50%);
-    position:relative; z-index:10;
+    /* position:relative; z-index:10; */
     display:flex; flex-flow:row nowrap; justify-content: space-around;
     
     margin-top:auto; /* pushes the footer to the bottom */
@@ -112,8 +112,9 @@ footer {
    ========================================================================== */
 main {
     width:960px; margin:0 auto; box-sizing: border-box;
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     padding:1em;
+    position:relative; z-index:2;
 
     img { 
 	/* display:block;  */
