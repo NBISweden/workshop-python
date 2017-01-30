@@ -188,17 +188,17 @@ main {
     blockquote.task {
 	border:0; padding:1em; margin:0 auto; width:60%;
 	border-radius:1em; box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-
-	position:relative;
-	&:before {
-	    content:'Goal'; font-variant:small-caps;
-	    display:block;
-	    position: absolute; top:0; left:0;
-	    transform:translate(-30%,-20%) rotate(-30deg);
-	    transform-origin:50% 50%;
-	    background:#2b5b84; color:yellow; padding:0 1ex;
-	    border-radius:1em;
-	}
+	p b { color:black; font-weight:bold; }
+	/* p { position:relative; } */
+	/* p[data-mark]:before { */
+	/*     content:attr(data-mark); font-variant:small-caps; */
+	/*     display:block; */
+	/*     position: absolute; top:0; left:0; */
+	/*     transform:translate(-30%,-20%) rotate(-30deg); */
+	/*     transform-origin:50% 50%; */
+	/*     background:#2b5b84; color:yellow; padding:0 1ex; */
+	/*     border-radius:1em; */
+	/* } */
     }
 
     #extra-task { border-top: 2px solid #ccc; padding-top:1em; margin-top:2em; text-align:right; }
@@ -210,11 +210,12 @@ main {
 	&:hover { text-decoration: underline; }
     }
 
-    hr { display:none;
-	 /* display: block; */
-	 /* height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; */
- 	 /* height: 0.25em; border: 0; padding: 0; margin: 24px 0; background-color: #e7e7e7; */
-    }
+    blockquote hr { display: block;
+		    border: 0; padding: 0; margin:1em 0;
+ 		    height: 0.2em; border: 0; background-color: #e7e7e7;
+		    /* height: 1px; border-top: 1px solid #ccc; */
+		  }
+    > hr { display:none; }
 
     img { max-width: 100%; }
 

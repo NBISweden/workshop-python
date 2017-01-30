@@ -1,15 +1,25 @@
 ---
 menu: help
-title: 'Python Cheat Sheet'
+title: 'Python 3 - Cheat Sheet'
 ---
 
+# Types
+{:.collapse-trigger}
+
+| Type  	| Example  	| Convert to type using |
+|-----------|:---------:|:---------------------:|
+| Integer  	|  0, 1, 100 	|  int() 	|
+| Float  	|  0.0, .5, 10.453 	|  float() 	|
+| String  	|  'hello' 	| str()  	|
+
+Create your own type using `class`
 
 
 # Iterating through list elements
 {:.collapse-trigger}
 
 ```python
-for item in list:
+for item in aList:
 	print('List item: ', item)
 ```
 		
@@ -17,9 +27,22 @@ It is not necessary to iterate list items via their position.
 You _rarely_ need to do:
 
 ```python
-for i in range(len(list)):
-	print('List item: ', list[i])
+for i in range(len(aList)):
+	print('List item: ', aList[i])
 ```
+
+If you are looking for an element in a list and cannot find it, you can use the `else` clause.
+For example, we are searching for the first integer in `aList` that is bigger than 10.
+
+```python
+aList = [ 1, 4, 7, 6, 3, 4, 32, 17, 18, 10, 8]
+for item in aList:
+	if item > 10:
+		return item
+else:
+	return None
+```
+
 		
 # Iterating through a dictionary
 {:.collapse-trigger}
@@ -126,10 +149,10 @@ For example, when calling a function where arguments have default values
 
 ```python
 def functionName(arg1=None):
-
+	
 	if arg1:
 		print('arg1 was None')
-		
+	
 	# Body of the function
 ```
 	  
@@ -141,9 +164,8 @@ try:
 	#
 	# Do something
 	#
-	
 except ErrorName:
 	print("An error of type ErrorName occured")
-	
+
 print('Continue after the error')
 ```

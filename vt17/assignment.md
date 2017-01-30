@@ -4,12 +4,36 @@ title: 'About your main assignment'
 ---
 
 <blockquote class="task">
-Given a <a
-href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz">Sequence
-file</a> and a <a
-href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/data/Homo_sapiens.GRCh38.87.gtf.gz">GTF
-file</a>, your task is to implement a python program, that
-extracts the protein from a particular transcript.
+
+<p data-mark="Background"><b>Background</b>: With the emergence of
+cheap full genome sequence technologies, there has been vast
+improvements in our ability to detect genetic diseases prior to the
+onset of the disease. Sometimes, there are known causative mutations
+that can be the targets of genetic screens for the disease. This is
+the case for Cystic fibrosis, a complex disease that leads to problems
+with lung function, diabetes and causes infertility, among other
+symptoms.</p>
+
+<p> A set of mutations have been associated with this disease, on a
+particular gene named the CFTR gene (short for Cystic Fibrosis
+Transmembrane Conductance Regulator). This gene encodes an ion channel
+protein acting in epithelial cells. Both amino-acid altering mutations
+and premature stop-codons have been identified to cause the disease.
+</p>
+
+<hr/>
+
+<p data-mark="Goal"><b>Goal</b>: In this assignment, you have access
+to the human reference genome as well as the genome annotation. In
+addition, you have full genome sequence data from five individuals
+from a family at risk of carrying mutations related to the
+disease.</p>
+
+<p> Your task is to write a Python program that will extract the CFTR
+gene, translate the gene sequence to its corresponding amino-acid
+sequence and based on the inferred amino-acid sequence determine wether
+any of the 5 individuals is affected.</p> 
+
 </blockquote>
 
 The main task is divided in several steps. Answer the following
@@ -66,7 +90,8 @@ All the following tasks are now related to the particular gene with id
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Check that the <code>start_codon</code> is <code>ATG</code>, and <code>stop_codon</code> is <code>TTT</code></p>
+   <p>Check that the <code>start_codon</code> is <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon</p>
+   <p>Make your program throw a warning in case the transcript you are currently translating does not begin with a start-codon and end with a stop-codon</p>
    </section>
    </details>
 
