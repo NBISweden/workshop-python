@@ -111,7 +111,10 @@ footer {
    ========================================================================== */
 @keyframes rotate {
     0%   { transform: rotate(0deg); }
-    100%   { transform: rotate(90deg); }
+    /* 25%   { transform: rotate(90deg); } */
+    /* 50%   { transform: rotate(180deg); } */
+    /* 75%   { transform: rotate(270deg); } */
+    100%   { transform: rotate(360deg); }
 }
 
 main {
@@ -257,17 +260,17 @@ main {
 	background-color:#2b5b84; color:white; 
 	background: linear-gradient(270deg, white 0%, #2b5b84 50%);
 
-	&:before {content:"\00BB"; display:inline; margin-right:1ex; }
+	&:before {content:"\00BB"; display:inline-block; margin-right:1ex; padding:0; vertical-align:middle; line-height:1; }
 	&.collapse-trigger { cursor: pointer; }
 
 
 	&.collapse-trigger + section { display: none; }
 	&.collapse-trigger.open + section { display: block; }
 
-	&.collapse-trigger:before { content:"\25B6"; font-size:50%; vertical-align:middle; display:inline-block; transform-origin:50% 50%;}
-	&.collapse-trigger.open:before { content:"\25BC"; }
+	&.collapse-trigger:before { content:"\25B6"; font-size:50%; width:1em; height:1em; text-align:center; transform-origin:33% 50%; /* barycenter */ }
+	&.collapse-trigger.open:before { content:"\25BC"; transform-origin:50% 33%; }
 
-	&.collapse-trigger:hover:before { animation: rotate .15s infinite; }
+	&.collapse-trigger:hover:before { animation: rotate 1.5s infinite; animation-timing-function: linear;  }
 
 
 
