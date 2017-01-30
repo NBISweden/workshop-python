@@ -1,6 +1,6 @@
 ---
-title: 'Before the first lecture...'
 menu: preliminary
+title: 'Before the first lecture...'
 ---
 
 We require you to have a laptop (with Linux, or Mac) for the practical
@@ -64,11 +64,12 @@ the
 [Python 3.5.0 sources](//www.python.org/ftp/python/3.5.0/Python-3.5.0.tgz). You
 are surely familiar with the classic cycle:
 
-	./configure
-	make
-	make test
-	sudo make install
-
+```bash
+./configure
+make
+make test
+sudo make install
+```
 
 ----
 
@@ -77,11 +78,15 @@ are surely familiar with the classic cycle:
 Start your favorite terminal and check the Python version. Type at the
 prompt (ie where the `$` sign is):
 
-	$ python --version
+```bash
+$ python --version
+```
 
 or start the python interpretor
 
-	$ python
+```bash
+$ python
+```
 
 [//]: # (Upon successful installation, you should see something like)
 
@@ -95,7 +100,9 @@ this
 the NBIS GitHub location for this instance of the course), and in your
 terminal, run
 
-	$ python test.py
+```bash
+$ python test.py
+```
 
 ...in the folder where the script resides. If this works fine, you
 should see the current time printed with "big digits" ;)
@@ -104,7 +111,9 @@ should see the current time printed with "big digits" ;)
 
 Alternatively, copy-paste that line at the prompt
 
-	curl -s https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/test.py | python
+```bash
+curl -s https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/test.py | python
+```
 
 ----
 

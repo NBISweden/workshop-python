@@ -82,8 +82,8 @@ All the following tasks are now related to the particular gene with id
    </section>
    </details>
 
-10. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
-
+1. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
+   
    <details>
    <summary>Procedure</summary>
    <section>

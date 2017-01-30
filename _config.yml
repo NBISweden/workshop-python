@@ -32,8 +32,7 @@ sass:
   sass_dir: css
   style:    compressed # nested|expanded|compact|compressed
 
-# pygments: true
-# highlighter: rouge
+highlighter: rouge
 
   
 # enable vendor prefixes
@@ -49,7 +48,7 @@ lsi: false
 
 kramdown:
   input: GFM
-#   syntax_highlighter: rouge
-#   syntax_highlighter_opts:
-#     css_class: 'codehilite'
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'codehilite'
 
