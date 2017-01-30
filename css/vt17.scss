@@ -31,7 +31,6 @@ header {
     background: linear-gradient(0deg, white 30%, #2b5b84 40%);
     color:white;
     padding:1em 3em 0 3em;
-    /* border-bottom:1px solid #2b5b84; */
     /* position:relative; z-index:10; */
 
     nav {
@@ -110,6 +109,11 @@ footer {
 /* ==========================================================================
    MAIN BLOCK
    ========================================================================== */
+@keyframes rotate {
+    0%   { transform: rotate(0deg); }
+    100%   { transform: rotate(90deg); }
+}
+
 main {
     width:960px; margin:0 auto; box-sizing: border-box;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
@@ -263,13 +267,7 @@ main {
 	&.collapse-trigger:before { content:"\25B6"; font-size:50%; vertical-align:middle; display:inline-block; transform-origin:50% 50%;}
 	&.collapse-trigger.open:before { content:"\25BC"; }
 
-	@keyframes rotate {
-	    0%   { transform: rotate(0deg); }
-	    100%   { transform: rotate(90deg); }
-	}
-	&.collapse-trigger:hover:before {
-	    animation:         rotate .15s infinite; /* IE 10+, Fx 29+ */
-	}
+	&.collapse-trigger:hover:before { animation: rotate .15s infinite; }
 
 
 
@@ -390,8 +388,9 @@ body main nav {
     body {
 	margin:0; padding:0;
 	min-width:auto;
+	display:block; /* cancel flex and sticky footer */
     }
-    main,header,footer { width:auto; border-radius:0; }
+    main,header,footer { width:auto; }
     header {
 	display:flex;
 	flex-direction:column;
