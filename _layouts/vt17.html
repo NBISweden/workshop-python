@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
         <link rel="stylesheet" href="{{ site.url }}/css/vt17.css">
 	<link rel="stylesheet" href="{{ site.url }}/css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{{ site.url }}/css/pygments/style.css">
+
         <script src="{{ site.url }}/js/modernizr-2.8.3.min.js"></script>
 	<!-- html5 shim and respond.js ie8 support of html5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -35,9 +38,6 @@
 	      <img src="{{ site.url }}/img/scilifelab.png" alt="SciLifeLab courses" />
 	    </a>
 	    <a href="{{ site.url }}/vt17/"><i class="fa fa-fw fa-home"></i></a>
-	    <a {% if page.menu == 'preliminary' %}class="active"{% endif %} href="{{ site.url }}/vt17/preliminary">
-	      <i class="fa fa-fw fa-hourglass-start"></i></i>Preliminaries
-	    </a>
 	    <a {% if page.menu == 'topics' %}class="active"{% endif %} href="{{ site.url }}/vt17/topics">
 	      <i class="fa fa-fw fa-tasks"></i>
 	      <!-- <i class="fa fa-fw fa-bars"> -->
@@ -47,6 +47,9 @@
 	      <i class="fa fa-briefcase"></i>
 	      <!-- <i class="fa fa-code-fork"></i> -->
 	      Project
+	    </a>
+	    <a {% if page.menu == 'preliminary' %}class="active"{% endif %} href="{{ site.url }}/vt17/preliminary">
+	      <i class="fa fa-fw fa-hourglass-start"></i></i>Preliminaries
 	    </a>
 	    <a {% if page.menu == 'help' %}class="active"{% endif %} href="{{ site.url }}/vt17/help">
 	      <!-- <i class="fa fa-fw fa-medkit"></i> -->
@@ -66,14 +69,9 @@
 	</main>
 
 	<footer>
-	  <span>
-	    Main Teacher: <a href="http://nbis.se/about/staff/frederic-haziza/">Frédéric Haziza</a>
-	  </span>
-	  <span>
-	    <a href="https://www.nbis.se">NBIS</a> &copy; 2017
-	  </span>
+	  <span>Main Teacher: <a href="http://nbis.se/about/staff/frederic-haziza/">Frédéric Haziza</a></span>
+	  <span><a href="https://www.nbis.se">NBIS</a> &copy; 2017</span>
 	</footer>
-	  
         
 	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ site.url }}/js/jquery-1.12.0.min.js"><\/script>')</script>
