@@ -97,21 +97,28 @@ def find_center():
     print(' Lng centroid: ', sum( entry.longitude for entry in all ) / len(all) )
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-db',dest='db',     action='store', help='SQLite Database to read', default='uppsala.sqlite' )
-    parser.add_argument('-l', dest='lat',    action='store', help='Latitude', required=False, type=float, default=default_lat )
-    parser.add_argument('-L', dest='lng',    action='store', help='Latitude', required=False, type=float, default=default_lng )
-    parser.add_argument('-z', dest='zoom',   action='store', help='Initial Zoom', type=int, default=14)
-    parser.add_argument('-r', dest='radius', action='store', help='Distance from the center point, in m', type=float, default=default_radius )
-    parser.add_argument('-q', dest='query',  action='store', help='Query [Eg: \'location = "Uppsala"\' ]', default='' )
-    parser.add_argument('-o', dest='output', action='store', help='Output file [Defaults to %(default)]', default='map.html' )
+    parser = argparse.ArgumentParser(
+        formatter_class=argparse.RawTextHelpFormatter,
+        epilog=('''
+\n
+For example:
+  %(prog)s -r 2000 \ 
+          -q 'rooms > 1 and rooms < 3 and area > 58 and rent < 3000' \ 
+          -l 59.865795990339876 -L 17.64583576202392 \ 
+          -o me.html 
+\n
+'''))
+    # parser = argparse.ArgumentParser()
+    #parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
+
+    parser.add_argument('-db',dest='db',     action='store', help='SQLite Database to read',                           default='uppsala.sqlite' )
+    parser.add_argument('-l', dest='lat',    action='store', help='Latitude',                              type=float, default=default_lat      )
+    parser.add_argument('-L', dest='lng',    action='store', help='Longitude',                             type=float, default=default_lng      )
+    parser.add_argument('-z', dest='zoom',   action='store', help='Initial Zoom',                          type=int,   default=14               )
+    parser.add_argument('-r', dest='radius', action='store', help='Distance from the center point, in m',  type=float, default=default_radius   )
+    parser.add_argument('-q', dest='query',  action='store', help='Query [Eg: \'location = "Uppsala"\' ]',             default=''               )
+    parser.add_argument('-o', dest='output', action='store', help='Output file [Default: %(default)s]',                default='map.html'       )
 
     args = parser.parse_args()
     work(args)
 
-# Example: python main.py -r 2000 -q 'rooms > 4.5' -l 59.85 -L 17.63
-
-
-
-
-# python main.py -r 2000 -q 'rooms > 1 and rooms < 3 and area > 58 and rent < 3000' -l 59.865795990339876 -L 17.64583576202392 -o me.html
