@@ -55,66 +55,12 @@ def work(args):
     db.disconnect()
 
     with open(args.output,'w',encoding='utf-8') as f:
-        f.write('''<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Uppsala Homes</title>
-    <style>
-      #map {{ height: 100%; }}
-      /* Optional: Makes the sample page fill the window. */
-      html, body {{
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }}
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <script>
-
-      function initMap() {{
-
-      //var centerIcon = {{ path: google.maps.SymbolPath.CIRCLE, strokeColor: "black", fillColor: "red", scale: 3 }}
-      var centerIcon = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-      var greenMakerIcon = "https://mt.googleapis.com/vt/icon/name=icons/onion/61-green-dot.png"
-"http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
-      var circleIcon = {{
-        path: google.maps.SymbolPath.CIRCLE,
-        strokeColor: "red",
-        scale: 2
-      }}
-      // var circleIcon = "https://storage.googleapis.com/support-kms-prod/SNP_2752129_en_v0"
-      var map = new google.maps.Map(document.getElementById("map"),{{
-  zoom: {0},
-  center: {{lat: {1}, lng: {2} }}
-}});
-var centerWindow = new google.maps.InfoWindow();
-var center = new google.maps.Marker({{
-  position: {{ lat: {1}, lng: {2} }},
-  map: map,
-  title: "center",
-  draggable:true,
-  icon: centerIcon 
-}})
-center.addListener('click',function(){{
-var p = center.getPosition();
-centerWindow.setContent('Lat: '+p.lat()+' <br/> Lng: '+p.lng());
-centerWindow.open(map,center);
-}});
-
-
-
-var radius = new google.maps.Circle({{
-  map: map,
-  radius: {3},    // in meters
-  fillColor: '#f8cef9'
-  //strokeWeight:'2px'
-  //fillOpacity: 0.5
-}});
-radius.bindTo('center', center, 'position');
+        f.write( open('utils/start.html','r',encoding='utf-8').read())
+        f.write('''
+map.setCenter({{lat: {1}, lng: {2} }});
+center.setPosition({{lat: {1}, lng: {2} }});
+radius.setRadius({3});
+map.setZoom({0});
 '''.format(args.zoom, args.lat, args.lng, args.radius))
 
         selected = []
@@ -132,15 +78,7 @@ radius.bindTo('center', center, 'position');
             f.write(marker(entry, cheapest = cheapest is entry))
             f.write('\n')
 
-        f.write('''
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC21XWgUbILZro3IfijyFTMwV3DUsLONGg&callback=initMap">
-    </script>
-  </body>
-</html>
-''')
+        f.write(open('utils/end.html','r',encoding='utf-8').read())
 
 
 def find_center():
