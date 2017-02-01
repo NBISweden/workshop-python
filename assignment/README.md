@@ -5,7 +5,7 @@ You are given:
 Your task is to implement a python program, that
 extracts the protein from a particular transcript.
 
-The task is divided in several steps. The GTF format uses particular [fields](data/gtf-format).
+The task is divided in several steps. The GTF format uses particular [fields](data/gtf-format.md).
 
 ## Warm up
 
