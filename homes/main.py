@@ -96,6 +96,7 @@ def find_center():
     print(' Lat centroid: ', sum( entry.latitude for entry in all ) / len(all) )
     print(' Lng centroid: ', sum( entry.longitude for entry in all ) / len(all) )
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter,

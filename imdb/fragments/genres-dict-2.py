@@ -12,15 +12,13 @@ with open(dbfile,'r',encoding="utf-8") as db:
     for line in db:
         blocks = line.split('|')
         for genre in blocks[5].split(','):
-            entry = genres.get(genre)
-            if entry is None:
-                genres[genre] = 1
-            else:
-                genres[genre]= entry + 1
+            key = genre[:6].upper()
+            entry = genres.get(key,0)
+            genres[key]= entry + 1
 
 
 print('I found %d genres' % (len(genres)))
-print('Those ones:\n', genres)
+print('Those ones:\n', sorted(genres))
             
 print('Sum Keys: ', len(genres.keys()))
 print('Sum Values: ', sum(genres.values()))
