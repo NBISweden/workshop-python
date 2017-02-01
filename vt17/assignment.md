@@ -5,21 +5,26 @@ title: 'About your main assignment'
 
 <blockquote class="task">
 
-<p data-mark="Background"><b>Background</b>: With the emergence of
-cheap full genome sequence technologies, there has been vast
-improvements in our ability to detect genetic diseases prior to the
-onset of the disease. Sometimes, there are known causative mutations
-that can be the targets of genetic screens for the disease. This is
-the case for Cystic fibrosis, a complex disease that leads to problems
-with lung function, diabetes and causes infertility, among other
-symptoms.</p>
+<p data-mark="Background"><b>Background</b>: For many diseases with
+known causative mutations, screening methods have been developed to
+detect whether people have a high risk of becoming sick, even before
+the onset of the actual disease.</p>
 
-<p> A set of mutations have been associated with this disease, on a
-particular gene named the CFTR gene (short for Cystic Fibrosis
-Transmembrane Conductance Regulator). This gene encodes an ion channel
-protein acting in epithelial cells. Both amino-acid altering mutations
-and premature stop-codons have been identified to cause the disease.
-</p>
+<p> Over the last few years, the cost of full genome sequencing has
+gone down so that, in some cases, it might be cheaper to collect the
+complete genome sequence of patients with a high risk of carrying
+variants associated with the disease, rather than using targeted
+screening procedures.</p>
+
+<p> Cystic fibrosis is a complex disease, where patients often
+manifest the following symptoms: problems with lung functions,
+diabetes and infertility. From a genetic point of view, there are
+several mutations associated with this disease. In particular, the
+CFTR gene (short for Cystic Fibrosis Transmembrane Conductance
+Regulator) encodes an ion channel protein acting in epithelial cells,
+and carries several non-synonymous genetic variants, with alterations
+leading to premature stop codons, that are known to cause the
+disease.</p>
 
 <hr/>
 
@@ -31,24 +36,55 @@ disease.</p>
 
 <p> Your task is to write a Python program that will extract the CFTR
 gene, translate the gene sequence to its corresponding amino-acid
-sequence and based on the inferred amino-acid sequence determine wether
-any of the 5 individuals is affected.</p> 
+sequence and based on the inferred amino-acid sequence determine
+whether any of the five given individuals is affected.</p>
 
 </blockquote>
 
-The main task is divided in several steps. Answer the following
-questions first:
+# Fetch the appropriate files
 
-1. What is the length of the given DNA sequence?
+The main task is divided in several steps. The first step is to fetch
+the sequence file (in `fasta` format) and the appropriate annotation
+file (in `GTF` format) from
+the [Ensembl database](http://www.ensembl.org/).
+
+The CTFR gene is chromosome `7`.
+
+# Easy warmup
+
+1. What is the length of the chosen DNA sequence?
+
+   <details>
+   <summary>Tip</summary>
+   <section>
+   <p>Open the DNA file with the <code>with</code> statement and read it line by line.</p>
+   <p>Ignore the first line and, in a loop, get the length of each line (from which you remove the trailing newline character).</p>
+   <p>Sum up all the lengths you found.</p>
+   </section>
+   </details>
+
 
 2. How many genes are annotated in the GTF file?
 
+   <details>
+   <summary>Note</summary>
+   <section>
+   <p>You need to understand the structure of a GTF-formatted file.</p>
+   <p>The GTF format uses several tab-delimited fields, for which we give you a <a href="https://github.com/NBISweden/PythonCourse/blob/vt17/assignment/data/gtf-format.md">short a description</a>.</p>
+   <p>Alternatively, you can <a href="https://en.wikipedia.org/wiki/Gene_transfer_format">search online</a>.</p>
+   </section>
+   </details>
+
 3. What fraction of the chromosome is annotated as genes?
 
-All the following tasks are now related to the particular gene with id
-`ENSG00000001626` on chromosome `7`.
+# Architect a method
 
-{:start="4"}
+All the following tasks are now related to the CTFR gene.
+
+In the annotation file (from the Ensembl database), that gene has the
+id `ENSG00000001626` on chromosome `7`.
+
+
 4. How many transcripts can this gene generate?
 
    <details><summary>Answer</summary><section>11</section></details>
@@ -69,8 +105,9 @@ All the following tasks are now related to the particular gene with id
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Open the DNA file with the <code>with</code> statement and read it line by line.</p>
+   <p>Similarly to step 1 from the Warmup, open the file with the `with` statement.</p>
    <p>Ignore the first line and, in a loop, append each line to a list.</p>
+   <p>Remember to strip the trailing newline character.</p>
    <p>Outside the loop, use the <code>join</code> function to concatenate the lines from the list.</p>
    <p><b>Avoid concatenation</b> <i>inside</i> the loop, as it is slow and wasting memory</p>
    </section>
@@ -81,7 +118,7 @@ All the following tasks are now related to the particular gene with id
    <details>
    <summary>Answer</summary>
    <section>
-   <p>Your answer can be output to a file and compare to <a href="">that given file</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
+   <p>Your answer can be output to a file and compare to <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/results/mrna.ncbi.fasta">that given result</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
    </section>
    </details>
 
@@ -91,7 +128,7 @@ All the following tasks are now related to the particular gene with id
    <summary>Tip</summary>
    <section>
    <p>Check that the <code>start_codon</code> is <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon</p>
-   <p>Make your program throw a warning in case the transcript you are currently translating does not begin with a start-codon and end with a stop-codon</p>
+   <p>Make your program throws a warning in case the transcript you are currently translating does not begin with a start-codon and end with a stop-codon</p>
    </section>
    </details>
 
@@ -100,8 +137,8 @@ All the following tasks are now related to the particular gene with id
    <details>
    <summary>Tip</summary>
    <section>
-   <p>The translation table is <a href="http://shawmst.org/biology/article/rna-translation-table/">depicted here</a>, and given to you in the utils.rna package</p>
-   <p>You can output your results in different files and check the difference with the <a href="https://github.com/NBISweden/PythonCourse/tree/vt17/assignment/results">given results</a> or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a> or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>.</p>
+   <p>You are given an implementation of the <a href="http://shawmst.org/biology/article/rna-translation-table/">translation table</a> the <a href="https://github.com/NBISweden/PythonCourse/tree/vt17/assignment"><code>utils.rna</code> package</a></p>
+   <p>You can output your results in different files and check the difference with the <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/results/protein.ncbi.fasta">given result</a> or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a> or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>.</p>
    <pre class="highlight"><code>diff filename-1 filename-2</code></pre>
    will output nothing when the files are identical.
    </section>
@@ -118,8 +155,21 @@ All the following tasks are now related to the particular gene with id
    </section>
    </details>
 
+<hr />
 
-### Extra tasks {#extra-task}
+# Find the patients at risk
+
+We are reaching the goal for this assignment!
+
+Using the python program you have designed above, find which one of
+the following 5 patients
+([patient-1](), [patient-2](), [patient-3](), [patient-4](),
+and [patient-5]()) carries a mutation on the CFTR gene, that can cause
+cystic fibrosis.
+
+Note: There might be several.
+
+# Extra tasks {#extra-task}
 
 What if the sequence was on the reverse strand?<br>
 You need implement that as well!<br>

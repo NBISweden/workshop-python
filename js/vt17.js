@@ -6,8 +6,8 @@
 
     $('main h1.collapse-trigger').each(function() {
     	var handle = $(this);
+	handle.nextUntil('h1').wrapAll('<section></section>'); // early
     	collapsable.push(handle);
-    	var group = handle.nextUntil('h1').wrapAll('<section></section>').end().next();
     	var id = handle.attr('id');
     	if( (id != undefined && id == hash) ){ handle.addClass('open'); }
     	handle.on('click',function(){ handle.toggleClass('open'); return false; });
@@ -24,7 +24,6 @@
 	
     }
 
-
     // Make indentation visible
     $('main .language-python pre.codehilite code').each(function() {
 	var o = $(this);
@@ -32,5 +31,7 @@
 	var n = t.replace(/\t/g, "<span class='indent'>\t</span>")
 	o.html(n);
     });
+
+
 
 })()

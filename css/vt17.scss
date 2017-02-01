@@ -168,20 +168,23 @@ main {
     }
 
     details {
-	position:relative;
-	font-size:0.8em;
-	margin-top:0.5ex;
-	summary { outline:0; cursor:pointer; }
+    	position:relative;
+    	font-size:0.8em;
+    	margin-top:0.5ex;
+    	summary { outline:0; cursor:pointer; }
 
-	&[open] { 
-	    summary {
-		position: absolute; top:0; left:0;
-		transform:translate(-150%,-20%) rotate(-90deg);
+    	&[open] {
+    	    summary {
+    		/* position: absolute; top:0; right:calc(100% + 1em); */
+    		/* transform: translate(0%,0%) rotate(-90deg); */
+    		/* transform-origin:100% 0%; */
+		position: absolute; top:0; left:-2.5em;
+		transform:translate(-100%,0%) rotate(-90deg);
 		transform-origin:100% 0%;
 		border-bottom:1px solid #ccc;
-	    }
-	    section { text-indent:1ex; min-height:5em; }
-	}
+    	    }
+    	    section { min-height:5em; /* border-left:1px solid #ccc; */ }
+    	}
 
     }
 
@@ -201,7 +204,9 @@ main {
 	/* } */
     }
 
-    #extra-task { border-top: 2px solid #ccc; padding-top:1em; margin-top:2em; text-align:right; }
+    /* #extra-task { border-top: 2px solid #ccc; padding-top:1em; margin-top:2em; text-align:right; } */
+    #extra-task { text-align:right; color: black; padding-right:1ex; }
+    #extra-task:before { content:''; display:none; }
     #extra-task ~ p { text-align:right; }
 
     a {
@@ -226,10 +231,10 @@ main {
 	li {
 	    margin-bottom:1em;
 	    > p {
-		margin:0; padding-left:1em;
-		background-color:#2b5b84; color:white; 
-		background: linear-gradient(90deg, #2b5b84 60%, white 100%);
-		a { color: yellow; }
+		margin:0; /* padding-left:1em; */
+		/* background-color:#2b5b84; color:white;  */
+		/* background: linear-gradient(90deg, #2b5b84 60%, white 100%); */
+		/* a { color: yellow; } */
 	    }
 	}
     }
@@ -330,7 +335,6 @@ main {
 
 
 }
-
 
 /* Sub navigation */
 body main nav {
