@@ -41,7 +41,7 @@ whether any of the five given individuals is affected.</p>
 
 </blockquote>
 
-# Fetch the appropriate files
+# Fetch the appropriate files {#fetch-files}
 
 The main task is divided in several steps. The first step is to fetch
 the sequence file (in `fasta` format) and the appropriate annotation
@@ -50,7 +50,7 @@ the [Ensembl database](http://www.ensembl.org/).
 
 The CTFR gene is chromosome `7`.
 
-# Easy warmup
+# Easy warmup {#warmup}
 
 1. What is the length of the chosen DNA sequence?
 
@@ -77,7 +77,7 @@ The CTFR gene is chromosome `7`.
 
 3. What fraction of the chromosome is annotated as genes?
 
-# Architect a method
+# Architect a method {#method}
 
 All the following tasks are now related to the CTFR gene.
 
@@ -157,7 +157,7 @@ id `ENSG00000001626` on chromosome `7`.
 
 <hr />
 
-# Find the patients at risk
+# Find the patients at risk {#main-task}
 
 We are reaching the goal for this assignment!
 

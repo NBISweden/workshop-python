@@ -1,5 +1,17 @@
 (function(){ // scoping
 
+    // Adding the #link
+    $("main > h1, main > h2").each(function(i, el) {
+	var el = $(el);
+	var id = el.attr('id');
+	//var link = '<i class="fa fa-link"></i>';
+	var link = '¶';
+	if (id) {
+	    return el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(link));
+	}
+    });
+
+
     var hash = window.location.hash.slice(1)
 
     var collapsable = []
@@ -10,7 +22,7 @@
     	collapsable.push(handle);
     	var id = handle.attr('id');
     	if( (id != undefined && id == hash) ){ handle.addClass('open'); }
-    	handle.on('click',function(){ handle.toggleClass('open'); return false; });
+    	handle.on('click',function(){ handle.toggleClass('open'); return false; }); // Don't propagate (to header-links). People can right-click
     });
 
 
@@ -31,7 +43,5 @@
 	var n = t.replace(/\t/g, "<span class='indent'>\t</span>")
 	o.html(n);
     });
-
-
 
 })()

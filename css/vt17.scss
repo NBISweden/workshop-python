@@ -266,7 +266,7 @@ main {
 	background-color:#2b5b84; color:white; 
 	background: linear-gradient(270deg, white 0%, #2b5b84 50%);
 
-	&:before {content:"\00BB"; display:inline-block; margin-right:1ex; padding:0; vertical-align:middle; line-height:1; }
+	&:before {content:"\00BB"; display:inline-block; margin-right:1ex; padding:0; line-height:1; /* vertical-align:middle; */ }
 	&.collapse-trigger { cursor: pointer; }
 
 
@@ -278,6 +278,9 @@ main {
 
 	&.collapse-trigger:hover:before { animation: rotate 1.5s infinite; animation-timing-function: linear;  }
 
+	a.header-link { margin-left: 1em; font-size:50%; padding:0.25em; display:inline-block; color:black; visibility:hidden; position:relative; top:-0.25em; }
+	a.header-link:hover { background:#ccc; } 
+	&:hover a.header-link {visibility:visible;} 
 
 
     }
