@@ -163,9 +163,13 @@ We are reaching the goal for this assignment!
 
 Using the python program you have designed above, find which one of
 the following 5 patients
-([patient-1](), [patient-2](), [patient-3](), [patient-4](),
-and [patient-5]()) carries a mutation on the CFTR gene, that can cause
-cystic fibrosis.
+([patient-1](https://github.com/NBISweden/PythonCourse/raw/vt17/assignment/data/Patient1.fa.gz),
+[patient-2](https://github.com/NBISweden/PythonCourse/raw/vt17/assignment/data/Patient2.fa.gz),
+[patient-3](https://github.com/NBISweden/PythonCourse/raw/vt17/assignment/data/Patient3.fa.gz),
+[patient-4](https://github.com/NBISweden/PythonCourse/raw/vt17/assignment/data/Patient4.fa.gz),
+and
+[patient-5](https://github.com/NBISweden/PythonCourse/raw/vt17/assignment/data/Patient5.fa.gz))
+carries a mutation on the CFTR gene, that can cause cystic fibrosis.
 
 Note: There might be several.
 
