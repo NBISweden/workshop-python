@@ -77,9 +77,10 @@ for k,v in dictionary.items():
 {:.collapse-trigger}
 
 ```python
-with open("filename","r") as f:
+with open("filename","r") as f: # Add encoding='...' if necessary
 	for line in f:
-		print('Line: ', line)
+		print('Line: ', line.rstrip()) # Removing the trailing newline character
+		# print('Line: ', line, end='') # Or that works too
 ```
 
 The `with` statement takes care of closing the file in case an error occurs in the `for` loop.
@@ -88,13 +89,24 @@ The `with` statement takes care of closing the file in case an error occurs in t
 {:.collapse-trigger}
 
 ```python
-def functionName(arg1, arg2, arg3=None, arg4='', arg5=0):
+def functionName(arg1, arg2, arg3=None, arg4='test.log', arg5=32):
 	# body of the function
 ```
 
-`arg1` and `arg2` are positioned arguments, required when calling the function.
+`arg1` and `arg2` are positional arguments, required when calling the function.
 
-`arg3`, `arg4`, `arg5` are named arguments with a default value (respectively `None`, the empty string, and the interger `0`)
+`arg3`, `arg4`, `arg5` are keyword arguments with a default value (respectively `None`, the string `test.log`, and the interger `32`)
+
+Positional arguments are always first, and in order.
+Keyword arguments are last, can be omitted and/or given in any desired order.
+
+You can _call_ the above function with, for example, `functionName(12,3.14,arg5=10,arg4='Blabla.tex')`.
+In the body, at runtime,
+* `arg1` will have the value `12` (an `int`),
+* `arg2` will have the value `3.14` (a `float`),
+* `arg3` will have the value `None` (a class of type `NoneType`),
+* `arg4` will have the value `'Blabla.txt'` (a `str`), and
+* `arg5` will have the value `10` (an `int`).
 
 # Importing a function from a module
 {:.collapse-trigger}
