@@ -101,7 +101,9 @@ Positional arguments are always first, and in order.
 Keyword arguments are last, can be omitted and/or given in any desired order.
 
 You can _call_ the above function with, for example, `functionName(12,3.14,arg5=10,arg4='Blabla.tex')`.
+
 In the body, at runtime,
+
 * `arg1` will have the value `12` (an `int`),
 * `arg2` will have the value `3.14` (a `float`),
 * `arg3` will have the value `None` (a class of type `NoneType`),
