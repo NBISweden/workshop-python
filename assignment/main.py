@@ -271,10 +271,10 @@ def dna_length(filename="Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa"):
     with open(filename, mode="rt") as fasta:
         return sum( 
             # Generator expression
-            (len(line.strip(' \n')) for line in fasta if not line.startswith('>')),
+            (len(line.strip()) for line in fasta if not line.startswith('>')),
             0 # start value
         )
-    return -1 # if problem opening file
+    # let it raise an error in case of problem opening file
 
 @time_me
 @print_args
@@ -292,7 +292,7 @@ def genes_count(filename="Homo_sapiens.GRCh38.87.gtf",chromosome='7',gene='ENSG0
             ): 
                 counter+=1
         return counter
-    return -1 # if problem opening file
+    # let it raise an error in case of problem opening file
 
 if __name__ == "__main__":
     import argparse
