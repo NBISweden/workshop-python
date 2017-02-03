@@ -8,7 +8,7 @@ import logging
 
 logger = logging.getLogger() # root logger
 
-_debug = True if logger.getEffectiveLevel() <= logging.DEBUG else False
+_debug = logger.getEffectiveLevel() <= logging.DEBUG
 
 def time_me(func):
     @wraps(func)
