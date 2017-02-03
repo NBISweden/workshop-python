@@ -2,29 +2,12 @@
 # -*- coding: utf-8 -*-
 
 from utils.db import HomeDB, HomeEntry
+from utils.db import haversine as get_distance
 import argparse
-from math import radians, cos, sin, asin, sqrt
 
 default_lat=59.83732598851705
 default_lng=17.64549846959149 
 default_radius=5000 # in m
-
-def haversine(lat1, lon1, lat2, lon2):
-    """
-    Calculate the great circle distance (in m) between two points 
-    on the earth (specified in decimal degrees)
-    """
-    # convert decimal degrees to radians 
-    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-
-    # haversine formula 
-    dlon = lon2 - lon1 
-    dlat = lat2 - lat1 
-    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-    c = 2 * asin(sqrt(a)) 
-    r = 6371 # Radius of earth in kilometers. Use 3956 for miles
-    return c * r * 1000 # in m
-
 
 def marker(entry, cheapest=False):
     """
@@ -66,7 +49,7 @@ map.setZoom({0});
         selected = []
         cheapest = None
         for entry in all:
-            d = haversine(entry.latitude, entry.longitude, args.lat, args.lng)
+            d = get_distance(entry.latitude, entry.longitude, args.lat, args.lng)
             #print('{} {:>20} {} < {}'.format('+' if d < args.radius else '-', entry.id, d, args.radius))
             if d < args.radius:
                 if not (cheapest and entry.price >= cheapest.price):
