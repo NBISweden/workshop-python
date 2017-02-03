@@ -104,11 +104,11 @@ You can _call_ the above function with, for example, `functionName(12,3.14,arg5=
 
 In the body, at runtime,
 
-* `arg1` will have the value `12` (an `int`),
-* `arg2` will have the value `3.14` (a `float`),
-* `arg3` will have the value `None` (a class of type `NoneType`),
-* `arg4` will have the value `'Blabla.txt'` (a `str`), and
-* `arg5` will have the value `10` (an `int`).
+* `arg1` will have the value `12` (of type `int`),
+* `arg2` will have the value `3.14` (of type `float`),
+* `arg3` will have the value `None` (of type `NoneType`),
+* `arg4` will have the value `'Blabla.txt'` (of type `str`), and
+* `arg5` will have the value `10` (of type `int`).
 
 # Importing a function from a module
 {:.collapse-trigger}

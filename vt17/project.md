@@ -50,7 +50,7 @@ the [Ensembl database](http://www.ensembl.org/).
 
 The CTFR gene is chromosome `7`.
 
-# Easy warmup {#warmup}
+# Warmup {#warmup}
 
 1. What is the length of the chosen DNA sequence?
 
