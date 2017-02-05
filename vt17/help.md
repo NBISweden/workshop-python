@@ -3,14 +3,29 @@ menu: help
 title: 'Python 3 - Cheat Sheet'
 ---
 
+**Quick links from the [Standard Library](https://docs.python.org/3.5/library/index.html)**
+
+* [Operations on Booleans](https://docs.python.org/3.5/library/stdtypes.html#boolean-operations-and-or-not) (`True`,`False`)
+* [Comparisons](https://docs.python.org/3.5/library/stdtypes.html#comparisons)
+* [Operations on numbers](https://docs.python.org/3.5/library/stdtypes.html#numeric-types-int-float-complex) (int,floats)
+* [Operations on sequences](https://docs.python.org/3.5/library/stdtypes.html#common-sequence-operations) (strings, lists, tuples, ... indexables), and also for [mutable sequences](https://docs.python.org/3.5/library/stdtypes.html#mutable-sequence-types)
+* [Built-in functions](https://docs.python.org/3.5/library/functions.html)
+* [The range function](https://docs.python.org/3.5/library/stdtypes.html#ranges)
+* [Manipulating strings](https://docs.python.org/3.5/library/stdtypes.html#string-methods)
+
 # Types
 {:.collapse-trigger}
 
 | Type  	| Example  	| Convert to type using |
 |-----------|:---------:|:---------------------:|
-| Integer  	|  0, 1, 100 	|  int() 	|
-| Float  	|  0.0, .5, 10.453 	|  float() 	|
-| String  	|  'hello' 	| str()  	|
+| None   	|  None 	|  - 	|
+| Integer `int`  	|  0, 1, 100 	|  int() 	|
+| Float  `float`	|  0.0, .5, 10.453 	|  float() 	|
+| String `str` 	|  'hello' 	| str()  	|
+| List `list` 	|  [1,'hi',None,3.14] 	| list(_[iterable]_)  	|
+| Tuple `tuple` 	|  [1,'hi',None,3.14] 	| tuple(_[iterable]_)  	|
+| Dictionary `dict` 	|  { 'a' : 1, 'b': 2 } 	| dict(_[iterable]_)  	|
+| Set `set` 	|  { 'a', 'b' } 	| dict(_[iterable]_)  	|
 
 Create your own type using `class`
 
