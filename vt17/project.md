@@ -171,7 +171,7 @@ and
 [patient-5](https://github.com/NBISweden/PythonCourse/raw/vt17/assignment/data/Patient5.fa.gz))
 carries a mutation on the CFTR gene, that can cause cystic fibrosis.
 
-Note: There might be several.
+There might be several.
 
 # Extra tasks {#extra-task}
 
