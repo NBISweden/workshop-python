@@ -81,7 +81,7 @@ nine= [" ***** ",
        "     * ",
        " ***** " ]
 
-digits = [zero,one,two,three,four,five,six,seven,eight,nine]
+digits = [zero,one,two,three,four,five,six,seven,eight,nine] # nested lists
 
 colon=["", "", "", "*", "", "*", "" ]
 
