@@ -83,14 +83,7 @@ nine= [" ***** ",
 
 digits = [zero,one,two,three,four,five,six,seven,eight,nine]
 
-colon=["       ",
-       "       ",
-       "       ",
-       "   *   ",
-       "       ",
-       "   *   ",
-       "       " ]
-
+colon=["", "", "", "*", "", "*", "" ]
 
 
 from time import localtime as get_time
@@ -103,14 +96,14 @@ m1 = now.tm_min // 10 # floor division
 m2 = now.tm_min % 10
 
 
-width = '=' * len(colon[0])
+width = '=' * len(zero)
 print( '{}'.format(width * 5) )
 
 for i in range(len(colon)):
-    print( '{}{}{}{}{}'.format(digits[h1][i],
-                               digits[h2][i],
-                               colon[i],
-                               digits[m1][i],
-                               digits[m2][i])) 
+    print( '{}{}{:^6}{}{}'.format(digits[h1][i],
+                                  digits[h2][i],
+                                  colon[i],
+                                  digits[m1][i],
+                                  digits[m2][i])) 
 
 print( '{}'.format(width * 5) )
