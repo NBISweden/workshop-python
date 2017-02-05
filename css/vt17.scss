@@ -303,7 +303,7 @@ main {
     	    list-style-type: none;
     	    margin:1em;
 	    
-    	    a {
+    	    > a {
 		display:block; padding:2em 1em; text-align:center;
 		text-decoration:none;
 		background-color:#eee;
@@ -332,6 +332,12 @@ main {
     		    text-align:center;
     		}
 
+	    }
+
+	    p.notebook-links {
+		text-align:right;
+		/* position:relative; top:-1.5em; right:1em; z-index:100; */
+		a { margin-left:4px; }
 	    }
     	}
     }
