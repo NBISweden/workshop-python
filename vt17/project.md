@@ -46,7 +46,7 @@ whether any of the five given individuals is affected.</p>
 The main task is divided in several steps. The first step is to fetch
 the sequence file (in `fasta` format) and the appropriate annotation
 file (in `GTF` format) from
-the [Ensembl database](http://www.ensembl.org/).
+the [Ensembl database](http://www.ensembl.org/info/data/ftp/index.html).
 
 The CTFR gene is chromosome `7`.
 
