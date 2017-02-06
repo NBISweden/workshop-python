@@ -22,8 +22,15 @@ Notebooks:
 
 <li>
 <a href="lecture/2">
-Day 2 - Not yet... chill
+<h3>More Data Structures</h3>
+
+set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
 </a>
+<p class="notebook-links">
+Notebooks: 
+<a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/3.ipynb">[3]</a>
+<a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/4%20-%20dict.ipynb">[4]</a>
+</p>
 </li>
 
 <li>
