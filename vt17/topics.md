@@ -27,6 +27,7 @@ Notebooks:
 set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
 </a>
 <p class="notebook-links">
+<a href="https://github.com/NBISweden/PythonCourse/raw/vt17/imdb/250.imdb">250.imdb</a> | 
 Notebooks: 
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/3.ipynb">[3]</a>
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/4%20-%20dict.ipynb">[4]</a>
