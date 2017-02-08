@@ -36,8 +36,14 @@ Notebooks:
 
 <li>
 <a href="lecture/3">
-Day 3 - Not yet... chill
+<h3>Using <code>dict</code></h3>
+
+dict, dict, dict, dict... function, positional argument, keyword argument, default value, import, sys.argv
 </a>
+<p class="notebook-links">
+Notebooks: 
+<a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/5%20-%20functions.ipynb">[5]</a>
+</p>
 </li>
 
 <li>
