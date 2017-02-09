@@ -221,6 +221,7 @@ main {
 		    /* height: 1px; border-top: 1px solid #ccc; */
 		  }
     > hr { display:none; }
+    > hr.force { display:block; }
 
     img { max-width: 100%; }
 

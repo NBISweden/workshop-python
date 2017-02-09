@@ -29,11 +29,11 @@ If no option is given, the utility displays all three in a table like:
 
 ```
 	Filename: <filename>
-    -------------------------------------------
-    |   Lines    |    Words   |  Characters   |
-    -------------------------------------------
-    |    12      |     345    |    67890      |
-    -------------------------------------------
+	-------------------------------------------
+	|   Lines    |    Words   |  Characters   |
+	-------------------------------------------
+	|    12      |     345    |    67890      |
+	-------------------------------------------
 ```
 
 The resulting code looks like:
@@ -132,7 +132,7 @@ if __name__ == '__main__':
 
 ```
 
-We know put that code in our `PATH` and rename it to `mycounter`.
+We now put that program in our `PATH` and rename it to `mycounter`.
 
 Note the string formatting for the table. This is what we now
 cover. Head to
@@ -193,44 +193,40 @@ Change the criteria now, and find the most expensive house per square meters.
 
 # Module documentation {#db-documentation}
 
-You can of course look at the documentation from the source, using the
-`help` function.
-
-```bash
-$ python Python 3.5.0 (default, Sep 25 2015,
-16:02:14) [GCC 4.2.1 Compatible Apple LLVM 6.1.0 (clang-602.0.53)] on
-darwin Type "help", "copyright", "credits" or "license" for more
-information.
->>> import db
->>> help(db.plot)
-```
-
 The code to produce would typically start by importing the necessary
 functions and classes from the `db` module.
 
 ```python
-#from <some.file.location> import <some.function.or.class>
+from db import HomeDB
 
 # Initilizing the database
-db = HomeDB('uppsala.sqlite')
-db.connect()
-selection = db.select('rooms > 1 and rooms < 3 and area > 58 and rent < 3000')
-db.disconnect()
+database = HomeDB('uppsala.sqlite')
+database.connect()
+selection = database.select('rooms > 1 and rooms < 3 and area > 58 and rent < 3000')
+database.disconnect()
 
 # Looping now through the selection
 for home in selection:
 	# Do something
+
+# Then plot
 ```
 
 The above code essentially initializes the database, fetches some
-selection, given some criteria and plots the result on a map. Yes,
+selection, based on some criteria, and plots the result on a map. Yes,
 it's visual, it' fun.
 
-The
-[haversine formula](https://en.wikipedia.org/wiki/Haversine_formula)
-determines the great-circle distance between two points on a sphere
-given their longitudes and latitudes. This will be useful for
-filtering the selection using the radius.
+<hr class="force" />
+
+You can of course look at the documentation from the sourcecode
+itself, using the `help` function.
+
+```
+$ python
+>>> import db
+>>> help(db.plot)
+```
+
 
 The plot function has a few keyword parameters and two first
 positional arguments for the selection and Google API key.
@@ -270,3 +266,23 @@ For each home, it is possible to call the following functions:
 <dd>returns its surface in m<sup>2</sup>.</dd>
 </dl>
 
+<hr class="force" />
+
+The
+[haversine formula](https://en.wikipedia.org/wiki/Haversine_formula)
+determines the great-circle distance between two points on a sphere
+given their longitudes and latitudes. This will be useful for
+filtering the selection using the radius.
+
+
+```
+$ python
+>>> import db
+>>> help(db.haversine)
+
+Help on function haversine in module db:
+
+haversine(lat1, lon1, lat2, lon2)
+    Calculate the great circle distance (in m) between two points
+    on the earth (specified in decimal degrees)
+```
