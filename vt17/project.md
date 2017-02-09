@@ -132,16 +132,15 @@ id `ENSG00000001626` on chromosome `7`.
    </section>
    </details>
 
-9. Translate into amino-acids.
+9. Translate into amino-acids, using an implementation of the <a href="http://shawmst.org/biology/article/rna-translation-table/">translation table</a> from <a href="https://github.com/NBISweden/PythonCourse/tree/vt17/assignment"><code>utils.rna</code> package</a>.
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>You are given an implementation of the <a href="http://shawmst.org/biology/article/rna-translation-table/">translation table</a> the <a href="https://github.com/NBISweden/PythonCourse/tree/vt17/assignment"><code>utils.rna</code> package</a></p>
    <p>You can output your results in different files and check the difference with the <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/results/protein.ncbi.fasta">given result</a> or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a> or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>.</p>
    <pre class="highlight"><code>diff filename-1 filename-2</code></pre>
    will output nothing when the files are identical.
-   <p>Moreover, have a look at the <a href="https://docs.python.org/3.5/library/stdtypes.html#ranges"><code>range</code> function</a>, which can take an extra <code>step</code> parameter.
+   <p>Moreover, have a look at the <a href="https://docs.python.org/3.5/library/stdtypes.html#ranges"><code>range</code> function</a>, which can take an extra <code>step</code> parameter.</p>
    </section>
    </details>
 
