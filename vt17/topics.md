@@ -54,6 +54,7 @@ import, documentation, function, default value, sys.argv, arguments
 </a>
 <p class="notebook-links">
 <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/bogus.py">bogus.py</a>
+<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/homes/homes.py">homes.py</a>
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/homes/uppsala.sqlite">uppsala.sqlite</a>
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/homes/db.py">db.py</a>
 </p>
