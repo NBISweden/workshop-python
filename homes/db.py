@@ -31,7 +31,7 @@ class HomeEntry():
             setattr(self,FIELDS[i],row[i])
 
     def __repr__(self):
-        return u'<Home {} | {} @ {}>'.format(self._id, self._type, self._location)
+        return u'<Home {} | {} @ {}>'.format(self.id, self.type, self.location)
 
     def __str__(self):
         return self.__repr__()
