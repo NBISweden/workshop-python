@@ -15,6 +15,7 @@ the
 
 
 # A small utility
+{:.collapse-trigger}
 
 This first part of today's class is a live code demo. We want to
 create a small utility that parses a file and print the number of
@@ -29,9 +30,7 @@ If no option is given, the utility displays all three in a table like:
 
 ```
 	Filename: <filename>
-	-------------------------------------------
-	|   Lines    |    Words   |  Characters   |
-	-------------------------------------------
+	|--- Lines ------ Words ---- Characters --|
 	|    12      |     345    |    67890      |
 	-------------------------------------------
 ```
@@ -140,6 +139,7 @@ the
 [Format String Syntax](https://docs.python.org/3.5/library/string.html#format-string-syntax) webpage.
 
 # Importing `math`
+{:.collapse-trigger}
 
 The
 [`math` module](https://docs.python.org/3.5/library/math.html#module-math) provides
@@ -157,6 +157,7 @@ axis and the segment formed by the 2 points.
 Finally, write a small test for the above functions.
 
 # House Database
+{:.collapse-trigger}
 
 For the second example
 of
@@ -173,8 +174,10 @@ assignment. The [documentation](#db-documentation) is at the end of
 this page.
 
 What is the price of the cheapest house around a given center and
-within 2 kilometers.  The center is given as both
-`latitude=lat=59.865795990339876` and `longitude=17.64583576202392`.
+within 2 kilometers.  The center is given as both:
+
+* latitude: 59.865795990339876
+* longitude: 17.64583576202392
 
 
 You can plot the results to an HTML file, which internally uses Google
@@ -192,6 +195,7 @@ Change the criteria now, and find the most expensive house per square meters.
 
 
 # Module documentation {#db-documentation}
+{:.collapse-trigger}
 
 The code to produce would typically start by importing the necessary
 functions and classes from the `db` module.
