@@ -48,8 +48,14 @@ Notebooks:
 
 <li>
 <a href="lecture/4">
-Day 4 - Not yet... chill
+<h3>Using someone else's code</h3>
+
+import, documentation, function, default value, sys.argv, arguments
 </a>
+<p class="notebook-links">
+<a href="https://github.com/NBISweden/PythonCourse/raw/vt17/homes/uppsala.sqlite">uppsala.sqlite</a>
+<a href="https://github.com/NBISweden/PythonCourse/raw/vt17/homes/db.py">db.py</a>
+</p>
 </li>
 
 <li>

@@ -1,7 +1,7 @@
 (function(){ // scoping
 
     // Adding the #link
-    $("main > h1, main > h2").each(function(i, el) {
+    $("main > h1").each(function(i, el) {
 	var el = $(el);
 	var id = el.attr('id');
 	//var link = '<i class="fa fa-link"></i>';
