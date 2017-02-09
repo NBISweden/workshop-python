@@ -220,6 +220,11 @@ The above code essentially initializes the database, fetches some
 selection, based on some criteria, and plots the result on a map. Yes,
 it's visual, it' fun.
 
+You could
+use
+[this template file](https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/homes/homes.py) that
+you have to complete.
+
 <hr class="force" />
 
 You can of course look at the documentation from the sourcecode
