@@ -99,7 +99,7 @@ For example:
 
 
 
-def _marker(entry, cheapest=False):
+def _marker(entry, special=False):
     """
     Creates the javascript code for a Google Maps Marker
     """
@@ -113,7 +113,7 @@ def _marker(entry, cheapest=False):
 var infowindow_{2} = new google.maps.InfoWindow({{ content: "{3}" }});
 google.maps.event.addListener(marker_{2}, 'click', function() {{ infowindow_{2}.open(map,marker_{2}); }});
 '''.format(entry.latitude, entry.longitude,entry.id,entry.to_html(),
-           'greenMakerIcon' if cheapest else 'circleIcon')
+           'greenMakerIcon' if special else 'circleIcon')
     raise ValueError("Not a good entry")
 
 
@@ -130,7 +130,7 @@ def plot(selection,
     Outputs the selection to map file.
     The center is given by latitude and longitude and marked on the map with a blue marker.
     The map draws a radius around the center.
-    When the cheapest is used, an extra green marker is ploted in the map.
+    When the special is used, an extra green marker is ploted in the map.
 
     Note: this requires you to pass a Google Maps API key.
     You can fetch one here: https://developers.google.com/maps/documentation/javascript/get-api-key
@@ -192,7 +192,7 @@ map.setZoom({0});
 '''.format(zoom, latitude, longitude, radius))
 
         for entry in selection:
-            f.write(_marker(entry, cheapest = cheapest is entry))
+            f.write(_marker(entry, special = special is entry))
             f.write('\n')
 
         f.write( end_html )

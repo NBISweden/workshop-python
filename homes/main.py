@@ -1,31 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from utils.db import HomeDB, HomeEntry
-from utils.db import haversine as get_distance
+from db import HomeDB
+from db import haversine as get_distance
+from db import plot
 import argparse
 
 default_lat=59.83732598851705
 default_lng=17.64549846959149 
 default_radius=5000 # in m
-
-def marker(entry, cheapest=False):
-    """
-    Creates the javascript code for a Google Maps Marker
-    """
-    if isinstance(entry,HomeEntry):
-        return '''var marker_{2} = new google.maps.Marker({{
- position: {{ lat: {0}, lng: {1} }},
- map: map,
- title: "id: {2}",
- icon: {4}
-}});
-var infowindow_{2} = new google.maps.InfoWindow({{ content: "{3}" }});
-google.maps.event.addListener(marker_{2}, 'click', function() {{ infowindow_{2}.open(map,marker_{2}); }});
-'''.format(entry.latitude, entry.longitude,entry.id,entry.to_html(),
-           'greenMakerIcon' if cheapest else 'circleIcon')
-    raise ValueError("Not a good entry")
-
 
 def work(args):
     """
@@ -34,34 +17,32 @@ def work(args):
 
     db = HomeDB(args.db)
     db.connect()
-    all = db.query(args.query)
+    homes = db.select(args.query)
     db.disconnect()
 
-    with open(args.output,'w',encoding='utf-8') as f:
-        f.write( open('utils/start.html','r',encoding='utf-8').read())
-        f.write('''
-map.setCenter({{lat: {1}, lng: {2} }});
-center.setPosition({{lat: {1}, lng: {2} }});
-radius.setRadius({3});
-map.setZoom({0});
-'''.format(args.zoom, args.lat, args.lng, args.radius))
+    selected = []
+    special = None
 
-        selected = []
-        cheapest = None
-        for entry in all:
-            d = get_distance(entry.latitude, entry.longitude, args.lat, args.lng)
-            #print('{} {:>20} {} < {}'.format('+' if d < args.radius else '-', entry.id, d, args.radius))
-            if d < args.radius:
-                if not (cheapest and entry.price >= cheapest.price):
-                    cheapest = entry
+    for home in homes:
+        latitude,longitude = home.get_location()
+        d = get_distance(latitude, longitude, args.lat, args.lng)
+        if d < args.radius:
+            if not (special and home.get_price() >= special.get_price()):
+                special = home
                 
-                selected.append(entry)
+        selected.append(home)
 
-        for entry in selected:
-            f.write(marker(entry, cheapest = cheapest is entry))
-            f.write('\n')
+    plot(selected,
+         output = args.output,
+         special = special,
+         zoom = args.zoom,
+         latitude=args.lat,
+         longitude=args.lng,
+         radius=args.radius, # in m
+         google_key = 'AIzaSyC21XWgUbILZro3IfijyFTMwV3DUsLONGg'
+    )
+    # https://developers.google.com/maps/documentation/javascript/get-api-key
 
-        f.write(open('utils/end.html','r',encoding='utf-8').read())
 
 
 def find_center():
