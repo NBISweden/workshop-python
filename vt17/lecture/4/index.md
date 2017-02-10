@@ -174,7 +174,7 @@ assignment. The [documentation](#db-documentation) is at the end of
 this page.
 
 What is the price of the cheapest house around a given center and
-within 2 kilometers.  The center is given as both:
+within 2 kilometers?  The center is given as both:
 
 * latitude: 59.865795990339876
 * longitude: 17.64583576202392
@@ -245,7 +245,7 @@ positional arguments for the selection and Google API key.
 plot(selection,
      google_key,
      output='selection.html',
-     cheapest=None,
+     special=None,
      zoom=12,
      latitude=59.83732598851705,
      longitude=17.64549846959149,
@@ -255,7 +255,7 @@ plot(selection,
     Outputs the selection to map file. Section is a list of HomeEntry.
     The center is given by latitude and longitude and marked on the map with a blue marker.
     The map draws a radius around the center.
-    When the cheapest is used, an extra green marker is ploted in the map.
+    When the special is used, an extra green marker is ploted in the map.
 
     Note: this requires you to pass a Google Maps API key.
     You can fetch one here: https://developers.google.com/maps/documentation/javascript/get-api-key
