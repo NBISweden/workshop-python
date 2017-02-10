@@ -41,7 +41,7 @@ Notebooks:
 dict, dict, dict, dict... function, positional argument, keyword argument, default value, import, sys.argv
 </a>
 <p class="notebook-links">
-Notebooks: 
+Notebook:
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/5%20-%20functions.ipynb">[5]</a>
 </p>
 </li>
@@ -54,6 +54,7 @@ import, documentation, function, default value, sys.argv, arguments
 </a>
 <p class="notebook-links">
 <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/bogus.py">bogus.py</a>
+|
 <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/homes/homes.py">homes.py</a>
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/homes/uppsala.sqlite">uppsala.sqlite</a>
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/homes/db.py">db.py</a>
@@ -67,7 +68,7 @@ import, documentation, function, default value, sys.argv, arguments
 format, positional argument, keyword argument, regular expression
 </a>
 <p class="notebook-links">
-Notebooks: 
+Notebook: 
 <a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/6.ipynb">[6]</a>
 </p>
 </li>
