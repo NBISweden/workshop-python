@@ -25,9 +25,9 @@ def RxLR_search(filename):
 
         # ======================================
         f.seek(0) # rewind first
-        print('Second search: RxLR.*ERR')
+        print('Second search: RxLR.*EER')
     
-        p = re.compile('R.LR.*ERR')
+        p = re.compile('R.LR....+EER')
 
         for line in f:
             if line.startswith( ('>','\n') ):
@@ -35,31 +35,31 @@ def RxLR_search(filename):
 
             m = p.search(line)
             if m:
-                print('Match found: {} at position {}'.format(m.group(), m.span()) )
+                print('Match found: {:60} at position {}'.format(m.group(), m.span()) )
 
-        # ======================================
-        f.seek(0) # rewind
-        print('Third search: RxLR and then ERR')
+        # # ======================================
+        # f.seek(0) # rewind
+        # print('Third search: RxLR and then EER')
     
-        p1 = re.compile('R.LR')
-        p2 = re.compile('ERR')
+        # p1 = re.compile('R.LR')
+        # p2 = re.compile('EER')
 
-        for line in f:
-            if line.startswith( ('>','\n') ):
-                continue
+        # for line in f:
+        #     if line.startswith( ('>','\n') ):
+        #         continue
 
-            m1 = p1.search(line)
-            if m1:
-                print('\tMatch found: {} at position {}'.format(m1.group(), m1.span()) )
+        #     m1 = p1.search(line)
+        #     if m1:
+        #         print('\tMatch found: {} at position {}'.format(m1.group(), m1.span()) )
 
-                for m2 in p2.finditer(line):
+        #         for m2 in p2.finditer(line):
 
-                    print('ERR found at position {}'.format( m1.span() ) )
-                    if m1.end() < m2.start():
-                        print('Gotcha!')
+        #             print('EER found at position {}'.format( m1.span() ) )
+        #             if m1.end() < m2.start():
+        #                 print('Gotcha!')
 
-                else: # Note the else is for the for loop
-                    print('\t\tbut not ERR')
+        #         else: # Note the else is for the for loop
+        #             print('\t\tbut not EER')
 
     
 if __name__ == "__main__":
