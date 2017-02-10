@@ -61,9 +61,15 @@ import, documentation, function, default value, sys.argv, arguments
 </li>
 
 <li>
-<a href="lecture/5">
-Day 5 - Not yet... chill
+<a href="lecture/3">
+<h3>Formatting String and <br>Pattern matching</h3>
+
+format, positional argument, keyword argument, regular expression
 </a>
+<p class="notebook-links">
+Notebooks: 
+<a href="https://github.com/NBISweden/PythonCourse/raw/vt17/notebooks/6.ipynb">[6]</a>
+</p>
 </li>
 
 </ol>
