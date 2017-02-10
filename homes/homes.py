@@ -12,27 +12,27 @@ db.connect()
 homes = db.select('rooms > 1 and rooms < 3 and area > 58 and rent < 3000')
 db.disconnect()
 
-#######################################
-#                                     #     #
-# THIS IS WHERE YOU INSERT YOUR CODE  #    ##
-#                                     #   ###
-#######################################  ################
-#                                     # #################
-selected = homes[:10]                 #  ################
-cheapest = homes[0]                   #   ###
-#                                     #    ##
-#######################################     #
+#############################################
+#                                           #     #
+#    THIS IS WHERE YOU INSERT YOUR CODE     #    ##
+#                                           #   ###
+#############################################  ################
+#                                           # #################
+selected_homes = homes[:10] #cheating       #  ################
+special_home = homes[0]     #wrong one      #   ###
+#                                           #    ##
+#############################################     #
 
-plot(selected,
+plot(selected_homes,
      output = 'selection.html',
-     cheapest = cheapest,
+     special = special_home,
      zoom = 14,
      latitude=lat,
      longitude=lng,
      radius=radius, # in m
-     google_key = 'AIzaSyDAfrqg2uOAkpem_B64PoQh8axACWGKe8U' 
+     google_key = '< INSERT YOUR KEY >'
 )
-
-print('Plot is in selection.html. Open that one')
-
 # https://developers.google.com/maps/documentation/javascript/get-api-key
+
+print('Check the results in selection.html.')
+print('Special home: {}'.format(special_home))

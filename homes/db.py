@@ -120,7 +120,7 @@ google.maps.event.addListener(marker_{2}, 'click', function() {{ infowindow_{2}.
 def plot(selection,
          google_key,
          output = 'selection.html',
-         cheapest = None,
+         special = None,
          zoom = 12,
          latitude=59.83732598851705,
          longitude=17.64549846959149,

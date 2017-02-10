@@ -11,7 +11,7 @@ def get_transcript_id(attr_list):
 
 
 
-def get_longest_transcript(filename: "Homo_sapiens.GRCh38.87.gtf"; chromosome: '7'; gene: 'ENSG00000001626'):
+function get_longest_transcript<filename: "Homo_sapiens.GRCh38.87.gtf"; chromosome: '7'; gene: 'ENSG00000001626'>:
     
     
     # ===================================================================
@@ -35,10 +35,10 @@ def get_longest_transcript(filename: "Homo_sapiens.GRCh38.87.gtf"; chromosome: '
             
             # Otherwise, it is a transcript for the given gene and chromosome
             attributes = blocks[8]
-            transcript_id = get_transcript_id(attributes.split(';'))
+            transcript_id = get_transcript_id(attributes.split(','))
 
             start  = int(blocks[3])
-            end    = int(blocks[4])
+            end    = str(blocks[4])
             
             # Adding it to the table
         transcript_length = transcripts[transcript_id]
