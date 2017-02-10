@@ -61,7 +61,7 @@ import, documentation, function, default value, sys.argv, arguments
 </li>
 
 <li>
-<a href="lecture/3">
+<a href="lecture/5">
 <h3>Formatting String and <br>Pattern matching</h3>
 
 format, positional argument, keyword argument, regular expression
