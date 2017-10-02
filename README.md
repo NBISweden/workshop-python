@@ -10,11 +10,15 @@ needs.
 
 # Important Dates
 
-* Application open: November 2nd, 2016
-* Application deadline: December 4th, 2016
-* Acceptance Confirmation: December 11th, 2016
+| Application | Date |
+|------------:|:-----|
+| ...opens on | August 23<sup>rd</sup>, 2017 |
+| ...closes on | September 11<sup>th</sup>, 2017 |
+| ...is accepted/denied on | September 15<sup>th</sup>, 2017 |
 
-If you don’t receive information according to the above dates, please contact education@scilifelab.uu.se.
+> Register for the course, using [this form](https://docs.google.com/forms/d/e/1FAIpQLScm40gTcH6qsq3JcpnsCDveCtiqdqevIsMjlOienDfyKALQgA/viewform)
+
+If you don’t receive information according to the above dates, please contact <a href="mailto:Frederic.Haziza@nbis.se?subject=[Python HT17] Registration">Frédéric Haziza</a> or <a href="mailto:Thomas.Kallman@nbis.se?subject=[Python HT17] Registration">Thomas Källman</a>.
 
 # Audience and Prerequisites
 
@@ -38,7 +42,7 @@ During this course, you will learn about:
 * Writing functions and best-practice ways of making them usable
 * Reading from and writing to files
 * Code packaging and Python libraries
-* How to work with biological data using external libraries.
+* How to work with biological data using external libraries (if time allows).
 
 # Learning Objectives
 
@@ -52,19 +56,25 @@ After this course you should be able to:
 # Format
 
 * Presentations and demonstrations
-* Practical exercises (either in the lab with assistants or on your own).
+* Practical exercises (both as lab assignments with assistants and on your own).
 
-Main teacher: [Frédéric Haziza](http://nbis.se/staff/frederic-haziza/)
+Main teacher: [Frédéric Haziza](//nbis.se/staff/frederic-haziza/)
 
 Prior to the course, you can read a companion
 book
-["Programming Python"](http://shop.oreilly.com/product/9780596158118.do),
+["Programming Python"](//shop.oreilly.com/product/9780596158118.do),
 or
-["Learning Python"](http://shop.oreilly.com/product/0636920028154.do). Such
+["Learning Python"](//shop.oreilly.com/product/0636920028154.do). Such
 a book will also prove useful for your programming tasks, after the
 course is over. It is however not required, and material will be
 presented in class.
 
+# Course fee
+
+A course fee of 2000 SEK will be invoiced to accepted participants
+(includes the study material, coffee/fika and lunches). NOTE
+– Uppsala University cannot invoice individuals.
+
 # Related Courses
 
-[Perl Programming with Application to Bioinformatics, 2 hp](https://www.scilifelab.se/events/perlht16/)
+[Python Programming with Application to Bioinformatics, 2 hp, 2017](//www.scilifelab.se/events/pythonvt17/)
