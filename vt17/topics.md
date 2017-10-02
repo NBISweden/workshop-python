@@ -47,7 +47,7 @@ Notebook:
 </li>
 
 <li>
-<a href="lecture/4">
+<a href="lecture/4" class="no-keynote">
 <h3>Using someone else's code</h3>
 
 import, documentation, function, default value, sys.argv, arguments

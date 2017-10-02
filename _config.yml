@@ -17,6 +17,11 @@ defaults:
       path: "vt17"
     values:
       layout: vt17
+  -
+    scope:
+      path: "ht17"
+    values:
+      layout: ht17
 
 
 

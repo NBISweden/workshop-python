@@ -18,14 +18,14 @@ This is precisely the expertise that [NBIS](//nbis.se) provides.
 # Current courses
 
 <dl>
-<dt> <a href="vt17">February 2017</a> </dt>
-<dd>This course is suitable for complete beginners and assumes no
-  prior programming experience (beyond the ability to use a text
-  editor). A very basic knowledge of UNIX would be an advantage, such
-  as navigating through folders and issuing commands at a shell
-  prompt.  </dd>
+<dt> <a href="ht17">October 2017</a> </dt>
+<dd>Second instance of the course, suitable for complete beginners and
+  assumes no prior programming experience (beyond the ability to use a
+  text editor). A very basic knowledge of UNIX is definitely an
+  advantage, such as navigating through folders and issuing commands
+  at a shell prompt.  </dd>
 </dl>
 
 ## Past courses
 
-* ...
+* <a href="vt17">February 2017</a>
