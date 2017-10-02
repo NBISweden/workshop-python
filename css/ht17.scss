@@ -232,7 +232,10 @@ main {
 
     img { max-width: 100%; }
 
-    iframe { max-width:100%; }
+    iframe { max-width:100%;
+	     display:block; margin:0 auto; 
+	     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+	   }
 
     ul li { list-style:circle; }
     ol {
