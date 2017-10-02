@@ -18,7 +18,11 @@ needs.
 
 > Register for the course, using [this form](https://docs.google.com/forms/d/e/1FAIpQLScm40gTcH6qsq3JcpnsCDveCtiqdqevIsMjlOienDfyKALQgA/viewform)
 
-If you don’t receive information according to the above dates, please contact <a href="mailto:Frederic.Haziza@nbis.se?subject=[Python HT17] Registration">Frédéric Haziza</a> or <a href="mailto:Thomas.Kallman@nbis.se?subject=[Python HT17] Registration">Thomas Källman</a>.
+If you don’t receive information according to the above dates, please
+contact <a href="mailto:Frederic.Haziza@nbis.se?subject=[Python HT17]
+Registration">Frédéric Haziza</a> or <a
+href="mailto:Thomas.Kallman@nbis.se?subject=[Python HT17]
+Registration">Thomas Källman</a>.
 
 # Audience and Prerequisites
 
@@ -29,8 +33,9 @@ If you don’t receive information according to the above dates, please contact 
   prompt. We will not teach Unix in detail: Other course are available
   at SciLifeLab for it.
 * Bring your own laptop (Linux, or Mac) for the practical
-  exercises. Otherwise, please contact us at
-  education@scilifelab.uu.se before you apply.
+  exercises. Otherwise, please contact <a
+  href="mailto:Frederic.Haziza@nbis.se?subject=[Python HT17] I need a
+  laptop">Frédéric Haziza</a> before the course starts.
 
 # Course Content
 
