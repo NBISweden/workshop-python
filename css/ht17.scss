@@ -496,7 +496,6 @@ main ol#topics li p.hidden { visibility:hidden; }
     img { display:block; margin:0 auto; }
 
     #text-editors {
-	/* display:flex; flex-flow:row nowrap; justify-content: space-between; */
 	columns: 3;
 	column-gap: 50px;
 	column-rule: 1px solid #e4dede;
@@ -510,9 +509,8 @@ main ol#topics li p.hidden { visibility:hidden; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
 
-    #preliminaries #text-editors {
-
-	columns: auto; column-gap: normal; column-rule: medium none white; column-break-before: column; /* reset */
+    #preliminaries #text-editors { /* reset */
+	columns: auto; column-gap: normal; column-rule: medium none white; column-break-before: column; 
 	> img:nth-child(2) { margin-top:2em; }
     }
     
