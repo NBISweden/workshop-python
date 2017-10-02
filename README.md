@@ -34,8 +34,7 @@ Registration">Thomas Källman</a>.
   at SciLifeLab for it.
 * Bring your own laptop (Linux, or Mac) for the practical
   exercises. Otherwise, please contact <a
-  href="mailto:Frederic.Haziza@nbis.se?subject=[Python HT17] I need a
-  laptop">Frédéric Haziza</a> before the course starts.
+  href="mailto:Frederic.Haziza@nbis.se?subject=[Python HT17] I need a laptop">Frédéric Haziza</a> before the course starts.
 
 # Course Content
 
