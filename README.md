@@ -76,8 +76,9 @@ presented in class.
 # Course fee
 
 A course fee of 2000 SEK will be invoiced to accepted participants
-(includes the study material, coffee/fika and lunches). NOTE
-– Uppsala University cannot invoice individuals.
+(includes the study material, coffee/fika and lunches).
+
+> NOTE: Uppsala University cannot invoice individuals.
 
 # Related Courses
 
