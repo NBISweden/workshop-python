@@ -427,6 +427,7 @@ body main nav {
 	flex-direction:column;
 	background: linear-gradient(0deg, white 0%, #2b5b84 25%);
 
+	> a { display:none; }
 	nav { display:none; }
 	justify-content:space-between;
 	padding:0;
