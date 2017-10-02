@@ -510,6 +510,12 @@ main ol#topics li p.hidden { visibility:hidden; }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
 
-    #preliminaries #text-editors > img:nth-child(2) { margin-top:2em; margin-bottom:1em; }
+    #preliminaries #text-editors {
+
+	> img:nth-child(2) { margin-top:2em; margin-bottom:1em; }
+
+	columns: auto; column-gap: normal; column-rule: medium none white; column-break-before: column; /* reset */
+	> img:nth-child(2) { max-width: 45%; margin-top:calc(2em + 100px); margin-left:55%; }
+    }
     
 }
