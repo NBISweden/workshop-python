@@ -89,8 +89,8 @@ regarding tabulations (which we will introduce in the course).
 Emacs and Vim are probably the best text editors, albeit for
 tech-savvy people.
 
-<img src="/img/emacs.png" alt="emacs" />
-<img src="/img/vim.png" alt="vim" />
+<img src="../img/emacs.png" alt="emacs" />
+<img src="../img/vim.png" alt="vim" />
 
 If you are not the latter
 kind, <a href="//www.sublimetext.com/">Sublime Text</a>
@@ -105,7 +105,7 @@ but we admit we did not really try it (We use Emacs!). Go ahead, <a
 href="//www.jetbrains.com/help/pycharm/requirements-installation-and-launching.html">install
 the free version</a> and give it a try!
 <a
-href="//www.jetbrains.com/help/pycharm/requirements-installation-and-launching.html"><img src="/img/pycharm.png" alt="PyCharm" /></a>
+href="//www.jetbrains.com/help/pycharm/requirements-installation-and-launching.html"><img src="../img/pycharm.png" alt="PyCharm" /></a>
 </div>
 
 ----
