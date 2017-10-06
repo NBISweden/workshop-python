@@ -14,8 +14,8 @@ open, encoding, if/else, for, while, in (membership), comparators, stdlib.
 </a>
 <p class="notebook-links">
 Notebooks: 
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/1%20-%20start.ipynb">[1]</a>
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/1%20-%20start.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/2.ipynb">[2]</a>
 </p>
 </li>
 
@@ -28,8 +28,8 @@ set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
 <p class="notebook-links hidden">
 <a href="https://github.com/NBISweden/PythonCourse/raw/ht17/imdb/250.imdb">250.imdb</a> | 
 Notebooks: 
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/3.ipynb">[3]</a>
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/4%20-%20dict.ipynb">[4]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/3.ipynb">[3]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/4%20-%20dict.ipynb">[4]</a>
 </p>
 </li>
 
@@ -41,7 +41,7 @@ dict, dict, dict, dict... function, positional argument, keyword argument, defau
 </a>
 <p class="notebook-links hidden">
 Notebook:
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/5%20-%20functions.ipynb">[5]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/5%20-%20functions.ipynb">[5]</a>
 </p>
 </li>
 
@@ -68,7 +68,7 @@ format, positional argument, keyword argument, regular expression
 </a>
 <p class="notebook-links hidden">
 Notebook: 
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/6.ipynb">[6]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/6.ipynb">[6]</a>
 </p>
 </li>
 
