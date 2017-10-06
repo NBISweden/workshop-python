@@ -31,15 +31,15 @@ header {
     background: linear-gradient(0deg, white 30%, #2b5b84 40%);
     color:white;
     padding:1em 3em 0 3em;
-    /* position:relative; z-index:10; */
+    position:relative; z-index:10;
 
     > a {
 	text-decoration:none; cursor:pointer; display:inline-block;
 	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
 	color: #ffffff;
-	padding:0.3em 1em;
+	/* padding:0.3em 1em; */
 	border:0; background:transparent;
-	position:absolute; left:0; top:center;
+	position:absolute; left:30px; top:20px;
 
 	&:hover {
 	    box-shadow: 0px 35px 15px -20px rgba(0, 0, 0, 0.75); 
