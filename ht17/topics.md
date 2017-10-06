@@ -14,7 +14,7 @@ open, encoding, if/else, for, while, in (membership), comparators, stdlib.
 </a>
 <p class="notebook-links">
 Notebooks: 
-<a href="https://github.com/NBISweden/PythonCourse/raw/v4t17/notebooks/1%20-%20start.ipynb">[1]</a>
+<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/1%20-%20start.ipynb">[1]</a>
 <a href="https://github.com/NBISweden/PythonCourse/raw/ht17/notebooks/2.ipynb">[2]</a>
 </p>
 </li>
