@@ -13,6 +13,7 @@ immutable, mutable, sequence (indexable), iterable, range,
 open, encoding, if/else, for, while, in (membership), comparators, stdlib.
 </a>
 <p class="notebook-links">
+<a href="lecture/1.pdf" download>as PDF</a> | 
 Notebooks: 
 <a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/1%20-%20start.ipynb">[1]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/2.ipynb">[2]</a>
@@ -26,6 +27,7 @@ Notebooks:
 set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
 </a>
 <p class="notebook-links">
+<a href="lecture/2.pdf" download>as PDF</a> | 
 <a href="https://github.com/NBISweden/PythonCourse/raw/ht17/imdb/250.imdb">250.imdb</a> | 
 Notebooks: 
 <a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/3.ipynb">[3]</a>
@@ -40,6 +42,7 @@ Notebooks:
 dict, dict, dict, dict... function, positional argument, keyword argument, default value, import, sys.argv
 </a>
 <p class="notebook-links hidden">
+<a href="lecture/3.pdf" download>as PDF</a> | 
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/5%20-%20functions.ipynb">[5]</a>
 </p>
@@ -67,6 +70,7 @@ import, documentation, function, default value, sys.argv, arguments
 format, positional argument, keyword argument, regular expression
 </a>
 <p class="notebook-links hidden">
+<a href="lecture/4.pdf" download>as PDF</a> | 
 Notebook: 
 <a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/6.ipynb">[6]</a>
 </p>
