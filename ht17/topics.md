@@ -54,7 +54,7 @@ Notebook:
 
 import, documentation, function, default value, sys.argv, arguments
 </a>
-<p class="notebook-links hidden">
+<p class="notebook-links">
 <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/bogus.py">bogus.py</a>
 |
 <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/homes/homes.py">homes.py</a>
