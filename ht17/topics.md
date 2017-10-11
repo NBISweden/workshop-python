@@ -41,7 +41,7 @@ Notebooks:
 
 dict, dict, dict, dict... function, positional argument, keyword argument, default value, import, sys.argv
 </a>
-<p class="notebook-links hidden">
+<p class="notebook-links">
 <a href="lecture/3.pdf" download>as PDF</a> | 
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/5%20-%20functions.ipynb">[5]</a>
