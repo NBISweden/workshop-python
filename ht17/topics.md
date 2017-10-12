@@ -69,8 +69,8 @@ import, documentation, function, default value, sys.argv, arguments
 
 format, positional argument, keyword argument, regular expression
 </a>
-<p class="notebook-links hidden">
-<a href="lecture/4.pdf" download>as PDF</a> | 
+<p class="notebook-links">
+<a href="lecture/5.pdf" download>as PDF</a> | 
 Notebook: 
 <a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht17/notebooks/6.ipynb">[6]</a>
 </p>
