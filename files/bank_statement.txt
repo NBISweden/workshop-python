@@ -1,0 +1,10 @@
+ICA	254
+Icecream	65
+Coop	25.45
+ICA	654.21
+Pharmacy	39.90
+IKEA	2365
+ATM	500
+SevenEleven	62.60
+ICA	278.50
+Åhlens	645.20
