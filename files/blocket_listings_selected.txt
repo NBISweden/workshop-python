@@ -1,0 +1,10 @@
+Furniture sold in October are:
+couch
+shoerack
+wardrobe
+
+Furniture bought in October are:
+table
+lamp
+bed
+chair
