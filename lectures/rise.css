@@ -159,6 +159,9 @@ body {
   font-family: monospace;
   text-transform: none; }
 
+.reveal pre.CodeMirror-line {
+  margin: 0px auto;
+}
 .reveal pre code {
   display: block;
   padding: 0px;
