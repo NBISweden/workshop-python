@@ -67,6 +67,8 @@ Human GTF annotation file:
    <p>Ignore the first line and, in a loop, get the length of each line (from which you remove the trailing newline character).</p>
    <p>Sum up all the lengths you found.</p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>
    <p>Chromosome 7 has 159.345.973 base pairs.</p>
@@ -84,6 +86,8 @@ Human GTF annotation file:
    <p>Alternatively, you can <a href="https://en.wikipedia.org/wiki/Gene_transfer_format">search online</a>.</p>
    <p>Then, only count entries of type gene</p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>
    <p>There are 58.395 genes annotated in the GTF file</p>
@@ -106,6 +110,8 @@ id `ENSG00000001626` on chromosome `7`.
    <section>
    <p>Again, think about the structure of the GTF file</p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>This gene can produce 11 different transcripts</section>
    </details>
@@ -117,6 +123,8 @@ id `ENSG00000001626` on chromosome `7`.
    <section>
    <p>Use start and stop positions for each transcript of the gene</p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>
    <p>The transcript with id ENST00000003084 is the longest among 11 other transcripts, and spans 188.703 bases</p>
@@ -135,6 +143,8 @@ id `ENSG00000001626` on chromosome `7`.
    <p><b>Avoid concatenation</b> <i>inside</i> the loop, as it is slow and wasting memory</p>
    <p>Use the start and stop positions extracted from the transcript, but think about where the index starts from</p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>
    <p>The entire sequence can be found here</p>
@@ -148,6 +158,8 @@ id `ENSG00000001626` on chromosome `7`.
    <section>
    <p>First you need to save the start and stop positions of all exons of that transcript.</p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>
    <p>The correct sequence can be found here<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/mrna.ncbi.fasta">that given result</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
@@ -162,6 +174,8 @@ id `ENSG00000001626` on chromosome `7`.
    <p>Check that the <code>start_codon</code> is <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon</p>
    <p>Make your program print a warning message in case the transcript does not begin with a start-codon and end with a stop-codon</p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>
    <p>Position of start codon is 117.480.095</p>
@@ -177,6 +191,8 @@ id `ENSG00000001626` on chromosome `7`.
    <p>Use start codon position to start translating from</p>
    <p></p>
    </section>
+   </details>
+   <details>
    <summary>Answer</summary>
    <section>
    <p>You can output your results in different files and check the difference with the <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/protein.ncbi.fasta">given result</a> or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a> or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>.</p>
@@ -223,6 +239,6 @@ There might be several.
   <details>
   <summary>Tip</summary>
   <section>
-  So ..._no!_ Use the BioPython module, it does that job!
+  <p>So ..._no!_ Use the BioPython module, it does that job!</p>
   </section>
   </details>
