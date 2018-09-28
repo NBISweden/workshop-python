@@ -36,7 +36,7 @@ disease.</p>
 
 <p> Your task is to write a Python program that will extract the CFTR
 gene, translate the gene sequence to its corresponding amino-acid
-sequence and based on the inferred amino-acid sequence determine
+sequence and based on the reference amino-acid sequence determine
 whether any of the five given individuals is affected.</p>
 
 </blockquote>
@@ -44,22 +44,32 @@ whether any of the five given individuals is affected.</p>
 # Fetch the appropriate files {#fetch-files}
 
 The main task is divided in several steps. The first step is to fetch
-the sequence file (in `fasta` format) and the appropriate annotation
+the reference sequence file (in `fasta` format) and the appropriate reference annotation
 file (in `GTF` format) from
 the [Ensembl database](http://www.ensembl.org/info/data/ftp/index.html).
 
-The CTFR gene is chromosome `7`.
+The CTFR gene is located on chromosome `7`. After downloading the files, read up on how the files are structured.
+
+Human reference DNA for chromosome 7 (fasta):
+- Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz
+
+Human GTF annotation file:
+- Homo_sapiens.GRCh38.93.gtf.gz
 
 # Warmup {#warmup}
 
-1. What is the length of the chosen DNA sequence?
+1. What is the length of chr7 on the reference sequence??
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Open the DNA file with the <code>with</code> statement and read it line by line.</p>
+   <p>Open the reference fasta file and read it line by line.</p>
    <p>Ignore the first line and, in a loop, get the length of each line (from which you remove the trailing newline character).</p>
    <p>Sum up all the lengths you found.</p>
+   </section>
+   <summary>Answer</summary>
+   <section>
+   <p>Chromosome 7 has 159.345.973 base pairs.</p>
    </section>
    </details>
 
@@ -67,15 +77,19 @@ The CTFR gene is chromosome `7`.
 2. How many genes are annotated in the GTF file?
 
    <details>
-   <summary>Note</summary>
+   <summary>Tip</summary>
    <section>
    <p>You need to understand the structure of a GTF-formatted file.</p>
    <p>The GTF format uses several tab-delimited fields, for which we give you a <a href="https://github.com/NBISweden/PythonCourse/blob/ht17/assignment/data/gtf-format.md">short a description</a>.</p>
    <p>Alternatively, you can <a href="https://en.wikipedia.org/wiki/Gene_transfer_format">search online</a>.</p>
+   <p>Then, only count entries of type gene</p>
+   </section>
+   <summary>Answer</summary>
+   <section>
+   <p>There are 58.395 genes annotated in the GTF file</p>
    </section>
    </details>
 
-3. What fraction of the chromosome is annotated as genes?
 
 # Architect a method {#method}
 
@@ -85,57 +99,85 @@ In the annotation file (from the Ensembl database), that gene has the
 id `ENSG00000001626` on chromosome `7`.
 
 
-4. How many transcripts can this gene generate?
-
-   <details><summary>Answer</summary><section>11</section></details>
-
-5. What is the longest transcript in nucleotides?
-
-   <details>
-   <summary>Answer</summary>
-   <section>
-   <p>The transcript with id ENST00000003084 has 6132 bp and is the longest among 11 other transcripts</p>
-   <p>Check its <a href="http://www.ensembl.org/Homo_sapiens/Transcript/Summary?db=core;g=ENSG00000001626;r=7:117465784-117715971;t=ENST00000003084">Ensembl data</a></p>
-   <p>Notice that the last column in the GTF on the line defining that transcript should contain <code>protein_coding</code>.</p>
-   </section>
-   </details>
-
-6. Fetch the DNA sequence for that gene
+3. How many transcripts can this gene generate?
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Similarly to step 1 from the Warmup, open the file with the `with` statement.</p>
+   <p>Again, think about the structure of the GTF file</p>
+   </section>
+   <summary>Answer</summary>
+   <section>This gene can produce 11 different transcripts</section>
+   </details>
+
+4. What is the longest transcript in nucleotides?
+
+   <details>
+   <summary>Tip</summary>
+   <section>
+   <p>Use start and stop positions for each transcript of the gene</p>
+   </section>
+   <summary>Answer</summary>
+   <section>
+   <p>The transcript with id ENST00000003084 is the longest among 11 other transcripts, and spans 188.703 bases</p>
+   </section>
+   </details>
+
+5. Fetch the DNA sequence for that transcript
+
+   <details>
+   <summary>Tip</summary>
+   <section>
+   <p>Similarly to step 1 from the Warmup, open the reference file.</p>
    <p>Ignore the first line and, in a loop, append each line to a list.</p>
    <p>Remember to strip the trailing newline character.</p>
    <p>Outside the loop, use the <code>join</code> function to concatenate the lines from the list.</p>
    <p><b>Avoid concatenation</b> <i>inside</i> the loop, as it is slow and wasting memory</p>
+   <p>Use the start and stop positions extracted from the transcript, but think about where the index starts from</p>
    </section>
-   </details>
-
-7. Fetch all the exons for that transcript (splicing)
-
-   <details>
    <summary>Answer</summary>
    <section>
-   <p>Your answer can be output to a file and compare to <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/mrna.ncbi.fasta">that given result</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
+   <p>The entire sequence can be found here</p>
    </section>
    </details>
 
-8. What are the position of the `start_codon` and `stop_codon` from that transcript?
+6. Fetch all the exons for that transcript, spliced together to one sequence
+
+   <details>
+   <summary>Tip</summary>
+   <section>
+   <p>First you need to save the start and stop positions of all exons of that transcript.</p>
+   </section>
+   <summary>Answer</summary>
+   <section>
+   <p>The correct sequence can be found here<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/mrna.ncbi.fasta">that given result</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
+   </section>
+   </details>
+
+7. What are the position and sequence of the `start_codon` and `stop_codon` from that transcript?
 
    <details>
    <summary>Tip</summary>
    <section>
    <p>Check that the <code>start_codon</code> is <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon</p>
-   <p>Make your program throws a warning in case the transcript you are currently translating does not begin with a start-codon and end with a stop-codon</p>
+   <p>Make your program print a warning message in case the transcript does not begin with a start-codon and end with a stop-codon</p>
+   </section>
+   <summary>Answer</summary>
+   <section>
+   <p>Position of start codon is 117.480.095</p>
+   <p>Position of stop codon is 117.667.106</p>
    </section>
    </details>
 
-9. Translate into amino-acids, using an implementation of the <a href="http://shawmst.org/biology/article/rna-translation-table/">translation table</a> from <a href="https://github.com/NBISweden/PythonCourse/tree/ht17/assignment"><code>utils.rna</code> package</a>.
+8. Translate into amino-acids, using an implementation of the <a href="http://shawmst.org/biology/article/rna-translation-table/">translation table</a> from <a href="https://github.com/NBISweden/PythonCourse/tree/ht17/assignment"><code>utils.rna</code> package</a>.
 
    <details>
    <summary>Tip</summary>
+   <section>
+   <p>Use start codon position to start translating from</p>
+   <p></p>
+   </section>
+   <summary>Answer</summary>
    <section>
    <p>You can output your results in different files and check the difference with the <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/protein.ncbi.fasta">given result</a> or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a> or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>.</p>
    <pre class="highlight"><code>diff filename-1 filename-2</code></pre>
@@ -144,16 +186,6 @@ id `ENSG00000001626` on chromosome `7`.
    </section>
    </details>
 
-1. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
-   
-   <details>
-   <summary>Procedure</summary>
-   <section>
-   <p>Start by <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc11">parsing a fasta file with BioPython</a>.</p>
-   <p>Have a look at <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc24">the transcription step</a>,</p>
-   <p>and the <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc25">translation step</a> using the built-in <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc26">translation tables</a>.</p>
-   </section>
-   </details>
 
 <hr />
 
@@ -175,7 +207,22 @@ There might be several.
 
 # Extra tasks {#extra-task}
 
-What if the sequence was on the reverse strand?<br>
-You need implement that as well!<br>
-So ..._no!_ Use the BioPython module, it does that job!
+1. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
 
+   <details>
+   <summary>Procedure</summary>
+   <section>
+   <p>Start by <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc11">parsing a fasta file with BioPython</a>.</p>
+   <p>Have a look at <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc24">the transcription step</a>,</p>
+   <p>and the <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc25">translation step</a> using the built-in <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc26">translation tables</a>.</p>
+   </section>
+   </details>
+
+2. What if the sequence was on the reverse strand? You need implement that as well!
+
+  <details>
+  <summary>Tip</summary>
+  <section>
+  So ..._no!_ Use the BioPython module, it does that job!
+  </section>
+  </details>
