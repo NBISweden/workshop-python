@@ -34,19 +34,14 @@ addition, you have full genome sequence data from five individuals
 from a family at risk of carrying mutations related to the
 disease.</p>
 
-<p> Your task is to write a Python program that will extract the CFTR
-gene, translate the gene sequence to its corresponding amino-acid
-sequence and based on the reference amino-acid sequence determine
-whether any of the five given individuals is affected.</p>
+<p> Your task is to write a Python program that will extract the correct transcript from the CFTR gene, translate the gene sequence to its corresponding amino-acid sequence and based on the reference amino-acid sequence determine whether any of the five given individuals is affected.</p>
 
 </blockquote>
 
 # Fetch the appropriate files {#fetch-files}
 
 The main task is divided in several steps. The first step is to fetch
-the reference sequence file (in `fasta` format) and the appropriate reference annotation
-file (in `GTF` format) from
-the [Ensembl database](http://www.ensembl.org/info/data/ftp/index.html).
+the reference sequence file (in `fasta` format) and the appropriate reference annotation file (in `GTF` format) from the [Ensembl database](http://www.ensembl.org/info/data/ftp/index.html).
 
 The CTFR gene is located on chromosome `7`. After downloading the files, read up on how the files are structured.
 
@@ -55,6 +50,9 @@ Human reference DNA for chromosome 7 (fasta):
 
 Human GTF annotation file:
 - Homo_sapiens.GRCh38.93.gtf.gz
+
+Many of the tasks involves outputting long sequences. To make sure they are correct, use the <code>utils.check_results package</code>:
+<pre class="highlight"><code>from utils import check_results</code></pre>
 
 # Warmup {#warmup}
 
@@ -103,7 +101,7 @@ In the annotation file (from the Ensembl database), that gene has the
 id `ENSG00000001626` on chromosome `7`.
 
 
-3. How many transcripts can this gene generate?
+1. How many transcripts can this gene generate?
 
    <details>
    <summary>Tip</summary>
@@ -116,7 +114,7 @@ id `ENSG00000001626` on chromosome `7`.
    <section>This gene can produce 11 different transcripts</section>
    </details>
 
-4. What is the longest transcript in nucleotides?
+2. What is the longest transcript in nucleotides?
 
    <details>
    <summary>Tip</summary>
@@ -131,7 +129,7 @@ id `ENSG00000001626` on chromosome `7`.
    </section>
    </details>
 
-5. Fetch the DNA sequence for that transcript
+3. Fetch the DNA sequence for that transcript
 
    <details>
    <summary>Tip</summary>
@@ -147,11 +145,12 @@ id `ENSG00000001626` on chromosome `7`.
    <details>
    <summary>Answer</summary>
    <section>
-   <p>The entire sequence can be found here</p>
+   <p>Write your results to file and compare with <code>check_answers.ex3(resultsFile)</code> </p>
+   <p>The entire sequence can be found [here](https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/transcript.ncbi.fasta)</p>
    </section>
    </details>
 
-6. Fetch all the exons for that transcript, spliced together to one sequence
+4. Fetch all the exons for that transcript, spliced together to one sequence
 
    <details>
    <summary>Tip</summary>
@@ -162,11 +161,12 @@ id `ENSG00000001626` on chromosome `7`.
    <details>
    <summary>Answer</summary>
    <section>
-   <p>The correct sequence can be found here<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/mrna.ncbi.fasta">that given result</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
+   <p>Write your results to file and compare with <code>check_answers.ex4(resultsFile)</code> </p>
+   <p>The correct sequence can be found [here](https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/mrna.ncbi.fasta)<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/mrna.ncbi.fasta">that given result</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
    </section>
    </details>
 
-7. What are the position and sequence of the `start_codon` and `stop_codon` from that transcript?
+5. What are the position and sequence of the `start_codon` and `stop_codon` from that transcript?
 
    <details>
    <summary>Tip</summary>
@@ -183,7 +183,7 @@ id `ENSG00000001626` on chromosome `7`.
    </section>
    </details>
 
-8. Translate into amino-acids, using an implementation of the <a href="http://shawmst.org/biology/article/rna-translation-table/">translation table</a> from <a href="https://github.com/NBISweden/PythonCourse/tree/ht17/assignment"><code>utils.rna</code> package</a>.
+6. Translate into amino-acids, using an implementation of the translation table from <a href="https://github.com/NBISweden/PythonCourse/tree/ht18/assignment"><code>utils.rna</code> package</a>.
 
    <details>
    <summary>Tip</summary>
@@ -195,10 +195,8 @@ id `ENSG00000001626` on chromosome `7`.
    <details>
    <summary>Answer</summary>
    <section>
-   <p>You can output your results in different files and check the difference with the <a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/protein.ncbi.fasta">given result</a> or online <a href="http://www.uniprot.org/uniprot/A0A024R730.fasta">here</a> or <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">here</a>.</p>
-   <pre class="highlight"><code>diff filename-1 filename-2</code></pre>
-   will output nothing when the files are identical.
-   <p>Moreover, have a look at the <a href="https://docs.python.org/3.5/library/stdtypes.html#ranges"><code>range</code> function</a>, which can take an extra <code>step</code> parameter.</p>
+   <p>Write your results to file and compare with <code>check_answers.ex6(resultsFile)</code> </p>
+   <p>The correct sequence can be found [here](https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/protein.ncbi.fasta)</p>
    </section>
    </details>
 
@@ -209,6 +207,7 @@ id `ENSG00000001626` on chromosome `7`.
 
 We are reaching the goal for this assignment!
 
+A mutation in the transcript ENST00000003084 causes a premature stop codon to be introduced into the aminoacid sequence. This creates a truncated protein, causing cystic fibrosis.
 Using the python program you have designed above, find which one of
 the following 5 patients
 ([patient-1](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient1.fa.gz),
@@ -217,7 +216,7 @@ the following 5 patients
 [patient-4](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient4.fa.gz),
 and
 [patient-5](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient5.fa.gz))
-carries a mutation on the CFTR gene, that can cause cystic fibrosis.
+carries a mutation on the CFTR gene, causing a truncated protein.
 
 There might be several.
 
