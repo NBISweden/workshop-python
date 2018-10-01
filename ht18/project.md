@@ -51,7 +51,7 @@ Human reference DNA for chromosome 7 (fasta):
 Human GTF annotation file:
 - Homo_sapiens.GRCh38.93.gtf.gz
 
-Many of the tasks involves outputting long sequences. To make sure they are correct, use the <code>utils.check_results package</code>:
+Many of the tasks involves outputting long sequences. To make sure they are correct, use the <code>utils.check_results</code>package:
 <pre class="highlight"><code>from utils import check_results</code></pre>
 
 # Warmup {#warmup}
@@ -80,7 +80,7 @@ Many of the tasks involves outputting long sequences. To make sure they are corr
    <summary>Tip</summary>
    <section>
    <p>You need to understand the structure of a GTF-formatted file.</p>
-   <p>The GTF format uses several tab-delimited fields, for which we give you a <a href="https://github.com/NBISweden/PythonCourse/blob/ht17/assignment/data/gtf-format.md">short a description</a>.</p>
+   <p>The GTF format uses several tab-delimited fields, for which we give you a <a href="https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/data/gtf-format.md">short a description</a>.</p>
    <p>Alternatively, you can <a href="https://en.wikipedia.org/wiki/Gene_transfer_format">search online</a>.</p>
    <p>Then, only count entries of type gene</p>
    </section>
@@ -146,7 +146,7 @@ id `ENSG00000001626` on chromosome `7`.
    <summary>Answer</summary>
    <section>
    <p>Write your results to file and compare with <code>check_answers.ex3(resultsFile)</code> </p>
-   <p>The entire sequence can be found [here](https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/transcript.ncbi.fasta)</p>
+   <p>The entire sequence can be found <a href="https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/transcript.ncbi.fasta">here</a></p>
    </section>
    </details>
 
@@ -162,7 +162,7 @@ id `ENSG00000001626` on chromosome `7`.
    <summary>Answer</summary>
    <section>
    <p>Write your results to file and compare with <code>check_answers.ex4(resultsFile)</code> </p>
-   <p>The correct sequence can be found [here](https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/mrna.ncbi.fasta)<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/mrna.ncbi.fasta">that given result</a> (also <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_000492">available online</a>)</p>
+   <p>The correct sequence can be found <a href="https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/mrna.ncbi.fasta">here</a></p>
    </section>
    </details>
 
@@ -196,7 +196,7 @@ id `ENSG00000001626` on chromosome `7`.
    <summary>Answer</summary>
    <section>
    <p>Write your results to file and compare with <code>check_answers.ex6(resultsFile)</code> </p>
-   <p>The correct sequence can be found [here](https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/protein.ncbi.fasta)</p>
+   <p>The correct sequence can be found <a href="https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/protein.ncbi.fasta">here</a></p>
    </section>
    </details>
 
@@ -210,12 +210,12 @@ We are reaching the goal for this assignment!
 A mutation in the transcript ENST00000003084 causes a premature stop codon to be introduced into the aminoacid sequence. This creates a truncated protein, causing cystic fibrosis.
 Using the python program you have designed above, find which one of
 the following 5 patients
-([patient-1](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient1.fa.gz),
-[patient-2](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient2.fa.gz),
-[patient-3](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient3.fa.gz),
-[patient-4](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient4.fa.gz),
+([patient-1](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient1.fa.gz),
+[patient-2](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient2.fa.gz),
+[patient-3](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient3.fa.gz),
+[patient-4](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient4.fa.gz),
 and
-[patient-5](https://github.com/NBISweden/PythonCourse/raw/ht17/assignment/data/Patient5.fa.gz))
+[patient-5](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient5.fa.gz))
 carries a mutation on the CFTR gene, causing a truncated protein.
 
 There might be several.
