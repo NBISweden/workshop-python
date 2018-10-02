@@ -42,7 +42,7 @@ The installer should look like:
 ### On Mac OS X
 
 Since Mac OS X 10.8, Python 2.7 is pre-installed by Apple. This is an incompatible version with this course.
-You should instead [download the installer](//www.python.org/ftp/python/3.7.0/python-3.7.0-macosx10.6.pkg) for the version 3.6.0 (or preferably a newer one), double-click and follow the instructions.
+You should instead [download the installer](//www.python.org/ftp/python/3.7.0/python-3.7.0-macosx10.6.pkg) for the version 3.7.0, double-click and follow the instructions.
 
 ![Installing Python on Mac OS X](../img/Python-3.5.0-Installer-OSX.png)
 
@@ -100,7 +100,7 @@ alternative. You should probably customize it to your taste first.
 
 Another alternative is <a
 href="//www.jetbrains.com/pycharm/">PyCharm</a>. It looks promising
-but we admit we did not really try it (We use Emacs!). Go ahead, <a
+but we admit we did not really try it. Go ahead, <a
 href="//www.jetbrains.com/help/pycharm/requirements-installation-and-launching.html">install
 the free version</a> and give it a try!
 <a

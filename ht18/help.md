@@ -3,15 +3,24 @@ menu: help
 title: 'Python 3 - Cheat Sheet'
 ---
 
-**Quick links from the [Standard Library](https://docs.python.org/3.5/library/index.html)**
+**Quick links from the [Standard Library](https://docs.python.org/3.7/library/index.html)**
 
-* [Operations on Booleans](https://docs.python.org/3.5/library/stdtypes.html#boolean-operations-and-or-not) (`True`,`False`)
-* [Comparisons](https://docs.python.org/3.5/library/stdtypes.html#comparisons)
-* [Operations on numbers](https://docs.python.org/3.5/library/stdtypes.html#numeric-types-int-float-complex) (int,floats)
-* [Operations on sequences](https://docs.python.org/3.5/library/stdtypes.html#common-sequence-operations) (strings, lists, tuples, ... indexables), and also for [mutable sequences](https://docs.python.org/3.5/library/stdtypes.html#mutable-sequence-types)
-* [Built-in functions](https://docs.python.org/3.5/library/functions.html)
-* [The range function](https://docs.python.org/3.5/library/stdtypes.html#ranges)
-* [Manipulating strings](https://docs.python.org/3.5/library/stdtypes.html#string-methods)
+* [Operations on Booleans](https://docs.python.org/3.7/library/stdtypes.html#boolean-operations-and-or-not) (`True`,`False`)
+* [Comparisons](https://docs.python.org/3.7/library/stdtypes.html#comparisons)
+* [Operations on numbers](https://docs.python.org/3.7/library/stdtypes.html#numeric-types-int-float-complex) (int,floats)
+* [Operations on sequences](https://docs.python.org/3.7/library/stdtypes.html#common-sequence-operations) (strings, lists, tuples, ... indexables), and also for [mutable sequences](https://docs.python.org/3.7/library/stdtypes.html#mutable-sequence-types)
+* [Built-in functions](https://docs.python.org/3.7/library/functions.html)
+* [Manipulating strings](https://docs.python.org/3.7/library/stdtypes.html#string-methods)
+
+
+# Cheat Sheet
+
+<object data="../img/cheat_sheet.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="../img/cheat_sheet.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="../img/cheat_sheet.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
+
 
 # Types
 {:.collapse-trigger}
@@ -37,7 +46,7 @@ Create your own type using `class`
 for item in aList:
 	print('List item: ', item)
 ```
-		
+
 It is not necessary to iterate list items via their position.
 You _rarely_ need to do:
 
@@ -58,7 +67,7 @@ else:
 	return None
 ```
 
-		
+
 # Iterating through a dictionary
 {:.collapse-trigger}
 
@@ -100,7 +109,7 @@ with open("filename","r") as f: # Add encoding='...' if necessary
 
 The `with` statement takes care of closing the file in case an error occurs in the `for` loop.
 
-# Defining a function 
+# Defining a function
 {:.collapse-trigger}
 
 ```python
@@ -168,7 +177,7 @@ False objects are:
 * the values `0`, `0.0`,
 * the empty string `''`,
 * the empty list `[]`, the empty tuple `()`
-* the empty dictionary `{}`, 
+* the empty dictionary `{}`,
 
 If you define your own class, you'll have to add the function
 `__bool__()` (or `__len__()`, since Python defaults to `__len__` when
@@ -178,13 +187,13 @@ For example, when calling a function where arguments have default values
 
 ```python
 def functionName(arg1=None):
-	
+
 	if arg1:
 		print('arg1 was None')
-	
+
 	# Body of the function
 ```
-	  
+
 # Catching errors
 {:.collapse-trigger}
 

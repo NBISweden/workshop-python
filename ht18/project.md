@@ -169,7 +169,7 @@ id `ENSG00000001626` on chromosome `7`.
 5. What are the position and sequence of the `start_codon` and `stop_codon` from that transcript?
 
    <details>
-   <summary>Tip</summary>
+   <summary>Note</summary>
    <section>
    <p>Check that the <code>start_codon</code> is <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon</p>
    <p>Make your program print a warning message in case the transcript does not begin with a start-codon and end with a stop-codon</p>
@@ -183,7 +183,7 @@ id `ENSG00000001626` on chromosome `7`.
    </section>
    </details>
 
-6. Translate into amino-acids, using an implementation of the translation table from <a href="https://github.com/NBISweden/PythonCourse/tree/ht18/assignment"><code>utils.rna</code> package</a>.
+6. Translate the above sequence into amino-acids, using an implementation of the translation table from <a href="https://github.com/NBISweden/PythonCourse/tree/ht18/assignment"><code>utils.rna</code> package</a>.
 
    <details>
    <summary>Tip</summary>
@@ -208,15 +208,14 @@ id `ENSG00000001626` on chromosome `7`.
 We are reaching the goal for this assignment!
 
 A mutation in the transcript ENST00000003084 causes a premature stop codon to be introduced into the aminoacid sequence. This creates a truncated protein, causing cystic fibrosis.
-Using the python program you have designed above, find which one of
-the following 5 patients
+Using the python program you have designed above, compare the reference sequence to the sequences of the following 5 patients
 ([patient-1](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient1.fa.gz),
 [patient-2](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient2.fa.gz),
 [patient-3](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient3.fa.gz),
 [patient-4](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient4.fa.gz),
 and
 [patient-5](https://github.com/NBISweden/PythonCourse/raw/ht18/assignment/data/Patient5.fa.gz))
-carries a mutation on the CFTR gene, causing a truncated protein.
+to determine which one is carrying a mutation in the CFTR gene, causing a truncated protein.
 
 There might be several.
 
