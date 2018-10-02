@@ -33,7 +33,7 @@ def compare(infile, correctFile):
 
 
 def ex3(infile):
-  compare(infile, 'C:/Users/Nina/Documents/courses/Python_Beginner_Course/assignment/transcript.ncbi.fasta')
+  compare(infile, 'https://raw.githubusercontent.com/NBISweden/PythonCourse/ht18/assignment/results/transcript.ncbi.fasta')
 
 
 def ex4(infile):
