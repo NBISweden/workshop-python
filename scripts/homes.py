@@ -28,7 +28,7 @@ plot(selected_homes,
      latitude=lat,
      longitude=lng,
      radius=radius, # in m
-     google_key = 'AIzaSyCnq3Y7RTJ94JdRiu4LEQsqWy-7cGc8OAc'
+     google_key = 'key'
 )
 # https://developers.google.com/maps/documentation/javascript/get-api-key
 
