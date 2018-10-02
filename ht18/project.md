@@ -51,7 +51,7 @@ Human reference DNA for chromosome 7 (fasta):
 Human GTF annotation file:
 - Homo_sapiens.GRCh38.93.gtf.gz
 
-Many of the tasks involves outputting long sequences. To make sure they are correct, use the <code>utils.check_results</code>package:
+Many of the tasks involves outputting long sequences. To make sure they are correct, use the <code>utils.check_results</code> package:
 <pre class="highlight"><code>from utils import check_results</code></pre>
 
 # Warmup {#warmup}
@@ -220,7 +220,7 @@ carries a mutation on the CFTR gene, causing a truncated protein.
 
 There might be several.
 
-# Extra tasks {#extra-task}
+# Extra task {#extra-task}
 
 1. Use [BioPython](http://biopython.org/wiki/Documentation) for (some of) the above tasks
 
@@ -228,16 +228,6 @@ There might be several.
    <summary>Procedure</summary>
    <section>
    <p>Start by <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc11">parsing a fasta file with BioPython</a>.</p>
-   <p>Have a look at <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc24">the transcription step</a>,</p>
    <p>and the <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc25">translation step</a> using the built-in <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc26">translation tables</a>.</p>
    </section>
    </details>
-
-2. What if the sequence was on the reverse strand? You need implement that as well!
-
-  <details>
-  <summary>Tip</summary>
-  <section>
-  <p>So ..._no!_ Use the BioPython module, it does that job!</p>
-  </section>
-  </details>
