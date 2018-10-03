@@ -97,7 +97,7 @@ Many of the tasks involves outputting long sequences. To make sure they are corr
 
 All the following tasks are now related to the CTFR gene.
 
-In the annotation file (from the Ensembl database), that gene has the
+In the annotation file (the GTF file), that gene has the
 id `ENSG00000001626` on chromosome `7`.
 
 

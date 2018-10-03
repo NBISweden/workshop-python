@@ -30,12 +30,12 @@ needs.
 
 # Schedule
 
-From Monday November 19<sup>th</sup>, to Friday Novmeber 23<sup>th</sup> 2018 (week 47).
+From Monday November 19<sup>th</sup>, to Friday November 23<sup>th</sup> 2018 (week 47).
 
 * **09:00 - 12:00**: Lectures + Hands-on (including a Fika break)
 * **12.00 - 13:00**: Lunch
 * **13:00 - 15:00**: Lectures + Hands-on
-* **15:00 - 17:00**: Practice time (with assistants)
+* **15:00 - 17:00**: Project
 
 # Course Content
 
