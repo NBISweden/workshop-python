@@ -5,7 +5,7 @@ menu: topics
 
 <ol id="topics">
 <li>
-<a href="lecture/1" download>
+<a href="lecture/1.pdf" download>
 <h3>Day 1 - First programs</h3>
 
 literals, variables, builtin types, int, float, str, list, bool,
