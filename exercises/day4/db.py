@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# TODO add popups for all markers, change color and shape of markers
+# TODO add popups for all markers
 
+import cgi
 import sqlite3
 from math import radians, cos, sin, asin, sqrt
 
@@ -104,39 +105,14 @@ def _marker(entry, special=False):
     """
     Creates the javascript code for a Google Maps Marker
     """
-    if isinstance(entry,HomeEntry) and special:
-        return '''
-        var lonLat = new OpenLayers.LonLat({}, {})
-           .transform(
-             new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-             map.getProjectionObject() // to Spherical Mercator Projection
-           );
-        center = new OpenLayers.Marker(lonLat);
-        center.icon.url = "http://www.pngall.com/wp-content/uploads/2017/05/Map-Marker-PNG-HD.png";
-        markers.addMarker(center);
-        '''.format(entry.longitude, entry.latitude)
-
-    elif isinstance(entry,HomeEntry):
-        return '''
-        var lonLat = new OpenLayers.LonLat({}, {})
-           .transform(
-             new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
-             map.getProjectionObject() // to Spherical Mercator Projection
-           );
-        markers.addMarker(new OpenLayers.Marker(lonLat));
-        '''.format(entry.longitude, entry.latitude)
-
-#        return '''var marker_{2} = new google.maps.Marker({{
-# position: {{ lat: {0}, lng: {1} }},
-# map: map,
-# title: "id: {2}",
-# icon: {4}
-#}});
-#var infowindow_{2} = new google.maps.InfoWindow({{ content: "{3}" }});
-#google.maps.event.addListener(marker_{2}, 'click', function() {{ infowindow_{2}.open(map,marker_{2}); }});
-#'''.format(entry.latitude, entry.longitude,entry.id,entry.to_html(),
-#           'greenMakerIcon' if special else 'circleIcon')
-#    raise ValueError("Not a good entry")
+    marker = "-gold" if special else ""
+    return """ var feature = new OpenLayers.Feature.Vector(
+            new OpenLayers.Geometry.Point( {}, {}).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()),
+            {{description: "{}"}} ,
+            {{externalGraphic: 'http://dev.openlayers.org/img/marker{}.png', graphicHeight: 25, graphicWidth: 21, graphicXOffset:-12, graphicYOffset:-25  }}
+             );    
+           vectorLayer.addFeatures(feature);
+           """.format(entry.longitude, entry.latitude, cgi.escape(str(entry)), marker)
 
 
 def plot(selection,
@@ -158,10 +134,6 @@ def plot(selection,
     You can fetch one here: https://developers.google.com/maps/documentation/javascript/get-api-key
 
     """
-
-    #       var circle4326 = circularPolygon([x, y], radius, 64);
-    #       var circle3857 = circle4326.clone().transform('EPSG:4326', 'EPSG:3857');
-    #       vectorLayer4326.getSource().addFeature(new Feature(circle4326));
     start_html = """<html>
       <head>
 
@@ -184,11 +156,14 @@ def plot(selection,
 
         var markers = new OpenLayers.Layer.Markers( "Markers" );
 
-        center = new OpenLayers.Marker(lonLat);
-        center.icon.url = "http://www.pngall.com/wp-content/uploads/2017/05/Map-Marker-Free-PNG-Image.png";
-        center.html = "<html>hej</html>";
-        center.events.register("click", map, function(e){{console.log(e.object.html); createPopup(e.object)}});
-        markers.addMarker(center);
+        // center = new OpenLayers.Marker(lonLat);
+        // center = new OpenLayers.Geometry.Point(1onLat);
+        // center.icon.url = "http://www.pngall.com/wp-content/uploads/2017/05/Map-Marker-Free-PNG-Image.png";
+        // center.html = "<html>hej</html>";
+        // center.events.register("click", map, function(e){{console.log(e.object.html); createPopup(e.object)}});
+        // var pointvectorLayer = new OpenLayers.Layer.Vector("Center");
+        // pointvectorLayer.addFeatures([
+        //markers.addMarker(center);
 
         map.setCenter (lonLat, zoom);
 
@@ -213,6 +188,29 @@ def plot(selection,
         """.format(longitude, latitude, zoom, radius*2)
 
     end_html = '''
+        var controls = {
+           selector: new OpenLayers.Control.SelectFeature(vectorLayer, { onSelect: createPopup, onUnselect: destroyPopup })
+        };
+        function createPopup(feature) {
+          feature.popup = new OpenLayers.Popup.FramedCloud("pop",
+            feature.geometry.getBounds().getCenterLonLat(),
+            null,
+            '<div class="markerContent">'+feature.attributes.description+'</div>',
+            null,
+            true,
+            function() { controls['selector'].unselectAll(); }
+          );
+          //feature.popup.closeOnMove = true;
+          map.addPopup(feature.popup);
+        }
+
+        function destroyPopup(feature) {
+          feature.popup.destroy();
+          feature.popup = null;
+        }
+        
+        map.addControl(controls['selector']);
+        controls['selector'].activate();
         map.addLayer(markers);
         </script>
       </body>
@@ -222,13 +220,6 @@ def plot(selection,
 
     with open(output,'w',encoding='utf-8') as f:
         f.write(start_html)
-        # f.write('''\
-        # map.setCenter({{lat: {1}, lng: {2} }});
-        # center.setPosition({{lat: {1}, lng: {2} }});
-        # radius.setRadius({3});
-        # map.setZoom({0});
-        # '''.format(zoom, latitude, longitude, radius))
-
         for entry in selection:
             f.write(_marker(entry, special = special is entry))
             f.write('\n')
