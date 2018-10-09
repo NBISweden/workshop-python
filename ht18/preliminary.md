@@ -23,14 +23,7 @@ We have the 3 following requirements:
 
 # How to install Python
 
-On the [Python website](//www.python.org/downloads/), the latest
-version available is `3.7.0`. Please, choose to install the version
-`3.6.0` or above.  You can install the latest Python
-on
-[Windows](//www.python.org/downloads/windows/),
-[Mac OS X](//www.python.org/downloads/mac-osx/)
-or [Linux/Unix](//www.python.org/downloads/source/).
-
+Please, choose to install the version `3.6.0` or above. The latest version available is 3.7.0
 
 ### On Windows
 
@@ -58,21 +51,31 @@ More information can be found on [docs.python.org/3.7](//docs.python.org/3.7/usi
 >
 > $ pyenv install 3.7.0
 
+
 ### On Linux/Unix
+#### Using a package manager
+Install Python3 and pip using your package manager. For Ubuntu and Debian, it goes like this:
 
-You probably
-know [what to do](//docs.python.org/3.7/using/unix.html) if we
-gave you
-the
-[Python 3.7.0 sources](//www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz). You
-are surely familiar with the classic cycle:
-
-```bash
-./configure
-make
-make test
-sudo make install
 ```
+sudo apt-get update
+sudo apt-get install python3 python3-pip
+```
+
+Then use pip to install Jupyter (see [below](#jupyter) for more details).
+
+```
+sudo python3 -m pip install jupyter
+```
+
+You can also use pip to install BioPython:
+
+```
+sudo python3 -m pip install biopython
+```
+
+#### Installing from source
+You can also install [Python from source](https://www.python.org/downloads/).
+
 
 ----
 
@@ -115,13 +118,13 @@ Start your favorite terminal and check the Python version. Type at the
 prompt (ie where the `$` sign is):
 
 ```bash
-$ python --version
+$ python3 --version
 ```
 
 or start the python interpretor
 
 ```bash
-$ python
+$ python3
 ```
 
 [//]: # (Upon successful installation, you should see something like)
@@ -137,7 +140,7 @@ the NBIS GitHub location for this instance of the course), and in your
 terminal, run
 
 ```bash
-$ python test.py
+$ python3 test.py
 ```
 
 ...in the folder where the script resides. If this works fine, you
@@ -148,7 +151,7 @@ should see the current time printed with "big digits" ;)
 
 ----
 
-# Jupyter notebooks
+# Jupyter notebooks {#jupyter}
 
 In the course, we will write Python code as standalone files. However,
 during the lecture, we will also use Jupyter
