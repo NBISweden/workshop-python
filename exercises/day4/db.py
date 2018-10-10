@@ -156,15 +156,6 @@ def plot(selection,
 
         var markers = new OpenLayers.Layer.Markers( "Markers" );
 
-        // center = new OpenLayers.Marker(lonLat);
-        // center = new OpenLayers.Geometry.Point(1onLat);
-        // center.icon.url = "http://www.pngall.com/wp-content/uploads/2017/05/Map-Marker-Free-PNG-Image.png";
-        // center.html = "<html>hej</html>";
-        // center.events.register("click", map, function(e){{console.log(e.object.html); createPopup(e.object)}});
-        // var pointvectorLayer = new OpenLayers.Layer.Vector("Center");
-        // pointvectorLayer.addFeatures([
-        //markers.addMarker(center);
-
         map.setCenter (lonLat, zoom);
 
         var vectorLayer = new OpenLayers.Layer.Vector("Overlay");
@@ -200,7 +191,6 @@ def plot(selection,
             true,
             function() { controls['selector'].unselectAll(); }
           );
-          //feature.popup.closeOnMove = true;
           map.addPopup(feature.popup);
         }
 
@@ -216,7 +206,6 @@ def plot(selection,
       </body>
     </html>
     '''
-    # You can add further markers using markers.addMarker(new OpenLayers.Marker(newLonLat)); if you define newLonLat to be another OpenLayers.LonLat object
 
     with open(output,'w',encoding='utf-8') as f:
         f.write(start_html)
