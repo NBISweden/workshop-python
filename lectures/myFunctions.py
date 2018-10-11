@@ -11,5 +11,5 @@ def toSec(days, hours, minutes, seconds):
     total += minutes*60
     total += seconds
  
-    return total
+    return str(total)+'s'
 
