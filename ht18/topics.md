@@ -16,12 +16,12 @@ encoding, if/else, for, while, comparators, stdlib.
 <a href="lecture/1.pdf" download>Download PDF</a> |
 Notebooks:
 <a
-href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day1/Day_1_Exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day1/Day_1_Exercise_2.ipynb">[2]</a>
+href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day1/Day_1_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day1/Day_1_Exercise_2.ipynb">[2]</a>
 <a
-href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day1/Day_1_Exercise_3.ipynb">[3]</a>
+href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day1/Day_1_Exercise_3.ipynb">[3]</a>
 <a
-href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day1/Day_1_Exercise_4.ipynb">[4]</a>
+href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day1/Day_1_Exercise_4.ipynb">[4]</a>
 
 </p>
 </li>
@@ -34,10 +34,10 @@ set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
 </a>
 <p class="notebook-links">
 <a href="lecture/2.pdf" download>Download PDF</a> |
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/imdb/250.imdb" download>250.imdb</a> |
+<a href="https://github.com/NBISweden/workshop-python/blob/ht18/files/250.imdb" download>250.imdb</a> |
 Notebooks:
-<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day2/Day_2_Exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day2/Day_2_Exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day2/Day_2_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day2/Day_2_Exercise_2.ipynb">[2]</a>
 </p>
 </li>
 
@@ -50,7 +50,7 @@ dict, function, positional argument, import, sys.argv
 <p class="notebook-links">
 <a href="lecture/3.pdf" download>Download PDF</a> |
 Notebook:
-<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
 </p>
 </li>
 
@@ -61,11 +61,11 @@ Notebook:
 import, documentation, function, default value, sys.argv, arguments
 </a>
 <p class="notebook-links">
-<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/bogus.py">bogus.py</a>
+<a href="https://raw.githubusercontent.com/NBISweden/workshop-python/ht17/assignment/bogus.py">bogus.py</a>
 |
-<a href="https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/homes/homes.py">homes.py</a>
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/homes/uppsala.sqlite">uppsala.sqlite</a>
-<a href="https://github.com/NBISweden/PythonCourse/raw/ht17/homes/db.py">db.py</a>
+<a href="https://raw.githubusercontent.com/NBISweden/workshop-python/ht17/homes/homes.py">homes.py</a>
+<a href="https://github.com/NBISweden/workshop-python/raw/ht17/homes/uppsala.sqlite">uppsala.sqlite</a>
+<a href="https://github.com/NBISweden/workshop-python/raw/ht17/homes/db.py">db.py</a>
 </p>
 </li>
 
@@ -78,7 +78,7 @@ format, positional argument, keyword argument, regular expression
 <p class="notebook-links">
 <a href="lecture/5.pdf" download>Download PDF</a> |
 Notebook:
-<a href="http://nbviewer.jupyter.org/github/NBISweden/PythonCourse/blob/ht18/exercises/day5/Day_5_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_1.ipynb">[1]</a>
 </p>
 </li>
 
