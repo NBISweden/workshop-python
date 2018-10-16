@@ -1,6 +1,6 @@
 import random
 import re
-
+import readline
 
 # TODO Hints
 
@@ -26,7 +26,11 @@ exercises = [
 
 def test(pattern, expr):
     goods, bads, help = expr
-    p = re.compile('^'+pattern+'$')
+    try:
+        p = re.compile('^'+pattern+'$')
+    except Exception:
+        print("Invalid regular expression. Try again!")
+        return False
     for good in goods:
         if p.search(good) is None:
             print('failed', good)
@@ -43,6 +47,7 @@ def test(pattern, expr):
 
 
 if __name__ == "__main__":
+    readline.parse_and_bind('set editing-mode vi')
     print('Hello!\nFor each given example, write a pattern that matches the Accept strings',
           'and that doesn\'t match the Reject string. Then press Enter.',
           '\nType "help" to get a hint or "skip" to skip the current question.',
@@ -50,8 +55,8 @@ if __name__ == "__main__":
     for ex in exercises:
         didit = False
         while not didit:
-            print('Accept {}'.format(', '.join(ex[0])))
-            print('Reject {}'.format(', '.join(ex[1])))
+            print('Accept {}'.format(', '.join('{!r}'.format(e) for e  in ex[0])))
+            print('Reject {}'.format(', '.join('{!r}'.format(e) for e  in ex[1])))
             pattern = input('> ').strip()
             if pattern == "help":
                 print('Hint:', ex[2])
