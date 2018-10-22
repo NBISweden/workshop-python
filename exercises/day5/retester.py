@@ -1,3 +1,4 @@
+import os
 import random
 import re
 import readline
@@ -18,7 +19,7 @@ exercises = [
    (['dogs', 'cats', 'horses'], ['dog', 'cat', 'mice', 'cow'], "There's something in the end..."),
    (['karlsson', 'carlson', 'carlzon', 'karlson'], ['larsson', 'karl', 'carlo'], "If you're lazy, just look at the beginning and the end"),
    (['vision', 'explosion', 'fusion'], ['station', 'motion', 'region'], "Any start will do..."),
-   (['ATG', 'ATA', 'ATT'], ['AAG', 'AGA', 'ACT'], "."),
+   (['ATG', 'ATA', 'ATT'], ['AAG', 'AGA', 'ACT'], "Mind the case! A != a"),
    (['words', 'letters', 'text'], ['not word', 'åå', 'work-shop', '88'], "Only the english alphabet is allowed here"),
    (['88', '337', '0'], ['elephant', 'two', '.99', '-22'], "Digits!"),
 ]
@@ -33,34 +34,45 @@ def test(pattern, expr):
         return False
     for good in goods:
         if p.search(good) is None:
-            print('failed', good)
+            print('Failed. Did not match the string {!r} which should be accepted'.format(good))
             print('Try again!')
             return False
     for bad in bads:
         if p.search(bad) is not None:
-            print('failed', bad)
+            print('Failed. Matched the string {!r} which should be rejected'.format(bad))
             print('Try again!')
             return False
     ok = ['Well done!', 'Good job!', 'Excellent!', 'Great!']
-    print(random.choice(ok))
-    return True
+    return random.choice(ok)
+
+
+def ask_question(exercise):
+    print('Accept {}'.format(', '.join('{!r}'.format(e) for e  in exercise[0])))
+    print('Reject {}'.format(', '.join('{!r}'.format(e) for e  in exercise[1])))
+    return input('> ').strip()
 
 
 if __name__ == "__main__":
     readline.parse_and_bind('set editing-mode vi')
-    print('Hello!\nFor each given example, write a pattern that matches the Accept strings',
+    print('Hello!\nFor each given example, write a regular expression that matches the Accept strings',
           'and that doesn\'t match the Reject string. Then press Enter.',
           '\nType "help" to get a hint or "skip" to skip the current question.',
+          '\nType "clear" to get clear the terminal screen.',
           '\nTo exit, type Ctrl+c\n')
+    didit = False
     for ex in exercises:
+        if didit:
+            print(didit)
+            print('Next exercise:')
         didit = False
         while not didit:
-            print('Accept {}'.format(', '.join('{!r}'.format(e) for e  in ex[0])))
-            print('Reject {}'.format(', '.join('{!r}'.format(e) for e  in ex[1])))
-            pattern = input('> ').strip()
+            pattern = ask_question(ex)
+            if pattern == "clear":
+                os.system('cls' if os.name == 'nt' else 'clear')
+                pattern = ask_question(ex)
             if pattern == "help":
                 print('Hint:', ex[2])
-                pattern = input('> ')
+                pattern = input('> ').strip()
             if pattern == "skip":
                 didit = True
                 continue
