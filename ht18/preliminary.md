@@ -61,6 +61,11 @@ sudo apt-get update
 sudo apt-get install python3 python3-pip
 ```
 
+> The command to run Python is `python3`. If you wish to be able to start Python with just `python`,
+> add the following line to the file `~/.bashrc`:
+
+> `alias python=python3`
+
 Then use pip to install Jupyter (see [below](#jupyter) for more details).
 
 ```
