@@ -51,7 +51,7 @@ Notebook:
 </li>
 
 <li>
-<a href="https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_4.slides.html">
+<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_4.slides.html">
 <h3>Day 4 - Using someone else's code</h3>
 
 import, documentation, function, default value, sys.argv, arguments
@@ -66,7 +66,7 @@ import, documentation, function, default value, sys.argv, arguments
 </li>
 
 <li>
-<a href="https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_5.slides.html">
+<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_5.slides.html">
 <h3>Day 5 - Formatting String and <br>Pattern matching</h3>
 
 format, positional argument, keyword argument, regular expression
