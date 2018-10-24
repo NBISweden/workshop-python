@@ -78,8 +78,7 @@ Notebook:
 </li>
 
 <li>
-Download all files needed for exercises
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht18/downloads" download>Download
+<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht18/downloads" download>Download all files needed for exercises
 </a>
 </li>
 
