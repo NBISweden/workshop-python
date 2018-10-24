@@ -20,7 +20,7 @@ body {
 
 .reveal {
   font-family: "Lato", sans-serif;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: normal;
   color: #000; }
 
@@ -236,9 +236,14 @@ body {
  *********************************************/
 .reveal section img {
   margin: 15px 0px;
+  width: 50%;
+  height: auto;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #333;
+  border: 1px solid #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal img { 
+  transform: scale(0.7, 0.7); }
 
 .reveal section img.plain {
   border: 0;
