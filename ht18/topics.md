@@ -5,7 +5,7 @@ menu: topics
 
 <ol id="topics">
 <li>
-<a href="404.md">
+<a href="https://github.com/NBISweden/workshop-python/blob/8040773fcf0514c8128df9f05970ecd961f81f42/lectures/Day_1.slides.html">
 <h3>Day 1 - First programs</h3>
 
 literals, variables, builtin types, int, float, str, list, bool,
@@ -13,7 +13,7 @@ immutable, mutable, sequences, iterable, open,
 encoding, if/else, for, while, comparators, stdlib.
 </a>
 <p class="notebook-links">
-<a href="404.md" download>Download PDF</a> |
+<a href="https://github.com/NBISweden/workshop-python/blob/8040773fcf0514c8128df9f05970ecd961f81f42/lectures/Day_1.slides.html" download>Download slides</a> |
 Notebooks:
 <a
 href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day1/Day_1_Exercise_1.ipynb">[1]</a>
@@ -84,7 +84,7 @@ Notebook:
 
 <li>
 <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht18/downloads" download>Download all files
-</a>
+</a>*
 </li>
 
 </ol>
