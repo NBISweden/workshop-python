@@ -13,7 +13,6 @@ immutable, mutable, sequences, iterable, open,
 encoding, if/else, for, while, comparators, stdlib.
 </a>
 <p class="notebook-links">
-<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/8040773fcf0514c8128df9f05970ecd961f81f42/lectures/Day_1.slides.html" download>Download slides</a> |
 Notebooks:
 <a
 href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day1/Day_1_Exercise_1.ipynb">[1]</a>
@@ -27,14 +26,12 @@ href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exe
 </li>
 
 <li>
-<a href="404.md">
+<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_2.slides.html">
 <h3>Day 2 - More Data Structures</h3>
 
 set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
 </a>
 <p class="notebook-links">
-<a href="404.md" download>Download PDF</a> |
-<a href="https://github.com/NBISweden/workshop-python/blob/ht18/files/250.imdb" download>250.imdb</a> |
 Notebooks:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day2/Day_2_Exercise_1.ipynb">[1]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day2/Day_2_Exercise_2.ipynb">[2]</a>
@@ -42,20 +39,19 @@ Notebooks:
 </li>
 
 <li>
-<a href="404.md">
+<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_3.slides.html">
 <h3>Day 3 - Using <code>dict</code></h3>
 
 dict, function, positional argument, import, sys.argv
 </a>
 <p class="notebook-links">
-<a href="404.md" download>Download PDF</a> |
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
 </p>
 </li>
 
 <li>
-<a href="404.md" class="no-keynote">
+<a href="https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_4.slides.html">
 <h3>Day 4 - Using someone else's code</h3>
 
 import, documentation, function, default value, sys.argv, arguments
@@ -70,21 +66,21 @@ import, documentation, function, default value, sys.argv, arguments
 </li>
 
 <li>
-<a href="404.md">
+<a href="https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_5.slides.html">
 <h3>Day 5 - Formatting String and <br>Pattern matching</h3>
 
 format, positional argument, keyword argument, regular expression
 </a>
 <p class="notebook-links">
-<a href="404.md" download>Download PDF</a> |
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_1.ipynb">[1]</a>
 </p>
 </li>
 
 <li>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht18/downloads" download>Download all files
-</a>*
+Download all files needed for exercises
+<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht18/downloads" download>Download
+</a>
 </li>
 
 </ol>
