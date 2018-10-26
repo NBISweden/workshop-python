@@ -52,7 +52,7 @@ Human GTF annotation file:
 - Homo_sapiens.GRCh38.93.gtf.gz
 
 Many of the tasks involves outputting long sequences. To make sure they are correct, use the <code>utils.check_results</code> package:
-<pre class="highlight"><code>from utils import check_results</code></pre>
+<pre class="highlight"><code>from utils import check_answers</code></pre>
 
 # Warmup {#warmup}
 
