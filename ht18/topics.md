@@ -74,7 +74,7 @@ format, positional argument, keyword argument, regular expression
 <p class="notebook-links">
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_2.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_2.ipynb">[2]</a>
 </p>
 </li>
 
