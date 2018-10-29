@@ -58,10 +58,10 @@ import, documentation, function, default value, sys.argv, arguments
 </a>
 <p class="notebook-links">
 Notebooks:
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_2.ipynb">[2]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_3.ipynb">[3]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_4.ipynb">[4]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_3.ipynb">[3]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_4.ipynb">[4]</a>
 </p>
 </li>
 
@@ -73,8 +73,8 @@ format, positional argument, keyword argument, regular expression
 </a>
 <p class="notebook-links">
 Notebook:
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_2.ipynb">[2]</a>
 </p>
 </li>
 
