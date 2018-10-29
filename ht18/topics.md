@@ -5,7 +5,7 @@ menu: topics
 
 <ol id="topics">
 <li>
-<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/8040773fcf0514c8128df9f05970ecd961f81f42/lectures/Day_1.slides.html">
+<a href="404.md">
 <h3>Day 1 - First programs</h3>
 
 literals, variables, builtin types, int, float, str, list, bool,
@@ -26,7 +26,7 @@ href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exe
 </li>
 
 <li>
-<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_2.slides.html">
+<a href="404.md">
 <h3>Day 2 - More Data Structures</h3>
 
 set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
@@ -39,7 +39,7 @@ Notebooks:
 </li>
 
 <li>
-<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_3.slides.html">
+<a href="404.md">
 <h3>Day 3 - Using <code>dict</code></h3>
 
 dict, function, positional argument, import, sys.argv
@@ -51,22 +51,22 @@ Notebook:
 </li>
 
 <li>
-<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_4.slides.html">
+<a href="404.md">
 <h3>Day 4 - Using someone else's code</h3>
 
 import, documentation, function, default value, sys.argv, arguments
 </a>
 <p class="notebook-links">
-<a href="https://raw.githubusercontent.com/NBISweden/workshop-python/ht17/assignment/bogus.py">bogus.py</a>
-|
-<a href="https://raw.githubusercontent.com/NBISweden/workshop-python/ht17/homes/homes.py">homes.py</a>
-<a href="https://github.com/NBISweden/workshop-python/raw/ht17/homes/uppsala.sqlite">uppsala.sqlite</a>
-<a href="https://github.com/NBISweden/workshop-python/raw/ht17/homes/db.py">db.py</a>
+Notebooks:
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_3.ipynb">[3]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_Exercise_4.ipynb">[4]</a>
 </p>
 </li>
 
 <li>
-<a href="http://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_5.slides.html">
+<a href="404.md">
 <h3>Day 5 - Formatting String and <br>Pattern matching</h3>
 
 format, positional argument, keyword argument, regular expression
@@ -74,6 +74,7 @@ format, positional argument, keyword argument, regular expression
 <p class="notebook-links">
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_Exercise_2.ipynb">[1]</a>
 </p>
 </li>
 
