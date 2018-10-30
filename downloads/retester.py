@@ -22,7 +22,7 @@ exercises = [
     (['dogs', 'cats', 'horses'], ['dog', 'cat', 'mice', 'cow'], "There's something in the end..."),
     (['karlsson', 'carlson', 'carlzon', 'karlson'], ['larsson', 'karl', 'carlo'], "If you're lazy, just look at the beginning and the end"),
     (['vision', 'explosion', 'fusion'], ['station', 'motion', 'region'], "Any start will do..."),
-    (['ATG', 'ATA', 'ATT'], ['AAG', 'AGA', 'ACT'], "Mind the case! A != a"),
+    (['TAG', 'TAA', 'TGA'], ['TCG', 'AGA', 'ACT'], "Mind the case! T != t"),
     (['words', 'letters', 'text'], ['not word', 'åå', 'work-shop', '88'], "Only the english alphabet is allowed here"),
     (['88', '337', '0'], ['elephant', 'two', '.99', '-22'], "Digits!"),
 ]
