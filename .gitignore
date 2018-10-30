@@ -4,3 +4,13 @@
 test/
 tmp/
 .ipynb_checkpoints/
+*.swp
+*__pycache__
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+
+
