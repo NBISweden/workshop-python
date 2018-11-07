@@ -10,6 +10,14 @@ FIELDS = [ "id", "type", "location", "address", "date", "asked_price", "price", 
 DEFAULT_QUERY = 'SELECT id,type,location,address,date,asked_price,price,rooms,area,rent,latitude,longitude FROM objects'
 
 
+def sort_by_price(houses, reverse=False):
+    """
+    Sorts  a list of homes by price.
+    Returns the sorted list, from cheapest to most expensived (when reverse=True)
+    """
+    return list(sorted(houses, key=lambda x: x.get_price(), reverse=reverse))
+
+
 def haversine(lat1, lon1, lat2, lon2):
     """
     Calculate the great circle distance (in m) between two points 
@@ -33,7 +41,7 @@ class HomeEntry():
             setattr(self,FIELDS[i],row[i])
 
     def __repr__(self):
-        return u'<Home {} | {} @ {}, {} ({}, {}):->'.format(self.id, self.type, self.location, self.price, self.longitude, self.latitude)
+        return u'<Home {} | {} @ {}, {:,.2f}:- ({}, {})>'.format(self.id, self.type, self.location, self.price, self.longitude, self.latitude)
 
     def __str__(self):
         return self.__repr__()
@@ -116,7 +124,6 @@ def _marker(entry, special=False):
 
 
 def plot(selection,
-         google_key,
          output = 'selection.html',
          special = None,
          zoom = 12,
@@ -129,9 +136,6 @@ def plot(selection,
     The center is given by latitude and longitude and marked on the map with a blue marker.
     The map draws a radius around the center.
     When the special is used, an extra green marker is ploted in the map.
-
-    Note: this requires you to pass a Google Maps API key.
-    You can fetch one here: https://developers.google.com/maps/documentation/javascript/get-api-key
 
     """
     start_html = """<html>

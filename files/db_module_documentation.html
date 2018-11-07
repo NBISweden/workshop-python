@@ -82,11 +82,9 @@ itself, using the <code class="highlighter-rouge">help</code> function.</p>
 </code></pre>
 </div>
 
-<p>The plot function has a few keyword parameters and two first
-positional arguments for the selection and Google API key.</p>
+<p>The plot function has a few keyword parameters.</p>
 
 <div class="highlighter-rouge"><pre class="codehilite"><code>plot(selection,
-     google_key,
      output='selection.html',
      special=None,
      zoom=12,
@@ -99,9 +97,6 @@ positional arguments for the selection and Google API key.</p>
     The center is given by latitude and longitude and marked on the map with a blue marker.
     The map draws a radius around the center.
     When the special is used, an extra green marker is ploted in the map.
-
-    Note: this requires you to pass a Google Maps API key.
-    You can fetch one here: https://developers.google.com/maps/documentation/javascript/get-api-key
 </code></pre>
 </div>
 
@@ -116,7 +111,15 @@ positional arguments for the selection and Google API key.</p>
 
 <dt><code>home</code>.get_area()</dt>
 <dd>returns its surface in m<sup>2</sup>.</dd>
+
+<p>For a list of homes, it is possible to sort it by price using the function below.</p>
+
+<dl>
+  <dt><code>sort_by_price(homes, reverse=False)</code></dt>
+<dd>returns the sorted list, starting from the cheapest home. If <code>reverse</code>
+is set to true, the list is instead sorted from expensive to cheap</dd>
 </dl>
+
 
 <hr class="force" />
 

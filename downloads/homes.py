@@ -1,6 +1,6 @@
 from db import HomeDB
 from db import haversine as get_distance
-from db import plot
+from db import plot, sort_by_price
 
 lat = 59.865795990339876
 lng = 17.64583576202392
