@@ -15,8 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/reveal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,14 +24,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/css/print/pdf.css';
+        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/html5shiv.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -11890,7 +11890,7 @@ a.anchor-link {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="htmlslides.css">
 
 </head>
 
@@ -11962,7 +11962,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Control-loops">Control loops<a class="anchor-link" href="#Control-loops">&#182;</a></h4><ul>
+<h4 id="Control-statements">Control statements<a class="anchor-link" href="#Control-statements">&#182;</a></h4><ul>
 <li><code>pass</code>  =&gt; do nothing</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
@@ -12043,113 +12043,6 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Using-code">Using code<a class="anchor-link" href="#Using-code">&#182;</a></h4><p><strong><code>Counter</code></strong> - a handy type of dictionary.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
-</pre></div>
-<blockquote><p>Dict subclass... Elements are stored as dictionary keys and their counts are stored as dictionary values.
-...</p>
-</blockquote>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">Counter</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;lettercountingstring&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="n">c</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;a nice story about books&quot;</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">letter</span> <span class="o">!=</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
-        <span class="n">c</span><span class="p">[</span><span class="n">letter</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-        
-<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;unimportant letters&quot;</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">letter</span> <span class="o">!=</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
-        <span class="n">c</span><span class="p">[</span><span class="n">letter</span><span class="p">]</span> <span class="o">-=</span> <span class="mi">1</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12288,7 +12181,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pretty</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">):</span>
@@ -12302,10 +12195,29 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The movie &#39;Beauty and the Beast&#39; got 10 votes.
+The movie &#39;It&#39; got 10000 votes.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pretty</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">):</span>
@@ -12320,10 +12232,29 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Beauty and Beast     got     10     votes.
+It                   got   10000    votes.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">prettyheader</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">):</span>
@@ -12339,16 +12270,56 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|-------Movie--------|-------Votes--------|
+Beauty and Beast     got     10     votes.
+It                   got   10000    votes.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;some text, some values here: </span><span class="si">{}</span><span class="s2"> and here: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">42</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[40]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;some text, some values here: 42 and here: value&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12363,7 +12334,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{}</span><span class="s2">&#39; got </span><span class="si">{}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
@@ -12373,42 +12344,23 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{0}</span><span class="s2">&#39; got </span><span class="si">{1}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[41]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;The movie &#39;Beauty and the Beast&#39; got 10 votes.&#34;</pre>
+</div>
 
 </div>
-</div>
-</div>
 
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{1}</span><span class="s2">&#39; got </span><span class="si">{1}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{3}</span><span class="s2">&#39; got </span><span class="si">{43}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -12423,7 +12375,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{movie}</span><span class="s2">&#39; got </span><span class="si">{number}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
@@ -12433,10 +12385,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[45]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;The movie &#39;Beauty and the Beast&#39; got 10 votes.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{movie}</span><span class="s2">&#39; got </span><span class="si">{movie}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
@@ -12446,51 +12418,23 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{0}</span><span class="s2">&#39; got </span><span class="si">{1}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
-</pre></div>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[46]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;The movie &#39;Beauty and the Beast&#39; got Beauty and the Beast votes.&#34;</pre>
+</div>
 
 </div>
-</div>
-</div>
 
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{0}</span><span class="s2">&#39; got </span><span class="si">{number}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Positional arguments comes first, keyword arguments after!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{movie}</span><span class="s2">&#39; got </span><span class="si">{1}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="s2">&quot;10&quot;</span><span class="p">)</span>
-</pre></div>
-
-</div>
 </div>
 </div>
 
@@ -12513,13 +12457,33 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{movie:30}</span><span class="s2">&#39; got </span><span class="si">{number:10}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[50]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;The movie &#39;Beauty and the Beast          &#39; got 10         votes.&#34;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12534,7 +12498,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{movie:&lt;30}</span><span class="s2">&#39; got </span><span class="si">{number:&gt;10}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
@@ -12544,10 +12508,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[51]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;The movie &#39;Beauty and the Beast          &#39; got         10 votes.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{movie:^30}</span><span class="s2">&#39; got </span><span class="si">{number:^10}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
@@ -12557,14 +12541,35 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[52]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;The movie &#39;     Beauty and the Beast     &#39; got     10     votes.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pretty</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:20}</span><span class="s2"> got </span><span class="si">{:^10}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span> <span class="n">val2</span><span class="p">))</span>
+    
 <span class="n">pretty</span><span class="p">(</span><span class="s1">&#39;Beauty and the Beast&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">pretty</span><span class="p">(</span><span class="s1">&#39;It&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
 </pre></div>
@@ -12573,12 +12578,31 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Beauty and the Beast got     10     votes.
+It                   got   10000    votes.
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Printing-a-table">Printing a table<a class="anchor-link" href="#Printing-a-table">&#182;</a></h3>
+<h3 id="Printing-a-table-hedear">Printing a table hedear<a class="anchor-link" href="#Printing-a-table-hedear">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12592,7 +12616,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;The movie &#39;</span><span class="si">{movie:_&lt;30}</span><span class="s2">&#39; got </span><span class="si">{number:*^10}</span><span class="s2"> votes.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;Beauty and the Beast&quot;</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="s2">&quot;10&quot;</span><span class="p">)</span>
@@ -12602,16 +12626,56 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[54]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#34;The movie &#39;Beauty and the Beast__________&#39; got ****10**** votes.&#34;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">&quot;|</span><span class="si">{0:-^20}</span><span class="s2">|</span><span class="si">{1:-^20}</span><span class="s2">|&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39; Movie &#39;</span><span class="p">,</span><span class="s1">&#39; Votes &#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[55]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;|------ Movie -------|------ Votes -------|&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -12626,7 +12690,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">points</span> <span class="o">=</span> <span class="mi">19</span>
@@ -12638,10 +12702,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Score: 0.8260869565217391&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Score: </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">points</span> <span class="o">/</span> <span class="n">total</span> <span class="p">)</span>
@@ -12651,10 +12735,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[57]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Score: 0.83&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;Score: </span><span class="si">{:.2%}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">points</span> <span class="o">/</span> <span class="n">total</span> <span class="p">)</span>
@@ -12664,57 +12768,52 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[58]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Score: 82.61%&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Formatting-dates">Formatting dates<a class="anchor-link" href="#Formatting-dates">&#182;</a></h4>
+<p><strong>The formatting instruction</strong></p>
+
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
-<span class="n">d</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">58</span><span class="p">)</span>
-<span class="n">d</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Syntax</strong></p>
+<pre>
+{[field_name] [: <font color="green">format_spec</font>]}
+</pre><p><em>Format_spec:</em></p>
+<pre>
+<font color="green">filling alignment width precision type</font>
+   -       &gt;        10    .2       f
+</pre>
+</div>
+</div>
+</div><aside class="notes">
 
-</div>
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;{:%Y-%m-</span><span class="si">%d</span><span class="s1"> %H:%M:%S}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="s1">&#39;{:%Y-%m-</span><span class="si">%d</span><span class="s1"> week:%W %A %H:%M:%S}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">now</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12723,7 +12822,8 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div>
+</aside></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12734,7 +12834,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># movies :: [(name, votes, total score)]</span>
@@ -12746,6 +12846,26 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>|------------Movie-------------|--Votes---|-Average--|
+|Beauty and the Beast          |    12    |   4.58   |
+|It                            |  10000   |   3.04   |
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12769,13 +12889,31 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I&#39;ve read the story &#39;</span><span class="si">%s</span><span class="s2">&#39; </span><span class="si">%s</span><span class="s2"> times&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s1">&#39;Alice in Wonderland&#39;</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>I&#39;ve read the story &#39;Alice in Wonderland&#39; 10 times
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12790,7 +12928,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">story</span> <span class="o">=</span> <span class="s2">&quot;Alice in Wonderland&quot;</span>
@@ -12799,6 +12937,24 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>I&#39;ve read the story &#39;Alice in Wonderland&#39; 10 times
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -12811,6 +12967,72 @@ a.anchor-link {
 
 </div>
 </div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Exercise">Exercise<a class="anchor-link" href="#Exercise">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The input:</p>
+<div class="highlight"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;Aligator&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;Bear&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;Cat&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="s1">&#39;Dolphin&#39;</span><span class="p">}</span>
+</pre></div>
+<p>The code:</p>
+<div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;WHAT TO PRINT?&quot;</span><span class="p">)</span>  <span class="c1"># Write code here</span>
+</pre></div>
+<p>Output:</p>
+
+<pre><code>Aligator       a     
+Bear           b     
+Cat            c     
+Dolphin        d</code></pre>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">animals</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="s1">&#39;Aligator&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="s1">&#39;Bear&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="s1">&#39;Cat&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="s1">&#39;Dolphin&#39;</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">animal</span> <span class="ow">in</span> <span class="n">animals</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{animal:10}</span><span class="s2"> </span><span class="si">{letter:^10}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">animal</span><span class="o">=</span><span class="n">animal</span><span class="p">,</span> <span class="n">letter</span><span class="o">=</span><span class="n">letter</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Aligator       a     
+Bear           b     
+Cat            c     
+Dolphin        d     
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -12867,7 +13089,7 @@ a.anchor-link {
 <li>American/British spelling, endings and other variants:<ul>
 <li>salpeter, salpetre, saltpeter, nitre, niter or KNO3</li>
 <li>hemaglobin, heamoglobin, hemaglobins, heamoglobin's</li>
-<li>catalyze, catalyse, catayzed...</li>
+<li>catalyze, catalyse, catalyzed...</li>
 </ul>
 </li>
 </ul>
@@ -12936,7 +13158,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>In most programming languages, text editors, search engines...</li>
+<li>Supported by most programming languages, text editors, search engines...</li>
 </ul>
 
 </div>
@@ -13007,7 +13229,94 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="More-common-operations">More common operations<a class="anchor-link" href="#More-common-operations">&#182;</a></h4><ul>
+<h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
+<li><code>\w</code> matches any letter or number, and the underscore</li>
+<li><code>\d</code> matches any digit</li>
+<li><code>\D</code> matches any non-digit</li>
+<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
+<li><code>\S</code> matches any non-whitespace</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
+<li><code>\w</code> matches any letter or number, and the underscore</li>
+<li><code>\d</code> matches any digit</li>
+<li><code>\D</code> matches any non-digit</li>
+<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
+<li><code>\S</code> matches any non-whitespace</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/regex_w.png" alt="result"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
+<li><code>\w</code> matches any letter or number, and the underscore</li>
+<li><code>\d</code> matches any digit</li>
+<li><code>\D</code> matches any non-digit</li>
+<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
+<li><code>\S</code> matches any non-whitespace</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/regex_d.png" alt="result"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
+<li><code>\w</code> matches any letter or number, and the underscore</li>
+<li><code>\d</code> matches any digit</li>
+<li><code>\D</code> matches any non-digit</li>
+<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
+<li><code>\S</code> matches any non-whitespace</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="img/regex_s.png" alt="result"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
 <li><code>\w</code> matches any letter or number, and the underscore</li>
 <li><code>\d</code> matches any digit</li>
 <li><code>\D</code> matches any non-digit</li>
@@ -13027,7 +13336,7 @@ a.anchor-link {
 <h4 id="[a-z]-matches-all-letters-between-a-and-z-(the-english-alphabet)."><code>[a-z]</code> matches all letters between <code>a</code> and <code>z</code> (the english alphabet).<a class="anchor-link" href="#[a-z]-matches-all-letters-between-a-and-z-(the-english-alphabet).">&#182;</a></h4><h4 id="[a-z]+-matches-any-(lowercased)-english-word."><code>[a-z]+</code> matches any (lowercased) english word.<a class="anchor-link" href="#[a-z]+-matches-any-(lowercased)-english-word.">&#182;</a></h4>
 </div>
 </div>
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13045,7 +13354,22 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h2><p><b>&rarr; Notebook Day_5_Exercise_1  (~30 minutes) </b></p>
+<h2 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h2><ul>
+<li><code>.</code> matches any character (once)</li>
+<li><code>?</code> repeat previous pattern 0 or 1 times</li>
+<li><code>*</code> repeat previous pattern 0 or more times</li>
+<li><code>+</code> repeat previous pattern 1 or more times</li>
+<li><code>\w</code> matches any letter or number, and the underscore</li>
+<li><code>\d</code> matches any digit</li>
+<li><code>\D</code> matches any non-digit</li>
+<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
+<li><code>\S</code> matches any non-whitespace</li>
+<li><code>[abc]</code> matches a single character defined in this set {a, b, c}</li>
+<li><code>[^abc]</code> matches a single character that is <strong>not</strong> a, b or c</li>
+<li><code>[a-z]</code> matches any (lowercased) letter from the english alphabet</li>
+<li><code>.*</code> matches anything</li>
+</ul>
+<p><b>&rarr; Notebook Day_5_Exercise_1  (~30 minutes) </b></p>
 
 </div>
 </div>
@@ -13060,7 +13384,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -13073,7 +13397,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;ab*&#39;</span><span class="p">)</span>
@@ -13081,6 +13405,26 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[67]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>re.compile(r&#39;ab*&#39;, re.UNICODE)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13095,7 +13439,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;ab*&#39;</span><span class="p">)</span>
@@ -13107,10 +13451,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[68]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;_sre.SRE_Match object; span=(0, 2), match=&#39;ab&#39;&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;cb&#39;</span><span class="p">))</span>
@@ -13120,10 +13484,28 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>None
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;HELLO&#39;</span><span class="p">)</span>
@@ -13133,6 +13515,24 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;_sre.SRE_Match object; span=(12, 17), match=&#39;HELLO&#39;&gt;
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13147,30 +13547,69 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[a-z]+&#39;</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;ATGAAA&#39;</span><span class="p">)</span>
-<span class="n">result</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>None
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;[a-z]+&#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+
 <span class="n">result</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;ATGAAA&#39;</span><span class="p">)</span>
 <span class="n">result</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[72]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;_sre.SRE_Match object; span=(0, 6), match=&#39;ATGAAA&#39;&gt;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13182,20 +13621,20 @@ a.anchor-link {
 <h3 id="The-match-object">The match object<a class="anchor-link" href="#The-match-object">&#182;</a></h3>
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The result </span><span class="si">{}</span><span class="s1"> is of type </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">result</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;123 ATGAAA 456&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-</div><div class="fragment">
+</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13210,7 +13649,7 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
@@ -13220,10 +13659,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[74]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;ATGAAA&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
@@ -13233,10 +13692,30 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[75]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>4</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
@@ -13246,16 +13725,56 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[76]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>10</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">span</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[77]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(4, 10)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13270,7 +13789,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*HELLO.*&#39;</span><span class="p">)</span>
@@ -13283,10 +13802,10 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="s1">&#39;lots of text  HELLO  more text and characters!!! ^^&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;lots of text  HELLO  more text and characters!!! ^^&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13296,13 +13815,33 @@ a.anchor-link {
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[80]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;lots of text  HELLO  more text and characters!!! ^^&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13326,7 +13865,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;HELLO&#39;</span><span class="p">)</span>
@@ -13338,10 +13877,28 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;callable_iterator object at 0x7fd8826f77f0&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
@@ -13349,6 +13906,25 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Found HELLO                          at position 14
+Found HELLO                          at position 32
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13363,7 +13939,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;The first full stop is here: .&quot;</span>
@@ -13377,10 +13953,28 @@ a.anchor-link {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#34;T&#34; at position 0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;\.&#39;</span><span class="p">)</span>
@@ -13390,6 +13984,24 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&#34;.&#34; at position 29
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13422,111 +14034,10 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Capturing-groups">Capturing groups<a class="anchor-link" href="#Capturing-groups">&#182;</a></h3><p>Find the domain name in an email address:</p>
-<p>kalle.larsson@<strong>gmail</strong>.com pigelin@<strong>uu</strong>.se</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">email1</span> <span class="o">=</span> <span class="s2">&quot;kalle.larsson@gmail.com&quot;</span>
-<span class="n">email2</span> <span class="o">=</span> <span class="s2">&quot;pigelin@uu.se&quot;</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*@.*\..*&#39;</span><span class="p">)</span>
-
-<span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">email1</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*@(.*)\..*&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">email1</span><span class="p">)</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;.*@(.*)\.(.*)&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">email1</span><span class="p">)</span><span class="o">.</span><span class="n">groups</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Capturing-groups">Capturing groups<a class="anchor-link" href="#Capturing-groups">&#182;</a></h3><p><strong>Structure</strong></p>
-<ul>
-<li>Each pair of parentheses creates a group</li>
-<li><code>group()</code> stores the whole match, as usual</li>
-<li><code>group(1)</code> stores the first group, <code>group(2)</code> the second...</li>
-<li><code>groups()</code> stores all groups</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Substitution">Substitution<a class="anchor-link" href="#Substitution">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;gmail&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;hotmail&#39;</span><span class="p">,</span> <span class="n">email1</span><span class="p">)</span>
-</pre></div>
-
 </div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;@.*\.&#39;</span><span class="p">)</span>
-<span class="n">e1</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;@hotmail.&#39;</span><span class="p">,</span> <span class="n">email1</span><span class="p">)</span>
-<span class="n">e2</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;@hotmail.&#39;</span><span class="p">,</span> <span class="n">email2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">e1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">e2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13537,7 +14048,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt</span> <span class="o">=</span> <span class="s2">&quot;Do it becuase I say so, not becuase you want!&quot;</span>
@@ -13547,10 +14058,10 @@ a.anchor-link {
 </div>
 </div>
 
-</div></div><div class="fragment">
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;becuase&#39;</span><span class="p">)</span>
@@ -13558,6 +14069,60 @@ a.anchor-link {
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[88]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Do it because I say so, not because you want!&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;\s&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="n">txt</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[89]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;Do_it_becuase_I_say_so,_not_becuase_you_want!&#39;</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13581,7 +14146,6 @@ a.anchor-link {
 </li>
 <li><p>Searching</p>
 <div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-  <span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </li>
 <li><p>Substitution</p>
@@ -13613,375 +14177,6 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Backreference">Backreference<a class="anchor-link" href="#Backreference">&#182;</a></h3>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>A reference to a previously captured group. Finds repetitions!</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(.)TG\1&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<center>
-<img src="img/backref.png" alt="break" width="20%"/>
-</center>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;CTGACCATGAG&#39;</span><span class="p">)</span>
-<span class="n">p</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<center>CTGACC<u><b>A</b>TG<b>A</b></u>G</center>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">kalle</span> <span class="o">=</span> <span class="s2">&quot;kalle-kalle@gmail.com&quot;</span>
-<span class="n">lisa</span> <span class="o">=</span> <span class="s2">&quot;lisa-lisa@hotmail.com&quot;</span>
-<span class="n">lisen</span> <span class="o">=</span> <span class="s2">&quot;lisa-lisen@uu.se&quot;</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(.*)-\1@(.*)&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">kalle</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">lisa</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">lisen</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Backreference">Backreference<a class="anchor-link" href="#Backreference">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Structure</strong></p>
-<ul>
-<li>Each pair of parentheses creates a group, which can be referred to</li>
-<li><code>\1</code> refers the first group, <code>\2</code> the second...</li>
-<li>Remember to use <em>raw strings</em> for all backreferences! <code>r'\1'</code></li>
-<li>In the match object, the groups can be found with <code>group(n)</code> and <code>groups()</code>, as usual</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Substitution-+-backreference!">Substitution + backreference!<a class="anchor-link" href="#Substitution-+-backreference!">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Create repetitions</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">email2</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(.*)@&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1-\1@&#39;</span><span class="p">,</span> <span class="n">email2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;(.*)@(.*)\.&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1-\1@\2.\2.&#39;</span><span class="p">,</span> <span class="n">email2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Reuse alternatives</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
-<span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(he|she|it) like &#39;</span><span class="p">)</span>
-<span class="n">corr</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\1 likes &#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="s1">&#39;she like programming&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(he|she|it) (\w+)&#39;</span><span class="p">)</span>
-<span class="n">corr</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;\1 \2s &#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">corr</span><span class="p">,</span> <span class="s1">&#39;she like programming and she make programs&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Substitution-+-backreference">Substitution + backreference<a class="anchor-link" href="#Substitution-+-backreference">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>Reorder</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Date formats</strong></p>
-<table border="0" width="80%" style="font-size:80%">
-<tr>
-    <td >Swedish format:</td><td> <code>year-month-day</code></td><td>   2018-11-23</td>
-</tr><tr>
-    <td>UK format:</td><td>      <code>day/month/year</code></td><td>   23/11/2018</td>
-</tr><tr>
-    <td>US format:</td><td>      <code>month/day/year</code></td><td>   11/23/2018</td>
-</tr>
-</table>
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">swedish_date</span> <span class="o">=</span> <span class="s1">&#39;2018-11-23&#39;</span>
-
-<span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(\d\d\d\d)-(\d\d)-(\d\d)&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">uk_date</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\3/\2/\1&#39;</span><span class="p">,</span> <span class="n">swedish_date</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;UK:&#39;</span><span class="p">,</span> <span class="n">uk_date</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">us_date</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\2/\3/\1&#39;</span><span class="p">,</span> <span class="n">swedish_date</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;US:&#39;</span><span class="p">,</span> <span class="n">us_date</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Backreference-+-substitution">Backreference + substitution<a class="anchor-link" href="#Backreference-+-substitution">&#182;</a></h3><ul>
-<li><p>Create repetitions</p>
-<div class="highlight"><pre><span></span><span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1-\1@&#39;</span><span class="p">,</span> <span class="n">email2</span><span class="p">)</span>
-</pre></div>
-</li>
-<li><p>Reorder</p>
-<div class="highlight"><pre><span></span><span class="n">us_date</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\2/\3/\1&#39;</span><span class="p">,</span> <span class="n">swedish_date</span><span class="p">)</span>
-</pre></div>
-</li>
-<li><p>Reuse alternatives</p>
-<div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;(he|she|it) (\w+)&#39;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\1 \2s &#39;</span><span class="p">,</span> <span class="s1">&#39;she like programming&#39;</span><span class="p">)</span>
-</pre></div>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Regular-expressions">Regular expressions<a class="anchor-link" href="#Regular-expressions">&#182;</a></h3><ul>
 <li><p>A powerful tool to search and modify text</p>
 </li>
@@ -13998,8 +14193,27 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h2><p>Read more: full documentation <a href="https://docs.python.org/3.6/library/re.html">https://docs.python.org/3.6/library/re.html</a></p>
-<p><br/>
+<h2 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h2><ul>
+<li><code>.</code> matches any character (once)</li>
+<li><code>?</code> repeat previous pattern 0 or 1 times</li>
+<li><code>*</code> repeat previous pattern 0 or more times</li>
+<li><code>+</code> repeat previous pattern 1 or more times</li>
+<li><code>\w</code> matches any letter or number, and the underscore</li>
+<li><code>\d</code> matches any digit</li>
+<li><code>\D</code> matches any non-digit</li>
+<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
+<li><code>\S</code> matches any non-whitespace</li>
+<li><code>[abc]</code> matches a single character defined in this set {a, b, c}</li>
+<li><code>[^abc]</code> matches a single character that is <strong>not</strong> a, b or c</li>
+<li><code>[a-z]</code> matches any (lowercased) letter from the english alphabet</li>
+<li><code>.*</code> matches anything</li>
+<li><code>\</code> escaping a character</li>
+<li><code>^</code> beginning of the string</li>
+<li><code>$</code> end of string</li>
+<li><code>|</code> boolean <code>or</code></li>
+</ul>
+<p>Read more: full documentation <a href="https://docs.python.org/3.6/library/re.html">https://docs.python.org/3.6/library/re.html</a>
+<br/>
 <b>&rarr; Notebook Day_5_Exercise_2  (~30 minutes) </b></p>
 
 </div>
@@ -14009,7 +14223,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sum-up!"><center>Sum up!</center><a class="anchor-link" href="#Sum-up!">&#182;</a></h2>
+<h3> <center>Sum up!</center></h3>
 </div>
 </div>
 </div></section></section><section><section>
@@ -14086,16 +14300,19 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Modify-values-and-compare">Modify values and compare<a class="anchor-link" href="#Modify-values-and-compare">&#182;</a></h4><ul>
-<li><div class="highlight"><pre><span></span><span class="o">+</span><span class="p">,</span> <span class="o">-</span><span class="p">,</span> <span class="o">-</span><span class="p">,</span><span class="o">...</span>
+<li><div class="highlight"><pre><span></span><span class="o">+</span><span class="p">,</span> <span class="o">-</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span><span class="o">...</span>   <span class="c1"># mathematical</span>
 </pre></div>
 </li>
-<li><div class="highlight"><pre><span></span><span class="ow">and</span><span class="p">,</span> <span class="ow">or</span><span class="p">,</span> <span class="ow">not</span>
+<li><div class="highlight"><pre><span></span><span class="ow">and</span><span class="p">,</span> <span class="ow">or</span><span class="p">,</span> <span class="ow">not</span>  <span class="c1"># logical</span>
 </pre></div>
 </li>
-<li><div class="highlight"><pre><span></span><span class="o">==</span><span class="p">,</span> <span class="o">!=</span>
+<li><div class="highlight"><pre><span></span><span class="o">==</span><span class="p">,</span> <span class="o">!=</span>        <span class="c1"># comparisons</span>
 </pre></div>
 </li>
-<li><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;=</span><span class="p">,</span> <span class="o">&gt;=</span>
+<li><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="p">,</span> <span class="o">&gt;</span><span class="p">,</span> <span class="o">&lt;=</span><span class="p">,</span> <span class="o">&gt;=</span>  <span class="c1"># comparisons</span>
+</pre></div>
+</li>
+<li><div class="highlight"><pre><span></span><span class="ow">in</span>            <span class="c1"># membership</span>
 </pre></div>
 </li>
 </ul>
@@ -14122,15 +14339,71 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Deciding-what-to-do">Deciding what to do<a class="anchor-link" href="#Deciding-what-to-do">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>
+<h4 id="Deciding-what-to-do---if-statement">Deciding what to do - if statement<a class="anchor-link" href="#Deciding-what-to-do---if-statement">&#182;</a></h4><p><img src="img/if_else_statement.png" alt="Drawing" style="width: 600px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Program-flow---for-loops">Program flow - for loops<a class="anchor-link" href="#Program-flow---for-loops">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">iterations</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">information</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">is_comment</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
-       <span class="n">use_comment</span><span class="p">()</span>
+       <span class="n">use_comment</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-       <span class="n">read_data</span><span class="p">()</span>
+       <span class="n">information</span> <span class="o">=</span> <span class="n">read_data</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
 </pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Program-flow---while-loops">Program flow - while loops<a class="anchor-link" href="#Program-flow---while-loops">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">keep_going</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">information</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">keep_going</span><span class="p">:</span>
+    <span class="n">current_line</span> <span class="o">=</span> <span class="n">lines</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+    <span class="n">information</span> <span class="o">+=</span> <span class="n">read_line</span><span class="p">(</span><span class="n">current_line</span><span class="p">)</span>
+    <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">check_someting</span><span class="p">(</span><span class="n">current_line</span><span class="p">):</span>
+        <span class="n">keep_going</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Different-types-of-loops">Different types of loops<a class="anchor-link" href="#Different-types-of-loops">&#182;</a></h4><p><strong><code>For</code> loop</strong></p>
+<p>Is a control flow statement that performs operations over a known amount of steps.</p>
+<p><strong><code>While</code> loop</strong></p>
+<p>Is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition.</p>
+<p><br></br></p>
+<p><strong>Which one to use?</strong></p>
+<p><code>For</code> loops - standard for iterations over lists and other iterable objects</p>
+<p><code>While</code> loops - more flexible and can iterate an unspecified number of times</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Controlling-loops">Controlling loops<a class="anchor-link" href="#Controlling-loops">&#182;</a></h4><ul>
+<li><code>break</code> - stop the loop</li>
+<li><code>continue</code> - go on to the next iteration</li>
+</ul>
 
 </div>
 </div>
@@ -14141,7 +14414,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Strings">Strings<a class="anchor-link" href="#Strings">&#182;</a></h4><p>Raw text</p>
 <ul>
-<li><p>Pruning:</p>
+<li><p>Common manipulations:</p>
 <ul>
 <li><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>  <span class="c1"># remove unwanted spacing</span>
 </pre></div>
@@ -14253,6 +14526,7 @@ a.anchor-link {
 <li>Keys have values</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">mydict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;alligator&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;bear&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;cat&quot;</span><span class="p">}</span>
+<span class="n">counter</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cats&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span> <span class="s2">&quot;dogs&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
 
 <span class="n">mydict</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span>
 <span class="n">mydict</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
@@ -14275,8 +14549,6 @@ a.anchor-link {
 </li>
 <li><p>Fast membership checks</p>
 </li>
-<li><p>No duplicates</p>
-</li>
 <li><p>Logical set operations (union, difference, intersection..)</p>
 </li>
 </ul>
@@ -14284,11 +14556,9 @@ a.anchor-link {
 </ul>
 <div class="highlight"><pre><span></span><span class="n">myset</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;drama&quot;</span><span class="p">,</span> <span class="s2">&quot;sci-fi&quot;</span><span class="p">}</span>
 
-<span class="n">myset</span><span class="o">.</span><span class="n">difference</span><span class="p">({</span><span class="s2">&quot;sci-fi&quot;</span><span class="p">,</span> <span class="s2">&quot;comedy&quot;</span><span class="p">})</span>  <span class="c1"># myset - {&quot;sci-fi&quot;, &quot;comedy&quot;}</span>
-<span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;drama&quot;</span><span class="p">}</span>
+<span class="n">myset</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&quot;comedy&quot;</span><span class="p">)</span>
 
-<span class="n">myset</span><span class="o">.</span><span class="n">intersection</span><span class="p">({</span><span class="s2">&quot;sci-fi&quot;</span><span class="p">,</span> <span class="s2">&quot;comedy&quot;</span><span class="p">})</span>
-<span class="o">&gt;</span> <span class="p">{</span><span class="s2">&quot;sci-fi&quot;</span><span class="p">}</span>
+<span class="n">myset</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&quot;drama&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14346,6 +14616,29 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h4><ul>
+<li><p>A group (usually two) of values that belong together</p>
+<ul>
+<li><div class="highlight"><pre><span></span><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_lenght</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)</span>
+</pre></div>
+</li>
+<li><p>An ordered sequence (like lists)</p>
+</li>
+<li><div class="highlight"><pre><span></span><span class="n">length</span> <span class="o">=</span> <span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># get content at index 0</span>
+</pre></div>
+</li>
+<li>Immutable</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Input/Output">Input/Output<a class="anchor-link" href="#Input/Output">&#182;</a></h4><ul>
 <li><p>In:</p>
 <ul>
@@ -14380,60 +14673,18 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="c1"># movies :: [(name, votes, total score)]</span>
-<span class="n">movies</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Beauty and the Beast&#39;</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">55</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;It&#39;</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">30450</span><span class="p">)]</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;|{:-^30}|{:-^10}|{:-^10}|&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Movie&#39;</span><span class="p">,</span> <span class="s1">&#39;Votes&#39;</span><span class="p">,</span> <span class="s1">&#39;Average&#39;</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">movie</span><span class="p">,</span> <span class="n">votes</span><span class="p">,</span> <span class="n">total</span> <span class="ow">in</span> <span class="n">movies</span><span class="p">:</span> 
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;|{:30}|{:^10}|{:^10.2f}|&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="p">,</span> <span class="n">votes</span><span class="p">,</span> <span class="n">total</span><span class="o">/</span><span class="n">votes</span><span class="p">))</span>
-</pre></div>
-<p><code>
-|------------Movie-------------|--Votes---|-Average--|
-|Beauty and the Beast          |    12    |   4.58   |
-|It                            |  10000   |   3.04   |
-</code></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>The format string</strong></p>
 <pre>
 {[field_name] [: <font color="green">format_spec</font>]}
 </pre><p><em>Format_spec:</em></p>
 <pre>
 <font color="green">filling alignment width precision type</font>
    -       &gt;        10    .2       f
-</pre>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{movie:^20}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="o">=</span><span class="s2">&quot;It&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:_&gt;20.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">20</span><span class="o">/</span><span class="mi">3</span><span class="p">))</span>
+</pre><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;|{:30}|{:^10}|{:^10.2f}|&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">movie</span><span class="p">,</span> <span class="n">votes</span><span class="p">,</span> <span class="n">total</span><span class="o">/</span><span class="n">votes</span><span class="p">))</span>
 </pre></div>
 
 </div>
 </div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><em>There is more to it! Read the <a href="https://docs.python.org/3.4/library/string.html#format-string-syntax">docs</a>!</em></p>
-
-</div>
-</div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14454,6 +14705,29 @@ a.anchor-link {
 <li>A named piece of code that performs a certain task.</li>
 </ul>
 <p><img src="img/function_structure_explained.png" alt="Drawing" style="width: 600px;"/></p>
+<ul>
+<li>Is given a number of input arguments</li>
+<li>Returns a result (maybe <code>None</code>)</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Functions---keyword-arguments">Functions - keyword arguments<a class="anchor-link" href="#Functions---keyword-arguments">&#182;</a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prettyprinter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="s2">&quot;The &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; is &quot;</span> <span class="o">+</span> <span class="n">delim</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="n">end</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">+=</span> <span class="n">end</span>
+    <span class="k">return</span> <span class="n">out</span>
+</pre></div>
+<ul>
+<li>used to set default values (often <code>None</code>)</li>
+<li>can be skipped in function calls</li>
+<li>improve readability</li>
+</ul>
 
 </div>
 </div>
@@ -14481,7 +14755,161 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Using-your-code">Using your code<a class="anchor-link" href="#Using-your-code">&#182;</a></h4><p>Any longer pieces of code that have been used and will be re-used SHOULD be saved</p>
+<p>Two options:</p>
+<ul>
+<li>Save it as a text file <code>.py</code></li>
+<li>Save it as a notebook file <code>.ipynb</code></li>
+</ul>
+<p>To run it:
+<code>python3 mycode.py</code></p>
+<p>Import it:
+<code>import mycode</code></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Documentation-and-comments">Documentation and comments<a class="anchor-link" href="#Documentation-and-comments">&#182;</a></h4><ul>
+<li><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; This is a doc-string explaining what the purpose of this function/module is &quot;&quot;&quot;</span>
+</pre></div>
+</li>
+<li><div class="highlight"><pre><span></span><span class="c1"># This is a comment that helps understanding the code</span>
+</pre></div>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Comments <em>will</em> help you</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Undocumented code rarely gets used</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Try to keep your code readable: use informative variable and function names</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="img/example_code.png" alt="Module" style="height: 80%"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Why-programming?">Why programming?<a class="anchor-link" href="#Why-programming?">&#182;</a></h4><p>Endless possibilities!</p>
+<ul>
+<li>reverse complement DNA</li>
+<li>custom filtering of VCF files</li>
+<li>plotting of results</li>
+<li>all excel stuff!</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Why-programming?">Why programming?<a class="anchor-link" href="#Why-programming?">&#182;</a></h4><ul>
+<li>Computers are fast</li>
+<li>Computers don't get bored</li>
+<li>Computers don't get sloppy</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Create reproducable results</li>
+<li>Extract large amount of information</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Final-advice">Final advice<a class="anchor-link" href="#Final-advice">&#182;</a></h4><ul>
+<li>Stop to think before you start coding<ul>
+<li>use pseudocode</li>
+<li>use top-down programming</li>
+<li>use paper and pen</li>
+<li>take breaks</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>You know the basics - don't be afraid to try</li>
+<li>You will get faster</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Final-advice">Final advice<a class="anchor-link" href="#Final-advice">&#182;</a></h4><ul>
+<li>Getting help<ul>
+<li>ask colleauges</li>
+<li>talk about your problem (get a rubber duck)</li>
+<li>search the web</li>
+<li>take breaks!</li>
+<li>NBIS drop-ins</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
@@ -14508,8 +14936,8 @@ require(
       waitSeconds: 15
     },
     [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/js/reveal.js"
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/head.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -14524,9 +14952,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/js/classList.js",
+                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/plugin/notes/notes.js",
+                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
