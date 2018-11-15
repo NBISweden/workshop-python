@@ -13690,13 +13690,15 @@ A set contains an unordered collection of unique and immutable objects</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Answer">Answer<a class="anchor-link" href="#Answer">&#182;</a></h3><p><img src="img/average_length.png" alt="Drawing" style="width: 500px;"/></p>
+<p><strong>Tip!</strong><br>
+Here you have to loop twice</p>
 
 </div>
 </div>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>        <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../downloads/250.imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -13717,10 +13719,10 @@ A set contains an unordered collection of unique and immutable objects</p>
                 
 <span class="k">for</span> <span class="n">genre</span> <span class="ow">in</span> <span class="n">genreDict</span><span class="p">:</span>      <span class="c1"># loop over the genres in the dictionaries</span>
     <span class="n">average</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">genreDict</span><span class="p">[</span><span class="n">genre</span><span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">genreDict</span><span class="p">[</span><span class="n">genre</span><span class="p">])</span>  <span class="c1"># calculate average length per genre</span>
-    <span class="n">hours</span>   <span class="o">=</span> <span class="n">average</span><span class="o">/</span><span class="mi">3600</span>                                 <span class="c1"># format seconds to hours</span>
-    <span class="n">minutes</span> <span class="o">=</span> <span class="p">(</span><span class="n">average</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3600</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">hours</span><span class="p">)))</span><span class="o">/</span><span class="mi">60</span>             <span class="c1"># format seconds to minutes</span>
+    <span class="n">hours</span>   <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">average</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span>                                 <span class="c1"># format seconds to hours</span>
+    <span class="n">minutes</span> <span class="o">=</span> <span class="p">(</span><span class="n">average</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3600</span><span class="o">*</span><span class="n">hours</span><span class="p">))</span><span class="o">/</span><span class="mi">60</span>             <span class="c1"># format seconds to minutes</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The average length for movies in genre &#39;</span><span class="o">+</span><span class="n">genre</span>\
-          <span class="o">+</span><span class="s1">&#39; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">hours</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;h&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">minutes</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;min&#39;</span><span class="p">)</span>
+          <span class="o">+</span><span class="s1">&#39; is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;h&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">minutes</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;min&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13792,14 +13794,14 @@ The average length for movies in genre horror is 1h59min
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">FormatSec</span><span class="p">(</span><span class="n">genre</span><span class="p">):</span>   <span class="c1"># input a list of seconds</span>
     <span class="n">average</span>   <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">genreDict</span><span class="p">[</span><span class="n">genre</span><span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">genreDict</span><span class="p">[</span><span class="n">genre</span><span class="p">])</span>
-    <span class="n">hours</span>     <span class="o">=</span> <span class="n">average</span><span class="o">/</span><span class="mi">3600</span>
-    <span class="n">minutes</span>   <span class="o">=</span> <span class="p">(</span><span class="n">average</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3600</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="n">hours</span><span class="p">)))</span><span class="o">/</span><span class="mi">60</span>   
-    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">hours</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;h&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">minutes</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;min&#39;</span>
+    <span class="n">hours</span>     <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">average</span><span class="o">/</span><span class="mi">3600</span><span class="p">)</span>
+    <span class="n">minutes</span>   <span class="o">=</span> <span class="p">(</span><span class="n">average</span> <span class="o">-</span> <span class="p">(</span><span class="mi">3600</span><span class="o">*</span><span class="n">hours</span><span class="p">))</span><span class="o">/</span><span class="mi">60</span>   
+    <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">hours</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;h&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">minutes</span><span class="p">))</span><span class="o">+</span><span class="s1">&#39;min&#39;</span>
 
 
 <span class="n">fh</span>        <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../downloads/250.imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -14175,6 +14177,18 @@ The average length for movies in genre horror is 1h59min
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2><ul>
+<li>A function is a block of organized, reusable code that is used to perform a single, related action</li>
+<li>Variables within a function are local variables</li>
+<li>Functions can be organized in separate files and imported to the main code</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>&rarr; Notebook Day_3_Exercise_1  (~30 minutes)</strong></p>
 
 </div>
@@ -14241,19 +14255,6 @@ The average length for movies in genre horror is 1h59min
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="img/sysargv_run.png" alt="Drawing" style="width: 900px;"/></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h2><ul>
-<li>A function is a block of organized, reusable code that is used to perform a single, related action</li>
-<li>Variables within a function are local variables</li>
-<li>Functions can be organized in separate files and imported to the main code</li>
-<li><code>sys.argv</code> imports command line arguments to be used within the code</li>
-</ul>
 
 </div>
 </div>
