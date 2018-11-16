@@ -41,7 +41,7 @@ disease.</p>
 # Fetch the appropriate files {#fetch-files}
 
 The main task is divided in several steps. The first step is to fetch
-the reference sequence file (in `fasta` format) and the appropriate reference annotation file (in `GTF` format) from the [Ensembl database](http://www.ensembl.org/info/data/ftp/index.html).
+the [reference sequence file](ftp://ftp.ensembl.org/pub/release-93/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz) (in `fasta` format) and the appropriate [reference annotation file](ftp://ftp.ensembl.org/pub/release-93/gtf/homo_sapiens/Homo_sapiens.GRCh38.93.gtf.gz) (in `GTF` format) from the Ensembl database.
 
 The CTFR gene is located on chromosome `7`. After downloading the files, read up on how the files are structured.
 
