@@ -5,7 +5,7 @@ menu: topics
 
 <ol id="topics">
 <li>
-<a href="404.md">
+<a href="https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_1.slides.html">
 <h3>Day 1 - First programs</h3>
 
 literals, variables, builtin types, int, float, str, list, bool,
