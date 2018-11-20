@@ -43,7 +43,7 @@ disease.</p>
 The main task is divided in several steps. The first step is to fetch
 the [reference sequence file](ftp://ftp.ensembl.org/pub/release-93/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz) (in `fasta` format) and the appropriate [reference annotation file](ftp://ftp.ensembl.org/pub/release-93/gtf/homo_sapiens/Homo_sapiens.GRCh38.93.gtf.gz) (in `GTF` format) from the Ensembl database.
 
-The CTFR gene is located on chromosome `7`. After downloading the files, read up on how the files are structured.
+The CFTR gene is located on chromosome `7`. After downloading the files, read up on how the files are structured.
 
 Human reference DNA for chromosome 7 (fasta):
 - Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz
