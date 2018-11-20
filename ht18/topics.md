@@ -26,7 +26,7 @@ href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exe
 </li>
 
 <li>
-<a href="404.md">
+<a href="https://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_2.slides.html">
 <h3>Day 2 - More Data Structures</h3>
 
 set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
