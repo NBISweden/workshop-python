@@ -39,7 +39,7 @@ Notebooks:
 </li>
 
 <li>
-<a href="404.md">
+<a href="https://htmlpreview.github.com/?https://github.com/NBISweden/workshop-python/blob/ht18/lectures/Day_3.slides.html">
 <h3>Day 3 - Using <code>dict</code></h3>
 
 dict, function, positional argument, import, sys.argv
@@ -47,6 +47,7 @@ dict, function, positional argument, import, sys.argv
 <p class="notebook-links">
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day2/Extra_exercises.ipynb">[extra]</a>
 </p>
 </li>
 
