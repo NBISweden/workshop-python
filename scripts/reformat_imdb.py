@@ -10,13 +10,14 @@ def FormatSec(seconds):    # formats seconds to hours and minutes
     minutes   = (seconds - (3600*int(hours)))/60   
     return str(int(hours))+'h'+str(round(minutes))+'min'
 
+
 def FormatMovie(movie):    # returns a string with the correct format for writing to file
     formMovie = str(movie[0])+'\t'+movie[1]+' ('+str(movie[2])+') ['+movie[3]+']\n'
     return formMovie
 
 
-if len(sys.argv) == 3:
-    fh        = open(sys.argv[1], 'r', encoding = 'utf-8')
+def CreateDict(infile):
+    fh        = open(infile, 'r', encoding = 'utf-8')
     genreDict = {}  
 
     for line in fh:
@@ -33,16 +34,22 @@ if len(sys.argv) == 3:
                     genreDict[entry.lower()] = []
                 genreDict[entry.lower()].append([rating, movie, year, FormatSec(length)])
     fh.close()
+    return genreDict
 
 
-    out = open(sys.argv[2], 'w', encoding = 'utf-8')
+def ReformatFile(genreDict, outfile):
+    out = open(outfile, 'w', encoding = 'utf-8')
     for genre in genreDict:
         out.write('> '+genre.capitalize()+'\n')
         for movie in genreDict[genre]:
             out.write(FormatMovie(movie))
     out.close()
 
+
+if len(sys.argv) == 3:
+    genreDict = CreateDict(sys.argv[1])
+    ReformatFile(genreDict, sys.argv[2])
 else:
     print('Number of arguments does not match')
-
-
+    
+    
