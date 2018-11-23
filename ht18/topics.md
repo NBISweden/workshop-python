@@ -79,6 +79,7 @@ format, positional argument, keyword argument, regular expression
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_2.ipynb">[2]</a>
+  <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Topdown_example.ipynb">[Topdown example]</a>
 </p>
 </li>
 
