@@ -231,9 +231,9 @@ There might be several.
    </section>
    </details>
 
-# Solution {#extra-task}
+# Solution {#main-task}
 
 Here are some possible solutions to the assignment. There are of course many correct solutions, we only present one of the alternatives.
 
-[Notebook](http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/assignment/Solutions_project.ipynb)
+[Notebook](http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/assignment/Solutions_project.ipynb)  
 [Standalone script](https://raw.githubusercontent.com/NBISweden/workshop-python/ht18/assignment/findTruncations.py)
