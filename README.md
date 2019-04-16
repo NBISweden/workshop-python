@@ -12,9 +12,9 @@ scratch and to customize more complex code to fit their needs.
 
 | Application | Date |
 |------------:|:-----|
-| ...opens on | August 21<sup>rd</sup>, 2018 |
-| ...closes on | October 11<sup>th</sup>, 2018 |
-| ...is accepted/denied on | October 16<sup>th</sup>, 2018 |
+| ...opens on | X<sup>rd</sup>, 2019 |
+| ...closes on | X<sup>th</sup>, 2019 |
+| ...is accepted/denied on | X<sup>th</sup>, 2019 |
 
 > Register for the course, using
 [this form](https://goo.gl/forms/53y2SxT7b91DcNh13)
