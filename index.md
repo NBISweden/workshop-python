@@ -18,15 +18,18 @@ This is precisely the expertise that [NBIS](//nbis.se) provides.
 # Current courses
 
 <dl>
-<dt> <a href="ht18">November 2018</a> </dt>
-<dd>Third instance of the course, suitable for complete beginners and
+<dt> <a href="ht19">October 2019</a> </dt>
+<dd>Fourth instance of the course, suitable for complete beginners and
   assumes no prior programming experience (beyond the ability to use a
   text editor). A very basic knowledge of UNIX is definitely an
   advantage, such as navigating through folders and issuing commands
-  at a shell prompt.  </dd>
+  at a shell prompt. Registration for the course is open, 
+  [Uppsala](https://www.scilifelab.se/events/python-programming-with-applications-to-bioinformatics-uppsala/), 
+  and [Umeå](https://www.scilifelab.se/events/python-programming-with-applications-to-bioinformatics-umea/) </dd>
 </dl>
 
 ## Past courses
 
+* <a href="ht18">November 2018</a>
 * <a href="vt17">February 2017</a>
 * <a href="ht17">October 2017</a>
