@@ -24,8 +24,8 @@ This is precisely the expertise that [NBIS](//nbis.se) provides.
   text editor). A very basic knowledge of UNIX is definitely an
   advantage, such as navigating through folders and issuing commands
   at a shell prompt. Registration for the course is open, 
-  [Uppsala](https://www.scilifelab.se/events/python-programming-with-applications-to-bioinformatics-uppsala/), 
-  and [Umeå](https://www.scilifelab.se/events/python-programming-with-applications-to-bioinformatics-umea/) </dd>
+  [Uppsala](//https://www.scilifelab.se/events/python-programming-with-applications-to-bioinformatics-uppsala/), 
+  and [Umeå](//https://www.scilifelab.se/events/python-programming-with-applications-to-bioinformatics-umea/) </dd>
 </dl>
 
 ## Past courses
