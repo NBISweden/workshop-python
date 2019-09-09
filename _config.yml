@@ -27,6 +27,11 @@ defaults:
       path: "ht18"
     values:
       layout: ht18
+  -
+    scope:
+      path: "ht19"
+    values:
+      layout: ht19
 
 
 
