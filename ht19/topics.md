@@ -49,7 +49,7 @@ dict, function, positional argument, import, sys.argv
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day2/Extra_exercises.ipynb">[extra]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day3/Day_3_IMDb_guide.ipynb">[extra]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day3/Day_3_IMDb_guide.ipynb">[IMDb guide]</a>
 </p>
 </li>
 
