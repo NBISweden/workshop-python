@@ -90,8 +90,8 @@ from time import localtime as get_time
 
 now = get_time()
 
-h1 = 0 if now.tm_hour < 10 else 1
-h2 = now.tm_hour - 10 if now.tm_hour >= 10 else now.tm_hour
+h1 = now.tm_hour // 10 # floor division
+h2 = now.tm_hour % 10
 m1 = now.tm_min // 10 # floor division
 m2 = now.tm_min % 10
 
