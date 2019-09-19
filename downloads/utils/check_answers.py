@@ -41,18 +41,18 @@ def ex3(infile):
   """
    Usage: Input filename of output from exercise 3
   """
-  compare(infile, 'https://raw.githubusercontent.com/NBISweden/PythonCourse/ht18/assignment/results/transcript.ncbi.fasta')
+  compare(infile, 'https://raw.githubusercontent.com/NBISweden/PythonCourse/ht19/assignment/results/transcript.ncbi.fasta')
 
 
 def ex4(infile):
   """
    Usage: Input filename of output from exercise 4
   """
-  compare(infile, 'https://raw.githubusercontent.com/NBISweden/PythonCourse/vt17/assignment/results/mrna.ncbi.fasta')
+  compare(infile, 'https://raw.githubusercontent.com/NBISweden/PythonCourse/ht19/assignment/results/mrna.ncbi.fasta')
 
 
 def ex6(infile):
   """
    Usage: Input filename of output from exercise 6
   """
-  compare(infile, 'https://raw.githubusercontent.com/NBISweden/PythonCourse/ht17/assignment/results/protein.ncbi.fasta')
+  compare(infile, 'https://raw.githubusercontent.com/NBISweden/PythonCourse/ht19/assignment/results/protein.ncbi.fasta')
