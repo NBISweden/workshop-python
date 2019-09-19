@@ -30,17 +30,19 @@ premature stop codons that are known to cause the disease.</p>
 
 <p data-mark="Goal"><b>Goal</b>: In this assignment, you have access
 to the human reference genome (chromosome 7) as well as the full genome annotation. In
-addition, you have genome sequence data (chromosome 7) from five individuals
+addition, you have genome sequence data of chromosome 7 from five individuals
 from a family at risk of carrying mutations related to the
 disease.</p>
 
 <p> Your task is to write a Python program that will extract the correct transcript from the CFTR gene, translate the gene sequence to its corresponding amino-acid sequence and based on the reference amino-acid sequence determine whether any of the five given individuals is affected.</p>
 
+<p> Download the lecture slides from <a href="https://nbisweden.github.io/workshop-python/ht19/404.md">here</a>.</p>
+
 </blockquote>
 
 # Download the appropriate files {#download-files}
 
-The main task is divided in several steps. The first step is to download
+The main task is divided into several steps. The first step is to download
 the reference sequence file and the appropriate reference annotation file from the Ensembl database:
 
 Human reference DNA for chromosome 7 (`fasta` format):
@@ -49,27 +51,28 @@ Human reference DNA for chromosome 7 (`fasta` format):
 Human reference annotation file (`GTF` format):
 - [Homo_sapiens.GRCh38.93.gtf.gz](ftp://ftp.ensembl.org/pub/release-93/gtf/homo_sapiens/Homo_sapiens.GRCh38.93.gtf.gz)
 
-The CFTR gene is located on chromosome `7`. After downloading the files, read up on how the files are structured.
+After downloading the files, read up on how the files are structured.
 
 Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package:
 <pre class="highlight"><code>from utils import check_answers</code></pre>
 
 # Warmup {#warmup}
 
-1. What is the length of chr7 on the reference sequence??
+1. What is the length of chromosome 7 on the reference sequence?
 
    <details>
    <summary>Tip</summary>
    <section>
    <p>Open the reference fasta file and read it line by line.</p>
-   <p>Ignore the first line and, in a loop, get the length of each line (from which you remove the trailing newline character).</p>
+   <p>In a loop, ignore the first line and get the length of each following line.</p>
+   <p>Don't forget to remove the trailing newline character from each line.</p>
    <p>Sum up all the lengths you found.</p>
    </section>
    </details>
    <details>
    <summary>Answer</summary>
    <section>
-   <p>Chromosome 7 has 159.345.973 base pairs.</p>
+   <p>Chromosome 7 has 159,345,973 base pairs.</p>
    </section>
    </details>
 
@@ -79,74 +82,77 @@ Some of the tasks involve outputting long sequences. To make sure they are corre
    <details>
    <summary>Tip</summary>
    <section>
-   <p>You need to understand the structure of a GTF-formatted file.</p>
-   <p>The GTF format uses several tab-delimited fields, for which we give you a <a href="https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/data/gtf-format.md">short a description</a>.</p>
-   <p>Alternatively, you can <a href="https://en.wikipedia.org/wiki/Gene_transfer_format">search online</a>.</p>
-   <p>Then, only count entries of type gene</p>
+   <p>You need to understand the structure of a GTF (gene transfer format) file to solve the task.</p>
+   <p>Here, you can find a <a href="https://github.com/NBISweden/PythonCourse/blob/ht19/assignment/data/gtf-format.md">short description</a> of the different (tab-delimited) fields of a GTF file.</p>
+   <p>You can also do a <a href="https://www.google.com/search?ei=bHWDXcz-EY2Fk74PjqiZqAU&q=gene+transfer+format&oq=gene+transfer+format&gs_l=psy-ab.3..0j0i30j0i8i30.12939.16095..16355...4.3..0.146.1128.11j4......0....1..gws-wiz.......0i71j0i7i30j0i7i10i30j0i8i7i30j0i8i7i10i30j0i7i5i30j0i13j0i13i30.BS3cF3GTV7g&ved=0ahUKEwjM5O6z8tzkAhWNwsQBHQ5UBlUQ4dUDCAo&uact=5">search online</a>.</p>
+   <p>Once you are done reading up on the file format, count all features of type `gene`.</p>
    </section>
    </details>
    <details>
    <summary>Answer</summary>
    <section>
-   <p>There are 58.395 genes annotated in the GTF file</p>
+   <p>There are 58,395 genes annotated in the GTF file.</p>
    </section>
    </details>
 
 
 # Architect a method {#method}
 
-All the following tasks are now related to the CTFR gene.
+All the following tasks are related to the CFTR gene.
 
-In the annotation file (the GTF file), that gene has the
+In the annotation file (the GTF file), the CFTR gene has the
 id `ENSG00000001626` on chromosome `7`.
 
 
-1. How many transcripts can this gene generate?
+1. How many transcripts can the CFTR gene generate?
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Again, think about the structure of the GTF file</p>
+   <p>Again, think about the structure of the GTF file.</p>
+   <p>Open the GTF file.
+   <p>In a loop, count all `transcript` features for the gene.</p>
    </section>
    </details>
    <details>
    <summary>Answer</summary>
-   <section>This gene can produce 11 different transcripts</section>
+   <section>This gene can produce 11 different transcripts.</section>
    </details>
 
-2. What is the longest transcript in nucleotides?
+2. Which of these transcripts is the longest transcript in nucleotides?
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Use start and stop positions for each transcript of the gene</p>
+   <p>Open the GTF file.
+   <p>Fetch the start and stop positions for each transcript of the gene to calculate their lengths.</p>
+   <p>Keep in mind that sequence numbering starts at 1 in the GTF file format.</p>
    </section>
    </details>
    <details>
    <summary>Answer</summary>
    <section>
-   <p>The transcript with id ENST00000003084 is the longest among 11 other transcripts, and spans 188.703 bases</p>
+   <p>The transcript with the id ENST00000003084 is the longest of 11 transcripts and spans 188,703 bases.</p>
    </section>
    </details>
 
-3. Fetch the DNA sequence for that transcript
+3. Fetch the DNA sequence for that transcript.
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Similarly to step 1 from the Warmup, open the reference file.</p>
-   <p>Ignore the first line and, in a loop, append each line to a list.</p>
-   <p>Remember to strip the trailing newline character.</p>
+   <p>Open the reference file.</p>
+   <p>In a loop, ignore the first line and append each line to a list, removing the trailing newline character.</p>
    <p>Outside the loop, use the <code>join</code> function to concatenate the lines from the list.</p>
-   <p><b>Avoid concatenation</b> <i>inside</i> the loop, as it is slow and wasting memory</p>
-   <p>Use the start and stop positions extracted from the transcript, but think about where the index starts from</p>
+   <p><b>Avoid concatenation</b> <i>inside</i> the loop, as it is slow and wastes memory.</p>
+   <p>Extract the start and stop positions of the transcript similar to task 2 to fetch the DNA sequence, but think about where the index starts from.</p>
    </section>
    </details>
    <details>
    <summary>Answer</summary>
    <section>
-   <p>Write your results to file and compare with <code>check_answers.ex3(resultsFile)</code> </p>
-   <p>The entire sequence can be found <a href="https://github.com/NBISweden/PythonCourse/blob/ht18/assignment/results/transcript.ncbi.fasta">here</a></p>
+   <p>Write your results to a file and compare it to the correct result using <code>check_answers.ex3("resultsFile")</code>.</p>
+   <p>The entire sequence can be also found <a href="https://github.com/NBISweden/PythonCourse/blob/ht19/assignment/results/transcript.ncbi.fasta">here</a>.</p>
    </section>
    </details>
 
