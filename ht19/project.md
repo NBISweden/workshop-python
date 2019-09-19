@@ -19,18 +19,18 @@ screening procedures.</p>
 <p> Cystic fibrosis is a complex disease, where patients often
 manifest the following symptoms: problems with lung functions,
 diabetes and infertility. From a genetic point of view, there are
-several mutations associated with this disease. In particular, the
-CFTR gene (short for Cystic Fibrosis Transmembrane Conductance
-Regulator) encodes an ion channel protein acting in epithelial cells,
-and carries several non-synonymous genetic variants, with alterations
-leading to premature stop codons, that are known to cause the
-disease.</p>
+several mutations associated with this disease. The gene
+CFTR (short for Cystic Fibrosis Transmembrane Conductance
+Regulator) encodes an ion channel protein acting in epithelial cells
+and is encoded on chromosome 7 of the human genome.
+CFTR carries several non-synonymous genetic variants, some of which leading to 
+premature stop codons that are known to cause the disease.</p>
 
 <hr/>
 
 <p data-mark="Goal"><b>Goal</b>: In this assignment, you have access
-to the human reference genome as well as the genome annotation. In
-addition, you have full genome sequence data from five individuals
+to the human reference genome (chromosome 7) as well as the full genome annotation. In
+addition, you have genome sequence data (chromosome 7) from five individuals
 from a family at risk of carrying mutations related to the
 disease.</p>
 
@@ -38,20 +38,20 @@ disease.</p>
 
 </blockquote>
 
-# Fetch the appropriate files {#fetch-files}
+# Download the appropriate files {#download-files}
 
-The main task is divided in several steps. The first step is to fetch
-the [reference sequence file](ftp://ftp.ensembl.org/pub/release-93/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz) (in `fasta` format) and the appropriate [reference annotation file](ftp://ftp.ensembl.org/pub/release-93/gtf/homo_sapiens/Homo_sapiens.GRCh38.93.gtf.gz) (in `GTF` format) from the Ensembl database.
+The main task is divided in several steps. The first step is to download
+the reference sequence file and the appropriate reference annotation file from the Ensembl database:
+
+Human reference DNA for chromosome 7 (`fasta` format):
+- [Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz](ftp://ftp.ensembl.org/pub/release-93/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz)
+
+Human reference annotation file (`GTF` format):
+- [Homo_sapiens.GRCh38.93.gtf.gz](ftp://ftp.ensembl.org/pub/release-93/gtf/homo_sapiens/Homo_sapiens.GRCh38.93.gtf.gz)
 
 The CFTR gene is located on chromosome `7`. After downloading the files, read up on how the files are structured.
 
-Human reference DNA for chromosome 7 (fasta):
-- Homo_sapiens.GRCh38.dna_sm.chromosome.7.fa.gz
-
-Human GTF annotation file:
-- Homo_sapiens.GRCh38.93.gtf.gz
-
-Many of the tasks involves outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package:
+Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package:
 <pre class="highlight"><code>from utils import check_answers</code></pre>
 
 # Warmup {#warmup}
