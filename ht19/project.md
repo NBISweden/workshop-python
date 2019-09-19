@@ -110,7 +110,7 @@ id `ENSG00000001626` on chromosome `7`.
    <summary>Tip</summary>
    <section>
    <p>Again, think about the structure of the GTF file.</p>
-   <p>Open the GTF file.
+   <p>Open the GTF file.</p>
    <p>In a loop, count all `transcript` features for the gene.</p>
    </section>
    </details>
@@ -124,7 +124,7 @@ id `ENSG00000001626` on chromosome `7`.
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Open the GTF file.
+   <p>Open the GTF file.</p>
    <p>Fetch the start and stop positions for each transcript of the gene to calculate their lengths.</p>
    <p>Keep in mind that sequence numbering starts at 1 in the GTF file format.</p>
    </section>
