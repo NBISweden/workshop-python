@@ -53,7 +53,7 @@ Human reference annotation file (`GTF` format):
 
 After downloading the files, read up on how the files are structured.
 
-Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package:
+Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website):
 <pre class="highlight"><code>from utils import check_answers</code></pre>
 
 # Warmup {#warmup}
