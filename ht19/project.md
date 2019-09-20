@@ -223,12 +223,8 @@ Extend the python program you have designed above to compare the reference seque
 [Patient2.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient2.fa.gz),
 [Patient3.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient3.fa.gz),
 [Patient4.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient4.fa.gz),
-and
-[Patient5.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient5.fa.gz))
+and [Patient5.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient5.fa.gz))
 to determine which of them are carrying a mutation in the CFTR gene that causes a truncated protein.
-
-
-<hr />
 
 # Extra task {#extra-task}
 
