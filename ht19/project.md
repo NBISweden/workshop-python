@@ -217,15 +217,15 @@ id `ENSG00000001626` on chromosome `7`.
 
 We are reaching the goal for this assignment!
 
-A mutation in the transcript ENST00000003084 causes a premature stop codon to be introduced into the aminoacid sequence. This creates a truncated protein, causing cystic fibrosis.
-Extend the python program you have designed above to compare the reference sequence of chromosome 7 to the sequences of the following 5 patients
-([patient-1](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient1.fa.gz),
-[patient-2](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient2.fa.gz),
-[patient-3](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient3.fa.gz),
-[patient-4](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient4.fa.gz),
+A mutation in the transcript ENST00000003084 causes a premature stop codon to be introduced into the amino acid sequence. This creates a truncated protein, causing cystic fibrosis.
+Extend the python program you have designed above to compare the reference sequence of chromosome 7 to the sequences of the following 5 patients in `fasta` format
+([Patient1.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient1.fa.gz),
+[Patient2.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient2.fa.gz),
+[Patient3.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient3.fa.gz),
+[Patient4.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient4.fa.gz),
 and
-[patient-5](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient5.fa.gz))
-to determine which of them are carrying a mutation in the CFTR gene, causing a truncated protein.
+[Patient5.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient5.fa.gz))
+to determine which of them are carrying a mutation in the CFTR gene that is causing a truncated protein.
 
 # Extra task {#extra-task}
 
