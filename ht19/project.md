@@ -225,7 +225,7 @@ Extend the python program you have designed above to compare the reference seque
 [Patient4.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient4.fa.gz),
 and
 [Patient5.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient5.fa.gz))
-to determine which of them are carrying a mutation in the CFTR gene that is causing a truncated protein.
+to determine which of them are carrying a mutation in the CFTR gene that causes a truncated protein.
 
 
 <hr />
