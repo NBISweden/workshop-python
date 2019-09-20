@@ -228,7 +228,7 @@ to determine which of them are carrying a mutation in the CFTR gene that causes 
 
 # Extra task {#extra-task}
 
-Use [BioPython](http://biopython.org/wiki/Documentation) to parse the fasta file and to translate DNA nucleotides into amino acids.
+1. Use [BioPython](http://biopython.org/wiki/Documentation) to parse the fasta file and to translate DNA nucleotides into amino acids.
 
    <details>
    <summary>Tip</summary>
