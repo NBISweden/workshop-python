@@ -237,8 +237,8 @@ Use [BioPython](http://biopython.org/wiki/Documentation) to parse the fasta file
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Check the <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc11">BioPython tutorial</a> on how to parse a fasta file with BioPython.</p>
-   <p>Read up on the built-in translation <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc25">method</a> and the BioPython <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc26">translation tables</a>.</p>
+   <p>Check the BioPython tutorial on how to <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc11">parse a fasta file</a> with BioPython.</p>
+   <p>Read up on the built-in <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc25">translation method</a> and the BioPython <a href="http://biopython.org/DIST/docs/tutorial/Tutorial.html#htoc26">translation tables</a>.</p>
    </section>
    </details>
 
