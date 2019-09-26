@@ -94,10 +94,16 @@ we have to download those dependencies.
 
 ## For Windows
 
-Start by [downloading and installing Anaconda]('https://www.anaconda.com/distribution/') if you don't already have it installed.Anaconda is the easiest way to download and manage your python libraries.
+Start by [downloading and installing Anaconda](https://www.anaconda.com/distribution/) if you don't already have it installed.Anaconda is the easiest way to download and manage your python libraries.
 Once you have downloaded Anaconda you can open up the Anaconda terminal, and from there use `pip` to install the following:
 
-<img src="../img/conda_pip.png" />
+```
+pip install pyreadline
+
+pip install pandas
+
+pip install matplotlib
+```
 
 `pyreadline` is a library specifically needed for Windows users, and is not required for Mac or Linux.
 
