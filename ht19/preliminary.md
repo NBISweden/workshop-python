@@ -12,11 +12,12 @@ of the course.
 It is important to come prepared _before_ the first lecture, in order
 to fully take advantage of the hands-on exercises, coming at a rather high pace.
 
-We have the 3 following requirements:
+We have the 4 following requirements:
 
 1. [Install Python](#how-to-install-python) on your machine
-2. Make sure you have a [proper text editor](#text-editor)
-3. Check that the installation went fine, by [running a given simple script](#test),
+2. [Install dependencies](#install-dependencies) on your machine
+3. Make sure you have a [proper text editor](#text-editor)
+4. Check that the installation went fine, by [running a given simple script](#test),
 
 
 ----
@@ -85,6 +86,26 @@ add the following line to the file `~/.bashrc` (or `~/.bash_profile`):
 `alias python=python3`
 
 ----
+
+# How to install dependencies {#install-dependencies}
+
+Later in the course we will try out `pandas` and some plotting, so before that
+we have to download those dependencies.
+
+## For Windows
+
+Start by [downloading and installing Anaconda]('https://www.anaconda.com/distribution/') if you don't already have it installed.Anaconda is the easiest way to download and manage your python libraries.
+Once you have downloaded Anaconda you can open up the Anaconda terminal, and from there use `pip` to install the following:
+
+<img src="../img/conda_pip.png" />
+
+`pyreadline` is a library specifically needed for Windows users, and is not required for Mac or Linux.
+
+## For Mac Os X and Unix/Linux users
+
+Use `pip` to install `pandas` and `matplotlib` as shown above. If you also would like to download Anaconda,
+feel free to do that, it is a very convenient package and environment manager not just for this course.
+
 
 # Using a proper Text Editor {#text-editor}
 
