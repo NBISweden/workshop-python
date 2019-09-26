@@ -13,4 +13,6 @@ tmp/
 *.snm
 *.toc
 
-
+tmp_lecture.tmp
+tmpcsstmp/*
+tmpimgtmp/*
