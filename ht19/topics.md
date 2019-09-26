@@ -5,9 +5,8 @@ menu: topics
 
 <ol id="topics">
 <li>
-<a href="{{ site.url }}/ht19/lecture/Day_1.slides.html">
-<!--<a href="404.md">-->
-<!--a href="lecture/Day1.slides.html"-->
+<!--a href="{{ site.url }}/ht19/lecture/Day_1.slides.html"-->
+<a href="404.md">
 <h3>Day 1 - First programs</h3>
 
 literals, variables, builtin types, int, float, str, list, bool,
@@ -28,8 +27,8 @@ href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exe
 </li>
 
 <li>
-<!--a href="404.md"-->
-<a href="{{ site.url }}/ht19/lecture/Day_2.slides.html">
+<a href="404.md">
+<!--a href="{{ site.url }}/ht19/lecture/Day_2.slides.html"-->
 <h3>Day 2 - More Data Structures</h3>
 
 set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
@@ -43,8 +42,8 @@ Notebooks:
 </li>
 
 <li>
-<!--a href="404.md"-->
-<a href="{{ site.url }}/ht19/lecture/Day_3.slides.html">
+<a href="404.md">
+<!--a href="{{ site.url }}/ht19/lecture/Day_3.slides.html"-->
 <h3>Day 3 - Using <code>dict</code></h3>
 
 dict, function, positional argument, import, sys.argv

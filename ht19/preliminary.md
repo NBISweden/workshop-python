@@ -142,7 +142,7 @@ $ python3
 
 Download
 this
-[test script](//raw.githubusercontent.com/NBISweden/PythonCourse/ht18/test.py) (from
+[test script](//raw.githubusercontent.com/NBISweden/PythonCourse/ht19/test.py) (from
 the NBIS GitHub location for this instance of the course), and in your
 terminal, run
 
