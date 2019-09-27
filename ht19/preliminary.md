@@ -15,7 +15,7 @@ to fully take advantage of the hands-on exercises, coming at a rather high pace.
 We have the 4 following requirements:
 
 1. [Install Python](#how-to-install-python) on your machine
-2. [Install dependencies](#install-dependencies) on your machine
+2. [Install dependencies](https://www.anaconda.com/distribution/) on your machine
 3. Make sure you have a [proper text editor](#text-editor)
 4. Check that the installation went fine, by [running a given simple script](#test),
 
@@ -23,6 +23,10 @@ We have the 4 following requirements:
 ----
 
 # How to install Python
+
+> IMPORTANT NOTE: A shortcut for Windows and Mac users is to simple install Anaconda
+> as described [further down](https://www.anaconda.com/distribution/). Anaconda comes with 
+> Python pre-installed. Otherwise, install as described here.
 
 Please, choose to install the version `3.6.0` or above. The latest version available is 3.7.0
 
