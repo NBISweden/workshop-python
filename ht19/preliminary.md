@@ -66,16 +66,13 @@ sudo apt-get update
 sudo apt-get install python3 python3-pip
 ```
 
-Then use pip to install Jupyter (see [below](#jupyter) for more details).
+Then use pip to install Jupyter (see [below](#jupyter) for more details), Biopython and other libraries that will be needed during the course:
 
 ```
-sudo python3 -m pip install jupyter
-```
-
-You can also use pip to install Biopython:
-
-```
-sudo python3 -m pip install biopython
+pip3 install --user jupyter
+pip3 install --user biopython
+pip3 install --user pandas
+pip3 install --user matplotlib
 ```
 
 #### Installing from source
