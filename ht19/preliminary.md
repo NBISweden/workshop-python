@@ -64,7 +64,7 @@ Install Python3 and pip using your package manager. For Ubuntu and Debian, it go
 ```
 sudo apt-get update
 sudo apt-get install python3 python3-pip
-
+```
 
 Then use pip to install Jupyter (see [below](#jupyter) for more details).
 
@@ -81,7 +81,7 @@ sudo python3 -m pip install biopython
 #### Installing from source
 You can also install [Python from source](https://www.python.org/downloads/).
 
-```
+
 
 ### A note for Linux/Unix and Mac users
 The command to run Python is `python3`. If you wish to be able to start Python by typing just `python`,
