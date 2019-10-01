@@ -1,14 +1,25 @@
 """
-Module for testing regex pattern.
+Quiz for regex patterns.
+
 Usage: python3 retester.py
 """
 import os
 import random
 import re
-import readline
 
 
-# All exercises
+try:
+    import readline
+except:
+    try:
+        # for Windows
+        from pyreadline import Readline
+        readline = Readline()
+    except:
+        exit("Error!\n\nModule readline not found. Plesae ask a teacher to help you install it!\n")
+
+
+# All exercises on the form ([positive patterns], [negative patterns], hint).
 exercises = [
     (['abc', 'abcd', 'abcde'], ['xyz', 'def'], "Look at the beginning of the strings. Remember how to match everything?"),
     (['abc', 'abbbc', 'abbbbc'], ['ac'], "How many b's do you need to accept?"),
@@ -29,9 +40,7 @@ exercises = [
 
 
 def test(pattern, expr):
-    """
-    Test if a pattern matches the positive examples and reject the negative
-    """
+    """Test if a pattern matches the positive examples and reject the negative."""
     goods, bads, hint = expr
     try:
         p = re.compile('^'+pattern+'$')
@@ -53,18 +62,14 @@ def test(pattern, expr):
 
 
 def ask_question(exercise):
-    """
-    Print the examples and get the user input
-    """
-    print('Accept {}'.format(', '.join('{!r}'.format(e) for e  in exercise[0])))
-    print('Reject {}'.format(', '.join('{!r}'.format(e) for e  in exercise[1])))
+    """Print the examples and get the user input."""
+    print('Accept {}'.format(', '.join('{!r}'.format(e) for e in exercise[0])))
+    print('Reject {}'.format(', '.join('{!r}'.format(e) for e in exercise[1])))
     return input('> ').strip()
 
 
 def main():
-    """
-    The main loop
-    """
+    """The main loop."""
     didit = False
     for ex in exercises:
         if didit:
@@ -93,5 +98,9 @@ if __name__ == "__main__":
           '\nType "help" to get a hint or "skip" to skip the current question.',
           '\nType "clear" to get clear the terminal screen.',
           '\nTo exit, type Ctrl+c\n')
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        print('\nThe program will stop!')
+        exit()
     print('Good work! You\'re done!\nBye!\n')
