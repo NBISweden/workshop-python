@@ -190,7 +190,7 @@ should see the current time printed with "big digits" ;)
 
 In the course, we will write Python code as standalone files. However,
 during the lecture, we will also use Jupyter
-notebooks. [Jupyter](//jupyter.org/) is a web-based tool which
+Notebook. [Jupyter](//jupyter.org/) is a web-based tool which
 allows us to evaluate our code line by line.  The Jupyter files are
 called
 [notebooks](//jupyter.readthedocs.io/en/latest/running.html) and
