@@ -15,7 +15,7 @@ DEST="$(basename $1)"
 mkdir -p $TMP_IMG
 mkdir -p $TMP_CSS
 cp $1 $TMP
-cp lectures/img/*{png,jpg} $TMP_IMG
+cp lectures/img/*{png,jpg,PNG} $TMP_IMG
 cp lectures/*css $TMP_CSS
 git checkout gh-pages
 mv $TMP ht19/lecture/$DEST
