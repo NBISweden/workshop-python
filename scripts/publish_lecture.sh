@@ -22,7 +22,7 @@ mv $TMP ht19/lecture/$DEST
 mv $TMP_IMG/* ht19/lecture/img/
 mv $TMP_CSS/* ht19/lecture/
 git add ht19/lecture/$DEST
-git add ht19/lecture/img/*{png,jpg}
+git add ht19/lecture/img/*{png,jpg,PNG}
 git add ht19/lecture/*css
 git commit -m "Update lecture $DEST"
 git checkout ht19
