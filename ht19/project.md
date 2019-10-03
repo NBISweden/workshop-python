@@ -67,6 +67,7 @@ More detailed instructions are given with each task that uses the package.
    <p>In a loop, ignore the first line and get the length of each following line.</p>
    <p>Don't forget to remove the trailing newline character from each line.</p>
    <p>Sum up all the lengths you found.</p>
+   <p></p>
    </section>
    </details>
    <details>
@@ -85,6 +86,7 @@ More detailed instructions are given with each task that uses the package.
    <p>You need to understand the structure of a GTF (gene transfer format) file for this project. Take your time and read up on the file format if you are not sure how to solve this task.</p>
    <p>To get the number of genes, open the GTF file and read it line by line.</p>
    <p>In a loop, count all features of type <code>gene</code>.</p>
+   <p></p>
    </section>
    </details>
    <details>
@@ -110,6 +112,7 @@ In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626
    <p>Again, think about the structure of the GTF file.</p>
    <p>Open the GTF file.</p>
    <p>In a loop, count all <code>transcript</code> features for the gene.</p>
+   <p></p>
    </section>
    </details>
    <details>
@@ -125,6 +128,7 @@ In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626
    <p>Open the GTF file.</p>
    <p>Fetch the start and stop positions for each transcript of the CFTR gene to calculate its length.</p>
    <p>Keep in mind that sequence numbering starts at 1 in the GTF file format.</p>
+   <p></p>
    </section>
    </details>
    <details>
@@ -143,6 +147,7 @@ In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626
    <p>In a loop, ignore the first line and append each line to a list, removing the trailing newline character.</p>
    <p>Outside the loop, use the <code>join</code> function to concatenate the lines from the list to get the reference sequence. Avoid concatenation inside the loop, as it is slow and wastes memory.</p>
    <p>Extract the start and stop positions of the longest transcript to fetch its DNA sequence from the reference sequence, but think about where the index starts from.</p>
+   <p></p>
    </section>
    </details>
    <details>
@@ -161,6 +166,7 @@ In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626
    <p>First, you need to save the start and stop positions of all exons of the longest transcript.</p>
    <p>Then you can use a similar loop to the one you used in task 3 to extract the DNA sequence of each exon.</p>
    <p>Finally, you need to concatenate the DNA sequences of all exons.</p>
+   <p></p>
    </section>
    </details>
    <details>
@@ -179,6 +185,7 @@ In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626
    <p>Find the <code>start_codon</code> and <code>stop_codon</code> features of the longest transcript in the GTF file, including the start positions of the start- and stop-codon.</p>
    <p>Check that the <code>start_codon</code> has the sequence <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon.</p>
    <p>Make your program print a warning message in case the transcript does not begin with a start-codon and end with a stop-codon.</p>
+   <p></p>
    </section>
    </details>
    <details>
