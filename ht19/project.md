@@ -31,12 +31,11 @@ premature stop codons that are known to cause the disease.</p>
 <p data-mark="Goal"><b>Goal</b>: In this assignment, you have access
 to the human reference genome (chromosome 7) as well as the full genome annotation. In
 addition, you have genome sequence data of chromosome 7 from five individuals
-from a family at risk of carrying mutations related to the
-disease.</p>
+from a family at risk of carrying mutations related to the disease.</p>
 
-<p> Your task is to write a Python program that will extract the correct transcript from the CFTR gene, translate the gene sequence to its corresponding amino-acid sequence and based on the reference amino-acid sequence determine whether any of the five given individuals is affected.</p>
+<p> Your task is to write a Python program that will extract a disease-causing transcript from the CFTR gene, translate the gene sequence to its corresponding amino-acid sequence and based on the reference amino-acid sequence determine whether any of the five given individuals is affected.</p>
 
-<p> Download the lecture slides from <a href="https://nbisweden.github.io/workshop-python/ht19/404.md">here</a>.</p>
+<p> Download the lecture slides from <a href="https://github.com/NBISweden/workshop-python/blob/gh-pages/ht19/lecture/Project.pdf">here</a>.</p>
 
 </blockquote>
 
@@ -51,11 +50,11 @@ Human reference DNA for chromosome 7 (`fasta` format):
 Human reference annotation file (`GTF` format):
 - [Homo_sapiens.GRCh38.93.gtf.gz](ftp://ftp.ensembl.org/pub/release-93/gtf/homo_sapiens/Homo_sapiens.GRCh38.93.gtf.gz)
 
-After downloading the files, read up online on how the files are structured. For example, <a href="https://github.com/NBISweden/PythonCourse/blob/ht19/assignment/data/gtf-format.md">here</a> you can find a short description of the different (tab-delimited) fields of a GTF file.
+If you are not familiar with the file formats, read up online on how the files are structured. For example, <a href="https://github.com/NBISweden/PythonCourse/blob/ht19/assignment/data/gtf-format.md">here</a> you can find a short description of the different (tab-delimited) fields of a GTF file.
 
 Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website). You can import it that way:
 <pre class="highlight"><code>from utils import check_answers</code></pre>
-More detailed instructions are given with the respective task.
+More detailed instructions are given with each task that uses the package.
 
 # Warmup {#warmup}
 
@@ -83,8 +82,7 @@ More detailed instructions are given with the respective task.
    <details>
    <summary>Tip</summary>
    <section>
-   <p>You need to understand the structure of a GTF (gene transfer format) file for this project.</p>
-   <p>Take your time and read up on the file format if you are not sure how to solve this task.</p>
+   <p>You need to understand the structure of a GTF (gene transfer format) file for this project. Take your time and read up on the file format if you are not sure how to solve this task.</p>
    <p>To get the number of genes, open the GTF file and read it line by line.</p>
    <p>In a loop, count all features of type <code>gene</code>.</p>
    </section>
@@ -99,10 +97,9 @@ More detailed instructions are given with the respective task.
 
 # Architect a method {#method}
 
-All the following tasks are related to the CFTR gene.
+All following tasks are related to the CFTR gene.
 
-In the annotation file (the GTF file), the CFTR gene has the
-id `ENSG00000001626` on chromosome `7`.
+In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626` on chromosome `7`.
 
 
 1. How many transcripts can the CFTR gene generate?
@@ -117,7 +114,7 @@ id `ENSG00000001626` on chromosome `7`.
    </details>
    <details>
    <summary>Answer</summary>
-   <section>This gene can produce 11 different transcripts.</section>
+   <section>The CFTR gene can produce 11 different transcripts.</section>
    </details>
 
 2. Which of these transcripts is the longest transcript in nucleotides?
@@ -126,14 +123,14 @@ id `ENSG00000001626` on chromosome `7`.
    <summary>Tip</summary>
    <section>
    <p>Open the GTF file.</p>
-   <p>Fetch the start and stop positions for each transcript of the gene to calculate their lengths.</p>
+   <p>Fetch the start and stop positions for each transcript of the CFTR gene to calculate its length.</p>
    <p>Keep in mind that sequence numbering starts at 1 in the GTF file format.</p>
    </section>
    </details>
    <details>
    <summary>Answer</summary>
    <section>
-   <p>The transcript with the id ENST00000003084 is the longest of 11 transcripts and spans 188,703 bases.</p>
+   <p>The transcript with the id <code>ENST00000003084</code> is the longest of 11 transcripts and spans 188,703 bases.</p>
    </section>
    </details>
 
@@ -142,11 +139,10 @@ id `ENSG00000001626` on chromosome `7`.
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Open the reference file.</p>
+   <p>Open the reference fasta file.</p>
    <p>In a loop, ignore the first line and append each line to a list, removing the trailing newline character.</p>
-   <p>Outside the loop, use the <code>join</code> function to concatenate the lines from the list.</p>
-   <p>Avoid concatenation inside the loop, as it is slow and wastes memory.</p>
-   <p>Extract the start and stop positions of the transcript like in task 2 to fetch its DNA sequence from the reference sequence, but think about where the index starts from.</p>
+   <p>Outside the loop, use the <code>join</code> function to concatenate the lines from the list to get the reference sequence. Avoid concatenation inside the loop, as it is slow and wastes memory.</p>
+   <p>Extract the start and stop positions of the longest transcript to fetch its DNA sequence from the reference sequence, but think about where the index starts from.</p>
    </section>
    </details>
    <details>
@@ -162,8 +158,8 @@ id `ENSG00000001626` on chromosome `7`.
    <details>
    <summary>Tip</summary>
    <section>
-   <p>First, you need to save the start and stop positions of all exons of that transcript.</p>
-   <p>Then you can use a similar loop to the one you used in task 3 to extract the DNA sequence of the full transcript to extract each exon.</p>
+   <p>First, you need to save the start and stop positions of all exons of the longest transcript.</p>
+   <p>Then you can use a similar loop to the one you used in task 3 to extract the DNA sequence of each exon.</p>
    <p>Finally, you need to concatenate the DNA sequences of all exons.</p>
    </section>
    </details>
@@ -180,25 +176,25 @@ id `ENSG00000001626` on chromosome `7`.
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Find the <code>start_codon</code> and <code>stop_codon</code> features of the CFTR gene in the GTF file, including their start positions.</p>
-   <p>Check that the <code>start_codon</code> is <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon.</p>
+   <p>Find the <code>start_codon</code> and <code>stop_codon</code> features of the longest transcript in the GTF file, including the start positions of the start- and stop-codon.</p>
+   <p>Check that the <code>start_codon</code> has the sequence <code>ATG</code>, and that the <code>stop_codon</code> corresponds to a proper stop codon.</p>
    <p>Make your program print a warning message in case the transcript does not begin with a start-codon and end with a stop-codon.</p>
    </section>
    </details>
    <details>
    <summary>Answer</summary>
    <section>
-   <p>The start codon has the sequence ATG and starts at position 117,480,095.</p>
-   <p>The stop codon has the sequence TAG and starts at position 117,667,106.</p>
+   <p>The start codon has the sequence <code>ATG</code> and starts at position 117,480,095.</p>
+   <p>The stop codon has the sequence <code>TAG</code> and starts at position 117,667,106.</p>
    </section>
    </details>
 
-6. Translate the above sequence of all exons into amino acids, using an implementation of the translation table from the <a href="https://github.com/NBISweden/PythonCourse/tree/ht18/assignment"><code>utils.rna</code> package</a> (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website).
+6. Translate the above sequence of all exons into amino acids, using an implementation of the translation table from the <code>utils.rna</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website).
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Translate the DNA sequence of all exons from the start codon position of the transcript on.</p>
+   <p>Translate the DNA sequence of the concatenated exons into amino acids from the start codon position of the transcript on.</p>
    <p></p>
    </section>
    </details>
@@ -218,7 +214,7 @@ id `ENSG00000001626` on chromosome `7`.
 We are reaching the goal for this assignment!
 
 A mutation in the transcript ENST00000003084 causes a premature stop codon to be introduced into the amino acid sequence. This creates a truncated protein, causing cystic fibrosis.
-Extend the python program you have designed above to compare the reference sequence of chromosome 7 to the sequences of the following 5 patients in `fasta` format
+Use the python code you have written to solve the tasks above and extend it to compare the reference genome sequence of chromosome 7 to the sequences of the following 5 patients in `fasta` format
 ([Patient1.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient1.fa.gz),
 [Patient2.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient2.fa.gz),
 [Patient3.fa.gz](https://github.com/NBISweden/PythonCourse/raw/ht19/assignment/data/Patient3.fa.gz),
