@@ -86,6 +86,11 @@ def check_replace(text):
 def check_lastvalue(coded):
     assert coded[1] == 'programmer', 'String at position 1 is wrong'
 
+
+@runner
+def check_remmagorp(coded):
+    assert coded == 'programmer', 'You got {}, that\'s not correct'
+
 @runner
 def check_dog(word):
     assert word == 'is', '"{}" is not the correct word'.format(word)
@@ -104,5 +109,9 @@ def check():
 def check_snakes(snake):
     assert snake == 'python', '{} is not the correct answer!'.format(snake)
 
+@runner
+def check_maybe(maybe):
+    assert maybe == 'is', '{} is not the correct answer!'.format(maybe)
 
+x = 77
 
