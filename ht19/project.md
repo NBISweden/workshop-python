@@ -35,7 +35,7 @@ from a family at risk of carrying mutations related to the disease.</p>
 
 <p> Your task is to write a Python program that will extract a disease-causing transcript from the CFTR gene, translate the gene sequence to its corresponding amino-acid sequence and based on the reference amino-acid sequence determine whether any of the five given individuals is affected.</p>
 
-<p> Download the lecture slides from <a href="https://github.com/NBISweden/workshop-python/blob/gh-pages/ht19/lecture/Project.pdf">here</a>.</p>
+<p> Download the lecture slides from <a href="https://github.com/NBISweden/workshop-python/raw/gh-pages/ht19/lecture/Project.pdf">here</a>.</p>
 
 </blockquote>
 
