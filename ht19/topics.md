@@ -61,7 +61,7 @@ Notebook:
 <!--a href="{{ site.url }}/ht19/lecture/Day_4.slides.html"-->
 <h3>Day 4 - Keyword arguments & Pandas</h3>
 
-import, documentation, function, default value, sys.argv, arguments
+import, documentation, keyword argument, None, Pandas
 </a>
 <p class="notebook-links">
 Notebooks:
@@ -76,7 +76,7 @@ Notebooks:
 <!--a href="{{ site.url }}/ht19/lecture/Day_5.slides.html"-->
 <h3>Day 5 - Pattern matching &amp; and course sum-up </h3>
 
-format, positional argument, keyword argument, regular expression
+regular expression, course sum-up
 </a>
 <p class="notebook-links">
 Notebook:
