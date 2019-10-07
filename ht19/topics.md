@@ -59,7 +59,7 @@ Notebook:
 <li>
 <a href="404.md">
 <!--a href="{{ site.url }}/ht19/lecture/Day_4.slides.html"-->
-<h3>Day 4 - Using someone else's code</h3>
+<h3>Day 4 - Keyword arguments & Pandas</h3>
 
 import, documentation, function, default value, sys.argv, arguments
 </a>
@@ -74,7 +74,7 @@ Notebooks:
 <li>
 <a href="404.md"> 
 <!--a href="{{ site.url }}/ht19/lecture/Day_5.slides.html"-->
-<h3>Day 5 - Formatting String and <br>Pattern matching</h3>
+<h3>Day 5 - Pattern matching &amp; and course sum-up </h3>
 
 format, positional argument, keyword argument, regular expression
 </a>
