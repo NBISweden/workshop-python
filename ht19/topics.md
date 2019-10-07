@@ -13,6 +13,7 @@ literals, variables, builtin types, int, float, str, list, bool,
 immutable, mutable, sequences, iterable, open,
 encoding, if/else, for, while, comparators, stdlib.
 </a>
+<p><a href="{{ site.url }}/ht19/lecture/Day_1.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebooks:
 <a
