@@ -28,7 +28,7 @@ href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exe
 </li>
 
 <li>
-<--a href="404.md"-->
+<!--a href="404.md"-->
 <a href="{{ site.url }}/ht19/lecture/Day_2.slides.html">
 <h3>Day 2 - More Data Structures</h3>
 
