@@ -67,9 +67,10 @@ import, documentation, keyword argument, None, Pandas
 </a>
 <p class="notebook-links">
 Notebooks:
-<!--a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_1_hints.ipynb">[1 - step by step]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_2.ipynb">[2]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_5.ipynb">[4]</a-->
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_5.ipynb">[5]</a>
 </p>
 </li>
 
@@ -82,9 +83,9 @@ regular expression, course sum-up
 </a>
 <p class="notebook-links">
 Notebook:
-<!--a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_2.ipynb">[2]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_3.ipynb">[2]</a-->
+<!--a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_3.ipynb">[2]</a-->
 </p>
 </li>
 
