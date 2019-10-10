@@ -60,12 +60,12 @@ Notebook:
 </li>
 
 <li>
-<a href="404.md">
-<!--a href="{{ site.url }}/ht19/lecture/Day_4.slides.html"-->
+<a href="{{ site.url }}/ht19/lecture/Day_4.slides.html">
 <h3>Day 4 - Keyword arguments & Pandas</h3>
 
 import, documentation, keyword argument, None, Pandas
 </a>
+<a href="{{ site.url }}/ht19/lecture/Day_4.slides.pdf">[PDF]</a>
 <p class="notebook-links">
 Notebooks:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day4/Day_4_exercise_1.ipynb">[1]</a>
