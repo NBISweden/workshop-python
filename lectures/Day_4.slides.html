@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>Day_4_plots slides</title>
+<title>Day_4 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -12617,7 +12617,7 @@ When is it used?</p>
 <h4 id="Comparing-None">Comparing <code>None</code><a class="anchor-link" href="#Comparing-None">&#182;</a></h4>
 </div>
 </div>
-</div><div class="fragment">
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -12634,7 +12634,7 @@ When is it used?</p>
 </div>
 </div>
 
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -12690,7 +12690,7 @@ When is it used?</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myvalue</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="k">if</span> <span class="n">myvalue</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">myvalue</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">myvalue</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value is not None&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value is None&#39;</span><span class="p">)</span>
@@ -12916,6 +12916,19 @@ When is it used?</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prettyprinter</span><span class="p">(</span><span class="s2">&quot;genre&quot;</span><span class="p">,</span> <span class="s2">&quot;Drama&quot;</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">prettyprinter</span><span class="p">(</span><span class="s2">&quot;genre&quot;</span><span class="p">,</span> <span class="s2">&quot;Drama&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;!&quot;</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s2">&quot;=&quot;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13232,7 +13245,7 @@ When is it used?</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Collect all related functions in one file</li>
+<li>Collect all related functions in one file / module</li>
 <li>Import a module to use its functions</li>
 <li>Only need to understand what the functions do, not how</li>
 </ul>
@@ -13631,7 +13644,19 @@ When is it used?</p>
 <h3 id="Formatting">Formatting<a class="anchor-link" href="#Formatting">&#182;</a></h3>
 </div>
 </div>
-</div><div class="fragment">
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="n">f</span><span class="s1">&#39;some text {variable:^50} text&#39;</span>  <span class="c1"># center in a 50 character wide column</span>
+<span class="n">f</span><span class="s1">&#39;some text {variable:&lt;50} text&#39;</span>  <span class="c1"># left align in 50 character wide column</span>
+<span class="n">f</span><span class="s1">&#39;some text {variable:.2f} text&#39;</span>  <span class="c1"># round a float to 2 digits</span>
+</pre></div>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13640,7 +13665,7 @@ When is it used?</p>
 
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14562,7 +14587,7 @@ When is it used?</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Group the table by the index (make subtrees)</li>
+<li>Group the table by the index (make subtrees / subdataframes)</li>
 <li>Get one board to plot all the lines</li>
 <li>Draw them one by one</li>
 </ul>
