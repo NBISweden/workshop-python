@@ -243,11 +243,10 @@ to determine which of them are carrying a mutation in the CFTR gene that causes 
    </section>
    </details>
 
-<!---
+
 # Solution {#main-task}
 
 Here are some possible solutions to the assignment. There are of course many correct solutions, we only present some of the alternatives.
 
 [solutions I (notebook)](http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/assignment/Solutions_project.ipynb)  
 [solutions II (standalone script)](https://raw.githubusercontent.com/NBISweden/workshop-python/ht19/assignment/findTruncations.py)
--->
