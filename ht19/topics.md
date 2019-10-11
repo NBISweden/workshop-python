@@ -76,12 +76,12 @@ Notebooks:
 </li>
 
 <li>
-<a href="404.md"> 
-<!--a href="{{ site.url }}/ht19/lecture/Day_5.slides.html"-->
+<a href="{{ site.url }}/ht19/lecture/Day_5.slides.html">
 <h3>Day 5 - Pattern matching &amp; and course sum-up </h3>
 
 regular expression, course sum-up
 </a>
+<p><a href="{{ site.url }}/ht19/lecture/Day_5.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
