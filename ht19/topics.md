@@ -44,12 +44,13 @@ Notebooks:
 </li>
 
 <li>
-<a href="404.md">
-<!--a href="{{ site.url }}/ht19/lecture/Day_3.slides.html"-->
+<!--a href="404.md"-->
+<a href="{{ site.url }}/ht19/lecture/Day_3.slides.html">
 <h3>Day 3 - Using <code>dict</code></h3>
 
 dict, function, positional argument, import, sys.argv
 </a>
+<p><a href="{{ site.url }}/ht19/lecture/Day_3.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
@@ -59,32 +60,34 @@ Notebook:
 </li>
 
 <li>
-<a href="404.md">
-<!--a href="{{ site.url }}/ht19/lecture/Day_4.slides.html"-->
+<a href="{{ site.url }}/ht19/lecture/Day_4.slides.html">
 <h3>Day 4 - Keyword arguments & Pandas</h3>
 
 import, documentation, keyword argument, None, Pandas
 </a>
+<p><a href="{{ site.url }}/ht19/lecture/Day_4.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebooks:
-<!--a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_2.ipynb">[2]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day4/Day_4_exercise_5.ipynb">[4]</a-->
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day4/Day_4_exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day4/Day_4_exercise_1_hints.ipynb">[1 - step by step]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day4/Day_4_exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day4/Day_4_exercise_5.ipynb">[5]</a>
 </p>
 </li>
 
 <li>
-<a href="404.md"> 
-<!--a href="{{ site.url }}/ht19/lecture/Day_5.slides.html"-->
+<a href="{{ site.url }}/ht19/lecture/Day_5.slides.html">
 <h3>Day 5 - Pattern matching &amp; and course sum-up </h3>
 
 regular expression, course sum-up
 </a>
+<p><a href="{{ site.url }}/ht19/lecture/Day_5.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebook:
-<!--a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_2.ipynb">[2]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/exercises/day5/Day_5_exercise_3.ipynb">[2]</a-->
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day5/Day_5_exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day5/Day_5_exercise_2_hints.ipynb">[2 - solutions]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day5/Day_5_exercise_3.ipynb">[Quiz]</a>
 </p>
 </li>
 
