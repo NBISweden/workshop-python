@@ -5,9 +5,9 @@ body_tags: ' id="preliminaries"'
 ---
 
 We require you to have a laptop for the practical
-exercises. If you do not have one, or want to borrow one from us,
-please contact <nina.norgren@scilifelab.se> before the beginning
-of the course.
+exercises. If possible, try to get an extra screen, so
+you can both view the presentation and try it out on
+your own at the same time.
 
 It is important to come prepared _before_ the first lecture, in order
 to fully take advantage of the hands-on exercises, coming at a rather high pace.
@@ -28,7 +28,7 @@ We have the 4 following requirements:
 > as described [further down](#install-dependencies). Anaconda comes with 
 > Python pre-installed. Otherwise, install as described here.
 
-Please, choose to install the version `3.6.0` or above. The latest version available is 3.7.0
+Please, choose to install the version `3.6.0` or above. The latest version available is 3.8.5
 
 ### On Windows
 

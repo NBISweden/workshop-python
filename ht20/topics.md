@@ -91,7 +91,7 @@ Notebook:
 </li>
 
 <li>
-<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht19/downloads" download>Download all files needed for exercises
+<a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht20/downloads" download>Download all files needed for exercises
 </a>
 </li>
 
