@@ -5,7 +5,7 @@ menu: topics
 
 <ol id="topics">
 <li>
-<!--a href="404.md"-->
+<a href="404.md">
 <!--<a href="{{ site.url }}/ht19/lecture/Day_1.slides.html">-->
 <h3>Day 1 - First programs</h3>
 
@@ -25,7 +25,7 @@ Notebooks:
 </li>
 
 <li>
-<!--a href="404.md"-->
+<a href="404.md">
 <!--<a href="{{ site.url }}/ht19/lecture/Day_2.slides.html">-->
 <h3>Day 2 - More Data Structures</h3>
 
@@ -41,7 +41,7 @@ Notebooks:
 </li>
 
 <li>
-<!--a href="404.md"-->
+<a href="404.md">
 <!--<a href="{{ site.url }}/ht19/lecture/Day_3.slides.html">-->
 <h3>Day 3 - Using <code>dict</code></h3>
 
