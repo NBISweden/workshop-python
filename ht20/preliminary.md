@@ -168,11 +168,12 @@ $ python3
 
 ## Running a test script
 
-Download
-this
-[test script](//raw.githubusercontent.com/NBISweden/PythonCourse/ht19/test.py) (from
-the NBIS GitHub location for this instance of the course), and in your
-terminal, run
+Download this
+[test script](//raw.githubusercontent.com/NBISweden/PythonCourse/ht20/test.py) (from
+the NBIS GitHub location for this instance of the course), or get it by downloading the zip archive
+with all the files needed for the course from <a href="https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NBISweden/workshop-python/tree/ht20/downloads" download>here.
+</a>
+In your terminal, run:
 
 ```bash
 $ python3 test.py
