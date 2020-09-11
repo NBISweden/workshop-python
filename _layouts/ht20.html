@@ -1,0 +1,74 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>{{ page.title }}{% if page.title %} | {% endif %}Introduction to Python | HT20 @ NBIS</title>
+
+        <meta name="description" content="Python Course given by NBIS in HT19">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="{{ site.url }}/img/apple-touch-icon.png">
+	<link rel="shortcut icon" href="{{ site.url }}/img/favicon.ico" />
+
+        <link rel="stylesheet" href="{{ site.url }}/css/normalize.css">
+        <link rel="stylesheet" href="{{ site.url }}/css/ht20.css">
+	<link rel="stylesheet" href="{{ site.url }}/css/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{{ site.url }}/css/pygments/style.css">
+
+        <script src="{{ site.url }}/js/modernizr-2.8.3.min.js"></script>
+	<!-- html5 shim and respond.js ie8 support of html5 elements and media queries -->
+	<!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    </head>
+    <body{{ page.body_tags }}>
+        <!--[if lt IE 9]>
+            <p class="browserupgrade">
+	      You are using an <strong>outdated</strong> browser.
+	      Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+	    </p>
+        <![endif]-->
+
+	<header>
+	  <a href="https://nbis.se">
+	    <img src="{{ site.url }}/img/nbis.png" alt="NBIS" />
+	  </a>
+	  <nav>
+	    <a href="{{ site.url }}/ht20/"><i class="fa fa-fw fa-home"></i></a>
+	    <a {% if page.menu == 'topics' %}class="active"{% endif %} href="{{ site.url }}/ht20/topics">
+	      <i class="fa fa-fw fa-tasks"></i> Topics
+	    </a>
+	    <a {% if page.menu == 'project' %}class="active"{% endif %} href="{{ site.url }}/ht20/project">
+	      <i class="fa fa-briefcase"></i> Project
+	    </a>
+	    <a {% if page.menu == 'preliminary' %}class="active"{% endif %} href="{{ site.url }}/ht20/preliminary">
+	      <i class="fa fa-fw fa-hourglass-start"></i> Preliminaries
+	    </a>
+	    <a {% if page.menu == 'help' %}class="active"{% endif %} href="{{ site.url }}/ht20/help">
+	      <i class="fa fa-fw fa-support"></i> Help
+	    </a>
+	  </nav>
+
+	  {% if page.title %}<h2>{{ page.title }}</h2>{% endif %}
+          <h1>Introduction to Python<small>HT19</small></h1>
+	</header>
+	<main>
+          {{ content }}
+	</main>
+
+	<footer>
+	  <span>Main Teachers: <a href="http://nbis.se/about/staff/nina-norgren/">Nina Norgren and </a><a href="http://nbis.se/about/staff/malin-ahlberg/">Dimitris Bampalikis</a></span>
+	  <span><a href="https://www.nbis.se">NBIS</a> &copy; 2020</span>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="{{ site.url }}/js/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="{{ site.url }}/js/ht20.js"></script>
+
+	{% include analytics.html %}
+
+    </body>
+</html>

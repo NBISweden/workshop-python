@@ -32,6 +32,11 @@ defaults:
       path: "ht19"
     values:
       layout: ht19
+  -
+    scope:
+      path: "ht20"
+    values:
+      layout: ht20
 
 
 
