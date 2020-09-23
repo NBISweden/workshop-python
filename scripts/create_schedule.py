@@ -16,7 +16,7 @@ fh.readline()
 
 for line in fh:
     data  = line.split(',')
-    event = data[-1]
+    event = data[-1].strip()
     etype = data[-2]
     data  = list(map(float, data[:4]))
     day   = data[0]-0.48
@@ -51,4 +51,4 @@ plt.title(day_label,y=1.07)
 handles = [mpatches.Patch(color=c, label=l) for l,c in colors.items() if c != 'white']
 plt.legend(handles=handles, bbox_to_anchor=(1.05, 1), loc='upper left')
 
-plt.savefig('../lectures/img/schedule.png', bbox_inches='tight')
+plt.savefig('../schedule.png', bbox_inches='tight')

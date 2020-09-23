@@ -35,7 +35,7 @@ Day,starthour,startmin,length,type,text
 1,13,50,10,break,
 2,13,30,40,Exercise,ex 2
 3,13,30,30,Exercise,ex 1
-1,14,0,45,Lecture,if/else
+1,14,0,45,Lecture,if/else + files
 2,14,10,10,break,
 3,14,0,10,break,
 1,14,45,40,Exercise,ex 4
@@ -44,6 +44,7 @@ Day,starthour,startmin,length,type,text
 1,15,25,20,Discussion,Discussions
 2,14,45,15,Discussion,Discussions
 3,14,30,30,Exercise,IMDb
-1,16,0,60,Project,Project
+1,15,45,15,break,
 2,15,0,120,Project,Project
 3,15,0,120,Project,Project
+1,16,0,60,Project,Project
