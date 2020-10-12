@@ -28,7 +28,7 @@ We have the 4 following requirements:
 > as described [further down](#install-dependencies). Anaconda comes with 
 > Python pre-installed. Otherwise, install as described here.
 
-Please, choose to install the version `3.6.0` or above. The latest version available is 3.8.5
+Please, choose to install the version `3.6.0` or above. The latest version available is 3.9.0
 
 ### On Windows
 
