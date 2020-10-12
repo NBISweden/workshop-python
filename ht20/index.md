@@ -32,10 +32,7 @@ needs.
 
 From Monday October 19<sup>th</sup>, to Friday October 23<sup>th</sup> 2020 (week 43).
 
-* **09:00 - 12:00**: Lectures + Hands-on exercises 
-* **12.00 - 13:00**: Lunch
-* **13:00 - 15:00**: Lectures + Hands-on exercises
-* **15:00 - 17:00**: Project
+![schedule](../img/schedule.png)
 
 # Course Content
 
