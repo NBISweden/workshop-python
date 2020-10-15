@@ -34,3 +34,27 @@ The theme used in the course is part of the nbextensions and can be activated wi
 * Load the notebook you want and enter the presentation mode
 
 You should be ready to go!
+
+## Create lecture material
+### HTML slides
+HTML slides are created and put on the website. Create the html slides using:
+```bash
+jupyter nbconvert --to slides <notebookename>
+```
+
+### Create pdfs
+1. Open the generated html slides in a browser. 
+2. Replace the # in the end of the url with ?print-pdf. 
+3. Right click and select Print, and print the pages to pdf.
+
+### Publish on course website
+Copy over html slides, pdfs and all html associated files to the gh-pages branch using:
+```bash
+./scripts/publish_lecture.sh lectures/Day_X.slides.html
+./scripts/publish_lecture.sh lectures/Day_X.slides.pdf
+```
+(Branch is hardcoded in the `publish_lecture.sh` script, so don't forget to update when new branch is created). All changes are commit to the gh-pages branch, but not yet pushed:
+```bash
+git checkout gh-pages
+git push
+```
