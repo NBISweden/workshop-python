@@ -13,7 +13,7 @@ literals, variables, builtin types, int, float, str, list, bool,
 immutable, mutable, sequences, iterable, open,
 encoding, if/else, for, while, comparators, stdlib.
 </a>
-<p><a href="{{ site.url }}/ht20/lecture/Day_1.slides.pdf">[PDF]</a></p>-->
+<p><a href="{{ site.url }}/ht20/lecture/Day_1.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebooks:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day1/Day_1_Exercise_1.ipynb">[1]</a>
