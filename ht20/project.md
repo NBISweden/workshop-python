@@ -35,7 +35,7 @@ from a family at risk of carrying mutations related to the disease.</p>
 
 <p> Your task is to write a Python program that will extract a disease-causing transcript from the CFTR gene, translate the gene sequence to its corresponding amino-acid sequence and based on the reference amino-acid sequence determine whether any of the five given individuals is affected.</p>
 
-<p> Download the lecture slides from <a href="https://github.com/NBISweden/workshop-python/raw/gh-pages/ht19/lecture/Project.pdf">here</a>.</p>
+<p> Download the lecture slides from <a href="https://github.com/NBISweden/workshop-python/raw/gh-pages/ht20/lecture/Project.pdf">here</a>.</p>
 
 </blockquote>
 
@@ -52,7 +52,7 @@ Human reference annotation file (`GTF` format):
 
 If you are not familiar with the file formats, read up online on how the files are structured. For example, <a href="https://github.com/NBISweden/PythonCourse/blob/ht19/assignment/data/gtf-format.md">here</a> you can find a short description of the different (tab-delimited) fields of a GTF file.
 
-Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website). You can import it that way:
+Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht20/topics">course topics</a> website). You can import it that way:
 <pre class="highlight"><code>from utils import check_answers</code></pre>
 More detailed instructions are given with each task that uses the package.
 
@@ -196,7 +196,7 @@ In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626
    </section>
    </details>
 
-6. Translate the above sequence of all exons into amino acids, using an implementation of the translation table from the <code>utils.rna</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website).
+6. Translate the above sequence of all exons into amino acids, using an implementation of the translation table from the <code>utils.rna</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht20/topics">course topics</a> website).
 
    <details>
    <summary>Tip</summary>
