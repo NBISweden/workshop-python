@@ -26,17 +26,17 @@ Notebooks:
 
 <li>
 <a href="404.md">
-<!--<a href="{{ site.url }}/ht19/lecture/Day_2.slides.html">-->
+<a href="{{ site.url }}/ht20/lecture/Day_2.slides.html">
 <h3>Day 2 - More Data Structures</h3>
 
 set, tuple, dict, split, strip, min, max, sum, break, continue, and, or, not
 </a>
-<!--<p><a href="{{ site.url }}/ht19/lecture/Day_2.slides.pdf">[PDF]</a></p>-->
+<p><a href="{{ site.url }}/ht20/lecture/Day_2.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebooks:
-<!--<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day2/Day_2_Exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day2/Day_2_Exercise_2.ipynb">[2]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day2/Day_2_IMDb_guide.ipynb">[IMDb guide]</a>-->
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day2/Day_2_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day2/Day_2_Exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day2/Day_2_IMDb_guide.ipynb">[IMDb guide]</a>
 </p>
 </li>
 
