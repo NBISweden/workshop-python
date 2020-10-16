@@ -25,7 +25,7 @@ Notebooks:
 </li>
 
 <li>
-<a href="404.md">
+<!--<a href="404.md">-->
 <a href="{{ site.url }}/ht20/lecture/Day_2.slides.html">
 <h3>Day 2 - More Data Structures</h3>
 
