@@ -137,9 +137,11 @@ alternative. You should probably customize it to your taste first.
 <img src="//camo.githubusercontent.com/adf6408a6a64d72440aff6d5e84e82d94865dd40/68747470733a2f2f636f6c6f727375626c696d652e6769746875622e696f2f436f6c6f727375626c696d652d506c7567696e2f636f6c6f727375626c696d652e676966" alt="[Sublime Text and Python]" style="margin-bottom:100px;"/>
 
 Another alternative is <a
-href="//www.jetbrains.com/pycharm/">PyCharm</a>. It looks promising
-but we admit we did not really try it. Go ahead, <a
-href="//www.jetbrains.com/help/pycharm/requirements-installation-and-launching.html">install
+href="//www.jetbrains.com/pycharm/">PyCharm</a>, an IDE (Integrated 
+Development Environment) for python. In addition to being an editor for 
+python code (with code completion/inspection, syntax highlighting etc.) it comes 
+with a terminal, python console, git and conda integration and more.   
+Go ahead, <a href="//www.jetbrains.com/help/pycharm/requirements-installation-and-launching.html">install
 the free version</a> and give it a try!
 <a
 href="//www.jetbrains.com/help/pycharm/requirements-installation-and-launching.html"><img src="../img/pycharm.png" alt="PyCharm" /></a>
