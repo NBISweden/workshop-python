@@ -41,18 +41,18 @@ Notebooks:
 </li>
 
 <li>
-<a href="404.md">
-<!--<a href="{{ site.url }}/ht19/lecture/Day_3.slides.html">-->
+<!--<a href="404.md">-->
+<a href="{{ site.url }}/ht19/lecture/Day_3.slides.html">
 <h3>Day 3 - Using <code>dict</code></h3>
 
 dict, function, positional argument, import, sys.argv
 </a>
-<!--<p><a href="{{ site.url }}/ht19/lecture/Day_3.slides.pdf">[PDF]</a></p>-->
+<p><a href="{{ site.url }}/ht19/lecture/Day_3.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebook:
-<!--<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day2/Extra_exercises.ipynb">[extra]</a>
-<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht19/exercises/day3/Day_3_IMDb_guide.ipynb">[IMDb guide]</a>-->
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day2/Extra_exercises.ipynb">[extra]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day3/Day_3_IMDb_guide.ipynb">[IMDb guide]</a>
 </p>
 </li>
 
