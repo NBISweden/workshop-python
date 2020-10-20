@@ -39,7 +39,8 @@ Day,starthour,startmin,length,type,text
 2,14,45,15,Discussion,Discussions
 3,14,30,30,Exercise,IMDb
 1,15,45,15,break,
-2,15,0,120,Project,Project
+2,15,0,15,Lecture,Project hints
+2,15,15,105,Project,Project
 3,15,0,120,Project,Project
 1,16,0,60,Project,Project
 4,9,0,20,Lecture,Review
@@ -68,4 +69,5 @@ Day,starthour,startmin,length,type,text
 5,13,50,30,Exercise, Quiz
 5,14,20,20,Lecture, Review Quiz
 5,14,40,20,Discussion,Discussions
-5,15,0,120,Project,Project
+5,15,0,60,Project,Project
+5,16,0,60,Lecture,Project wrap-up
