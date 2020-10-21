@@ -168,6 +168,20 @@ bool({})
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
+- Python and the truth: true and false values
+'''
+
+# %%
+values = [1, 0, '', '0', '1', [], [0]]
+for x in values:
+    if x:
+        print(repr(x), 'is true!')
+    else:
+        print(repr(x), 'is false!')
+
+
+# %% [markdown] slideshow={"slide_type": "slide"}
+'''
 - Converting between strings and lists
 '''
 
@@ -274,16 +288,16 @@ print(list_A, list_B)
 
 # %%
 list_A = ['red', 'green']
-lists = {'A': list_A, 'B': list_B}
+lists = {'A': list_A, 'B': list_A}
 print(lists)
-lists['A'].append('blue')
+lists['B'].append('blue')
 print(lists)
 
 # %%
 list_A = ['red', 'green']
-lists = {'A': list_A, 'B': list_B}
+lists = {'A': list_A, 'B': list_A}
 print(lists)
-lists['A'] = lists['A'] + ['yellow']
+lists['B'] = lists['B'] + ['yellow']
 print(lists)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -298,7 +312,7 @@ movies = ['Toy story', 'Home alone']
 def change_to_thriller():
     movies = ['Fargo', 'The Usual Suspects']
 
-change_to_horror_movies()
+change_to_thriller()
 print(movies)
 
 # %%
@@ -311,23 +325,10 @@ print(movies)
 # %%
 def change_to_scifi(movies):
     movies.clear()
-    movies.append('Terminator II', 'The Matrix')
+    movies += ['Terminator II', 'The Matrix']
 
 change_to_scifi(movies)
 print(movies)
-
-# %% [markdown] slideshow={"slide_type": "slide"}
-'''
-- Python and the truth: true and false values
-'''
-
-# %%
-values = [1, 0, '', '0', '1', [], [0]]
-for x in values:
-    if x:
-        print(str(x), ' is true!')
-    else:
-        print(str(x), ' is false!')
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
@@ -399,7 +400,6 @@ print(format_sentence(subject='lecture', 'ongoing', '.'))
 '''
 
 # %%
-
 def format_sentence(subject, value, end='.'):
     return 'The ' + subject + ' is ' + value + end
 
@@ -415,7 +415,6 @@ print(format_sentence('lecture', 'ongoing', '...'))
 '''
 
 # %%
-
 def format_sentence(subject, value, end='.', second_value=None):
     if second_value is None:
         return 'The ' + subject + ' is ' + value + end
@@ -424,7 +423,8 @@ def format_sentence(subject, value, end='.', second_value=None):
 
 print(format_sentence('lecture', 'ongoing'))
 
-print(format_sentence('lecture', 'ongoing', second_value='self-referential', end='!'))
+print(format_sentence('lecture', 'ongoing',
+                      second_value='self-referential', end='!'))
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
@@ -459,6 +459,22 @@ counts.get('romance') is None
 
 # %%
 counts.get('thriller') is None
+
+# %% [markdown] slideshow={"slide_type": "slide"}
+'''
+- Python and the truth, take two
+'''
+
+# %%
+values = [None, 1, 0, '', '0', '1', [], [0]]
+for x in values:
+    if x is None:
+        print(repr(x), 'is None')
+    if not x:
+        print(repr(x), 'is false')
+    if x:
+        print(repr(x), 'is true')
+
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
@@ -540,7 +556,7 @@ for x in lines_in_a_big_file:
 </center>
 '''
 
-# %% [markdown] slideshow={"slide_type": "skip"}
+# %% [markdown] slideshow={"slide_type": "slide"}
 '''
 **Another control statement: pass** - the placeholder
 '''
@@ -615,9 +631,11 @@ import sys
 sys.argv[1]
 ```
 or
+
 ```py
-import imbd_parser as imdb
-imdb.parse('250.imdb')```
+import imdb_parser as imdb
+imdb.parse('250.imdb')
+```
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -660,9 +678,8 @@ dir(math)
 # %% slideshow={"slide_type": "slide"}
 help(math.sqrt)
 
-
- # %% slideshow={"slide_type": "slide"}
- math.sqrt(3)
+# %% slideshow={"slide_type": "slide"}
+math.sqrt(3)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
@@ -698,7 +715,7 @@ Works because somebody else has documented their code!
 def process_file(filename, chrom, pos):
     for line in open(filename):
         if not line.startswith('#'):
-            columns = line.split('\t')
+            col = line.split('\t')
             if col[0] == chrom and col[1] == pos:
                 print(col[9:])
 
@@ -711,13 +728,15 @@ def process_file(filename, chrom, pos):
 
 # %% slideshow={"slide_type": "fragment"}
 def process_file(filename, chrom, pos):
-    """Read a vcf file, search for lines matching chromosome chrom and position pos.
+    """
+    Read a vcf file, search for lines matching
+    chromosome chrom and position pos.
 
     Print the genotypes of the matching lines.
     """
     for line in open(filename):
         if not line.startswith('#'):
-            columns = line.split('\t')
+            col = line.split('\t')
             if col[0] == chrom and col[1] == pos:
                 print(col[9:])
 
@@ -737,8 +756,16 @@ Your code may have two types of users:
 '''
 Write documentation for both of them!
 
-- library users:` """What does this function do?"""` (doc strings)
-- maintainers:    `   # implementation details`        (comments)
+- library users (docstrings):
+  ```python
+  """
+  What does this function do?
+  """
+  ```
+- maintainers (comments):
+  ```python
+  # implementation details
+  ```
 '''
 
 
@@ -762,20 +789,26 @@ def process_file(filename, chrom, pos):
 #### Documentation:
 '''
 
-# %% [markdown] slideshow={"slide_type": "fragment"}
+# %% [markdown]
 '''
- - At the beginning of the file
+- At the beginning of the file
 
-   `"""This module provides functions for..."""`
+   ```python
+   """
+   This module provides functions for...
+   """
+   ````
 '''
 
-# %% [markdown] slideshow={"slide_type": "skip"}
+# %% [markdown]
 '''
- - For every function
+- For every function
 
-    <pre>def make_list(x):
-        """Returns an random list of lenght x."""</pre>
-
+    ```python
+    def make_list(x):
+        """Returns a random list of length x."""
+        pass
+    ```
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -783,17 +816,18 @@ def process_file(filename, chrom, pos):
 #### Comments:
 '''
 
-# %% [markdown] slideshow={"slide_type": "skip"}
+# %% [markdown]
 '''
  - Wherever the code is hard to understand
 
 
 '''
 
-# %% [markdown] slideshow={"slide_type": "fragment"}
+# %% [markdown]
 '''
 ```py
-my_list[5] += other_list[3]  # explain why you do this!```
+my_list[5] += other_list[3]  # explain why you do this!
+```
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
@@ -812,49 +846,31 @@ https://www.python.org/dev/peps/pep-0008/?#comments
 
 '''
 
-# %% slideshow={"slide_type": "fragment"}
-title = 'Great movie'
+# %%
+title = 'Toy Story'
 rating = 10
-print('The result is: '+ title + 'with rating: ' + rating)
+print('The result is: ' + title + ' with rating: ' + str(rating))
 
-# %% [markdown] slideshow={"slide_type": "fragment"}
-'''
-#### Formatting!
-'''
+# %%
+# f-strings (since python 3.6)
+print(f'The result is: {title} with rating: {rating}')
 
-# %% slideshow={"slide_type": "-"}
-print('The result is: {} with rating {}'.format(title, rating))
+# %%
+# format method
+print('The result is: {} with rating: {}'.format(title, rating))
 
-# %% [markdown] slideshow={"slide_type": "fragment"}
-'''
-#### Formatting - f-strings
-'''
+# %%
+# the ancient way (python 2)
+print('The result is: %s with rating: %s' % (title, rating))
 
-# %% slideshow={"slide_type": "-"}
-print(f'The result is: {title} with rating {rating}')  # python version >= 3.6
-
-# %% [markdown] slideshow={"slide_type": "fragment"}
-'''
-#### Formatting - the old way
-'''
-
-# %% slideshow={"slide_type": "-"}
-print('The result is: %s with rating %s' % (title, rating))  # python2
-
-# %% [markdown] slideshow={"slide_type": "slide"}
-'''
-### Formatting
-
-'''
-
-# %% [markdown] slideshow={"slide_type": "fragment"}
+# %% [markdown]
 '''
 Learn more from the Python docs: https://docs.python.org/3.4/library/string.html#format-string-syntax
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-## Exercise 2
+#### Exercise 2
 
 
 ```py
@@ -864,12 +880,12 @@ pick_movie(rating_max=8.0, genre="Mystery")
 Twelve Monkeys
 ```
 
-<b>&rarr; Notebook Day_4_Exercise_2 </b>
+- Notebook Day_4_Exercise_2
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-## Pandas
+### Pandas
 '''
 
 # %% [markdown]
@@ -884,67 +900,56 @@ Data analysis, graph plotting...
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-## Pandas
+### Pandas
 '''
 
 # %% [markdown] slideshow={"slide_type": "-"}
 '''
 
 <center>
-<div class="output_subarea output_html rendered_html output_result">
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>circumference</th>
-      <th>height</th>
-    </tr>
-    <tr>
-      <th>age</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>3</td>
-      <td>35</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>5</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>10</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
-</div></div>
+    <div class="output_subarea output_html rendered_html output_result">
+        <table border="1" class="dataframe">
+          <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th>circumference</th>
+              <th>height</th>
+            </tr>
+            <tr>
+              <th>age</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td> <td>2</td> <td>30</td>
+            </tr>
+            <tr>
+              <td>2</td> <td>3</td> <td>35</td>
+            </tr>
+            <tr>
+              <td>3</td> <td>5</td> <td>40</td>
+            </tr>
+            <tr>
+              <td>4</td> <td>10</td> <td>50</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
 </center>
 '''
 
 # %% [markdown] slideshow={"slide_type": "-"}
 '''
-   <center><div>
-   <img src="img/pandaplot.png" alt="plot" width=30%/>
-  </div>
+<center>
+  <img src="img/pandaplot.png" alt="plot" width=30%/>
 </center>
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-## Pandas - a short overview
+#### Pandas - a short overview
 '''
 
 # %%
@@ -955,9 +960,10 @@ help(pd)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-Orange tree data
---------------
-`Orange_1.tsv`:
+#### Orange tree data
+
+- `Orange_1.tsv`:
+
 ```
 age   circumference  height
 1        2             30
@@ -968,13 +974,12 @@ age   circumference  height
 '''
 
 # %% slideshow={"slide_type": "fragment"}
-
 tree_growth = pd.read_table('../downloads/Orange_1.tsv', index_col=0)
 
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Dataframes
+#### Dataframes
 '''
 
 # %%
@@ -999,15 +1004,12 @@ tree_growth.index
 '''
 
 # %% slideshow={"slide_type": "fragment"}
-actually I try ttree_growth.circumference
+tree_growth.circumference
 
 # %% [markdown]
 '''
 ```py
-
 dataframe.columnname
-
-
 dataframe['columnname']
 ```
 '''
@@ -1035,21 +1037,11 @@ tree_growth.loc[4]
 '''
 #### Reading data
 
-`dataframe = pandas.read_table(filepath, index_col=N)`
-
-`dataframe.columnname`
-
-`dataframe.loc[row_name]`
-'''
-
-# %% [markdown] slideshow={"slide_type": "slide"}
-'''
-#### Exercise 3
-
-- Read the `Orange_1.tsv`
-- Print the height column
-- Print the data for the tree at age 2
-
+```python
+dataframe = pandas.read_table(filepath, index_col=N)`
+dataframe.columnname
+dataframe.loc[row_name]
+```
 '''
 
 # %% slideshow={"slide_type": "slide"}
@@ -1065,9 +1057,9 @@ tree_growth.loc[2]
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-Many trees!
------------
-`Orange.tsv`
+#### Many trees!
+
+- `Orange.tsv`
 ```
 Tree    age circumference
 1     118       30
@@ -1082,18 +1074,14 @@ Tree    age circumference
 '''
 
 # %% slideshow={"slide_type": "slide"}
-
 tree_growth = pd.read_table('../downloads/Orange.tsv', index_col=0)
 tree_growth
-
 
 # %% slideshow={"slide_type": "slide"}
 tree_growth.index
 
 # %%
-
 tree_growth.columns
-
 
 # %% slideshow={"slide_type": "skip"}
 tree_growth.circumference.min()
@@ -1123,17 +1111,17 @@ len(tree_growth.age.unique())
 
 # %% [markdown]
 '''
-### Columns
+#### Columns
 
 `dataframe.columnname`
 
-#### Methods:
+- Methods:
 `.max()`, `.min()`, `unique()`, `.values`, `.mean()`, `.sum()`...
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Selecting parts of the table
+#### Selecting parts of the table
 '''
 
 # %% slideshow={"slide_type": "fragment"}
@@ -1145,13 +1133,14 @@ tree_growth.loc[2]  # selecting rows with index 2
 # %% [markdown] slideshow={"slide_type": "fragment"}
 '''
 ```py
-tree_growth.loc[ criteria ]  # select all rows that fullfills this criteria
+# select all rows that fullfills a criteria:
+tree_growth.loc[ criteria ]
 ```
 '''
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Selecting parts of the table
+#### Selecting parts of the table
 '''
 
 # %% [markdown]
@@ -1178,14 +1167,11 @@ young
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-#### Exercise 4
-
-- Read the data `Orange.tsv`
-- Find the maximum circumference
-- What tree reached that circumference, and how old was it at that time?
+#### Exercises
 
 ```py
-tree_growth.loc[ tree_growth.age < 200 ]```
+tree_growth.loc[ tree_growth.age < 200 ]
+```
 '''
 
 # %% slideshow={"slide_type": "slide"}
@@ -1219,7 +1205,7 @@ orange_1.circumference.plot()
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting
+#### Plotting
 
 What if no plot shows up?
 
@@ -1236,7 +1222,7 @@ plt.show()
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting - many trees
+#### Plotting - many trees
 '''
 
 # %% [markdown] slideshow={"slide_type": "fragment"}
@@ -1252,7 +1238,7 @@ tree_growth.plot(kind='bar', figsize=(12, 12), fontsize=12)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting
+#### Plotting
 
 - Plot a line graph
 '''
@@ -1266,19 +1252,26 @@ tree1
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting
+#### Plotting
 
-- Plot a graph: `dataframe.plot(kind="line", x=..., y=...)`
+- Plot a graph:
+```py
+dataframe.plot(kind="line", x=..., y=...)
+```
 '''
 
 # %% slideshow={"slide_type": "slide"}
-tree1.plot(x='age', y='circumference', fontsize=14, figsize=(12,10))
+tree1.plot(x='age', y='circumference',
+           fontsize=14, figsize=(12,10))
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting
+#### Plotting
 
-- Plot a graph: `dataframe.plot(kind="line", x="..", y="...")`
+- Plot a graph:
+```py
+dataframe.plot(kind="line", x="..", y="...")
+```
 '''
 
 # %% [markdown] slideshow={"slide_type": "fragment"}
@@ -1287,7 +1280,8 @@ Let's plot all the trees!
 '''
 
 # %% slideshow={"slide_type": "slide"}
-tree_growth.plot(kind='line', x='age', y='circumference', figsize=(12, 10), fontsize=14)
+tree_growth.plot(kind='line', x='age', y='circumference',
+                 figsize=(12, 10), fontsize=14)
 
 # %% [markdown] slideshow={"slide_type": "fragment"}
 '''
@@ -1296,17 +1290,21 @@ tree_growth.plot(kind='line', x='age', y='circumference', figsize=(12, 10), font
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting
+#### Plotting
 
-- Plot a graph: `dataframe.plot(kind="scatter", x="..", y="...")`
+- Plot a graph:
+```py
+dataframe.plot(kind="scatter", x="..", y="...")
+```
 '''
 
 # %%
-tree_growth.plot(kind='scatter', x='age', y='circumference', figsize=(12, 10), fontsize=14)
+tree_growth.plot(kind='scatter', x='age', y='circumference',
+                 figsize=(12, 10), fontsize=14)
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting
+#### Plotting
 
 What about the lines?
 '''
@@ -1328,7 +1326,6 @@ dataframe.groupby([what])
 # %% [markdown] slideshow={"slide_type": "fragment"}
 '''
 ```py
-
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots()
@@ -1337,8 +1334,7 @@ fig, ax = plt.subplots()
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
-### Plotting
-
+#### Plotting, several lines
 '''
 
 # %% slideshow={"slide_type": "fragment"}
@@ -1347,14 +1343,22 @@ import matplotlib.pyplot as plt
 fig, ax = plt.subplots()
 
 for index, subtree in tree_growth.groupby(['Tree']):
-    subtree.plot(x='age', y='circumference', ax=ax, kind='line', fontsize=14, figsize=(12,10))
+    subtree.plot(x='age', y='circumference', kind='line',
+                 ax=ax,
+                 fontsize=14, figsize=(12,10))
 
 
 # %% [markdown] slideshow={"slide_type": "slide"}
 '''
 ### Exercise 5
 
+- Read the `Orange_1.tsv`
+    - Print the height column
+    - Print the data for the tree at age 2
+    - Find the maximum circumference
+    - What tree reached that circumference, and how old was it at that time?
+
 - Use Pandas to read IMDB
-- Explore it by making graphs
+    - Explore it by making graphs
 '''
 
