@@ -47,7 +47,7 @@ Notebooks:
 
 dict, function, positional argument, import, sys.argv
 </a>
-<p><a href="{{ site.url }}/ht19/lecture/Day_3.slides.pdf">[PDF]</a></p>
+<p><a href="{{ site.url }}/ht20/lecture/Day_3.slides.pdf">[PDF]</a></p>
 <p class="notebook-links">
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day3/Day_3_Exercise_1.ipynb">[1]</a>
