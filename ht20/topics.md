@@ -42,7 +42,7 @@ Notebooks:
 
 <li>
 <!--<a href="404.md">-->
-<a href="{{ site.url }}/ht19/lecture/Day_3.slides.html">
+<a href="{{ site.url }}/ht20/lecture/Day_3.slides.html">
 <h3>Day 3 - Using <code>dict</code></h3>
 
 dict, function, positional argument, import, sys.argv
@@ -73,7 +73,7 @@ Notebooks:
 </li>
 
 <li>
-<a href="404.md"> 
+<a href="404.md">
 <!--a href="{{ site.url }}/ht19/lecture/Day_5.slides.html"-->
 <h3>Day 5 - Pattern matching &amp; and course sum-up </h3>
 
