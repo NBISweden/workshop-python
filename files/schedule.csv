@@ -58,10 +58,11 @@ Day,starthour,startmin,length,type,text
 5,9,0,10,Lecture,Review
 5,9,10,10,Exercise,Review answers
 5,9,20,30,Lecture,Recap & Intro to regex
-5,9,50,10,break,
-5,10,0,30,Exercise,ex 1
-5,10,30,40,Lecture,Regex in Python
-5,11,10,30,Exercise,ex 2
+5,9,50,30,Exercise,ex 1
+5,10,20,10,break,
+5,10,30,30,Lecture,Regex in Python
+5,11,0,30,Exercise,ex 2
+5,11,30,10,break,
 5,11,40,20,Discussion,Discussions
 5,12,0,60,Lunch,LUNCH
 5,13,0,40,Lecture,Sum up
