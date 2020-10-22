@@ -17,8 +17,8 @@ def runner(func):
 @runner
 def check_name(name):
     assert isinstance(name, str), 'The given name is not a string!'
-    assert name.strip(), 'That string is empty.'
-    return 'Hello '+name
+    assert len(name.strip()) > 0, 'That string is empty.' 
+    return 'Hello '+ name
 
 
 @runner
