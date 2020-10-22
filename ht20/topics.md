@@ -83,6 +83,7 @@ regular expression, course sum-up
 Notebook:
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day5/Day_5_exercise_1.ipynb">[1]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day5/Day_5_exercise_2.ipynb">[2]</a>
+<a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day5/Day_5_exercise_2_hints.ipynb">[2 - Hints]</a>
 <a href="http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht20/exercises/day5/Day_5_exercise_3.ipynb">[Quiz]</a>
 </p>
 </li>
