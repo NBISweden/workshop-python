@@ -23,7 +23,7 @@ several mutations associated with this disease. The gene
 CFTR (short for Cystic Fibrosis Transmembrane Conductance
 Regulator) encodes an ion channel protein acting in epithelial cells
 and is encoded on chromosome 7 of the human genome.
-CFTR carries several non-synonymous genetic variants, some of which leading to 
+CFTR carries several non-synonymous genetic variants, some of which leading to
 premature stop codons that are known to cause the disease.</p>
 
 <hr/>
@@ -243,11 +243,10 @@ to determine which of them are carrying a mutation in the CFTR gene that causes 
    </section>
    </details>
 
-<!---
-# Solution {#main-task}
+# Solution {#solution}
 
 Here are some possible solutions to the assignment. There are of course many correct solutions, we only present one of the alternatives.
 
-[Notebook](http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/assignment/Solutions_project.ipynb)  
-[Standalone script](https://raw.githubusercontent.com/NBISweden/workshop-python/ht18/assignment/findTruncations.py)
--->
+1. [Dan's solution from the last day](https://raw.githubusercontent.com/NBISweden/workshop-python/ht20/assignment/project.py)
+2. [Notebook solution](http://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/ht18/assignment/Solutions_project.ipynb)
+3. [Standalone script](https://raw.githubusercontent.com/NBISweden/workshop-python/ht18/assignment/findTruncations.py)
