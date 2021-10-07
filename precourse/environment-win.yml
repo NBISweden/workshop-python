@@ -8,3 +8,5 @@ dependencies:
   - matplotlib
   - spyder=4.2.0
   - pyreadline
+  - biopython
+  - jupyter
