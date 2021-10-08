@@ -1,0 +1,12 @@
+name: workshop
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - python=3.9.4
+  - pandas
+  - matplotlib
+  - spyder=4.2.0
+  - pyreadline
+  - biopython
+  - jupyter
