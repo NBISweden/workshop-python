@@ -11906,11 +11906,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Introduction-to">Introduction to<a class="anchor-link" href="#Introduction-to">&#182;</a></h2><p><img src="img/python-logo-master-flat.png" alt="title"></p>
-
-<pre><code>### with Application to Bioinformatics
-
-</code></pre>
-<h4 id="--Day-4">- Day 4<a class="anchor-link" href="#--Day-4">&#182;</a></h4>
+<h3 id="with-Application-to-Bioinformatics">with Application to Bioinformatics<a class="anchor-link" href="#with-Application-to-Bioinformatics">&#182;</a></h3><h4 id="--Day-4">- Day 4<a class="anchor-link" href="#--Day-4">&#182;</a></h4>
 </div>
 </div>
 </div></section></section><section><section>
@@ -11920,7 +11916,6 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="TODAY">TODAY<a class="anchor-link" href="#TODAY">&#182;</a></h3><ul>
 <li>Keyword arguments</li>
-<li>Loops with break and continue</li>
 <li>"Code structure": comments and documentation</li>
 <li>Importing modules: using libraries</li>
 <li>Pandas - explore your data!</li>
@@ -12169,7 +12164,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;1e9&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;1e-2&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12182,7 +12177,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;1e9&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;1e9&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12441,6 +12436,18 @@ a.anchor-link {
     <span class="n">number</span> <span class="o">+=</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="mi">2</span>
 </pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Let's-get-back-to-buisness!">Let's get back to buisness!<a class="anchor-link" href="#Let's-get-back-to-buisness!">&#182;</a></h3><ul>
+<li>Continue working on IMDb (or other unfinished exercises) ~30 minutes</li>
+<li>Discussion session</li>
+</ul>
 
 </div>
 </div>
@@ -12837,7 +12844,14 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h4><ul>
-<li>Notebook Day_4_Exercise_1  (~30 minutes)</li>
+<li><p>Notebook Day_4_Exercise_1  (~30 minutes)</p>
+</li>
+<li><p>Extra reading:</p>
+<ul>
+<li><a href="https://realpython.com/python-kwargs-and-args/">https://realpython.com/python-kwargs-and-args/</a></li>
+<li><a href="https://able.bio/rhett/python-functions-and-best-practices--78aclaa">https://able.bio/rhett/python-functions-and-best-practices--78aclaa</a></li>
+</ul>
+</li>
 </ul>
 
 </div>
@@ -12990,9 +13004,6 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">)</span>
-
-<span class="c1"># install packages using: pip</span>
-<span class="c1"># Dimitris&#39; protip: install packages using conda</span>
 </pre></div>
 
 </div>
@@ -13091,7 +13102,6 @@ a.anchor-link {
             <span class="n">col</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">col</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="n">chrom</span> <span class="ow">and</span> <span class="n">col</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">pos</span><span class="p">:</span>
                 <span class="nb">print</span><span class="p">(</span><span class="n">col</span><span class="p">[</span><span class="mi">9</span><span class="p">:])</span>
-<span class="n">help</span><span class="p">(</span><span class="n">process_file</span><span class="p">)</span>                
 </pre></div>
 
 </div>
@@ -13161,7 +13171,6 @@ a.anchor-link {
 <div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd"> This module provides functions for...</span>
 <span class="sd"> &quot;&quot;&quot;</span>
- <span class="err">`</span>
 </pre></div>
 </li>
 </ul>
@@ -13177,7 +13186,7 @@ a.anchor-link {
 <li><p>For every function</p>
 <div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">make_list</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
       <span class="sd">&quot;&quot;&quot;Returns a random list of length x.&quot;&quot;&quot;</span>
-      <span class="k">pass</span>
+      <span class="o">...</span>
 </pre></div>
 </li>
 </ul>
@@ -13228,85 +13237,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Formatting">Formatting<a class="anchor-link" href="#Formatting">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Toy Story&#39;</span>
-<span class="n">rating</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The result is: &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39; with rating: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rating</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># f-strings (since python 3.6)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;The result is: </span><span class="si">{title}</span><span class="s1"> with rating: </span><span class="si">{rating}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># format method</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The result is: </span><span class="si">{}</span><span class="s1"> with rating: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">rating</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># the ancient way (python 2)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The result is: </span><span class="si">%s</span><span class="s1"> with rating: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">rating</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Learn more from the Python docs: <a href="https://docs.python.org/3.9/library/string.html#format-string-syntax">https://docs.python.org/3.9/library/string.html#format-string-syntax</a></p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h4><p>Documentation</p>
-<ul>
-<li>Notebook Day_4_Exercise_2</li>
-</ul>
-
+<h1 id="Pandas!!!">Pandas!!!<a class="anchor-link" href="#Pandas!!!">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13526,7 +13457,7 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
@@ -13539,7 +13470,20 @@ a.anchor-link {
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -13618,7 +13562,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>head -n <span class="m">6</span> ../downloads/Orange.tsv
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>head -n <span class="m">5</span> ../downloads/Orange.tsv
 </pre></div>
 
 </div>
@@ -13631,7 +13575,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;../downloads/Orange.tsv&#39;</span><span class="p">)</span> <span class="c1"># , index_col=0)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">&#39;../downloads/Orange.tsv&#39;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># can also use .head()</span>
 </pre></div>
 
@@ -13646,19 +13590,6 @@ a.anchor-link {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">Tree</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;genre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Thriller&#39;</span><span class="p">,</span> <span class="s1">&#39;Drama&#39;</span><span class="p">],</span> <span class="s2">&quot;rating&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">]})</span><span class="o">.</span><span class="n">rating</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 
 </div>
@@ -13685,7 +13616,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Finding-the-maximum-and-then-filter-by-it">Finding the maximum and then filter by it<a class="anchor-link" href="#Finding-the-maximum-and-then-filter-by-it">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span> <span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">200</span> <span class="p">]</span>
+<h4 id="Finding-the-maximum-and-then-filter-by-it">Finding the maximum and then filter by it<a class="anchor-link" href="#Finding-the-maximum-and-then-filter-by-it">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span> <span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">200</span> <span class="p">]</span>
 </pre></div>
 
 </div>
@@ -13775,7 +13706,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Plotting---many-trees">Plotting - many trees<a class="anchor-link" href="#Plotting---many-trees">&#182;</a></h4>
+<h4 id="Plotting---bars">Plotting - bars<a class="anchor-link" href="#Plotting---bars">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -13844,7 +13775,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Line-plot">Line plot<a class="anchor-link" href="#Line-plot">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="n">x</span><span class="o">=...</span><span class="p">,</span> <span class="n">y</span><span class="o">=...</span><span class="p">)</span>
+<h4 id="Line-plot">Line plot<a class="anchor-link" href="#Line-plot">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">dataframe</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;line&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=...</span><span class="p">,</span> <span class="n">y</span><span class="o">=...</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13869,9 +13800,22 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Grouping">Grouping<a class="anchor-link" href="#Grouping">&#182;</a></h4>
+<h4 id="Multiple-graphs---grouping">Multiple graphs - grouping<a class="anchor-link" href="#Multiple-graphs---grouping">&#182;</a></h4>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Tree&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -13890,23 +13834,22 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Exercise-3">Exercise 3<a class="anchor-link" href="#Exercise-3">&#182;</a></h3><ul>
-<li><p><strong>Easy</strong>: Read the <code>Orange_1.tsv</code></p>
+<h3 id="Exercise-2">Exercise 2<a class="anchor-link" href="#Exercise-2">&#182;</a></h3><ul>
+<li><p><strong>Easy</strong>:</p>
 <ul>
-<li>Print the height column</li>
-<li>Print the data for the tree at age 2</li>
-<li>Find the maximum circumference</li>
-<li>What tree reached that circumference, and how old was it at that time?</li>
+<li>Explore the <code>Orange_1.tsv</code></li>
 </ul>
 </li>
-<li><p><strong>Medium/hard</strong>: Use Pandas to read IMDB</p>
+<li><p><strong>Medium/hard</strong>:</p>
 <ul>
+<li>Use Pandas to read IMDB</li>
 <li>Explore it by making graphs</li>
 </ul>
 </li>
-<li><p><strong>Extra exercise</strong>:</p>
+<li><p><strong>Extra exercises</strong>:</p>
 <ul>
 <li>Read the pandas documentation :)</li>
+<li>Start exploring your own data</li>
 </ul>
 </li>
 </ul>
