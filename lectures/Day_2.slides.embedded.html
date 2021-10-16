@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html>
@@ -12988,8 +12989,13 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13057,6 +13063,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
     </style>
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
@@ -13192,40 +13237,21 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Review-Day-1">Review Day 1<a class="anchor-link" href="#Review-Day-1">¶</a></h2><p>Give an example of the following:</p>
-<ul>
-<li>A number of type <code>float</code> </li>
-<li>A variable containing an <code>integer</code> </li>
-<li>A <code>Boolean</code> / A <code>list</code> / A <code>string</code> </li>
-<li>What character represents a comment?  </li>
-<li>What happens if I take a <code>list</code> plus a <code>list</code>?  </li>
-<li>How do I find out if x is present in a <code>list</code>?  </li>
-<li>How do I find out if 5 is larger than 3 and the integer 4 is the same as the float 4?  </li>
-<li>How do I find the second item in a <code>list</code>?  </li>
-<li>An example of a <code>mutable sequence</code> </li>
-<li>An example of an <code>immutable sequence</code> </li>
-<li>Something <code>iterable</code> (apart from a list)  </li>
-<li>How do I do to print ‘Yes’ if x is bigger than y?  </li>
-<li>How do I open a file handle to read a file called ‘somerandomfile.txt’?    </li>
-<li>The file contains several lines, how do I print each line?  </li>
-</ul>
+<h2 id="Review-Day-1">Review Day 1<a class="anchor-link" href="#Review-Day-1">¶</a></h2><p>Go to Canvas, <code>Modules -&gt; Day 2 -&gt; Review Day 1</code></p>
+<p>20 minutes</p>
 </div>
 </div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Variables-and-Types">Variables and Types<a class="anchor-link" href="#Variables-and-Types">¶</a></h2><p><strong>A number of type <code>float</code>:</strong><br/>
-3.14</p>
-<p><strong>A variable containing an <code>integer</code>:</strong><br/>
-a = 5<br/>
-x = 349852</p>
-<p><strong>A <code>boolean</code>:</strong><br/>
-True</p>
-<p><strong>A <code>list</code>:</strong><br/>
-[2,6,4,8,9]</p>
-<p><strong>A <code>string</code>:</strong><br/>
-'this is a string'</p>
+<h2 id="Variables-and-Types">Variables and Types<a class="anchor-link" href="#Variables-and-Types">¶</a></h2><p><strong>1. Which of the following is of the type <code>float</code>?:</strong><br/>
+7.4</p>
+<p><strong>2. Match the following variables with their type:</strong></p>
+<p><code>var1 = 54</code>                              <strong>integer</strong><br/>
+<code>var2 = [1,2,7,1,24]</code>                                        <strong>list</strong><br/>
+<code>var3 = 2.98</code>                            <strong>float</strong><br/>
+<code>var4 = True</code>                            <strong>boolean</strong></p>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13244,7 +13270,7 @@ True</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
@@ -13255,7 +13281,7 @@ True</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[1]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>int</pre>
 </div>
@@ -13272,7 +13298,7 @@ True</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>
@@ -13284,7 +13310,7 @@ True</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>3.14</pre>
 </div>
@@ -13301,7 +13327,7 @@ True</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -13314,7 +13340,7 @@ True</p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[3]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>list</pre>
 </div>
@@ -13325,13 +13351,28 @@ True</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Operations">Operations<a class="anchor-link" href="#Operations">¶</a></h2><p><strong>What character represents a <code>comment</code>?</strong><br/>
-#</p>
-<p><strong>What happens if I take a <code>list</code> plus a <code>list</code>?</strong><br/>
-The lists will be concatenated</p>
-<p><strong>How do I find out if x is present in a <code>list</code>?</strong><br/>
-<code>x in [1,2,3,4]</code></p>
-<p><strong>How do I find out if 5 is larger than 3 and the integer 4 is the same as the float 4?</strong><br/>
+<h2 id="Comments">Comments<a class="anchor-link" href="#Comments">¶</a></h2><p><strong>3. Which of the following symbols can be used to write comments in your code?</strong></p>
+<p>#</p>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Operations">Operations<a class="anchor-link" href="#Operations">¶</a></h2><p><strong>4. What happens if you do <code>[1,2,5,11] + [87,2,43,3]</code>?</strong><br/>
+<code>[1,2,5,11,87,2,43,3]</code>      The lists will be concatenated</p>
+<p><br/></p>
+<p><strong>5. How do you find out if the variable <code>x</code> is present in a  the list <code>mylist</code>?</strong><br/>
+Two answers correct:</p>
+<ol>
+<li><code>x in mylist</code></li>
+<li>
+<pre><code>for l in mylist:
+   if l == x:
+       print('Found a match')</code></pre>
+</li>
+</ol>
+<p><strong>6. How do you find out if 5 is larger than 3 and the integer 4 is the same as the float 4? Fill in all the missing code.</strong><br/>
 <code>5 &gt; 3 and 4 == 4.0</code></p>
 </div>
 </div>
@@ -13348,7 +13389,7 @@ string                     + </em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
@@ -13365,7 +13406,7 @@ string                     + </em></p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>9</pre>
 </div>
@@ -13382,7 +13423,7 @@ string                     + </em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
@@ -13396,7 +13437,7 @@ string                     + </em></p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>False</pre>
 </div>
@@ -13407,14 +13448,17 @@ string                     + </em></p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Sequences">Sequences<a class="anchor-link" href="#Sequences">¶</a></h2><p><strong>How do I find the second item in a <code>list</code>?</strong><br/>
-<code>list_a[1]</code></p>
-<p><strong>An example of a <code>mutable sequence</code>:</strong><br/>
-<code>[1,2,3,4,5,6]</code></p>
-<p><strong>An example of an <code>immutable sequence</code>:</strong><br/>
-<code>'a string is immutable'</code></p>
-<p><strong>Something <code>iterable</code> (apart from a list):</strong><br/>
-<code>'a string is also iterable'</code></p>
+<h2 id="Sequences">Sequences<a class="anchor-link" href="#Sequences">¶</a></h2><p><strong>7. How do you select the second element in the variable <code>mylist = [4,3,8,10]</code>?</strong><br/>
+<code>mylist[1]</code><br/>
+<br/>
+<strong>8. Pair the following variables with whether they are mutable or immutable</strong></p>
+<p><code>var1 = 'my pretty string'</code>                              <strong>immutable</strong><br/>
+<code>var2 = [1,2,3,4,5]</code>                       <strong>mutable</strong><br/>
+<code>var3 = "hello world"</code>                            <strong>immutable</strong><br/>
+<code>var4 = ['a', 'b', 'c', 'd']</code>            <strong>mutable</strong><br/>
+<br/>
+<strong>9. Which of the following types are iterable?</strong><br/>
+Lists and strings</p>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13429,14 +13473,14 @@ string                     + </em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">]</span>
 <span class="n">c</span> <span class="o">=</span> <span class="s1">'a random string'</span>
 
-<span class="n">a</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -13445,7 +13489,7 @@ string                     + </em></p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>[1, 3, 5]</pre>
 </div>
@@ -13463,7 +13507,7 @@ string                     + </em></p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>         <span class="c1"># mutable</span>
@@ -13480,7 +13524,7 @@ string                     + </em></p>
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>[42, 2, 3, 4, 5]</pre>
 </div>
@@ -13537,12 +13581,12 @@ c
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="If/-Else-statements">If/ Else statements<a class="anchor-link" href="#If/-Else-statements">¶</a></h2><p><b>How do I do if I want to print ‘Yes’ if x is bigger than y?</b><br/>
+<h2 id="If/-Else-statements">If/ Else statements<a class="anchor-link" href="#If/-Else-statements">¶</a></h2><p><strong>10. How do you do to print ‘Yes’ if x is bigger than y?</strong><br/>
 <code>if x &gt; y:</code><br/>
  <code>print('Yes')</code></p>
 </div>
 </div>
-</div>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [13]:</div>
@@ -13569,19 +13613,25 @@ c
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Files-and-loops">Files and loops<a class="anchor-link" href="#Files-and-loops">¶</a></h2><p><strong>How do I open a file handle to read a file called ‘somerandomfile.txt’?</strong><br/>
-<code>fh = open('somerandomfile.txt', 'r', encoding = 'utf-8')</code><br/>
-<code>fh.close()</code></p>
-<p><strong>The file contains several lines, how do I print each line?</strong><br/>
-<code>for line in fh:</code><br/>
- <code>print(line.strip())</code></p>
+<h2 id="Files-and-loops">Files and loops<a class="anchor-link" href="#Files-and-loops">¶</a></h2><p><strong>How do you open a file handle to read a file called ‘somerandomfile.txt’?</strong><br/>
+<code>fh = open('somerandomfile')</code></p>
+<p><br/></p>
+<p><strong>The file in the previous question contains several lines, how do you print each line?</strong></p>
+<ol>
+<li><p><code>for line in fh:</code><br/>
+ <code>print(line)</code></p>
+</li>
+<li><p><code>for row in fh:</code><br/>
+ <code>print(row)</code></p>
+</li>
+</ol>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [14]:</div>
@@ -14203,7 +14253,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [27]:</div>
+<div class="prompt input_prompt">In [26]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
@@ -14218,7 +14268,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[27]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'a string'</pre>
 </div>
@@ -14256,7 +14306,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [44]:</div>
+<div class="prompt input_prompt">In [27]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -14267,7 +14317,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[44]:</div>
+<div class="prompt output_prompt">Out[27]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>3.0</pre>
 </div>
@@ -14284,7 +14334,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [46]:</div>
+<div class="prompt input_prompt">In [28]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">max</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">35</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">88</span><span class="p">,</span><span class="mi">4</span><span class="p">])</span>
@@ -14295,7 +14345,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[46]:</div>
+<div class="prompt output_prompt">Out[28]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>88</pre>
 </div>
@@ -14313,7 +14363,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [49]:</div>
+<div class="prompt input_prompt">In [29]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">sum</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="mi">4</span><span class="p">)</span>
@@ -14329,7 +14379,7 @@ You have a VCF file with a larger number of samples. You are interested in only 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Help on built-in function sum in module builtins:
 
-sum(iterable, start=0, /)
+sum(iterable, /, start=0)
     Return the sum of a 'start' value (default: 0) plus an iterable of numbers
     
     When the iterable is empty, return the start value.
@@ -14351,7 +14401,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [50]:</div>
+<div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="mf">3.234556</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -14362,7 +14412,7 @@ sum(iterable, start=0, /)
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[50]:</div>
+<div class="prompt output_prompt">Out[30]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>3.23</pre>
 </div>
@@ -14394,7 +14444,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [54]:</div>
+<div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="s1">'    spaciousWith5678.com'</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'mco'</span><span class="p">)</span>
@@ -14405,7 +14455,7 @@ sum(iterable, start=0, /)
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[54]:</div>
+<div class="prompt output_prompt">Out[31]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'    spaciousWith5678.'</pre>
 </div>
@@ -14422,7 +14472,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [56]:</div>
+<div class="prompt input_prompt">In [32]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="s1">'  split a string into a list '</span>
@@ -14434,7 +14484,7 @@ sum(iterable, start=0, /)
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[56]:</div>
+<div class="prompt output_prompt">Out[32]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>['split', 'a', 'string', 'into a list ']</pre>
 </div>
@@ -14451,7 +14501,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [62]:</div>
+<div class="prompt input_prompt">In [33]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="s1">' '</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">'a string already'</span><span class="p">)</span>
@@ -14463,7 +14513,7 @@ sum(iterable, start=0, /)
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[62]:</div>
+<div class="prompt output_prompt">Out[33]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'a   s t r i n g   a l r e a d y'</pre>
 </div>
@@ -14481,7 +14531,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [29]:</div>
+<div class="prompt input_prompt">In [34]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#'long string'.startswith('ng',2)</span>
@@ -14493,7 +14543,7 @@ sum(iterable, start=0, /)
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[29]:</div>
+<div class="prompt output_prompt">Out[34]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
@@ -14511,7 +14561,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [30]:</div>
+<div class="prompt input_prompt">In [35]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1">#'LongRandomString'.lower()</span>
@@ -14523,7 +14573,7 @@ sum(iterable, start=0, /)
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[30]:</div>
+<div class="prompt output_prompt">Out[35]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>'LONGRANDOMSTRING'</pre>
 </div>
@@ -14541,7 +14591,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [31]:</div>
+<div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
@@ -14556,7 +14606,7 @@ sum(iterable, start=0, /)
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[31]:</div>
+<div class="prompt output_prompt">Out[36]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>[5, 5, 5, 5, 4, 3, 2, 1]</pre>
 </div>
@@ -14579,7 +14629,7 @@ sum(iterable, start=0, /)
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>→ Notebook Day_2_Exercise_2  (~30 minutes)</strong></p>
+<p><strong>→ Notebook Day_2_Exercise_2  (~30 minutes) OR continute with Exercise_1</strong></p>
 </div>
 </div>
 </div></div></section></section><section><section>
@@ -14614,7 +14664,7 @@ sum(iterable, start=0, /)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [32]:</div>
+<div class="prompt input_prompt">In [37]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fh</span>   <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'../downloads/250.imdb'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
@@ -14661,7 +14711,7 @@ The LOTR: The Return of the King with 8.9</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [33]:</div>
+<div class="prompt input_prompt">In [38]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">fh</span>   <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'../downloads/250.imdb'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
