@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12998,8 +12999,13 @@ ul.typeahead-list  > li > a.pull-right {
 /*# sourceMappingURL=style.min.css.map */
     </style>
 <style type="text/css">
-    .highlight .hll { background-color: #ffffcc }
-.highlight  { background: #f8f8f8; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding: 0 5px 0 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding: 0 5px 0 5px; }
+.highlight .hll { background-color: #ffffcc }
+.highlight { background: #f8f8f8; }
 .highlight .c { color: #408080; font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
 .highlight .k { color: #008000; font-weight: bold } /* Keyword */
@@ -13067,6 +13073,45 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
 .highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+    </style>
+<style type="text/css">
+    
+/* Temporary definitions which will become obsolete with Notebook release 5.0 */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-bold { font-weight: bold; }
+
     </style>
 
 
@@ -13210,14 +13255,8 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Review-Day-2">Review Day 2<a class="anchor-link" href="#Review-Day-2">&#182;</a></h2><ul>
-<li>Give an example of a tuple   </li>
-<li>What is the difference between a tuple and a list?</li>
-<li>How would you approach a complicated coding task?</li>
-<li>What is the different syntax between a function and a method?</li>
-<li>Calculate the average of the list [1,2,3.5,5,6.2] to one decimal</li>
-<li>Take the list ['i','know','python'] as input and output the string 'I KNOW PYTHON'</li>
-</ul>
+<h2 id="Review-Day-2">Review Day 2<a class="anchor-link" href="#Review-Day-2">&#182;</a></h2><p>Go to Canvas, <code>Modules -&gt; Day 3 -&gt; Review Day 2</code></p>
+<p>~20 minutes</p>
 
 </div>
 </div>
@@ -13225,18 +13264,32 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h2><p><b>Give an example of a tuple:</b></p>
+<h2 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h2><p><strong>1. Which of the following variables are of the type tuple?</strong><br>
+<code>a = (1, 2, 3, 4)</code><br>
+<code>a = ([1, 2], 'a', 'b')</code></p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>2. What is the difference between a tuple and a list?</strong><br>
+A tuple is immutable while a list is mutable</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myTuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">myTuple</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myTuple</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="n">myList</span>     <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span> <span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">myList</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="o">=</span> <span class="mi">4</span>
+<span class="c1">#myTuple[2] = 4</span>
+<span class="n">myList</span>
 </pre></div>
 
     </div>
@@ -13249,13 +13302,13 @@ a.anchor-link {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[3]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(1, 2, 3, &#39;a&#39;, &#39;b&#39;, [4, 5, 6])</pre>
+<pre>[1, 2, 4]</pre>
 </div>
 
 </div>
@@ -13263,12 +13316,12 @@ a.anchor-link {
 </div>
 </div>
 
-</div>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>What is the difference between a tuple and a list?</strong><br>
-A tuple is immutable while a list is mutable</p>
+<h2 id="How-to-structure-code">How to structure code<a class="anchor-link" href="#How-to-structure-code">&#182;</a></h2><p><strong>3. What does pseudocode mean?</strong><br>
+Writing down the steps you intend to include in your code in more general language</p>
 
 </div>
 </div>
@@ -13276,7 +13329,7 @@ A tuple is immutable while a list is mutable</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-structure-code">How to structure code<a class="anchor-link" href="#How-to-structure-code">&#182;</a></h2><ul>
+<ul>
 <li>Decide on what output you want</li>
 <li>What input files do you have?</li>
 <li>How is the input structured, can you iterate over it?</li>
@@ -13298,8 +13351,10 @@ A tuple is immutable while a list is mutable</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Functions-and-methods">Functions and methods<a class="anchor-link" href="#Functions-and-methods">&#182;</a></h2><p><strong>What is the different syntax between a function and a method?</strong><br>
-<code>functionName()</code>  &emsp; &emsp;  <code>&lt;object&gt;.methodName()</code></p>
+<h2 id="Functions-and-methods">Functions and methods<a class="anchor-link" href="#Functions-and-methods">&#182;</a></h2><p><strong>4. What are the following examples of?</strong><br>
+<code>len([1, 2, 3, 4])</code><br>
+<code>print("my text")</code></p>
+<p>Functions</p>
 
 </div>
 </div>
@@ -13307,17 +13362,39 @@ A tuple is immutable while a list is mutable</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Calculate the average of the list [1,2,3.5,5,6.2] to one decimal</strong></p>
+<p><strong>5. What are the following examples of?</strong><br>
+<code>"my\ttext".split("\t")</code><br>
+<code>[1, 2, 3].pop()</code></p>
+<p>Methods</p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>General syntax of Functions and Methods</p>
+<p><code>functionName()</code>  &emsp; &emsp;  <code>&lt;object&gt;.methodName()</code></p>
+<p><br>
+A method always belongs to an object of a specific class, a function does not have to.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>6. Calculate the average of the list <code>[1,2,3.5,5,6.2]</code> to one decimal, using Python</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">5</span> <span class="p">,</span><span class="mf">6.2</span><span class="p">]</span>
 <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">myList</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">myList</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
@@ -13331,13 +13408,13 @@ A tuple is immutable while a list is mutable</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[4]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3.4</pre>
+<pre>3.5</pre>
 </div>
 
 </div>
@@ -13345,21 +13422,23 @@ A tuple is immutable while a list is mutable</p>
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Take the list ['i','know','python'] as input and output the string 'I KNOW PYTHON'</strong></p>
+<p><strong>7. Take the list <code>['I','know','Python']</code> as input and output the string 'I KNOW PYTHON'</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;i&#39;</span><span class="p">,</span><span class="s1">&#39;know&#39;</span><span class="p">,</span><span class="s1">&#39;python&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span><span class="p">,</span><span class="s1">&#39;know&#39;</span><span class="p">,</span><span class="s1">&#39;Python&#39;</span><span class="p">]</span>
+<span class="n">my_string</span> <span class="o">=</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_string</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13372,15 +13451,13 @@ A tuple is immutable while a list is mutable</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&#39;I KNOW PYTHON&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>I KNOW PYTHON
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -13395,6 +13472,7 @@ A tuple is immutable while a list is mutable</p>
 <li>Dictionaries</li>
 <li>Functions</li>
 <li>sys.argv</li>
+<li>Formatting</li>
 </ul>
 
 </div>
@@ -13403,7 +13481,7 @@ A tuple is immutable while a list is mutable</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="IMDb">IMDb<a class="anchor-link" href="#IMDb">&#182;</a></h2><h3 id="Find-the-number-of-genres">Find the number of genres<a class="anchor-link" href="#Find-the-number-of-genres">&#182;</a></h3><p><img src="img/header_imdb.png" alt="Drawing" style="width: 1000px;"/></p>
+<h2 id="IMDb">IMDb<a class="anchor-link" href="#IMDb">&#182;</a></h2><h3 id="Find-the-number-of-unique-genres">Find the number of unique genres<a class="anchor-link" href="#Find-the-number-of-unique-genres">&#182;</a></h3><p><img src="img/header_imdb.png" alt="Drawing" style="width: 1000px;"/></p>
 
 </div>
 </div>
@@ -13419,7 +13497,7 @@ A tuple is immutable while a list is mutable</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>     <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../downloads/250.imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -13489,7 +13567,7 @@ A tuple is immutable while a list is mutable</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -13516,7 +13594,7 @@ A tuple is immutable while a list is mutable</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -13534,7 +13612,7 @@ A tuple is immutable while a list is mutable</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Find-the-number-of-genres">Find the number of genres<a class="anchor-link" href="#Find-the-number-of-genres">&#182;</a></h3><p><img src="img/header_imdb.png" alt="Drawing" style="width: 1000px;"/></p>
+<h3 id="Find-the-number-of-unique-genres">Find the number of unique genres<a class="anchor-link" href="#Find-the-number-of-unique-genres">&#182;</a></h3><p><img src="img/header_imdb.png" alt="Drawing" style="width: 1000px;"/></p>
 <p>Modify your code to use sets</p>
 
 </div>
@@ -13542,7 +13620,7 @@ A tuple is immutable while a list is mutable</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>     <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../downloads/250.imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -13581,7 +13659,7 @@ A tuple is immutable while a list is mutable</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[9]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -13620,7 +13698,7 @@ A tuple is immutable while a list is mutable</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="IMDb">IMDb<a class="anchor-link" href="#IMDb">&#182;</a></h2><h3 id="How-to-find-the-number-of-movies-per-genre?">How to find the number of movies per genre?<a class="anchor-link" href="#How-to-find-the-number-of-movies-per-genre?">&#182;</a></h3><p><img src="img/header_imdb.png" alt="Drawing" style="width: 1000px;"/></p>
+<h2 id="IMDb">IMDb<a class="anchor-link" href="#IMDb">&#182;</a></h2><h3 id="Find-the-number-of-movies-per-genre">Find the number of movies per genre<a class="anchor-link" href="#Find-the-number-of-movies-per-genre">&#182;</a></h3><p><img src="img/header_imdb.png" alt="Drawing" style="width: 1000px;"/></p>
 
 </div>
 </div>
@@ -13649,7 +13727,7 @@ A tuple is immutable while a list is mutable</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myDict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;drama&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
@@ -13668,13 +13746,13 @@ A tuple is immutable while a list is mutable</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[10]:</div>
+    <div class="prompt output_prompt">Out[22]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>{&#39;drama&#39;: 4, &#39;romance&#39;: 5, &#39;thriller&#39;: 2}</pre>
+<pre>{&#39;drama&#39;: 4, &#39;thriller&#39;: 2, &#39;romance&#39;: 5}</pre>
 </div>
 
 </div>
@@ -13700,7 +13778,7 @@ A tuple is immutable while a list is mutable</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myDict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;drama&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
@@ -13728,7 +13806,7 @@ A tuple is immutable while a list is mutable</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[11]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -13752,7 +13830,7 @@ A tuple is immutable while a list is mutable</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">myDict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;drama&#39;</span><span class="p">:</span> <span class="mi">182</span><span class="p">,</span> 
@@ -13816,7 +13894,7 @@ A tuple is immutable while a list is mutable</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>        <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../downloads/250.imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -13837,6 +13915,24 @@ A tuple is immutable while a list is mutable</p>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;drama&#39;: 182, &#39;war&#39;: 30, &#39;adventure&#39;: 55, &#39;comedy&#39;: 46, &#39;family&#39;: 24, &#39;animation&#39;: 17, &#39;biography&#39;: 25, &#39;history&#39;: 18, &#39;action&#39;: 31, &#39;crime&#39;: 62, &#39;mystery&#39;: 41, &#39;thriller&#39;: 65, &#39;fantasy&#39;: 29, &#39;romance&#39;: 24, &#39;sci-fi&#39;: 28, &#39;western&#39;: 8, &#39;musical&#39;: 5, &#39;music&#39;: 3, &#39;historical&#39;: 1, &#39;sport&#39;: 7, &#39;film-noir&#39;: 7, &#39;horror&#39;: 5}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13861,7 +13957,7 @@ Here you have to loop twice</p>
 </div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>        <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../downloads/250.imdb&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
@@ -13892,6 +13988,45 @@ Here you have to loop twice</p>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The average length for movies in genre drama is 2h14min
+The average length for movies in genre war is 2h30min
+The average length for movies in genre adventure is 2h13min
+The average length for movies in genre comedy is 1h53min
+The average length for movies in genre family is 1h44min
+The average length for movies in genre animation is 1h40min
+The average length for movies in genre biography is 2h30min
+The average length for movies in genre history is 2h47min
+The average length for movies in genre action is 2h18min
+The average length for movies in genre crime is 2h11min
+The average length for movies in genre mystery is 2h3min
+The average length for movies in genre thriller is 2h11min
+The average length for movies in genre fantasy is 2h2min
+The average length for movies in genre romance is 2h2min
+The average length for movies in genre sci-fi is 2h6min
+The average length for movies in genre western is 2h11min
+The average length for movies in genre musical is 1h57min
+The average length for movies in genre music is 2h24min
+The average length for movies in genre historical is 2h38min
+The average length for movies in genre sport is 2h17min
+The average length for movies in genre film-noir is 1h43min
+The average length for movies in genre horror is 1h59min
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13918,7 +14053,7 @@ Here you have to loop twice</p>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">FormatSec</span><span class="p">(</span><span class="n">genre</span><span class="p">):</span>   <span class="c1"># input a list of seconds</span>
@@ -14011,7 +14146,7 @@ The average length for movies in genre horror is 1h59min
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">addFive</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>    
@@ -14031,7 +14166,7 @@ The average length for movies in genre horror is 1h59min
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[13]:</div>
+    <div class="prompt output_prompt">Out[28]:</div>
 
 
 
@@ -14048,7 +14183,7 @@ The average length for movies in genre horror is 1h59min
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -14070,13 +14205,13 @@ The average length for movies in genre horror is 1h59min
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[29]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;The time is: 19:16:35.696575&#39;</pre>
+<pre>&#39;The time is: 12:53:24.875493&#39;</pre>
 </div>
 
 </div>
@@ -14087,7 +14222,7 @@ The average length for movies in genre horror is 1h59min
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">addFive</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
@@ -14111,7 +14246,7 @@ The average length for movies in genre horror is 1h59min
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt output_prompt">Out[30]:</div>
 
 
 
@@ -14139,7 +14274,7 @@ The average length for movies in genre horror is 1h59min
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">someFunction</span><span class="p">():</span>
@@ -14215,7 +14350,7 @@ another string
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">myFunctions</span> <span class="kn">import</span> <span class="n">formatSec</span>
@@ -14235,7 +14370,7 @@ another string
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[17]:</div>
+    <div class="prompt output_prompt">Out[32]:</div>
 
 
 
@@ -14252,7 +14387,7 @@ another string
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">myFunctions</span> <span class="kn">import</span>  <span class="n">formatSec</span><span class="p">,</span> <span class="n">toSec</span>
@@ -14323,7 +14458,7 @@ another string
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="NEW-TOPIC-AGAIN:-sys.argv">NEW TOPIC AGAIN: <code>sys.argv</code><a class="anchor-link" href="#NEW-TOPIC-AGAIN:-sys.argv">&#182;</a></h2><ul>
+<h2 id="NEW-TOPIC:-sys.argv">NEW TOPIC: <code>sys.argv</code><a class="anchor-link" href="#NEW-TOPIC:-sys.argv">&#182;</a></h2><ul>
 <li>Avoid hardcoding the filename in the code</li>
 <li>Easier to re-use code for different input files</li>
 <li>Uses command-line arguments</li>
@@ -14421,6 +14556,173 @@ another string
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Formatting">Formatting<a class="anchor-link" href="#Formatting">&#182;</a></h2><p>Format text for printing or for writing to file.</p>
+<p>What we have been doing so far:</p>
+
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">title</span>  <span class="o">=</span> <span class="s1">&#39;Toy Story&#39;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The result is: &#39;</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s1">&#39; with rating: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">rating</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The result is: Toy Story with rating: 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Other (better) ways of formatting strings:</p>
+<p><br></p>
+<p><strong>f-strings (since python 3.6)</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">title</span>  <span class="o">=</span> <span class="s1">&#39;Toy Story&#39;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;The result is: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s1"> with rating: </span><span class="si">{</span><span class="n">rating</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The result is: Toy Story with rating: 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>format method</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">title</span>  <span class="o">=</span> <span class="s1">&#39;Toy Story&#39;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The result is: </span><span class="si">{}</span><span class="s1"> with rating: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">rating</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The result is: Toy Story with rating: 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>The ancient way (python 2)</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">title</span>  <span class="o">=</span> <span class="s1">&#39;Toy Story&#39;</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The result is: </span><span class="si">%s</span><span class="s1"> with rating: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">rating</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The result is: Toy Story with rating: 10
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="IMDb">IMDb<a class="anchor-link" href="#IMDb">&#182;</a></h3><p><strong>Re-structure and write the output to a new file as below</strong></p>
 <p><img src="img/re-structured.png" alt="Drawing" style="width: 400px;"/></p>
 <p>Note:</p>
@@ -14432,7 +14734,7 @@ another string
 
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
