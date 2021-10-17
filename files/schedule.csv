@@ -70,5 +70,4 @@ Day,starthour,startmin,length,type,text
 5,13,50,30,Exercise, Quiz
 5,14,20,20,Lecture, Review Quiz
 5,14,40,20,Discussion,Discussions
-5,15,0,60,Project,Project
-5,16,0,60,Lecture,Project wrap-up
+5,15,0,120,Project,Project
