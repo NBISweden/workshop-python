@@ -5,7 +5,7 @@ Creating a conda environment is one solution for installing the required package
 ## Environment
 * Create environment for the course using
  ```bash
-conda create -n python_workshop jupyter
+conda env create -f environment.yml
 ```
 
 * Activate the environment using
@@ -13,14 +13,6 @@ conda create -n python_workshop jupyter
 conda activate python_workshop
 ```
 
-* Install [RISE](https://rise.readthedocs.io/en/stable/). For conda installations run
-```bash
-conda install -c conda-forge rise
-```
-* Install [nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/index.html). For conda installations run
-```bash
-conda install -c conda-forge jupyter_contrib_nbextensions
-```
 * To start the jupyter notebooks run the following conda from the same terminal
 ```bash
 jupyter notebook
