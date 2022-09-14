@@ -33,20 +33,27 @@ HTML slides are created and put on the website. Create the html slides using:
 ```bash
 jupyter nbconvert --to slides <notebookename>
 ```
+To convert html slides to stand-alone html:
+```bash
+cd lectures/
+python ../scripts/convert_html_to_standalone.py --infile <html file> --outfile <html file>.embedded.html --css custom.css
+``` 
 
 ### Create pdfs
 1. Open the generated html slides in a browser. 
 2. Replace the # in the end of the url with ?print-pdf. 
 3. Right click and select Print, and print the pages to pdf.
 
-### Publish on course website
-Copy over html slides, pdfs and all html associated files to the gh-pages branch using:
-```bash
-./scripts/publish_lecture.sh lectures/Day_X.slides.html
-./scripts/publish_lecture.sh lectures/Day_X.slides.pdf
-```
-(Branch is hardcoded in the `publish_lecture.sh` script, so don't forget to update when new branch is created). All changes are commit to the gh-pages branch, but not yet pushed:
-```bash
-git checkout gh-pages
-git push
-```
+### Publish all material to Canvas
+
+#### Lectures
+
+Use https://htmlview.glitch.me/?https://github.com/NBISweden/workshop-python/blob/htXX/lectures/\<file\>.embedded.html
+
+
+#### Exercises
+
+Use https://nbviewer.jupyter.org/github/NBISweden/workshop-python/blob/htXX/exercises/dayX/\<file\>.ipynb
+
+Note! nbviewer is sometimes very slow in updating (some known issue), so you might have to wait for the changes to show
+
