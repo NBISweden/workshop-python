@@ -1,0 +1,29 @@
+Find the number of unique genres
+
+1. Open file
+2. Start empty list to collect genres in
+3. Loop over all lines not starting with '#'
+4. Strip and split lines into list
+5. Save the element containing the genres into a variable
+6. Split the string variable into a list
+7. Loop over list of genres
+8. Check if genre is in genrelist, if not, add it
+9. Remember to lowercase first
+
+
+fh = open('../downloads/250.imdb', 'r', encoding = 'utf-8')
+
+genres = []
+
+for line in fh:
+    if not line.startswith('#'):
+        cols = line.strip().split('|')
+        genre = cols[5].strip()
+        genrelist = genre.split(',')
+        for entry in genrelist:
+            if entry.lower() not in genres:
+                genres.append(entry.lower())
+        
+fh.close()
+print(genres)
+print(len(genres))
