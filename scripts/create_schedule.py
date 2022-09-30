@@ -2,7 +2,7 @@ import matplotlib.patches as mpatches
 import matplotlib.pylab as plt
 
 daylist = ['Mon','Tue', 'Wed', 'Thu', 'Fri']
-colors  = {'Lecture': 'pink', 'Exercise':'lightgreen', 'Project': 'lightblue', 'Lunch':'white', 'Discussion':'wheat', 'break': 'white'}
+colors  = {'Lecture': 'pink', 'Exercise':'lightgreen', 'Project': 'lightblue', 'Lunch':'white', 'PyQuiz':'wheat', 'break': 'white'}
 
 #colors = ['pink', 'lightgreen', 'lightblue', 'wheat', 'salmon']
 
@@ -11,24 +11,6 @@ day_label  = 'Schedule'
 
 fig = plt.figure(figsize=(15,9.89))
 
-fh  = open(input_file, 'r')
-fh.readline()
-
-for line in fh:
-    data  = line.split(',')
-    event = data[-1].strip()
-    etype = data[-2]
-    data  = list(map(float, data[:4]))
-    day   = data[0]-0.48
-    start = data[1]+data[2]/60
-    end   = start+data[3]/60
-
-    plt.fill_between([day, day+0.96], [start, start], [end,end], color=colors[etype], edgecolor='k', linewidth=0.5)
-    # plot beginning time
-    plt.text(day+0.02, start+0.05 ,'{0}:{1:0>2}'.format(int(data[1]),int(data[2])), va='top', fontsize=7)
-    # plot event name
-    plt.text(day+0.48, (start+end)*0.5, event, ha='center', va='center', fontsize=11)
- 
 # Set Axis
 ax = fig.add_subplot(111)
 ax.yaxis.grid(color = 'lightgrey')
@@ -45,6 +27,27 @@ ax2.set_ylim(ax.get_ylim())
 ax2.set_xticks(ax.get_xticks())
 ax2.set_xticklabels(daylist, size = 15)
 ax2.set_ylabel('Time', size = 15)
+
+fh  = open(input_file, 'r')
+fh.readline()
+
+
+for line in fh:
+    data  = line.split(',')
+    event = data[-1].strip()
+    etype = data[-2]
+    data  = list(map(float, data[:4]))
+    day   = data[0]-0.48
+    start = data[1]+data[2]/60
+    end   = start+data[3]/60
+
+    plt.fill_between([day, day+0.96], [start, start], [end,end], color=colors[etype], edgecolor='k', linewidth=0.5)
+    # plot beginning time
+    plt.text(day+0.02, start+0.05 ,'{0}:{1:0>2}'.format(int(data[1]),int(data[2])), va='top', fontsize=7)
+    # plot event name
+    plt.text(day+0.48, (start+end)*0.5, event, ha='center', va='center', fontsize=11)
+    
+
 
 plt.title(day_label,y=1.07)
 

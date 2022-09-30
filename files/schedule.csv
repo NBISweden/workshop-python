@@ -1,58 +1,58 @@
 Day,starthour,startmin,length,type,text
 1,9,0,30,Lecture,Intro + Types
-2,9,0,30,Exercise,Review
-3,9,0,20,Exercise,Review
 1,9,30,30,Exercise,ex 1
-2,9,30,30,Lecture,Review answers
-3,9,20,20,Lecture,Review answers
 1,10,15,45,Lecture,Operations
-2,10,0,15,break,
-3,9,40,30,Exercise,IMDb + sets
 1,11,0,30,Exercise,ex 2
-2,10,15,25,Lecture,Pseudocode
-3,10,10,10,break,
 1,11,30,10,break,
-2,10,40,50,Exercise,ex 1
-3,10,20,20,Lecture,Dictionaries
-1,11,40,20,Discussion,Discussions
-2,11,30,10,break,
-3,10,40,50,Exercise,IMDb
+1,11,40,20,PyQuiz,PyQuiz!
 1,12,0,60,Lunch,LUNCH
-2,11,40,20,Discussion,Discussions
-3,11,40,20,Discussion,Discussions
 1,13,0,30,Lecture,Loops
-2,12,0,60,Lunch,LUNCH
-3,12,0,60,Lunch,LUNCH
 1,13,30,20,Exercise,ex 3
-2,13,0,30,Lecture,Functions/Methods
-3,13,0,30,Lecture,Functions
 1,13,50,10,break,
-2,13,30,30,Exercise,ex 2
-3,13,30,30,Exercise,ex 1
 1,14,0,45,Lecture,if/else + files
-2,14,0,10,break,
-3,14,0,10,break,
 1,14,45,40,Exercise,ex 4
-2,14,25,35,Exercise,IMDb
-3,14,10,20,Lecture,sys.argv
-1,15,25,20,Discussion,Discussions
-2,14,10,15,Discussion,Discussions
-3,14,30,30,Exercise,IMDb
+1,15,25,20,PyQuiz,PyQuiz!
 1,15,45,15,break,
-2,15,0,120,Project,Project
-3,15,0,120,Project,Project
 1,16,0,60,Project,Project
+2,9,0,30,Exercise,Review
+2,9,30,30,Lecture,Review answers
+2,10,0,15,break,
+2,10,15,25,Lecture,Pseudocode
+2,10,40,50,Exercise,ex 1
+2,11,30,10,break,
+2,11,40,20,PyQuiz,PyQuiz!
+2,12,0,60,Lunch,LUNCH
+2,13,0,30,Lecture,Functions/Methods
+2,13,30,30,Exercise,ex 2
+2,14,0,10,break,
+2,14,25,35,Exercise,IMDb
+2,14,10,15,PyQuiz,PyQuiz!
+2,15,0,120,Project,Project
+3,9,0,20,Exercise,Review
+3,9,20,20,Lecture,Review answers
+3,9,40,30,Exercise,IMDb + sets
+3,10,10,10,break,
+3,10,20,20,Lecture,Dictionaries
+3,10,40,50,Exercise,IMDb
+3,11,40,20,PyQuiz,PyQuiz!
+3,12,0,60,Lunch,LUNCH
+3,13,0,30,Lecture,Functions
+3,13,30,30,Exercise,ex 1
+3,14,0,10,break,
+3,14,10,20,Lecture,sys.argv
+3,14,30,30,Exercise,IMDb
+3,15,0,20,PyQuiz,PyQuiz!
+3,15,20,100,Project,Project
 4,9,0,20,Exercise,Review
 4,9,20,20,Lecture,Review answers
-4,9,40,30,Exercise,IMDb cont.
-4,10,10,20,Discussion,Discussions
-4,10,45,45,Lecture,Functions and kw.args
-4,11,30,30,Exercise,ex 1
+4,9,40,45,Lecture,Functions and kw.args
+4,10,20,40,Exercise,ex 1
+4,11,00,40,Lecture,Modules and documentation
+4,11,40,20,PyQuiz,PyQuiz!
 4,12,0,60,Lunch,LUNCH
-4,13,00,20,Lecture,Modules and documentation
-4,13,20,40,Lecture,Pandas and plotting
-4,14,00,30,Exercise,Pandas exercise
-4,14,40,20,Discussion,Discussions
+4,13,0,60,Lecture,Pandas and plotting
+4,14,00,40,Exercise,Pandas exercise
+4,14,40,20,PyQuiz,PyQuiz!
 4,15,00,120,Project,Project
 5,9,0,10,Lecture,Review
 5,9,10,10,Exercise,Review answers
@@ -62,11 +62,10 @@ Day,starthour,startmin,length,type,text
 5,10,30,30,Lecture,Regex in Python
 5,11,0,30,Exercise,ex 2
 5,11,30,10,break,
-5,11,40,20,Discussion,Discussions
+5,11,40,20,PyQuiz,PyQuiz!
 5,12,0,60,Lunch,LUNCH
 5,13,0,40,Lecture,Sum up
 5,13,40,10,break,
 5,13,50,30,Exercise, Quiz
-5,14,20,20,Lecture, Review Quiz
-5,14,40,20,Discussion,Discussions
+5,14,20,40,Lecture, Review Quiz
 5,15,0,120,Project,Project
