@@ -13779,7 +13779,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Be careful: <code>if x is True</code> is <strong>Not</strong> equivalent to <code>if bool(x) is True</code></p>
+<p>Be careful: <code>if x is True</code> is <strong>not</strong> equivalent to <code>if bool(x) is True</code></p>
 
 </div>
 </div>
@@ -13957,11 +13957,12 @@ a.anchor-link {
 <li>A named piece of code that performs a specific task</li>
 <li>A relation (mapping) between inputs (arguments) and output (return value)</li>
 </ul>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_function</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
-    <span class="c1"># print the user input</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment_by_two</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
     <span class="n">number</span> <span class="o">+=</span> <span class="mi">2</span>
-    <span class="k">return</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">number</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">increment_by_two</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">increment_by_two</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
 </pre></div>
 
 </div>
