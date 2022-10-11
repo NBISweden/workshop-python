@@ -13862,7 +13862,7 @@ a.anchor-link {
 <li>scop of variables</li>
 <li>positional arguments and keyword arguments</li>
 <li><code>return</code> statement</li>
-<li>arbitrary arguments</li>
+<li>arbitrary number of arguments</li>
 </ul>
 </li>
 <li>Reusing code:<ul>
@@ -13878,7 +13878,24 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="More-on-functions:-scope---global-variables-and-local-function-variables">More on functions: scope - global variables and local function variables<a class="anchor-link" href="#More-on-functions:-scope---global-variables-and-local-function-variables">¶</a></h3>
+<h3 id="More-on-functions:-scope---global-vs-local-variables">More on functions: scope - global vs local variables<a class="anchor-link" href="#More-on-functions:-scope---global-vs-local-variables">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">HOST</span> <span class="o">=</span> <span class="s1">'global'</span>
+
+<span class="k">def</span> <span class="nf">show_host</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'HOST inside the function = </span><span class="si">{HOST}</span><span class="s1">'</span><span class="p">)</span>
+
+<span class="n">show_host</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">'HOST outside the function = </span><span class="si">{HOST}</span><span class="s1">'</span><span class="p">)</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
