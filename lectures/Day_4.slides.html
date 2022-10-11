@@ -13993,7 +13993,10 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="More-on-functions:-scope---global-vs-local-variables">More on functions: scope - global vs local variables<a class="anchor-link" href="#More-on-functions:-scope---global-vs-local-variables">&#182;</a></h3>
+<h3 id="More-on-functions:-scope---global-vs-local-variables">More on functions: scope - global vs local variables<a class="anchor-link" href="#More-on-functions:-scope---global-vs-local-variables">&#182;</a></h3><ul>
+<li>Global variables can be accessed inside the function</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14015,19 +14018,90 @@ a.anchor-link {
 </div>
 </div>
 
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Change in the function will not change the global variable</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Toy story&#39;</span><span class="p">,</span> <span class="s1">&#39;Home alone&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;global&#39;</span>
 
-<span class="k">def</span> <span class="nf">some_thriller_movies</span><span class="p">():</span>
-    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;Fargo&#39;</span><span class="p">,</span> <span class="s1">&#39;The Usual Suspects&#39;</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">change_host</span><span class="p">():</span>
+    <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;local&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;HOST inside the function = </span><span class="si">{HOST}</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<span class="n">movies</span> <span class="o">=</span> <span class="n">some_thriller_movies</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+<span class="n">change_host</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;HOST outside the function = </span><span class="si">{HOST}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Pass global variable as argument</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;global&#39;</span>
+
+<span class="k">def</span> <span class="nf">change_host</span><span class="p">(</span><span class="n">HOST</span><span class="p">):</span>
+    <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;local&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;HOST inside the function = </span><span class="si">{HOST}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">change_host</span><span class="p">(</span><span class="n">HOST</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;HOST outside the function = </span><span class="si">{HOST}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="More-on-functions:-scope---global-vs-local-variables-cont.">More on functions: scope - global vs local variables cont.<a class="anchor-link" href="#More-on-functions:-scope---global-vs-local-variables-cont.">&#182;</a></h3><ul>
+<li>List as global variables</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">MOVIES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Toy story&#39;</span><span class="p">,</span> <span class="s1">&#39;Home alone&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">change_movie</span><span class="p">():</span>
+    <span class="n">MOVIES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Fargo&#39;</span><span class="p">,</span> <span class="s1">&#39;The Usual Suspects&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;MOVIES inside the function = </span><span class="si">{MOVIES}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">change_movie</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;MOVIES outside the function = </span><span class="si">{MOVIES}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14040,13 +14114,14 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Toy story&#39;</span><span class="p">,</span> <span class="s1">&#39;Home alone&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">MOVIES</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Toy story&#39;</span><span class="p">,</span> <span class="s1">&#39;Home alone&#39;</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">change_to_drama</span><span class="p">(</span><span class="n">movies</span><span class="p">):</span>
-    <span class="n">movies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Forrest Gump&#39;</span><span class="p">,</span> <span class="s1">&#39;Titanic&#39;</span><span class="p">]</span>
+<span class="k">def</span> <span class="nf">change_movie</span><span class="p">():</span>
+    <span class="n">MOVIES</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="s1">&#39;Fargo&#39;</span><span class="p">,</span> <span class="s1">&#39;The Usual Suspects&#39;</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;MOVIES inside the function = </span><span class="si">{MOVIES}</span><span class="s1">&#39;</span><span class="p">)</span>
 
-<span class="n">change_to_drama</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span>
+<span class="n">change_movie</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;MOVIES outside the function = </span><span class="si">{MOVIES}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14057,15 +14132,7 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Takeaway message: be careful with your variable names!</p>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Also, global variables are usually not a good idea</p>
+<p>Global variables are usually not a good idea</p>
 
 </div>
 </div>
