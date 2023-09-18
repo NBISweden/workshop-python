@@ -78,7 +78,7 @@ presented in class.
 
 # Course fee
 
-A course fee of 2000 SEK will be invoiced to accepted participants.
+A course fee of 3000 SEK will be invoiced to accepted participants.
 This includes lunches, coffee and fika, and course dinner.
 
 > NOTE: NBIS cannot invoice individuals.
