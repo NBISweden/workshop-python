@@ -1,0 +1,12 @@
+{
+    "aliveStatusCodes": [0, 40, 200, 401, 403, 418, 500, 503]
+    "ignorePatterns": [
+        {
+            "pattern": [
+                "^https://north-1.cloud.snic.se:5000/Shibboleth.sso/SAML2/POST",
+                "^https://tower.nf/api/compute-envs/",
+                "^https://support.naiss.se/Ticket/Display.html?id=273542"
+             ]
+        }
+    ]
+}
