@@ -27,3 +27,14 @@ symbold
 th
 url
 yml
+Selenocysteine
+cds
+cds
+gencode
+geneset
+github
+html
+https
+mRNA
+seleno
+
