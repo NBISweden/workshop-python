@@ -35,7 +35,7 @@ from a family at risk of carrying mutations related to the disease.</p>
 
 <p> Your task is to write a Python program that will extract a disease-causing transcript from the CFTR gene, translate the gene sequence to its corresponding amino-acid sequence and based on the reference amino-acid sequence determine whether any of the five given individuals is affected.</p>
 
-<p> Download the lecture slides from <a href="https://github.com/NBISweden/workshop-python/raw/gh-pages/ht19/lecture/Project.pdf">here</a>.</p>
+<p> Download the lecture slides from <a href="https://github.com/NBISweden/workshop-python/raw/gh-pages/ht20/lecture/Project.pdf">here</a>.</p>
 
 </blockquote>
 
@@ -52,18 +52,50 @@ Human reference annotation file (`GTF` format):
 
 If you are not familiar with the file formats, read up online on how the files are structured. For example, <a href="https://github.com/NBISweden/PythonCourse/blob/ht19/assignment/data/gtf-format.md">here</a> you can find a short description of the different (tab-delimited) fields of a GTF file.
 
-Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website). You can import it that way:
+Some of the tasks involve outputting long sequences. To make sure they are correct, use the <code>utils.check_answers</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht20/topics">course topics</a> website). You can import it that way:
 <pre class="highlight"><code>from utils import check_answers</code></pre>
 More detailed instructions are given with each task that uses the package.
 
 # Warmup {#warmup}
 
-1. What is the length of chromosome 7 on the reference sequence?
+1. Make a directory for the project for you to work in and put the project
+   files there.
 
    <details>
    <summary>Tip</summary>
    <section>
-   <p>Open the reference fasta file and read it line by line.</p>
+
+   The commands below are for Mac and Linux and should also work on Windows Subsystem for Linux.
+   You can get help in the terminal by writing the command name followed by <code>--help</code>, such as <code>cd --help</code>.
+   Naturally you can also search the web!
+
+   <ol>
+   <li>Download the files (see instructions above)</li>
+
+   <li>Open a terminal navigate to a directory where you want your project to be.
+       Use <code>cd</code> to change directory and <code>pwd</code> to print the working (current) directory.</li>
+
+   <li>Make a folder for the project.
+       Use <code>mkdir</code> or a file explorer. Check that the files are there using by listing the directory's contents with <code>ls</code>.</li>
+
+   <li>Move the files to this project.
+       Move files using <code>mv</code>. Again, use <code>ls</code> to see that the files end up where you want them to be.</li>
+
+   <li>Unpack any compressed files: the file extension <code>.gz</code> indicates
+       gzip compression which can be decompressed using <code>gunzip</code>.
+       The command for <code>.zip</code> files is <code>unzip</code>.</li>
+
+   <li>Examine the file contents using <code>cat</code>, <code>head</code> and <code>tail</code>.</li>
+   </ol>
+   </section>
+   </details>
+
+2. What is the length of chromosome 7 on the reference sequence?
+
+   <details>
+   <summary>Tip</summary>
+   <section>
+   <p>Open the reference fasta file and read it line by line. Study the example in the lecture!</p>
    <p>In a loop, ignore the first line and get the length of each following line.</p>
    <p>Don't forget to remove the trailing newline character from each line.</p>
    <p>Sum up all the lengths you found.</p>
@@ -78,7 +110,7 @@ More detailed instructions are given with each task that uses the package.
    </details>
 
 
-2. How many genes are annotated in the GTF file?
+3. How many genes are annotated in the GTF file?
 
    <details>
    <summary>Tip</summary>
@@ -196,7 +228,7 @@ In the annotation file (the GTF file), the CFTR gene has the id `ENSG00000001626
    </section>
    </details>
 
-6. Translate the above sequence of all exons into amino acids, using an implementation of the translation table from the <code>utils.rna</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht19/topics">course topics</a> website).
+6. Translate the above sequence of all exons into amino acids, using an implementation of the translation table from the <code>utils.rna</code> package (from the downloads folder from the <a href="https://nbisweden.github.io/workshop-python/ht20/topics">course topics</a> website).
 
    <details>
    <summary>Tip</summary>
