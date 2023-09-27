@@ -7,3 +7,4 @@ tmp/
 *.old
 Gemfile*
 _site
+lesson_plans/

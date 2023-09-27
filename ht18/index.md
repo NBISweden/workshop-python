@@ -25,6 +25,12 @@ needs.
   prompt. We will not teach Unix in detail: Other course are available
   at SciLifeLab for it.
 
+## Latest/current course
+
+See <a href="our course on Canvas">https://uppsala.instructure.com/courses/85913</a>
+
+# Prerequisites
+
 > Before the first lecture, we require you to follow
 > these [preliminary steps](preliminary).
 
