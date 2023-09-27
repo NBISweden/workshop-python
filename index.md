@@ -17,18 +17,13 @@ This is precisely the expertise that [NBIS](//nbis.se) provides.
 
 # Current courses
 
-<dl>
-<dt> <a href="ht20">October 2020</a> </dt>
-<dd>Fifth instance of the course, suitable for complete beginners and
-  assumes no prior programming experience (beyond the ability to use a
-  text editor). A very basic knowledge of UNIX is definitely an
-  advantage, such as navigating through folders and issuing commands
-  at a shell prompt. This year the course will be given online.
-  Registration for the course is now closed.</dd>
-</dl>
+See <a href="our course on Canvas">https://uppsala.instructure.com/courses/85913</a>
 
 ## Past courses
 
+* <a href="ht22">October 2022</a>
+* <a href="ht21">October 2021</a>
+* <a href="ht20">October 2020</a>
 * <a href="ht19">October 2019</a>
 * <a href="ht18">November 2018</a>
 * <a href="vt17">February 2017</a>
