@@ -9,3 +9,4 @@ dependencies:
   - spyder=4.2.0
   - biopython
   - jupyter
+  - scikit-learn
