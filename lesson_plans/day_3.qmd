@@ -78,14 +78,14 @@ assert denominator != 0.0
 value = numerator / denominator
 ```
 
-Use assert extensively @sutter2004cpp@stroustrup2018cpp@mcconnell2004code
+Use assert extensively @sutter2004cpp@stroustrup2013cpp@mcconnell2004code
 @liberty2002sams@lakos1996large.
 
 ## `assert` references 1/2
 
  * @sutter2004cpp Chapter 68: '
    Assert liberally to document internal assumptions and invariants'
- * @stroustrup2018cpp (3rd edition) Advice 24.5.18: 
+ * @stroustrup2013cpp (3rd edition) Advice 24.5.18: 
    'Explicitly express preconditions, postconditions, 
    and other assertions as assertions'
  * @mcconnell2004code Chapter 8.2: 
@@ -133,7 +133,330 @@ b = 4
 c = calc_euclidian_distance(a, b)
 ```
 
-We use a function.
+We use a function!
+
+## Question
+
+ * What is a function?
+ * What makes a good function?
+
+## My answer
+
+ * A function is a unit of code with a name that clearly describes what it does.
+
+## About good functions 1/3
+
+ * @meyers2005effective Item 18: 
+   'Make interfaces easy to use correctly and hard to use incorrectly.'
+ * @sutter2004cpp Item 20: 'Avoid long functions. Avoid deep nesting'
+ * @stroustrup2013cpp (4th edition) page 341: 
+   '[1] Package meaningful operations as carefully named functions'
+ * @stroustrup2013cpp (4th edition) page 341: 
+   '[2] A function should perform a single logical operation'
+ * @stroustrup2013cpp (4th edition) page 341: 
+   '[3] Keep functions short'
+
+## About good functions 2/3
+
+ * @lakos1996large Chapter 2.6: 
+   Document the interfaces so that they are usable by others. 
+   Have at least one other developer review each interface
+ * @martin2005joint AV Rule 1: 'Any one function (or method) will contain no more than 200 logical source lines of code.'
+
+## About good functions 3/3
+
+ * @stroustrup2013cpp (4th edition) page 341: '[20] Specify preconditions and postconditions for your functions'
+ * @stroustrup2018cpp I.5: State preconditions (if any)
+ * @stroustrup2018cpp I.7: State postconditions
+ * @stroustrup2018cpp  I.1: Make interfaces explicit
+ * @stroustrup2018cpp  I.4: Make interfaces precisely and strongly typed
+
+## Function name
+
+The **name** is the most important part of a function.
+
+ * A good name makes it natural to use the function correctly.
+ * A bad name confuses the reader.
+
+## Function name
+
+> There are only two hard things in Computer Science: 
+> cache invalidation and naming things.
+> 
+> Phil Karlton
+
+## Function name conventions
+
+ * Starts with a verb 
+ * All letters lowercase @van2001pep
+ * All words separated by underscores @van2001pep
+ * Common verbs abbreviations are allowed
+ 
+```{python}
+#| echo: true
+#| eval: false
+print_hello_world()
+```
+
+
+## Questions
+
+Give the Python function name to determine if something ...
+
+ * is zero
+ * is bigger than zero
+ * is a number
+ * is a list
+ * is a empty list
+
+## Answers:
+
+ * is zero: `is_zero`
+ * is bigger than zero: `is_positive`, `is_bigger_than_zero`
+ * is a number: `is_number`
+ * is a list: `is_list`
+ * is a empty list: `is_empty_list`
+
+## Questions
+
+Give the Python function name to determine if something ...
+
+ * is a list of strings
+ * is a list of integers
+ * is a list of integers of only zeroes
+
+## Answers
+
+ * is a list of strings: `is_string_list`, `is_text`, `are_strings`
+ * is a list of integers: `is_integer_list`, `are_integers`, `are_ints`
+ * is a list of integers of only zeroes: `are_zeroes`
+
+## Exercise: function names
+
+ * Fill in the blanks
+ * Multiple answers are correct
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(number):
+  return number == 0.0
+
+assert ___(0.0)
+assert not ___(3.14)
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def is_zero(number):
+  return number == 0.0
+
+assert is_zero(0.0)
+assert not is_zero(3.14)
+```
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def ____(number):
+    return number > 0.0
+
+assert ___(1.0)
+assert not ___(0.0)
+assert not ___(-1.0)
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def is_bigger_than_zero(number):
+    return number > 0.0
+
+assert is_bigger_than_zero(1.0)
+assert not is_bigger_than_zero(0.0)
+assert not is_bigger_than_zero(-1.0)
+```
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+    return len(my_list) == 0
+
+assert ___([])
+assert not ___([1])
+assert not ___([1, 2])
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def is_empty_list(my_list):
+    return len(my_list) == 0
+
+assert is_empty_list([])
+assert not is_empty_list([1])
+assert not is_empty_list([1, 2])
+```
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+  return sum(my_list)
+
+assert ___([1]) == 1
+assert ___([1, 2]) == 3
+assert ___([1, 2, 3]) == 6
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def calc_sum(my_list):
+    return sum(my_list)
+
+# assert calc_sum([]) == 0
+assert calc_sum([1]) == 1
+assert calc_sum([1, 2]) == 3
+assert calc_sum([1, 2, 3]) == 6
+```
+
+
+
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+  return sorted(my_list)
+
+assert ___([2, 1]) == [1, 2]
+assert ___([3, 2, 1]) == [1, 2, 3]
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def create_sorted_list(my_list):
+  return sorted(my_list)
+
+assert create_sorted_list([2, 1]) \
+  == [1, 2]
+assert create_sorted_list([3, 2, 1]) \
+  == [1, 2, 3]
+```
+
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+  // Bonus: assert __
+  return sum(my_list) / len(my_list)
+
+assert ___([1, 3]) == 2
+assert ___([1, 3, 5]) == 3
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def calculate_mean(my_list):
+  assert len(my_list)
+  return sum(my_list) / len(my_list)
+
+assert calculate_mean([1, 3]) == 2
+assert calculate_mean([1, 3, 5]) == 3
+```
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+  # Convert the list to a set 
+  # to remove duplicates
+  ___
+
+assert ___([1]) == [1]
+assert ___([1, 1]) == [1]
+assert ___([1, 2, 2]) == [1, 2]
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def get_unique_elements(my_list):
+  return list(set(my_list))
+
+assert get_unique_elements([1]) \
+  == [1]
+assert get_unique_elements([1, 1]) \
+  == [1]
+assert get_unique_elements([1, 2, 2]) \
+  == [1, 2]
+```
+
+## Writing the tests first
+
+## Question
+
+```{python}
+#| echo: true
+#| eval: false
+def is_float(number):
+    # TODO
+
+assert is_float(3.14)
+assert not is_float(42)
+assert not is_float('Hello')
+assert not is_float([1.2, 3.4])
+assert not is_float((1.2, 3.4))
+```
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: true
+def is_float(number):
+    return isinstance(number, float)
+
+assert is_float(3.14)
+assert not is_float(42)
+assert not is_float('Hello')
+assert not is_float([1.2, 3.4])
+assert not is_float((1.2, 3.4))
+```
 
 ## Break
 
