@@ -1,27 +1,813 @@
 ---
-title: "Quarto Basics"
-format:
-  html:
-    code-fold: true
+title: "Day 3"
+author: "Richèl Bilderbeek"
+format: revealjs
+bibliography: day_3.bib
+from: markdown+emoji
+csl: vancouver.csl
 jupyter: python3
+css: styles.css
 ---
 
-For a demonstration of a line plot on a polar axis, see @fig-polar.
+# 1. Big Picture
+
+## Question
+
+What is mastery in programming?
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
+
+## My answer
+
+To be able to express your ideas in correct and readable code
+in an elegant way.
+
+# 2. Express your assumptions in code
+
+Express your assumptions in code
+
+## Problem
 
 ```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
+#| eval: false
+#| echo: true
+numerator = # something
+denominator = # something
+# denominator is not zero
+value = numerator / denominator
 ```
+
+How to do better?
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
+
+## Naive answer
+
+```{python}
+#| eval: true
+#| echo: true
+numerator = 1.2
+denominator = 3.4
+# denominator is not zero
+if denominator == 0.0:
+    print("ERROR! QUIT!")
+```
+
+What do we express here?
+
+## `assert`
+
+Express: 'I believe this to be true':
+
+```{python}
+#| echo: true
+#| eval: true
+assert 1 + 1 == 2
+```
+
+This presentation will not compile when an `assert` fails!
+
+## `assert` in action
+
+```{python}
+#| echo: true
+#| eval: true
+numerator = 1.2
+denominator = 3.4
+assert denominator != 0.0
+value = numerator / denominator
+```
+
+Use assert extensively @sutter2004cpp@stroustrup2013cpp@mcconnell2004code
+@liberty2002sams@lakos1996large.
+
+## `assert` references 1/2
+
+ * @sutter2004cpp Chapter 68: '
+   Assert liberally to document internal assumptions and invariants'
+ * @stroustrup2013cpp (3rd edition) Advice 24.5.18: 
+   'Explicitly express preconditions, postconditions, 
+   and other assertions as assertions'
+ * @mcconnell2004code Chapter 8.2: 
+   'Use assertions to document and verify preconditions and postconditions'
+ * @mcconnell2004code Chapter 8.2: 
+   'Use assertions for conditions that should never occur'.
+ * @liberty2002sams Chapter 'assert()': 'Use assert freely'
+
+## `assert` references 2/2
+
+ * @lakos1996large Chapter 2.6: 
+   'The use of assert statements can help to document the assumptions 
+   you make when implementing your code
+ * @stroustrup2018cpp (4th edition) page 884: 
+   '[13] Use static_assert() and assert() extensively'
+
+# 3. Express yourself in readable code
+
+Express yourself in readable code
+
+## Problem
+
+```{python}
+#| echo: true
+#| eval: true
+a = 3
+b = 4
+# Calculate the Euclidean distance 
+# using Pythagoras' theorem
+c = ((a * a) + (b * b)) ** 0.5
+```
+
+How to express ourselves in code?
+
+## Solution
+
+```{python}
+#| echo: false
+#| eval: true
+def calc_euclidian_distance(a, b):
+    return ((a * a) + (b * b)) ** 0.5
+```
+
+```{python}
+#| echo: true
+#| eval: true
+a = 3
+b = 4
+c = calc_euclidian_distance(a, b)
+```
+
+We use a function!
+
+## Question
+
+ * What is a function?
+ * What makes a good function?
+
+## My answer
+
+A function is a unit of code, that has a name, optional inputs
+and optional output.
+ 
+![](function_cartoon.png)
+
+## About good functions 1/3
+
+ * @meyers2005effective Item 18: 
+   'Make interfaces easy to use correctly and hard to use incorrectly.'
+ * @sutter2004cpp Item 20: 'Avoid long functions. Avoid deep nesting'
+ * @stroustrup2013cpp (4th edition) page 341: 
+   '[1] Package meaningful operations as carefully named functions'
+ * @stroustrup2013cpp (4th edition) page 341: 
+   '[2] A function should perform a single logical operation'
+ * @stroustrup2013cpp (4th edition) page 341: 
+   '[3] Keep functions short'
+
+## About good functions 2/3
+
+ * @lakos1996large Chapter 2.6: 
+   Document the interfaces so that they are usable by others. 
+   Have at least one other developer review each interface
+ * @martin2005joint AV Rule 1: 'Any one function (or method) 
+   will contain no more than 200 logical source lines of code.'
+
+## About good functions 3/3
+
+ * @stroustrup2013cpp (4th edition) page 341: '[20] Specify preconditions and 
+   postconditions for your functions'
+ * @stroustrup2018cpp I.5: State preconditions (if any)
+ * @stroustrup2018cpp I.7: State postconditions
+ * @stroustrup2018cpp  I.1: Make interfaces explicit
+ * @stroustrup2018cpp  I.4: Make interfaces precisely and strongly typed
+
+## Function parts by importance
+
+ 1. The name
+ 2. The tests
+ 3. The documentation
+ 4. The body
+
+Your boss will rarely care about the body of your functions.
+
+# 4. Making your code readable
+
+Making your code readable
+
+## Function name
+
+The **name** is the most important part of a function.
+
+ * A good name makes it natural to use the function correctly.
+ * A bad name confuses the reader.
+
+## Function name
+
+> There are only two hard things in Computer Science: 
+> cache invalidation and naming things.
+> 
+> Phil Karlton
+
+## Function name conventions
+
+ * Starts with a verb 
+ * All letters lowercase @van2001pep
+ * All words separated by underscores @van2001pep
+ * Common verbs abbreviations are allowed
+ 
+```{python}
+#| echo: true
+#| eval: false
+print_hello_world()
+```
+
+## Questions 1
+
+Give the Python function name to determine if something ...
+
+ * is zero
+ * is bigger than zero
+ * is a number
+ * is a list
+ * is a empty list
+
+## Answers 1
+
+ * is zero: `is_zero`
+ * is bigger than zero: `is_positive`, `is_bigger_than_zero`
+ * is a number: `is_number`
+ * is a list: `is_list`
+ * is a empty list: `is_empty_list`
+
+## Questions 2
+
+Give the Python function name to determine if something ...
+
+ * is a list of strings
+ * is a list of integers
+ * is a list of integers of only zeroes
+
+## Answers 2
+
+ * is a list of strings: `is_string_list`, `is_text`, `are_strings`
+ * is a list of integers: `is_integer_list`, `are_integers`, `are_ints`
+ * is a list of integers of only zeroes: `are_zeroes`
+
+## Exercise
+
+ * Fill in the blanks
+ * Multiple answers are correct
+
+## Question 3
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(number):
+  return number == 0.0
+
+assert ___(0.0)
+assert not ___(3.14)
+```
+
+## Answer 3
+
+```{python}
+#| echo: true
+#| eval: true
+def is_zero(number):
+  return number == 0.0
+
+assert is_zero(0.0)
+assert not is_zero(3.14)
+```
+
+## Question 4
+
+```{python}
+#| echo: true
+#| eval: false
+def ____(number):
+    return number > 0.0
+
+assert ___(1.0)
+assert not ___(0.0)
+assert not ___(-1.0)
+```
+
+## Answer 4
+
+```{python}
+#| echo: true
+#| eval: true
+def is_bigger_than_zero(number):
+    return number > 0.0
+
+assert is_bigger_than_zero(1.0)
+assert not is_bigger_than_zero(0.0)
+assert not is_bigger_than_zero(-1.0)
+```
+
+## Question 5
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+    return len(my_list) == 0
+
+assert ___([])
+assert not ___([1])
+assert not ___([1, 2])
+```
+
+## Answer 5
+
+```{python}
+#| echo: true
+#| eval: true
+def is_empty_list(my_list):
+    return len(my_list) == 0
+
+assert is_empty_list([])
+assert not is_empty_list([1])
+assert not is_empty_list([1, 2])
+```
+
+## Question 6
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+  return sum(my_list)
+
+assert ___([1]) == 1
+assert ___([1, 2]) == 3
+assert ___([1, 2, 3]) == 6
+```
+
+## Answer 6
+
+```{python}
+#| echo: true
+#| eval: true
+def calc_sum(my_list):
+    return sum(my_list)
+
+# assert calc_sum([]) == 0
+assert calc_sum([1]) == 1
+assert calc_sum([1, 2]) == 3
+assert calc_sum([1, 2, 3]) == 6
+```
+
+## Question 7
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+  return sorted(my_list)
+
+assert ___([2, 1]) == [1, 2]
+assert ___([3, 2, 1]) == [1, 2, 3]
+```
+
+## Answer 7
+
+```{python}
+#| echo: true
+#| eval: true
+def create_sorted_list(my_list):
+  return sorted(my_list)
+
+assert create_sorted_list([2, 1]) \
+  == [1, 2]
+assert create_sorted_list([3, 2, 1]) \
+  == [1, 2, 3]
+```
+
+
+## Question 8
+
+```{python}
+#| echo: true
+#| eval: false
+def ___(my_list):
+  // Bonus: assert __
+  return sum(my_list) / len(my_list)
+
+assert ___([1, 3]) == 2
+assert ___([1, 3, 5]) == 3
+```
+
+## Answer 8
+
+```{python}
+#| echo: true
+#| eval: true
+def calculate_mean(my_list):
+  assert len(my_list)
+  return sum(my_list) / len(my_list)
+
+assert calculate_mean([1, 3]) == 2
+assert calculate_mean([1, 3, 5]) == 3
+```
+
+# 5. Do work in the right order
+
+Do work in the right order
+
+## Question
+
+**Imagine** you need to write a function, for example,
+to determine if a number is prime.
+
+**Remember** when you just started programming:
+what were your first lines of code?
+
+## Possible answer
+
+```{python}
+#| echo: true
+#| eval: false
+def prime(number)
+  for i in range(1, number)
+    for j in range(2, i)
+      if i %% j:
+```
+
+What is the problem?
+
+## Next answer
+
+We overload our working memory.
+We do too many things.
+Instead, work from big to small:
+write the tests first!
+
+## Test-Driven Development
+
+Writing test first is a software methodology, called
+Test-Driven Development.
+
+## Effects of TDD
+
+Test-Driven Development ...
+
+ * makes developers more productive @erdogmus2005effectiveness
+ * increases quality of the code 
+       @erdogmus2005effectiveness @alkaoud2018quality @janzen2006test
+     * There are plenty of costly programming mistakes documented!
+ * helps shape the project architecture @mayr2005projekt
+ * helps better modularisation @madeyski2010test
+ * works great with Xtreme programming and CI
+
+## For us
+
+We 'only' use tests to express what we expect our function to do.
+
+## Example question
+
+```{python}
+#| echo: true
+#| eval: false
+def is_float(number):
+    # Google this!
+
+assert is_float(3.14)
+assert not is_float(42)
+assert not is_float('Hello')
+assert not is_float([1.2, 3.4])
+assert not is_float((1.2, 3.4))
+```
+
+## Example answer
+
+```{python}
+#| echo: true
+#| eval: true
+def is_float(number):
+    return isinstance(number, float)
+
+assert is_float(3.14)
+assert not is_float(42)
+assert not is_float('Hello')
+assert not is_float([1.2, 3.4])
+assert not is_float((1.2, 3.4))
+```
+
+## Question 1
+
+Write the tests for a function to determine if a file exists.
+
+## Answer 1
+
+```{python}
+#| echo: false
+#| eval: true
+def does_file_exist(filename):
+    return filename == "day_3.qml"
+```
+
+```{python}
+#| echo: true
+#| eval: true
+assert does_file_exist("day_3.qml")
+assert not does_file_exist("abs.ent")
+```
+
+## Question 2
+
+Write the tests for a function to read the content of a file
+into a list of strings.
+
+## Answer 2
+
+```{python}
+#| echo: true
+#| eval: false
+
+assert len(read_file( \
+  "day_3.qml"))
+assert is_string(read_file( \
+  "day_3.qml")[0])
+assert is_text(read_file( \
+  "day_3.qml"))
+```
+
+'a list of string' can be called 'text' :-)
+
+## Question 3
+
+Write the tests for a function to read the content of a file
+into a list of strings, yet skipping the first line
+
+## Answer 3
+
+```{python}
+#| echo: true
+#| eval: false
+# Save space
+f = read_file_without_header
+
+assert len(f("day_3.qml"))
+assert is_string(f("day_3.qml")[0])
+assert is_text(f("day_3.qml"))
+assert len(f("day_3.qml")) \
+ == len(read_file("day_3.qml")) - 1
+```
+
+## Question 4
+
+Create a function that returns this text as a list of strings:
+
+```{python}
+#| echo: true
+#| eval: false
+First name|Last name
+Alita     |Colbert 
+Brandi    |Lovell
+Corrina   |Georgeanna
+```
+
+Call the function `create_test_table`.
+
+## Answer 4
+
+```{python}
+#| echo: true
+#| eval: false
+# Save space
+f = create_test_table
+
+assert len(f()) == 4
+assert f()[0] == "First name|Last name"
+assert f()[1] == "Alita     |Colbert" 
+assert f()[2] == "Brandi    |Lovell"
+assert f()[3] == "Corrina   |Georgeanna"
+```
+
+## Question 5
+
+Assume a table as text, including headers.
+Extract the `n`th column as a list of strings.
+Use `create_test_table` in your tests
+
+## Answer 5
+
+```{python}
+#| echo: true
+#| eval: false
+# Save space
+f = get_nth_column
+
+table = create_test_table()
+
+# A column has no header 
+n_rows = len(table)
+first_column = f(table, 0)
+n_elements = len(first_column)
+assert(n_rows - 1 == n_elements)
+
+assert f(table, 0)[0] == "Alita"
+assert f(table, 0)[1] == "Brandi"
+assert f(table, 0)[2] == "Corrina"
+assert f(table, 1)[0] == "Colbert"
+assert f(table, 1)[1] == "Lovell"
+assert f(table, 1)[2] == "Georgeanna"
+```
+
+## Question 6
+
+Split a string into its elements. 
+The elements are separated by commas, e.g. `"A,B,C"`.
+Remove the whitespace at the edges.
+
+## Answer 6
+
+```{python}
+#| echo: true
+#| eval: false
+assert split_str("A") == ["A"]
+assert split_str("A,B") == ["A", "B"]
+assert split_str("A,B ") == ["A", "B"]
+assert split_str(" A,B ") == ["A", "B"]
+assert split_str("A ,B ") == ["A", "B"]
+assert split_str("A, B ") == ["A", "B"]
+```
+
+# 6. Make your function usable by others
+
+Make your function usable by others
+
+## Adding documentation
+
+```{python}
+#| echo: true
+#| eval: true
+def split_str(x):
+  """
+  Split 'x' into its comma-seperated
+  parts.
+  Assumes 'x' is a string 
+  of at least 1 character;
+  will terminate the program
+  if not
+  """
+  # Do it
+```
+
+# 7. Writing the function body
+
+Writing the function body.
+
+## Writing a good function body
+
+> Premature optimization is the root of all evil.
+>
+> Donald Knuth
+
+## Writing a good function body
+
+In this course, we do not care about speed.
+
+Without runtime speed profiles, any discussion
+on this is useless.
+
+## Writing a function body
+
+```{python}
+#| echo: true
+#| eval: false
+def my_super_smart_function(x):
+  # Nobody cares
+```
+
+# 8. Expressing a set
+
+Expressing a set
+
+## Question
+
+What is set?
+
+## Answer
+
+'A collection things'
+
+For example, the ages of people in a room:
+
+```{python}
+#| echo: true
+#| eval: false
+ages = []
+ages = [8]
+ages = [8]
+ages = [8, 18]
+```
+
+## Question
+
+Write the tests for a function 
+to add values to a list **only** when a value
+is not present yet.
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: false
+f = add_value_to_set
+ages = []
+ages = f(ages, 8)
+ages = f(ages, 8)
+ages = f(ages, 18)
+assert ages == [8, 18]
+```
+
+## Question
+
+Would it be possible to express this better?
+
+## Answer
+
+Yes, using a Python set.
+
+```{python}
+#| echo: true
+#| eval: false
+ages = {}
+ages.add(8)
+ages.add(8)
+ages.add(18)
+assert ages == {8, 18}
+assert ages == [8, 18]
+```
+
+## Reflection
+
+Classes ...
+
+ * can be built-in, e.g. string, lists and sets
+ * have a clear purpose
+ * allow us to express ourselves **elegantly**
+ * help us to **maintain overview**, 
+   e.g. we know things about elements in a set
+
+# 9. Expressing a dictionary
+
+Expressing a dictionary
+
+## Trick question
+
+Write the tests for some functions 
+to work with a telephone book.
+
+One function allows to add a name and phone number.
+If the name already exists, overwrite the phone number.
+
+## Naive answer
+
+```{python}
+#| echo: true
+#| eval: false
+# To save space
+p = create_phone_book()
+p = add(p, "Aardvark", 1234567890)
+p = add(p, "Zziiz", 1234567891)
+assert get_phone_number( \
+  p, "Aardvark") \
+  == 1234567890
+```
+
+This will be a *tour de force*!
+
+## Better answer
+
+Use a dictionary!
+
+```{python}
+#| echo: true
+#| eval: true
+# To save space
+p = { \
+  "Aardvark": 1234567890, \
+  "Zziiz": 1234567891 \
+  }
+assert p["Aardvark"] == 1234567890
+p["Zziiz"] = 9876543210
+assert p["Zziiz"] == 9876543210
+```
+
+# 10. Using system arguments
+
+
+## Exercise
+
+
+
+## Break
+
+![](forgetting.png)
+
+## References
