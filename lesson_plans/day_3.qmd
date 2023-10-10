@@ -7,9 +7,25 @@ from: markdown+emoji
 csl: vancouver.csl
 jupyter: python3
 css: styles.css
+slide-number: true
 ---
 
 # 1. Big Picture
+
+## Breaks
+
+Please take breaks:
+these are important for learning!
+Ideally, do something boring!
+
+## Break schedule
+
+ * 10:00-10:15
+ * 11:00-11:15
+ * 12:00-13:00
+ * 14:00-14:15
+ * 15:00-15:15
+ * 16:00-16:15
 
 ## Question
 
@@ -101,6 +117,12 @@ Use assert extensively @sutter2004cpp@stroustrup2013cpp@mcconnell2004code
    you make when implementing your code
  * @stroustrup2018cpp (4th edition) page 884: 
    '[13] Use static_assert() and assert() extensively'
+
+## Questions
+
+Questions about `assert`?
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
 
 # 3. Express yourself in readable code
 
@@ -683,6 +705,13 @@ def my_super_smart_function(x):
   # Nobody cares
 ```
 
+## Exercise
+
+Do 
+
+ * `Day 3` -> `Exercise 1 - functions`
+ * `Day 3` -> `PyQuiz 3.2`
+
 # 8. Expressing a set
 
 Expressing a set
@@ -799,15 +828,122 @@ p["Zziiz"] = 9876543210
 assert p["Zziiz"] == 9876543210
 ```
 
-# 10. Using system arguments
-
-
 ## Exercise
 
+Do 
+ * `Day 3` -> `IMDb exercise - Day 3`
+ * `Day 3` -> `PyQuiz 3.1`
 
+# 10. Using system arguments
 
-## Break
+## Problem
+
+Imagine you have written a useful Python script.
+You want to run the script in two different ways:
+
+ * Quiet: no output
+ * Verbose: with many prints to the screen
+
+How to do this?
+
+## Answer
+
+**Call** the script differently, for example:
+
+```{python}
+#| echo: true
+#| eval: false
+python3 my_script.py --verbose
+python3 my_script.py --quiet
+```
+
+## Exercise, little help
+
+Write a Python script that ...
+
+ * when run with `--verbose` states it is running verbosely
+ * when run with `--quiet` (ironically) states it is running quietly
+
+Either Google or read the next slide for hints
+
+## Exercise, more help
+
+```{python}
+#| echo: true
+#| eval: false
+import sys
+
+print(sys.argv)
+```
+
+`sys.argv` is a list of strings.
+
+## Answer
+
+```{python}
+#| echo: true
+#| eval: false
+import sys
+
+assert len(sys.argv) == 2
+if sys.argv[1] == "--quiet":
+  print("Quiet")
+elif sys.argv[1] == "--verbose":
+  print("Verbose!")
+else
+  assert not "Unknown argument"
+```
+
+## Questions?
+
+# Conclusion
+
+> To be able to express your ideas in correct and readable code
+> in an elegant way.
+
+ * Express assumptions with `assert`s
+ * Use functions to make code readable
+ * Use tests to verify the code is correct
+ * Use sets or dictionaries when this fits naturally
+
+## Questions?
+
+If not, apply this in The Project!
+
+# Done!
+
+Go home and rest :-)
+
+# Breaks
+
+Are important. Please rest!
+
+## Break 1: 10:00-10:15
 
 ![](forgetting.png)
+
+## Break 2: 11:00-11:15
+
+![](dilbert_tdd.gif)
+
+## Break 3: 12:00-13:00
+
+![](dilbert_agile_1.png)
+
+## Break 4: 14:00-14:15
+
+![](dilbert_agile_2.png)
+
+## Break 5: 15:00-15:15
+
+![](dilbert_tdd_2.gif)
+
+## Break 6: 16:00-16:15
+
+![](dilbert_tdd_3.png)
+
+## Done
+
+![](dilbert_tdd_4.png)
 
 ## References
