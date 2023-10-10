@@ -78,18 +78,65 @@ assert denominator != 0.0
 value = numerator / denominator
 ```
 
-Use assert extensively @sutter2004cpp@stroustrup2018cpp@mcconnell2004code@liberty2002sams@lakos1996large.
+Use assert extensively @sutter2004cpp@stroustrup2018cpp@mcconnell2004code
+@liberty2002sams@lakos1996large.
 
-## `assert` references
+## `assert` references 1/2
 
- * @sutter2004cpp Chapter 68: 'Assert liberally to document internal assumptions and invariants'
- * @stroustrup2018cpp (3rd edition) Advice 24.5.18: 'Explicitly express preconditions, postconditions, and other assertions as assertions'
- * @mcconnell2004code Chapter 8.2: 'Use assertions to document and verify preconditions and postconditions'
- * @mcconnell2004code Chapter 8.2: 'Use assertions for conditions that should never occur'.
+ * @sutter2004cpp Chapter 68: '
+   Assert liberally to document internal assumptions and invariants'
+ * @stroustrup2018cpp (3rd edition) Advice 24.5.18: 
+   'Explicitly express preconditions, postconditions, 
+   and other assertions as assertions'
+ * @mcconnell2004code Chapter 8.2: 
+   'Use assertions to document and verify preconditions and postconditions'
+ * @mcconnell2004code Chapter 8.2: 
+   'Use assertions for conditions that should never occur'.
  * @liberty2002sams Chapter 'assert()': 'Use assert freely'
- * @lakos1996largeChapter 2.6: 'The use of assert statements can help to document the assumptions you make when implementing your code
- * @stroustrup2018cpp (4th edition)  page 884: '[13] Use static_assert() and assert() extensively'
+
+## `assert` references 2/2
+
+ * @lakos1996large Chapter 2.6: 
+   'The use of assert statements can help to document the assumptions 
+   you make when implementing your code
+ * @stroustrup2018cpp (4th edition) page 884: 
+   '[13] Use static_assert() and assert() extensively'
+
+## Problem
+
+```{python}
+#| echo: true
+#| eval: true
+a = 3
+b = 4
+# Calculate the Euclidean distance 
+# using Pythagoras' theorem
+c = ((a * a) + (b * b)) ** 0.5
+```
+
+How to express ourselves in code?
+
+## Solution
+
+```{python}
+#| echo: false
+#| eval: true
+def calc_euclidian_distance(a, b):
+    return ((a * a) + (b * b)) ** 0.5
+```
+
+```{python}
+#| echo: true
+#| eval: true
+a = 3
+b = 4
+c = calc_euclidian_distance(a, b)
+```
+
+We use a function.
 
 ## Break
+
+![](forgetting.png)
 
 ## References
