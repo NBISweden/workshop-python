@@ -15,8 +15,8 @@ slide-number: true
 ## Breaks
 
 Please take breaks:
-these are important for learning!
-Ideally, do something boring!
+these are important for learning.
+Ideally, do something boring @newport2016deep!
 
 ## Break schedule
 
