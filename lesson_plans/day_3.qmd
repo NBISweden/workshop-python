@@ -3,26 +3,93 @@ title: "Day 3"
 author: "Richèl Bilderbeek"
 format: revealjs
 bibliography: day_3.bib
+from: markdown+emoji
 csl: vancouver.csl
 jupyter: python3
 css: styles.css
 ---
 
+## Overview
 
-# Goal
+ * `assert`
+ * `set`
+ * `set`
+ * Functions
+ * `sys.args`
 
-To express your ideas in correct and readable code.
+## Question
+
+What is mastery in programming?
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
+
+## My answer
+
+To be able to express your ideas in correct and readable code
+in an elegant way.
+
+## Problem
+
+```{python}
+#| eval: false
+#| echo: true
+numerator = # something
+denominator = # something
+# denominator is not zero
+value = numerator / denominator
+```
+
+How to do better?
+
+## Problem
+
+```{python}
+#| eval: true
+#| echo: true
+numerator = 1.2
+denominator = 3.4
+# denominator is not zero
+if denominator == 0.0:
+    print("ERROR! QUIT!")
+```
+
+What do we express here?
+
+## `assert`
+
+Express: 'I believe this to be true':
+
+```{python}
+#| echo: true
+#| eval: true
+assert 1 + 1 == 2
+```
+
+This presentation will not compile when an `assert` fails!
 
 ## `assert`
 
 ```{python}
 #| echo: true
-assert 1 + 1 == 2
+#| eval: true
+numerator = 1.2
+denominator = 3.4
+assert denominator != 0.0
+value = numerator / denominator
 ```
 
-## `assert` again
+Use assert extensively @sutter2004cpp@stroustrup2018cpp@mcconnell2004code@liberty2002sams@lakos1996large.
 
-```{python}
-#| echo: true
-assert 1 + 1 == 2
-```
+## `assert` references
+
+ * @sutter2004cpp Chapter 68: 'Assert liberally to document internal assumptions and invariants'
+ * @stroustrup2018cpp (3rd edition) Advice 24.5.18: 'Explicitly express preconditions, postconditions, and other assertions as assertions'
+ * @mcconnell2004code Chapter 8.2: 'Use assertions to document and verify preconditions and postconditions'
+ * @mcconnell2004code Chapter 8.2: 'Use assertions for conditions that should never occur'.
+ * @liberty2002sams Chapter 'assert()': 'Use assert freely'
+ * @lakos1996largeChapter 2.6: 'The use of assert statements can help to document the assumptions you make when implementing your code
+ * @stroustrup2018cpp (4th edition)  page 884: '[13] Use static_assert() and assert() extensively'
+
+## Break
+
+## References
