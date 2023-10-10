@@ -1,27 +1,28 @@
 ---
-title: "Quarto Basics"
-format:
-  html:
-    code-fold: true
+title: "Day 3"
+author: "Richèl Bilderbeek"
+format: revealjs
+bibliography: day_3.bib
+csl: vancouver.csl
 jupyter: python3
+css: styles.css
 ---
 
-For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+# Goal
+
+To express your ideas in correct and readable code.
+
+## `assert`
 
 ```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
+#| echo: true
+assert 1 + 1 == 2
+```
 
-import numpy as np
-import matplotlib.pyplot as plt
+## `assert` again
 
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.show()
+```{python}
+#| echo: true
+assert 1 + 1 == 2
 ```
