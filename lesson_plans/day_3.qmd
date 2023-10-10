@@ -168,11 +168,13 @@ and optional output.
  * @lakos1996large Chapter 2.6: 
    Document the interfaces so that they are usable by others. 
    Have at least one other developer review each interface
- * @martin2005joint AV Rule 1: 'Any one function (or method) will contain no more than 200 logical source lines of code.'
+ * @martin2005joint AV Rule 1: 'Any one function (or method) 
+   will contain no more than 200 logical source lines of code.'
 
 ## About good functions 3/3
 
- * @stroustrup2013cpp (4th edition) page 341: '[20] Specify preconditions and postconditions for your functions'
+ * @stroustrup2013cpp (4th edition) page 341: '[20] Specify preconditions and 
+   postconditions for your functions'
  * @stroustrup2018cpp I.5: State preconditions (if any)
  * @stroustrup2018cpp I.7: State postconditions
  * @stroustrup2018cpp  I.1: Make interfaces explicit
