@@ -974,7 +974,7 @@ Are important. Please rest!
 
 ## Break 2: 11:00-11:15
 
-![](dilbert_tdd.gif)
+![](dilbert_tdd.png)
 
 ## Break 3: 12:00-13:00
 
@@ -986,7 +986,7 @@ Are important. Please rest!
 
 ## Break 5: 15:00-15:15
 
-![](dilbert_tdd_2.gif)
+![](dilbert_tdd_2.png)
 
 ## Break 6: 16:00-16:15
 
