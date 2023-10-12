@@ -16,6 +16,7 @@ Things that went well:
  * [W1] Being able to observe flaws
  * [W2] Handling feedback
  * [W3] Time management without a schedule
+ * [W4] Student that took the time to compliment me
 
 Things that could be improved:
 
@@ -127,6 +128,14 @@ I conclude that indeed I can improvise without a timed-out schedule,
 yet I do enjoy writing down such a schedule, so I will do so anyways,
 when there is the time. On my list of priorities, it would have been the
 next thing to do.
+
+## [W4] Student that took the time to compliment me
+
+There was one student that at the end of the day
+took some minutes to compliment me on how much he/she
+enjoyed my teaching. He/she shared that he/she is a teacher too.
+
+I should write that down in a reflection too :-)
 
 ## [I1] The amount of TAs
 
