@@ -22,6 +22,7 @@ Things that could be improved:
 
  * [I1] The amount of TAs
  * [I2] The learning line of the teaching materials
+ * [I3] Forgot about group work
 
 Things to discuss:
 
@@ -176,6 +177,17 @@ quickly.
 Instead, I ended up creating exercises that were too vague:
 they would write their first assert in a Python
 script at around after 4 hours.
+
+## [I3] Forgot about group work
+
+As I hard a hard time imagining how to teach/engage two classrooms.
+At the start of the thought process, I felt I should not do group work,
+as I cannot check the groups in Umea and I felt that was unfair.
+
+It was only after the lesson a learner asked me why I did not do group work.
+
+I shared that I had rejected the idea before and that I only now see that
+it could/would have been a good idea! I thanked the learner for the insight.
 
 ## [D1] Have requirements for TAs
 
