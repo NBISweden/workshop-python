@@ -464,7 +464,9 @@ def prime(number)
       if i %% j:
 ```
 
-What is the problem?
+What is the problem of writing this part first?
+
+ * Do not fix the code!
 
 :woman_technologist: Write down in the HackMD! :man_technologist:
 
@@ -592,8 +594,8 @@ assert len(f("day_3.qml")) \
 
 ## Question 4
 
-Create a function that returns the text below as a list of strings.
-Call the function `create_test_table`. 
+Imagine a function called `create_test_table` that returns the text below as a list of strings.
+Write its tests. 
 
 ```{python}
 #| echo: true
@@ -925,8 +927,8 @@ if sys.argv[1] == "--quiet":
   print("Quiet")
 elif sys.argv[1] == "--verbose":
   print("Verbose!")
-else
-  assert not "Unknown argument"
+else:
+  print("ERROR! Unknown argument!")
 ```
 
 ## Questions about command line arguments?
