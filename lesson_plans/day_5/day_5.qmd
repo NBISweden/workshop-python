@@ -11,7 +11,7 @@ slide-number: true
 number-sections: true
 ---
 
-# Big Picture
+# Schedule
 
 ## Breaks
 
@@ -27,6 +27,24 @@ Ideally, do something boring @newport2016deep!
  * 14:00-14:15
  * 15:00-15:15
  * 16:00-16:15
+
+# Day 4
+
+## E. Review Day 4
+
+ * Do Studium quiz: Review Day 4
+ * `[Timer 10 mins]`
+
+## Discuss answers
+
+ * `[Discuss answers]`
+ * `[Discuss HackMD]`
+
+Questions on this so far?
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
+
+# Day 5
 
 ## Problem
 
@@ -56,16 +74,14 @@ How would you do that?
 ```{python}
 #| eval: false
 #| echo: true
-
 # Define my function: is_dna_sequence
 #  (assume input is a string)
 #  if string is empty, return False
-#  count the length of the string
-#  count the number of As, Cs, Gs, Ts
-#  if the ACGT counts add up 
-#  to the total length:
-#    return True
-#  else return False
+#  iterator through each character
+#    if the character is not an A, 
+#    nor a C, nor a G, nor a T, 
+#      then return False
+#  return True
 ```
 
 ## Can we do better?
@@ -81,18 +97,38 @@ We use regular expressions!
 >
 > Adapted from [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
 
-## Q: regex quiz
+## Exercise: regex quiz
 
 Do [https://regexone.com](https://regexone.com) lessons 1 to and including 10.
 
  * Extra: also complete the rest of the tutorial
 
-## Recap
+## Question: Recap
 
 It is a small language on its own indeed!
 
+ * `[Discuss notes https://regexone.com ]`
 
+Questions on this so far?
 
+ * `[Discuss HackMD]`
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
+
+## Exercise 1 - day 5 
+
+On Studium, do `Exercise 1 - day 5`.
+
+ * `[Timer 25 mins]`
+
+Questions on this?
+
+ * `[Take a first look at the code]`
+ * `[Discuss HackMD]`
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
+
+# Now us!
 
 ## Importing the `re` module
 
@@ -277,6 +313,14 @@ Confirm that everything works as expected on your computer!
 
 Bonus: the pattern is imperfect. Can you find an example?
 
+## Putting `is_chess_square` in your code
+
+ * `[demonstrate this]`
+
+Questions on this?
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
+
 ## Unexpected `is_chess_square`
 
 ```{python}
@@ -312,6 +356,10 @@ def is_chess_square(s):
 
  * Use `fullmatch`, instead of `search` or `match`
  * `search` and `"^[a-h][1-8]$"` fails???
+
+Questions on this?
+
+:woman_technologist: Write down in the HackMD! :man_technologist:
  
 ## Print that `is_chess_square` works
 
@@ -342,34 +390,46 @@ assert not is_chess_square("a1234")
 assert not is_chess_square("nonsense")
 ```
 
-## Q: regex for first name in English?
-
-In English: what is the regular expression for a first name?
-
-## A: first name
-
-A first name:
-
- * start with a capital letter
- * then has lowercase characters only
- * :monocle_face: do you already spot the flaw?
-
-## Q: program the regex for first name
-
- * [Python doc: Regular expression HOWTO](https://docs.python.org/3/howto/regex.html)
- * [The 're' documentation](https://docs.python.org/3/library/re.html)
-
-
-How to do better?
-
-:woman_technologist: Write down in the HackMD! :man_technologist:
-
-
-
 ## Questions about today's theory?
 
 :woman_technologist: Write down in the HackMD! :man_technologist:
 
+# Evaluation
+
+## Procedure 1/4: Why
+
+Feedback is the 10th most impactful way to learn @hattie2012visible.
+Teachers need to learn too.
+We need your feedback!
+This is more important than 15 mins of lecture :-)
+
+## Procedure 2/4: Form
+
+ * Anonymously (hence this person is here)
+   * Teachers and TAs must be away
+   * Teacher will never ask for names
+   * Person will never gives names
+ * Both HackMD and Google Forms
+ * Raw results will be on GitHub: 
+   please follow privacy rules!
+
+## Procedure 3/4: Code of Conduct
+
+* Using welcoming and inclusive language
+* Being respectful of differing viewpoints and experiences
+* Gracefully accepting constructive criticism
+* Focusing on what is best for the community
+* Showing empathy towards other community members
+
+## Procedure 4/4: What we'd like to know
+
+ * All you would like to share
+ * Need guidance? Share a good thing and a thing that can be improved
+   on the course, course material, the teachers together/individually, etc.
+
+Thanks! When done, it is fika!
+At 15:15, Pedro speaks!
+ 
 # Done!
 
 Go home and rest :-)
