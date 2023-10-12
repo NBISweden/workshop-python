@@ -82,8 +82,12 @@ Then, I realized that there probably is an effect of the person asking
 the question.
 I decided to treat my ideas and the TAs ideas as 'just two different ways
 of interpreting things'.
-
 In the end, I do change the order in which I teach things.
+
+Other feedback was simpler, such as an exercise being unclear,
+a microphone being on or off, etc. I immediately changed the
+slides/equipment/etc. I am happy the TAs felt comfortable with sharing this
+and I thanked them each time.
 
 ## [I1] The amount of TAs
 
