@@ -14738,7 +14738,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="s1">'2000'</span><span class="p">,</span> <span class="s1">'30'</span><span class="p">,</span> <span class="s1">'100'</span><span class="p">]))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">sorted</span><span class="p">([</span><span class="s1">'2000'</span><span class="p">,</span> <span class="s1">'30'</span><span class="p">,</span> <span class="s1">'100'</span><span class="p">,</span> <span class="s1">'5'</span><span class="p">,</span> <span class="s1">'301'</span><span class="p">]))</span>
 </pre></div>
 
      </div>
@@ -14754,7 +14754,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">'2'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">ord</span><span class="p">(</span><span class="s1">'3'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15278,7 +15278,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="s1">''</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">([])</span>
 </pre></div>
 
      </div>
@@ -15714,7 +15714,7 @@ div.jp-OutputPrompt {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">HOST</span> <span class="o">=</span> <span class="s1">'global'</span>
 
 <span class="k">def</span> <span class="nf">show_host</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'HOST inside the function = </span><span class="si">{</span><span class="n">HOST</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'HOST inside the function = </span><span class="si">{HOST}</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="n">show_host</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'HOST outside the function = </span><span class="si">{</span><span class="n">HOST</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
@@ -15752,10 +15752,12 @@ div.jp-OutputPrompt {
 <span class="k">def</span> <span class="nf">change_host</span><span class="p">():</span>
     <span class="n">HOST</span> <span class="o">=</span> <span class="s1">'local'</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'HOST inside the function = </span><span class="si">{</span><span class="n">HOST</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-
+<span class="k">def</span> <span class="nf">app2</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">HOST</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'HOST outside the function before change = </span><span class="si">{</span><span class="n">HOST</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 <span class="n">change_host</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'HOST outside the function after change  = </span><span class="si">{</span><span class="n">HOST</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">app2</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15844,8 +15846,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Will the global variable never to changed by function?</p>
-
+<h3 id="Will-the-global-variable-never-to-changed-by-function?">Will the global variable never to changed by function?<a class="anchor-link" href="#Will-the-global-variable-never-to-changed-by-function?">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15914,7 +15915,7 @@ div.jp-OutputPrompt {
 
 <span class="n">count1</span> <span class="o">=</span> <span class="n">cytosine_count</span><span class="p">(</span><span class="s1">'CATATTAC'</span><span class="p">)</span>
 <span class="n">count2</span> <span class="o">=</span> <span class="n">cytosine_count</span><span class="p">(</span><span class="s1">'tagtag'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">count1</span><span class="p">,</span> <span class="n">count2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count1</span><span class="p">,</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">count2</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16015,8 +16016,8 @@ div.jp-OutputPrompt {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
     <span class="n">do_nothing</span> <span class="o">=</span> <span class="mi">1</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">foo</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Return value of foo() = </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">foo</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Return value of foo() = </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16039,6 +16040,102 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Small-detour:-Python's-value-for-missing-values:-None">Small detour: Python's value for missing values: <code>None</code><a class="anchor-link" href="#Small-detour:-Python's-value-for-missing-values:-None">&#182;</a></h3><ul>
+<li>Default value for optional arguments</li>
+<li>Implicit return value of functions without a <code>return</code> statement</li>
+<li><code>None</code> is <code>None</code>, not anything else</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">None</span> <span class="o">==</span> <span class="mi">0</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">None</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">None</span> <span class="o">==</span> <span class="s1">''</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -16366,12 +16463,12 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">format_sentence</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">format_sentence</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">13</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">"...."</span><span class="p">):</span>
     <span class="k">return</span> <span class="s1">'The '</span> <span class="o">+</span> <span class="n">subject</span> <span class="o">+</span> <span class="s1">' is '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="n">end</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">format_sentence</span><span class="p">(</span><span class="s1">'lecture'</span><span class="p">,</span> <span class="s1">'ongoing'</span><span class="p">,</span> <span class="s1">'.'</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">format_sentence</span><span class="p">(</span><span class="s1">'lecture'</span><span class="p">,</span> <span class="s1">'ongoing'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">'!'</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">format_sentence</span><span class="p">(</span><span class="s1">'lecture'</span><span class="p">,</span> <span class="s1">'!'</span><span class="p">,</span>  <span class="n">value</span><span class="o">=</span><span class="s1">'ongoing'</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">format_sentence</span><span class="p">(</span><span class="n">subject</span><span class="o">=</span><span class="s1">'lecture'</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">'ongoing'</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">'...'</span><span class="p">))</span>
 </pre></div>
@@ -16435,7 +16532,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">format_sentence</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">'.'</span><span class="p">,</span> <span class="n">second_value</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">format_sentence</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">'.'</span><span class="p">,</span> <span class="n">second_value</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">second_value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">'The '</span> <span class="o">+</span> <span class="n">subject</span> <span class="o">+</span> <span class="s1">' is '</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="n">end</span>
     <span class="k">else</span><span class="p">:</span>
@@ -16459,111 +16556,12 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Small-detour:-Python's-value-for-missing-values:-None">Small detour: Python's value for missing values: <code>None</code><a class="anchor-link" href="#Small-detour:-Python's-value-for-missing-values:-None">&#182;</a></h3><ul>
-<li>Default value for optional arguments</li>
-<li>Implicit return value of functions without a <code>return</code> statement</li>
-<li><code>None</code> is <code>None</code>, not anything else</li>
-</ul>
-
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">None</span> <span class="o">==</span> <span class="mi">0</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">None</span> <span class="o">==</span> <span class="kc">False</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kc">None</span> <span class="o">==</span> <span class="s1">''</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">bool</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Exercise-1">Exercise 1<a class="anchor-link" href="#Exercise-1">&#182;</a></h3><ul>
 <li>Notebook Day_4_Exercise_1  (~30 minutes)</li>
 <li>Go to Canvas, <code>Modules -&gt; Day 4 -&gt; Exercise 1 - day 4</code></li>
-<li><p>Quiz. Go to Canvas, <code>Modules -&gt; Day 4 -&gt; PyQuiz 4.1</code></p>
-</li>
-<li><p>Lunch break</p>
-</li>
-<li><p>Extra reading:</p>
+</ul>
 <ul>
+<li>Extra reading:<ul>
 <li><a href="https://realpython.com/python-kwargs-and-args/">https://realpython.com/python-kwargs-and-args/</a></li>
 <li><a href="https://able.bio/rhett/python-functions-and-best-practices--78aclaa">https://able.bio/rhett/python-functions-and-best-practices--78aclaa</a></li>
 </ul>
@@ -16704,7 +16702,7 @@ div.jp-OutputPrompt {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
 
-<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">"date"</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s2">"ls"</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16719,8 +16717,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>How to find the right module and instructions?</p>
-<ul>
+<h3 id="How-to-find-the-right-module-and-instructions?">How to find the right module and instructions?<a class="anchor-link" href="#How-to-find-the-right-module-and-instructions?">&#182;</a></h3><ul>
 <li>Look at the <a href="https://docs.python.org/3/py-modindex.html">module index</a> for Python standard modules</li>
 <li>Search <a href="http://pypi.org">PyPI</a></li>
 <li>Search <a href="https://www.w3schools.com/python/">https://www.w3schools.com/python/</a></li>
@@ -16770,6 +16767,7 @@ div.jp-OutputPrompt {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s1">'Programming,is,cool'</span>
+<span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16946,7 +16944,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">process_file</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">chrom</span><span class="p">,</span> <span class="n">pos</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Read a vcf file, search for lines matching</span>
+<span class="sd">    Read a very large vcf file, search for lines matching</span>
 <span class="sd">    chromosome chrom and position pos.</span>
 
 <span class="sd">    Print the genotypes of the matching lines.</span>
@@ -17124,7 +17122,8 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">files</span> <span class="kn">import</span> <span class="n">mywork</span>
+<span class="n">mywork</span><span class="o">.</span><span class="n">pipeline</span><span class="p">([</span><span class="s2">"accctt"</span><span class="p">,</span> <span class="s2">"gaccct"</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -17142,6 +17141,17 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <h3 id="Read-more:">Read more:<a class="anchor-link" href="#Read-more:">&#182;</a></h3><p><a href="https://realpython.com/documenting-python-code/">https://realpython.com/documenting-python-code/</a></p>
 <p><a href="https://www.python.org/dev/peps/pep-0008/?#comments">https://www.python.org/dev/peps/pep-0008/?#comments</a></p>
 
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Lunch">Lunch<a class="anchor-link" href="#Lunch">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -17285,22 +17295,6 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>../downloads/Orange_1.tsv
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">'../downloads/Orange_1.tsv'</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
@@ -17421,7 +17415,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -17490,7 +17484,8 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">age</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_new</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">age</span>
+<span class="n">df_new</span> 
 </pre></div>
 
      </div>
@@ -17640,7 +17635,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span> <span class="c1"># select row 2 and 4</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span> <span class="c1"># select row 2 and 4</span>
 </pre></div>
 
      </div>
@@ -17683,7 +17678,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="s1">'age'</span><span class="p">,</span> <span class="s1">'height'</span><span class="p">]]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[[</span><span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="s1">'age'</span><span class="p">]]</span>
 </pre></div>
 
      </div>
@@ -17742,7 +17737,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="s1">'age'</span><span class="p">]]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
 
      </div>
@@ -17798,6 +17793,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
 <span class="n">df</span><span class="p">[</span><span class="s1">'radius'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'circumference'</span><span class="p">]</span> <span class="o">/</span> <span class="mf">2.0</span> <span class="o">/</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span>
+
 <span class="n">df</span>
 </pre></div>
 
@@ -17896,7 +17892,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df2</span><span class="p">,</span> <span class="n">df1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -17939,24 +17935,8 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">10</span><span class="w"> </span>../downloads/Orange.tsv
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="s1">'../downloads/Orange.tsv'</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">]</span>  <span class="c1"># can also use .head()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># can also use .head()</span>
 </pre></div>
 
      </div>
@@ -18031,7 +18011,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">circumference</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">circumference</span> <span class="o">&lt;</span> <span class="mi">100</span><span class="p">)</span> <span class="p">]</span>
 </pre></div>
 
      </div>
@@ -18047,7 +18027,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Small-exercise-1">Small exercise 1<a class="anchor-link" href="#Small-exercise-1">&#182;</a></h3><ul>
-<li>find the maximal circumference and then filter the data frame by it</li>
+<li>Find the maximal circumference and then filter the data frame by it</li>
 </ul>
 
 </div>
@@ -18061,7 +18041,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">circumference</span> <span class="o">==</span> <span class="n">df</span><span class="o">.</span><span class="n">circumference</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span>
 </pre></div>
 
      </div>
@@ -18142,7 +18122,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">small_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'age'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'height'</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">'line'</span><span class="p">)</span> <span class="c1"># plot the relationship of age and height</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">small_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">'age'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'circumference'</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">'line'</span><span class="p">)</span> <span class="c1"># plot the relationship of age and height</span>
 <span class="c1"># try with other types of plots, e.g. scatter</span>
 </pre></div>
 
@@ -18158,7 +18138,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="What-if-no-plots-shows-up?">What if no plots shows up?<a class="anchor-link" href="#What-if-no-plots-shows-up?">&#182;</a></h3>
+<h3 id="Tips:-what-if-no-plots-shows-up?">Tips: what if no plots shows up?<a class="anchor-link" href="#Tips:-what-if-no-plots-shows-up?">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -18268,7 +18248,7 @@ providing the url as <a href="https://www.python.org/static/img/python-logo@2x.p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">small_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'hist'</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">'age'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">small_df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'hist'</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">'age'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
 </pre></div>
 
      </div>
