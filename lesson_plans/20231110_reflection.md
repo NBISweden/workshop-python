@@ -15,6 +15,7 @@ Things that went well:
 
  * [W1] Being able to observe flaws
  * [W2] Handling feedback
+ * [W3] Time management without a schedule
 
 Things that could be improved:
 
@@ -33,11 +34,27 @@ Things to do different next time:
 
 ## [G1] Engage all students
 
-I did.
+This was the hardest thing to find out:
+how does one teach in two different locations?
+
+I used a shared HackMD document and timed with a naive learner how
+quickly he/she would be able to edit a HackMD document.
+This was less than 1 minute.
+
+The HackMD contained, per question/exercise a list of all students' names.
+This worked great in getting to know the students:
+there are some students in Umeå that I think I can describe their personality:
+sure I can be wrong, but I do have a hypothesis I can defend :-) 
+
+The HackHD worked out way better than I expected.
+I took the time (3 minutes!) to let all students fill in a general
+question. It was long enough.
 
 ## [G2] Have readable slides
 
-I did.
+This was the scariest thing in my preparation schedule.
+I dared to take the time to figure this out
+and I am happy with the result.
 
 ## [G3] Develop the material in 1 day
 
@@ -45,7 +62,10 @@ I did.
 
 ## [G4] Take enough breaks
 
-I did.
+I had an espeak script to help me remind when to take breaks.
+I would always take the breaks.
+I had slides that showed the start and end of each break.
+It was quite clear.
 
 ## [G5] No excuses for the choices I made
 
@@ -55,8 +75,7 @@ For example, I did not update the course schedule on Studium/Canvas.
 That was just fine: I did a good job at sharing the schedule in the slides.
 
 Another example was the course content.
-It was good enough.
-Using it would help me the flaws.
+It was good enough and using it would help me the flaws.
 
 ## [W1] Being able to observe flaws
 
@@ -88,6 +107,26 @@ Other feedback was simpler, such as an exercise being unclear,
 a microphone being on or off, etc. I immediately changed the
 slides/equipment/etc. I am happy the TAs felt comfortable with sharing this
 and I thanked them each time.
+
+## [W3] Time management without a schedule
+
+I chose not to have a timed-out schedule,
+as I wanted to see how well I would do without one.
+This turned out to work OK, but could be improved.
+
+For example, I knew I had 100 slides, so that means
+I need to go through 17 every one of the 6 hours.
+This worked out perfectly until lunch: I was at slide 57
+and was exactly halfway.
+However, I was wrong: in total I would only have 5 hours, hence
+I had 2 more hours left.
+I did speed up and got through all the theory, 
+yet this was at the cost of more hands-on exercises.
+
+I conclude that indeed I can improvise without a timed-out schedule,
+yet I do enjoy writing down such a schedule, so I will do so anyways,
+when there is the time. On my list of priorities, it would have been the
+next thing to do.
 
 ## [I1] The amount of TAs
 
