@@ -42,10 +42,10 @@ How would you do that?
 ```{python}
 #| eval: false
 #| echo: true
-# Test strings that are correct
+# Strings that are correct
 # "A"
 # "ACGT"
-# Test strings that are incorrect
+# Strings that are incorrect
 # ""
 # "acgt"
 # "nonsense"
@@ -81,6 +81,19 @@ We use regular expressions!
 >
 > Adapted from [Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
 
+## Q: regex quiz
+
+Do [https://regexone.com](https://regexone.com) lessons 1 to and including 10.
+
+ * Extra: also complete the rest of the tutorial
+
+## Recap
+
+It is a small language on its own indeed!
+
+
+
+
 ## Importing the `re` module
 
 To use regexes in Python, 
@@ -91,6 +104,8 @@ put this line at the top of your script:
 #| echo: true
 import re
 ```
+
+ * Tip: [The Python 're' documentation](https://docs.python.org/3/library/re.html)
 
 ## Creating the pattern
 
@@ -108,7 +123,7 @@ This would be the pattern:
  * `[ACGT]`: must be among these characters
  * `+` ... at least once
 
-## Compiling the pattern
+## Compiling regexes
 
 ```{python}
 #| eval: true
@@ -117,8 +132,8 @@ dna_seq_pattern = re.compile("[ACGT]+")
 print(dna_seq_pattern)
 ```
 
- * :sunglasses: This results in a finite state machine 
-   with all `if` statement needed 
+:sunglasses::+1: This results in a finite state machine 
+with all `if` statements needed
 
 ## Getting a match
 
@@ -128,17 +143,23 @@ print(dna_seq_pattern)
 print(dna_seq_pattern.match("A"))
 ```
 
+:monocle_face:
+
 ```{python}
 #| eval: true
 #| echo: true
 print(dna_seq_pattern.match("AACGCGT"))
 ```
 
+:nerd_face:
+
 ```{python}
 #| eval: true
 #| echo: true
 print(dna_seq_pattern.match("nonsense"))
 ```
+
+:neutral_face:
 
 ## Getting a match
 
@@ -164,119 +185,190 @@ else:
   print("Nope, no DNA here :-(")
 ```
 
-## Q: What is a regular expression?
+## Q: `is_chess_square` 1/2
 
-What is a regular expression?
+![https://en.wikipedia.org/wiki/File:SCD_algebraic_notation.svg](SCD_algebraic_notation.png)
 
-```{python}
-#| eval: false
-#| echo: true
-2023-04-13
-107 70 Stockholm
-+46 8 405 10 00
-2,112,000 kr
-```
+## Q: `is_chess_square` 2/2
 
-:woman_technologist: Write down in the HackMD! :man_technologist:
+Write the pattern to detect if a string is a chess square. Test that it works
 
-## Q: What are other text patterns?
+![](SCD_algebraic_notation.png)
 
-Do you know example of other text patterns?
-
- * Name those text patterns, e.g. 'A DNA sequence'
- * Do not describe the text pattern!
-
-:woman_technologist: Write down in the HackMD! :man_technologist:
-
-## A: What are other text patterns?
-
- * A first/last/full name
- * An address
- * A ZIP/postcal code
- * A phone number
- * A Swedish ID/'personnummer'
- * A URL
- * ... etcetera
-
-
-
-
-
-
-## A pattern
+## A: `is_chess_square` 1/3
 
 ```{python}
 #| eval: true
 #| echo: true
-pattern = re.compile(".{2}")
-print(pattern)
+chess_square_pattern = \
+  re.compile("[a-h][1-8]")
 ```
 
-## Matching
+ * The first character is `a`, `b` `c`, etc. to and including `h`
+ * The second character is `1`, `2` `3`, etc. to and including `8`
+ * :monocle_face: Can you spot the mistake already?
+
+## A: `is_chess_square` 2/3
 
 ```{python}
 #| eval: true
 #| echo: true
-match = pattern.search("Hello")
-print(match)
+m = chess_square_pattern.match("d5")
+if m:
+  print("This was a match!")
+else:
+  print("Nope, no chess square here :-(")
 ```
 
+## A: `is_chess_square` 1/3
+
+```{python}
+#| eval: true
+#| echo: true
+m = chess_square_pattern.match("ACGT")
+if m:
+  print("This was a match!")
+else:
+  print("Nope, no chess square here :-(")
+```
+
+## Putting `is_chess_square` in a function
+
+```{python}
+#| eval: true
+#| echo: true
+def is_chess_square(s):
+  p = re.compile("[a-h][1-8]")
+  return chess_square_pattern.match(s)
+```
+
+## Using `is_chess_square`
+
+```{python}
+#| eval: true
+#| echo: true
+print(is_chess_square("a1"))
+```
+
+:nerd_face:
+
+```{python}
+#| eval: true
+#| echo: true
+print(is_chess_square("nonsense"))
+```
+
+:monocle_face:
+
+## Testing `is_chess_square`
+
+```{python}
+#| eval: true
+#| echo: true
+assert is_chess_square("a1")
+assert not is_chess_square("nonsense")
+```
+
+## Q: `is_chess_square` in your code
+
+Put the `is_chess_square` function and tests in your code.
+
+Confirm that everything works as expected on your computer!
+
+Bonus: the pattern is imperfect. Can you find an example?
+
+## Unexpected `is_chess_square`
+
+```{python}
+#| eval: true
+#| echo: true
+if is_chess_square("a123"):
+  print("This is unexpected!")
+```
+
+## Problem `is_chess_square`
+
+ * The first character is `a`, `b` `c`, etc. to and including `h`
+ * The second character is `1`, `2` `3`, etc. to and including `8`
+ * **A chess square has two characters**
+
+## Q: Fix `is_chess_square`
+
+Fix `is_chess_square`. 
+
+Use [the Python 're' documentation](https://docs.python.org/3/library/re.html)
+
+ * Tip: [see the search versus match section](https://docs.python.org/3/library/re.html#search-vs-match)
+
+## A: Fix `is_chess_square`
+
+```{python}
+#| eval: true
+#| echo: true
+def is_chess_square(s):
+  p = re.compile("[a-h][1-8]")
+  return p.fullmatch(s)
+```
+
+ * Use `fullmatch`, instead of `search` or `match`
+ * `search` and `"^[a-h][1-8]$"` fails???
+ 
+## Print that `is_chess_square` works
+
+```{python}
+#| eval: true
+#| echo: true
+print(is_chess_square("a1234"))
+```
+
+:sunglasses::+1:
+
+```{python}
+#| eval: true
+#| echo: true
+if is_chess_square("a1234"):
+  print("WEIRD!")
+else:
+  print("Life is good!")
+```
+
+## Testing `is_chess_square`
+
+```{python}
+#| eval: true
+#| echo: true
+assert is_chess_square("a1")
+assert not is_chess_square("a1234")
+assert not is_chess_square("nonsense")
+```
+
+## Q: regex for first name in English?
+
+In English: what is the regular expression for a first name?
+
+## A: first name
+
+A first name:
+
+ * start with a capital letter
+ * then has lowercase characters only
+ * :monocle_face: do you already spot the flaw?
+
+## Q: program the regex for first name
+
+ * [Python doc: Regular expression HOWTO](https://docs.python.org/3/howto/regex.html)
  * [The 're' documentation](https://docs.python.org/3/library/re.html)
+
 
 How to do better?
 
 :woman_technologist: Write down in the HackMD! :man_technologist:
 
-## Naive answer
-
-```{python}
-#| eval: true
-#| echo: true
-numerator = 1.2
-denominator = 3.4
-# denominator is not zero
-if denominator == 0.0:
-    print("ERROR! QUIT!")
-```
-
-What do we express here?
-
-## `assert`
-
-Express: 'I believe this to be true':
-
-```{python}
-#| echo: true
-#| eval: true
-assert 1 + 1 == 2
-```
-
-This presentation will not compile when an `assert` fails!
-
-## `assert` in action
-
-```{python}
-#| echo: true
-#| eval: true
-numerator = 1.2
-denominator = 3.4
-assert denominator != 0.0
-value = numerator / denominator
-```
-
-Use assert extensively @sutter2004cpp@stroustrup2013cpp@mcconnell2004code
-@liberty2002sams@lakos1996large.
 
 
 ## Questions about today's theory?
 
 :woman_technologist: Write down in the HackMD! :man_technologist:
-
-If not, apply this in The Project:
-
- * Use `assert`
- * Split code into functions
- * Test functions
 
 # Done!
 
