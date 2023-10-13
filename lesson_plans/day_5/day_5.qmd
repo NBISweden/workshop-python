@@ -440,27 +440,30 @@ Are important. Please rest!
 
 ## Break 1: 10:00-10:15
 
+![https://xkcd.com/208/](xkcd_regular_expressions.png)
+
 
 
 ## Break 2: 11:00-11:15
 
+![https://www.explainxkcd.com/wiki/index.php/1313:_Regex_Golf](xkcd_regex_golf.png)
 
 
 ## Break 3: 12:00-13:00
 
-
+![https://www.explainxkcd.com/wiki/index.php/1171:_Perl_Problems](xkcd_perl_problems.png)
 
 ## Break 4: 14:00-14:15
 
-
+![https://www.explainxkcd.com/wiki/index.php/1638:_Backslashes](xkcd_backslashes.png)
 
 ## Break 5: 15:00-15:15
 
-
+![https://xkcd.com/353/](xkcd_python.png)
 
 ## Break 6: 16:00-16:15
 
-
+![https://xkcd.com/1987/](xkcd_python_environment_2x.png)
 
 ## Done
 
