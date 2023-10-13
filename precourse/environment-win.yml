@@ -10,3 +10,4 @@ dependencies:
   - pyreadline
   - biopython
   - jupyter
+  - scikit-learn
