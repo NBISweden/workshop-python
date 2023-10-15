@@ -211,6 +211,22 @@ slow (note there was still 1 student that felt
 I went too fast: I'd enjoy to find out
 how to be even slower, as I have no idea).
 
+### Postscriptum
+
+The feedback 'Just asking the students to Google is not helpful'
+was very helpful to me: I immediately put this into my teaching
+and now state 'Let's Google this together'.
+
+In hindsight, what went wrong with Day 3?
+There are multiple factors, I focus on the factors 
+the would have changed my preparation.
+What I missed is an anonymous evaluation where
+the could have learned from the students that
+they expect/need a classic/stock-standard course.
+I am happy that anyone preparing the course
+of next year has a solid evaluation to base his/her
+preparation on.
+
 ## Observation
 
 ```
