@@ -20,7 +20,7 @@ scratch and to customize more complex code to fit their needs.
 [this form](https://goo.gl/forms/53y2SxT7b91DcNh13)
 
 If you don’t receive information according to the above dates, please
-contact <a href="mailto:nina.norgren@scilifelab.se?subject=[Python HT18]
+contact <a href="mailto:dimitrios.bampalikis@nbis.se?subject=[Python HT24]
 Registration">Nina Norgren</a>
 
 # Audience and Prerequisites
@@ -33,7 +33,7 @@ Registration">Nina Norgren</a>
   at SciLifeLab for it.
 * Bring your own laptop with python installed for the practical
   exercises. Otherwise, please contact <a
-  href="mailto:nina.norgren@scilifelab.se?subject=[Python HT18] I need a laptop">Nina Norgren</a> before the course starts.
+  href="mailto:dimitrios.bampalikis@nbis.se?subject=[Python HT24] I need a laptop">Dimitris Bampalikis</a> before the course starts.
 * Due to limited space the course can accommodate maximum of 20 participants.
   If we receive more applications, participants will be selected based on
   several criteria. Selection criteria include correct entry requirements,
@@ -65,7 +65,7 @@ After this course you should be able to:
 * Presentations and demonstrations
 * Practical exercises (both as lab assignments with assistants and on your own).
 
-Main teacher: [Nina Norgren](//nbis.se/about/staff/nina-norgren/)
+Main teacher: Nina Norgren
 
 Prior to the course, you can read a companion
 book
