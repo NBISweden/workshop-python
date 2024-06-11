@@ -12,16 +12,16 @@ scratch and to customize more complex code to fit their needs.
 
 | Application | Date |
 |------------:|:-----|
-| ...opens on | X<sup>rd</sup>, 2019 |
-| ...closes on | X<sup>th</sup>, 2019 |
-| ...is accepted/denied on | X<sup>th</sup>, 2019 |
+| ...opens on | June 11<sup>th</sup>, 2024 |
+| ...closes on | September 24<sup>th</sup>, 2024 |
+| ...is accepted/denied on | October 2<sup>nd</sup>, 2024 |
 
 > Register for the course, using
-[this form](https://goo.gl/forms/53y2SxT7b91DcNh13)
+[this form](https://forms.gle/fWmvBxfkj7v5M6j87)
 
 If you don’t receive information according to the above dates, please
-contact <a href="mailto:dimitrios.bampalikis@nbis.se?subject=[Python HT24]
-Registration">Nina Norgren</a>
+contact <a href="mailto:edu.intro-python@nbis.se?subject=[Python HT24]
+Registration">edu.intro-python@nbis.se</a>
 
 # Audience and Prerequisites
 
@@ -34,7 +34,7 @@ Registration">Nina Norgren</a>
 * Bring your own laptop with python installed for the practical
   exercises. Otherwise, please contact <a
   href="mailto:dimitrios.bampalikis@nbis.se?subject=[Python HT24] I need a laptop">Dimitris Bampalikis</a> before the course starts.
-* Due to limited space the course can accommodate maximum of 20 participants.
+* Due to limited space the course can accommodate maximum of 25 participants in Uppsala and 15 in Umeå and Lund.
   If we receive more applications, participants will be selected based on
   several criteria. Selection criteria include correct entry requirements,
   motivation to attend the course as well as gender and geographical balance.
@@ -62,10 +62,11 @@ After this course you should be able to:
 
 # Format
 
+* This course runs in parallel on-site in Uppsala, Umeå and Lund. Lectures will be streamed from our Uppsala site
 * Presentations and demonstrations
-* Practical exercises (both as lab assignments with assistants and on your own).
+* Practical exercises (both as lab assignments with assistants in the calssroom and on your own)
 
-Main teacher: Nina Norgren
+Main teachers: Nina Norgren, Dimitrios Bampalikis, Nanjiang Shu
 
 Prior to the course, you can read a companion
 book
