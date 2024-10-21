@@ -1,0 +1,33 @@
+name: Zip Downloads Folder
+
+# Trigger the workflow when there's a push to the ht24 branch, specifically for changes in the downloads folder
+on:
+  push:
+    branches:
+      - ht24
+    paths:
+      - 'downloads/**'   # Watch for changes in the downloads folder
+
+jobs:
+  zip-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Zip downloads folder
+      run: |
+        zip -r downloads.zip downloads
+
+    - name: Commit and push downloads.zip
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add downloads.zip
+        git commit -m "Auto update downloads.zip"
+        git push origin ht24
+      env:
+        # Necessary for pushing changes back to the repository
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
