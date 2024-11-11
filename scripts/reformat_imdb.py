@@ -45,11 +45,14 @@ def ReformatFile(genreDict, outfile):
             out.write(FormatMovie(movie))
     out.close()
 
+usage = f"{sys.argv[0]} inputFile outputFile"
 
-if len(sys.argv) == 3:
-    genreDict = CreateDict(sys.argv[1])
-    ReformatFile(genreDict, sys.argv[2])
-else:
-    print('Number of arguments does not match')
-    
-    
+if len(sys.argv) < 3:
+    print(usage)
+    sys.exit(1)
+
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+genreDict = CreateDict(input_file)
+ReformatFile(genreDict, output_file)
