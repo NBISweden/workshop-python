@@ -16,3 +16,9 @@ tmp/
 tmp_lecture.tmp
 tmpcsstmp/*
 tmpimgtmp/*
+
+
+assignment/data/*.fa
+assignment/data/*.gtf
+exercises/day*/*.html
+
