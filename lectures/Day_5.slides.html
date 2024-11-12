@@ -14671,7 +14671,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Day-5">Day 5<a class="anchor-link" href="#Day-5">&#182;</a></h2><ul>
+<h3 id="Day-5">Day 5<a class="anchor-link" href="#Day-5">&#182;</a></h3><ul>
 <li><strong>Session 1</strong><ul>
 <li>Quiz: Review of Day 4</li>
 <li>Lecture: Go through questions</li>
@@ -14680,9 +14680,9 @@ div.jp-OutputPrompt {
 </ul>
 </li>
 <li><strong>Session 2</strong>    <ul>
-<li>Lecture: Regexp in Python</li>
-<li>Ex2: Regexp using Python</li>
-<li>PyQuiz 5.1 (10 min)</li>
+<li>Lecture: Regex in Python</li>
+<li>Ex2: Regex using Python</li>
+<li>PyQuiz 5.1</li>
 </ul>
 </li>
 <li><strong>Session 3</strong>  <ul>
@@ -14716,19 +14716,38 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="1.-What-happens-if-you-declare-a-variable-with-the-same-name-inside-and-outside-a-function?">1. What happens if you declare a variable with the same name inside and outside a function?<a class="anchor-link" href="#1.-What-happens-if-you-declare-a-variable-with-the-same-name-inside-and-outside-a-function?">&#182;</a></h3><ul>
-<li>The variable inside the function has a separate scope and does not affect the one outside </li>
-</ul>
+<h3 id="1.-What-happens-if-you-declare-a-variable-with-the-same-name-inside-and-outside-a-function?">1. What happens if you declare a variable with the same name inside and outside a function?<a class="anchor-link" href="#1.-What-happens-if-you-declare-a-variable-with-the-same-name-inside-and-outside-a-function?">&#182;</a></h3><p>The variable inside the function has a separate scope and does not affect the one outside</p>
 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"Max"</span>
+<span class="k">def</span> <span class="nf">changeName</span><span class="p">():</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"Niko"</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"name inside the function: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="n">changeName</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"name outside of the function: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"Max"</span>
@@ -14744,45 +14763,55 @@ div.jp-OutputPrompt {
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>name inside the function: Niko, address = 4388913008
-name outside of the function: Max, address = 4386289840
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="2.-What-is-the-difference-between-positional-arguments-and-keyword-arguments?">2. What is the difference between positional arguments and keyword arguments?<a class="anchor-link" href="#2.-What-is-the-difference-between-positional-arguments-and-keyword-arguments?">&#182;</a></h3><ul>
-<li>Keyword arguments can be given in any order, while positional arguments depend on the function's order </li>
+<h3 id="2.-What-is-the-difference-between-positional-arguments-and-keyword-arguments?">2. What is the difference between positional arguments and keyword arguments?<a class="anchor-link" href="#2.-What-is-the-difference-between-positional-arguments-and-keyword-arguments?">&#182;</a></h3><p>Keyword arguments can be given in any order, while positional arguments depend on the function's order</p>
+
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sum3</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"a=</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"b=</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"c=</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">+</span><span class="n">c</span>
+<span class="n">sum3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h4 id="Arguments-can-be-used-in-both-ways,-with-or-without-keyword,-if-there-is-no-ambiguity">Arguments can be used in both ways, with or without keyword, if there is no ambiguity<a class="anchor-link" href="#Arguments-can-be-used-in-both-ways,-with-or-without-keyword,-if-there-is-no-ambiguity">&#182;</a></h4><ul>
+<li>When used with keyword, they are keyword arguments</li>
+<li>When used without keyword, they are positional arguments</li>
 </ul>
 
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14793,12 +14822,12 @@ name outside of the function: Max, address = 4386289840
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -14810,30 +14839,6 @@ name outside of the function: Max, address = 4386289840
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>3
-6
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -14850,12 +14855,12 @@ name outside of the function: Max, address = 4386289840
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
@@ -14879,7 +14884,7 @@ name outside of the function: Max, address = 4386289840
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -14924,6 +14929,9 @@ name outside of the function: Max, address = 4386289840
 <div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">importlib</span> <span class="kn">import</span> <span class="n">reload</span>
 <span class="n">reload</span><span class="p">(</span><span class="n">myModule</span><span class="p">)</span>
 </pre></div>
+<p>or</p>
+<div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">&#39;myMoudle&#39;</span><span class="p">]</span>
+</pre></div>
 
 </div>
 </div>
@@ -14942,21 +14950,20 @@ name outside of the function: Max, address = 4386289840
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
     <span class="s1">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'Charlie'</span><span class="p">,</span> <span class="s1">'David'</span><span class="p">],</span>
     <span class="s1">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
     <span class="s1">'height'</span><span class="p">:</span> <span class="p">[</span><span class="mf">165.4</span><span class="p">,</span> <span class="mf">175.3</span><span class="p">,</span> <span class="mf">168.5</span><span class="p">,</span> <span class="mf">180.6</span><span class="p">]</span>
-<span class="p">}</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'age'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">]</span>
 </pre></div>
@@ -14966,85 +14973,7 @@ name outside of the function: Max, address = 4386289840
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>      name  age  height
-0    Alice   25   165.4
-1      Bob   30   175.3
-2  Charlie   35   168.5
-3    David   40   180.6
-</pre>
-</div>
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>age</th>
-      <th>height</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>2</th>
-      <td>Charlie</td>
-      <td>35</td>
-      <td>168.5</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>David</td>
-      <td>40</td>
-      <td>180.6</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15119,12 +15048,12 @@ name outside of the function: Max, address = 4386289840
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>grep<span class="w"> </span><span class="s2">"furniture.*sell"</span><span class="w"> </span>../downloads/blocket_listings.txt<span class="w"> </span>
@@ -15133,32 +15062,6 @@ name outside of the function: Max, address = 4386289840
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>desk	furniture	sell	2000	2018-01-14
-couch	furniture	sell	500	2018-10-05
-shoerack	furniture	sell	200	2018-10-24
-wardrobe	furniture	sell	300	2018-10-23
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -15179,93 +15082,24 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<center>
-<img src="img/color.png" alt="regex" width="50%"/>
-<img src="img/salpeter.png" alt="regex" width="50%"/>
+<div style="display: flex; align-items: center; justify-content: space-between; margin: 0; padding: 0; width: 100%;">
 
-</center>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Common-operations">Common operations<a class="anchor-link" href="#Common-operations">&#182;</a></h4><p>Building blocks for creating patterns</p>
-<ul>
-<li><code>.</code> matches any character (once)</li>
-<li><code>?</code> repeat previous pattern 0 or 1 times</li>
-<li><code>*</code> repeat previous pattern 0 or more times</li>
-<li><code>+</code> repeat previous pattern 1 or more times</li>
-</ul>
+<div style="flex: 1; text-align: left; margin: 0; padding: 0;">
+    <img src="img/color.png" alt="regex" width="75%" style="margin: 0; padding: 0;"/>
+    <img src="img/salpeter.png" alt="regex" width="75%" style="margin: 0; padding: 0;"/>
+</div><div style="flex: 1; text-align: right; padding-right: 0; margin: 0;">
+    <ul style="margin: 0; padding: 0; list-style-position: inside;">
+        <li><code>.</code> matches any character (once)</li>
+        <li><code>?</code> repeat previous pattern 0 or 1 times</li>
+        <li><code>*</code> repeat previous pattern 0 or more times</li>
+        <li><code>+</code> repeat previous pattern 1 or more times</li>
+    </ul>
+</div><p>&lt;/div&gt;</p>
 
 </div>
 </div>
 </div>
 </div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Pattern-for-matching-the-colour-family">Pattern for matching the colour family<a class="anchor-link" href="#Pattern-for-matching-the-colour-family">&#182;</a></h4><p><code>colour.*</code></p>
-
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>.*</code> matches everything (including the empty string)!</p>
-
-</div>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Pattern-for-matching-the-different-spellings">Pattern for matching the different spellings<a class="anchor-link" href="#Pattern-for-matching-the-different-spellings">&#182;</a></h4><p><code>salt?peter</code></p>
-
-</div>
-</div>
-</div>
-</div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<center>What about the different endings: er-re?</center><center><code>"salt?pet.."</code></center>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<center><font color="green">saltpeter</font></center><center><font color="red">"saltpet88"</font></center>
-<center><font color="red">"salpetin"</font></center>
-<center><font color="red">"saltpet  "</font></center>
-</div>
-</div>
-</div>
-</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -15292,10 +15126,6 @@ wardrobe	furniture	sell	300	2018-10-23
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h3><ul>
 <li><code>\w</code> matches any letter or number, and the underscore</li>
-<li><code>\d</code> matches any digit</li>
-<li><code>\D</code> matches any non-digit</li>
-<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
-<li><code>\S</code> matches any non-whitespace</li>
 </ul>
 
 </div>
@@ -15322,11 +15152,7 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
-<li><code>\w</code> matches any letter or number, and the underscore</li>
 <li><code>\d</code> matches any digit</li>
-<li><code>\D</code> matches any non-digit</li>
-<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
-<li><code>\S</code> matches any non-whitespace</li>
 </ul>
 
 </div>
@@ -15353,11 +15179,7 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
-<li><code>\w</code> matches any letter or number, and the underscore</li>
-<li><code>\d</code> matches any digit</li>
-<li><code>\D</code> matches any non-digit</li>
 <li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
-<li><code>\S</code> matches any non-whitespace</li>
 </ul>
 
 </div>
@@ -15384,26 +15206,12 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">&#182;</a></h4><ul>
-<li><code>\w</code> matches any letter or number, and the underscore</li>
-<li><code>\d</code> matches any digit</li>
-<li><code>\D</code> matches any non-digit</li>
-<li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
-<li><code>\S</code> matches any non-whitespace</li>
 <li><code>[abc]</code> matches a single character defined in this set {a, b, c}</li>
 <li><code>[^abc]</code> matches a single character that is <strong>not</strong> a, b or c</li>
+<li><code>[a-z]</code> matches all letters between <code>a</code> and <code>z</code> (the english alphabet).</li>
+<li><code>[a-z]+</code> matches any (lowercased) english word.</li>
 </ul>
 
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="%5Ba-z%5D-matches-all-letters-between-a-and-z-(the-english-alphabet)."><code>[a-z]</code> matches all letters between <code>a</code> and <code>z</code> (the english alphabet).<a class="anchor-link" href="#%5Ba-z%5D-matches-all-letters-between-a-and-z-(the-english-alphabet).">&#182;</a></h4><h4 id="%5Ba-z%5D+-matches-any-(lowercased)-english-word."><code>[a-z]+</code> matches any (lowercased) english word.<a class="anchor-link" href="#%5Ba-z%5D+-matches-any-(lowercased)-english-word.">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -15499,7 +15307,7 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>Find all lines containing more than one homozygous sample.</li>
+<li>Find all lines containing more than one homozygous sample (assuming all homozygous are of the form 1/1, which might not be the case in general)</li>
 </ul>
 
 </div>
@@ -15513,17 +15321,6 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><code>... 1/1:...  ... 1/1:...  ...</code></p>
-
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
 </div>
 </div>
@@ -15633,7 +15430,7 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import module</span>
@@ -15645,12 +15442,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Define a pattern</span>
@@ -15661,31 +15458,6 @@ wardrobe	furniture	sell	300	2018-10-23
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>re.compile(r&#39;ab*&#39;, re.UNICODE)</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -15699,12 +15471,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Search pattern in string</span>
@@ -15718,37 +15490,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;re.Match object; span=(0, 2), match=&#39;ab&#39;&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">'cb'</span><span class="p">))</span>
@@ -15759,35 +15506,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>None
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'HELLO'</span><span class="p">)</span>
@@ -15801,29 +15525,6 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;re.Match object; span=(12, 17), match=&#39;HELLO&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15835,12 +15536,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remember, [a-z]+ matches any lower case english word</span>
@@ -15854,35 +15555,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>None
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'[a-z]+'</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
@@ -15896,31 +15574,6 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[49]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;re.Match object; span=(0, 6), match=&#39;ATGAAA&#39;&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15932,12 +15585,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'[a-z]+'</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
@@ -15949,31 +15602,6 @@ wardrobe	furniture	sell	300	2018-10-23
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[51]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&lt;re.Match object; span=(4, 10), match=&#39;ATGAAA&#39;&gt;</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></div><div class="fragment">
@@ -15991,12 +15619,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
@@ -16007,37 +15635,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[52]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;ATGAAA&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
@@ -16048,37 +15651,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>4</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">end</span><span class="p">()</span>
@@ -16089,37 +15667,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[54]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>10</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span><span class="o">.</span><span class="n">span</span><span class="p">()</span>
@@ -16128,31 +15681,6 @@ wardrobe	furniture	sell	300	2018-10-23
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[55]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>(4, 10)</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -16171,7 +15699,7 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">'.*HELLO.*'</span><span class="p">)</span>
@@ -16187,7 +15715,7 @@ wardrobe	furniture	sell	300	2018-10-23
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">'lots of text  HELLO  more text and characters!!! ^^'</span><span class="p">)</span>
@@ -16198,12 +15726,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">m</span><span class="o">.</span><span class="n">group</span><span class="p">()</span>
@@ -16212,31 +15740,6 @@ wardrobe	furniture	sell	300	2018-10-23
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;lots of text  HELLO  more text and characters!!! ^^&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></div><div class="fragment">
@@ -16262,12 +15765,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Find all instance of the defined pattern</span>
@@ -16281,35 +15784,12 @@ wardrobe	furniture	sell	300	2018-10-23
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&lt;callable_iterator object at 0x7ff202b6efa0&gt;
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loop through matches</span>
@@ -16320,30 +15800,6 @@ wardrobe	furniture	sell	300	2018-10-23
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Found HELLO at position 14
-Found HELLO at position 32
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -16357,12 +15813,12 @@ Found HELLO at position 32
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[79]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt</span> <span class="o">=</span> <span class="s2">"The first full stop is here: ."</span>
@@ -16377,35 +15833,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&#34;T&#34; at position 0
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[85]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Print all matches</span>
@@ -16419,12 +15852,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[86]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Use escape character to search</span>
@@ -16437,29 +15870,6 @@ Found HELLO at position 32
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>&#34;.&#34; at position 29
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -16531,7 +15941,7 @@ Found HELLO at position 32
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[87]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">txt</span> <span class="o">=</span> <span class="s2">"Do it   becuase   I say so,     not becuase you want!"</span>
@@ -16542,12 +15952,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[89]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Spell the word because correctly</span>
@@ -16562,35 +15972,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Do it   because   I say so,     not because you want!
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[90]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Remove additional spaces</span>
@@ -16601,31 +15988,6 @@ Found HELLO at position 32
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[90]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;Do it because I say so, not because you want!&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -16690,7 +16052,7 @@ Found HELLO at position 32
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Regular-expressions">Regular expressions<a class="anchor-link" href="#Regular-expressions">&#182;</a></h3><ul>
+<h3 id="Summary">Summary<a class="anchor-link" href="#Summary">&#182;</a></h3><ul>
 <li><p>A powerful tool to search and modify text</p>
 </li>
 <li><p>There is much more to read in the <a href="https://docs.python.org/3/library/re.html">docs</a></p>
@@ -16713,7 +16075,7 @@ Found HELLO at position 32
 <li>Canvas -&gt; Modules -&gt; Day 5 -&gt; Exercise 2 - day 5 </li>
 </ul>
 <h4 id="Take-a-break-after-the-exercise-(~10-min)">Take a break after the exercise (~10 min)<a class="anchor-link" href="#Take-a-break-after-the-exercise-(~10-min)">&#182;</a></h4><hr>
-<h4 id="PyQuiz-5.1">PyQuiz 5.1<a class="anchor-link" href="#PyQuiz-5.1">&#182;</a></h4><hr>
+<h4 id="PyQuiz-5.1-(~10-min)">PyQuiz 5.1 (~10 min)<a class="anchor-link" href="#PyQuiz-5.1-(~10-min)">&#182;</a></h4><hr>
 <h2 id="Lunch">Lunch<a class="anchor-link" href="#Lunch">&#182;</a></h2>
 </div>
 </div>
@@ -16821,12 +16183,12 @@ Found HELLO at position 32
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[91]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mi">4</span>
@@ -16840,35 +16202,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>nextvalue:  5 value:  4
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
@@ -16882,37 +16221,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">7</span><span class="p">)</span> <span class="ow">or</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="mi">1</span>
@@ -16921,31 +16235,6 @@ Found HELLO at position 32
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -16965,7 +16254,7 @@ Found HELLO at position 32
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mystr</span> <span class="o">=</span> <span class="s2">"one"</span>
@@ -16976,12 +16265,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mystr</span> <span class="o">+=</span> <span class="s2">" two"</span> <span class="c1"># string concatnation </span>
@@ -16993,37 +16282,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[24]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;one two&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">mystr</span><span class="p">)</span> <span class="c1"># get the length</span>
@@ -17034,37 +16298,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[25]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>7</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="s2">"one"</span> <span class="ow">in</span> <span class="n">mystr</span> <span class="c1"># membership checking</span>
@@ -17073,31 +16312,6 @@ Found HELLO at position 32
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[26]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -17111,12 +16325,12 @@ Found HELLO at position 32
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mystr</span> <span class="o">=</span> <span class="s2">"one"</span>
@@ -17128,41 +16342,12 @@ Found HELLO at position 32
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[27], line 2</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> mystr <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">one</span><span style="color: rgb(175,0,0)">&#34;</span>
-<span class="ansi-green-fg">----&gt; 2</span> mystr[<span style="color: rgb(98,98,98)">1</span>] <span style="color: rgb(98,98,98)">=</span> <span style="color: rgb(175,0,0)">&#34;</span><span style="color: rgb(175,0,0)">W</span><span style="color: rgb(175,0,0)">&#34;</span>
-
-<span class="ansi-red-fg">TypeError</span>: &#39;str&#39; object does not support item assignment</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mystr</span> <span class="o">=</span> <span class="s2">"one"</span>
@@ -17176,36 +16361,12 @@ Cell <span class="ansi-green-fg">In[27], line 2</span>
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>one
-two
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mystr</span> <span class="o">=</span> <span class="s2">"one"</span>
@@ -17217,30 +16378,6 @@ two
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>mystr = one, address = 4330374000
-mystr = two, address = 4414743344
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></div></section></section><section><section>
@@ -17277,12 +16414,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[92]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
@@ -17297,31 +16434,6 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[92]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;python programmer writes p&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -17331,7 +16443,7 @@ mystr = two, address = 4414743344
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Collections">Collections<a class="anchor-link" href="#Collections">&#182;</a></h3><p>Can contain strings, integer, booleans...</p>
 <ul>
-<li><p><strong>Mutable</strong>: you can <em>add</em>, <em>remove</em>, <em>change</em> values</p>
+<li><p>Most collections are mutable (not tuple): you can <em>add</em>, <em>remove</em>, <em>change</em> values</p>
 </li>
 <li><p>Lists:</p>
 <div class="highlight"><pre><span></span><span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;value&#39;</span><span class="p">)</span>
@@ -17357,7 +16469,7 @@ mystr = two, address = 4414743344
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Collections">Collections<a class="anchor-link" href="#Collections">&#182;</a></h4><ul>
+<h3 id="Collections">Collections<a class="anchor-link" href="#Collections">&#182;</a></h3><ul>
 <li><p>Test for membership:</p>
 <div class="highlight"><pre><span></span><span class="n">value</span> <span class="ow">in</span> <span class="n">myobj</span>
 </pre></div>
@@ -17378,7 +16490,7 @@ mystr = two, address = 4414743344
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Lists">Lists<a class="anchor-link" href="#Lists">&#182;</a></h4><ul>
+<h3 id="Lists">Lists<a class="anchor-link" href="#Lists">&#182;</a></h3><ul>
 <li>Ordered!</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">todolist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;work&quot;</span><span class="p">,</span> <span class="s2">&quot;sleep&quot;</span><span class="p">,</span> <span class="s2">&quot;eat&quot;</span><span class="p">,</span> <span class="s2">&quot;work&quot;</span><span class="p">]</span>
@@ -17398,7 +16510,7 @@ mystr = two, address = 4414743344
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[101]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todolist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"work"</span><span class="p">,</span> <span class="s2">"sleep"</span><span class="p">,</span> <span class="s2">"eat"</span><span class="p">,</span> <span class="s2">"work"</span><span class="p">]</span>
@@ -17409,12 +16521,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[94]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
@@ -17426,35 +16538,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;eat&#39;, &#39;sleep&#39;, &#39;work&#39;, &#39;work&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[95]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
@@ -17466,35 +16555,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[&#39;work&#39;, &#39;work&#39;, &#39;sleep&#39;, &#39;eat&#39;]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[96]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
@@ -17505,37 +16571,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[96]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;sleep&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[99]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -17546,37 +16587,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[99]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>&#39;eat&#39;</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[103]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
@@ -17587,31 +16603,6 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[103]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;eat&#39;, &#39;work&#39;]</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -17620,7 +16611,7 @@ mystr = two, address = 4414743344
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">&#182;</a></h3><ul>
-<li>Keys have values</li>
+<li>List of key value pairs</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">mydict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="s2">&quot;alligator&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="s2">&quot;bear&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">:</span> <span class="s2">&quot;cat&quot;</span><span class="p">}</span>
 <span class="n">counter</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cats&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span> <span class="s2">&quot;dogs&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">}</span>
@@ -17633,12 +16624,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[104]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'cats'</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">'others'</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
@@ -17655,31 +16646,6 @@ mystr = two, address = 4414743344
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[104]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;cats&#39;: 2, &#39;others&#39;: 2}</pre>
-</div>
-
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -17713,12 +16679,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[105]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todolist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"work"</span><span class="p">,</span> <span class="s2">"sleep"</span><span class="p">,</span> <span class="s2">"eat"</span><span class="p">,</span> <span class="s2">"work"</span><span class="p">]</span>
@@ -17732,37 +16698,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[105]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;eat&#39;, &#39;sleep&#39;, &#39;work&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[106]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todo_items</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">"study"</span><span class="p">)</span>
@@ -17774,37 +16715,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[106]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;eat&#39;, &#39;sleep&#39;, &#39;study&#39;, &#39;work&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[107]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">todo_items</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s2">"eat"</span><span class="p">)</span>
@@ -17816,31 +16732,6 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[107]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>{&#39;eat&#39;, &#39;sleep&#39;, &#39;study&#39;, &#39;work&#39;}</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
 </div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -17848,7 +16739,7 @@ mystr = two, address = 4414743344
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h4><ul>
+<h3 id="Tuples">Tuples<a class="anchor-link" href="#Tuples">&#182;</a></h3><ul>
 <li>A group (usually two) of values that belong together</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="n">max_length</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)</span>
@@ -17865,12 +16756,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tup</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">'xy'</span><span class="p">)</span>
@@ -17882,37 +16773,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[53]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>2</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tup</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
@@ -17923,34 +16789,6 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-54-874559a0c62a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>tup<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">2</span>
-
-<span class="ansi-red-fg">TypeError</span>: &#39;tuple&#39; object does not support item assignment</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -17958,7 +16796,7 @@ mystr = two, address = 4414743344
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Tuples-in-functions">Tuples in functions<a class="anchor-link" href="#Tuples-in-functions">&#182;</a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_longest_seq</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
+<h3 id="Tuples-in-functions">Tuples in functions<a class="anchor-link" href="#Tuples-in-functions">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_longest_seq</span><span class="p">(</span><span class="n">file</span><span class="p">):</span>
     <span class="c1"># some code here...</span>
     <span class="k">return</span> <span class="n">length</span><span class="p">,</span> <span class="n">sequence</span>
 </pre></div>
@@ -18002,7 +16840,7 @@ mystr = two, address = 4414743344
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Deciding-what-to-do">Deciding what to do<a class="anchor-link" href="#Deciding-what-to-do">&#182;</a></h4><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+<h3 id="Deciding-what-to-do-with-if-else-statement">Deciding what to do with if else statement<a class="anchor-link" href="#Deciding-what-to-do-with-if-else-statement">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
 <span class="k">elif</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;medium&#39;</span><span class="p">)</span>
@@ -18013,12 +16851,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[108]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'bread'</span><span class="p">,</span> <span class="s1">'egg'</span><span class="p">,</span> <span class="s1">' butter'</span><span class="p">,</span> <span class="s1">'milk'</span><span class="p">]</span>
@@ -18035,29 +16873,6 @@ mystr = two, address = 4414743344
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Better to stay at home
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -18079,7 +16894,7 @@ mystr = two, address = 4414743344
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Program-flow---for-loops">Program flow - for loops<a class="anchor-link" href="#Program-flow---for-loops">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">information</span> <span class="o">=</span> <span class="p">[]</span>
+<h3 id="Program-flow---for-loops">Program flow - for loops<a class="anchor-link" href="#Program-flow---for-loops">&#182;</a></h3><div class="highlight"><pre><span></span><span class="n">information</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;myfile.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fh</span><span class="p">:</span>
@@ -18111,7 +16926,7 @@ mystr = two, address = 4414743344
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Program-flow---while-loops">Program flow - while loops<a class="anchor-link" href="#Program-flow---while-loops">&#182;</a></h4><div class="highlight"><pre><span></span><span class="n">keep_going</span> <span class="o">=</span> <span class="kc">True</span>
+<h3 id="Program-flow---while-loops">Program flow - while loops<a class="anchor-link" href="#Program-flow---while-loops">&#182;</a></h3><div class="highlight"><pre><span></span><span class="n">keep_going</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">information</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">index</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -18149,7 +16964,7 @@ mystr = two, address = 4414743344
 <p>is a control flow statement that performs operations over a known amount of steps.</p>
 <p><strong><code>While</code> loop</strong></p>
 <p>is a control flow statement that allows code to be executed repeatedly based on a given Boolean condition.</p>
-<p><br></br></p>
+<p><br></p>
 <p><strong>Which one to use?</strong></p>
 <p><code>For</code> loops - standard for iterations over lists and other iterable objects</p>
 <p><code>While</code> loops - more flexible and can iterate an unspecified number of times</p>
@@ -18157,12 +16972,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_input</span> <span class="o">=</span> <span class="s2">"thank god it's friday"</span>
@@ -18175,55 +16990,12 @@ mystr = two, address = 4414743344
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>T
-H
-A
-N
-K
- 
-G
-O
-D
- 
-I
-T
-&#39;
-S
- 
-F
-R
-I
-D
-A
-Y
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
@@ -18236,49 +17008,6 @@ Y
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>T
-H
-A
-N
-K
- 
-G
-O
-D
- 
-I
-T
-&#39;
-S
- 
-F
-R
-I
-D
-A
-Y
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div></section></section><section><section>
@@ -18296,12 +17025,12 @@ Y
 </div>
 </div>
 </div>
-</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">user_input</span> <span class="o">=</span> <span class="s2">"thank god it's friday"</span>
@@ -18317,36 +17046,6 @@ Y
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>T
-H
-A
-N
-K
- 
-G
-O
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -18359,12 +17058,12 @@ O
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># DON'T RUN THIS</span>
@@ -18376,33 +17075,6 @@ O
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[31], line 3</span>
-<span class="ansi-red-fg">    -while i &lt; 10:</span>
-     ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div><div class="fragment">
@@ -18425,27 +17097,22 @@ O
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="File-Input/Output">File Input/Output<a class="anchor-link" href="#File-Input/Output">&#182;</a></h3><ul>
-<li><p>In:</p>
-<ul>
-<li>Read files: <code>fh = open(filename, 'r')</code><ul>
-<li><code>for line in fh:</code><ul>
-<li><code>fh.read()</code></li>
-<li><code>fh.readlines()</code></li>
-</ul>
+<li><p>In: Read from files</p>
+<div class="highlight"><pre><span></span><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fh</span><span class="p">:</span>
+       <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+       <span class="n">fh</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+</pre></div>
+<p>Read information from command line: <code>sys.argv[1:]</code></p>
 </li>
-</ul>
-</li>
-<li>Read information from command line: <code>sys.argv[1:]</code></li>
-</ul>
-</li>
-<li><p>Out:</p>
-<ul>
-<li>Write files: <code>fh = open(filename, 'w')</code><ul>
-<li><code>fh.write(text)</code></li>
-</ul>
-</li>
-<li>Printing: <code>print('my_information')</code></li>
-</ul>
+<li><p>Out:
+Write to files:</p>
+<div class="highlight"><pre><span></span><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+   <span class="n">fh</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+<p>Printing:</p>
+<div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;my_information&#39;</span><span class="p">)</span>
+</pre></div>
 </li>
 </ul>
 
@@ -18459,13 +17126,13 @@ O
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Input/Output">Input/Output<a class="anchor-link" href="#Input/Output">&#182;</a></h4><ul>
-<li>Open files should be closed:<ul>
-<li><code>fh.close()</code></li>
-</ul>
-</li>
-</ul>
-<p>or use <code>with</code> clause</p>
+<h3 id="Input/Output">Input/Output<a class="anchor-link" href="#Input/Output">&#182;</a></h3><p>Open files should be closed:</p>
+<div class="highlight"><pre><span></span><span class="n">fh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+<p>or use the <code>with</code> clause</p>
+<div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+        <span class="n">do_something</span>
+</pre></div>
 
 </div>
 </div>
@@ -18514,7 +17181,7 @@ O
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Functions---keyword-arguments">Functions - keyword arguments<a class="anchor-link" href="#Functions---keyword-arguments">&#182;</a></h4><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prettyprinter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<h3 id="Functions---keyword-arguments">Functions - keyword arguments<a class="anchor-link" href="#Functions---keyword-arguments">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">prettyprinter</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">delim</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">out</span> <span class="o">=</span> <span class="s2">&quot;The &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; is &quot;</span> <span class="o">+</span> <span class="n">delim</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">value</span>
     <span class="k">if</span> <span class="n">end</span><span class="p">:</span>
         <span class="n">out</span> <span class="o">+=</span> <span class="n">end</span>
@@ -18536,9 +17203,9 @@ O
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Using-your-code">Using your code<a class="anchor-link" href="#Using-your-code">&#182;</a></h4><p>Any longer pieces of code that have been used and will be re-used should be saved</p>
+<h3 id="Using-your-code">Using your code<a class="anchor-link" href="#Using-your-code">&#182;</a></h3><p>Any longer pieces of code that have been used and will be re-used should be saved</p>
 <ul>
-<li><p>Save it as a file <code>.py</code></p>
+<li><p>Save it as a file <code>mycode.py</code></p>
 </li>
 <li><p>To run it:
 <code>python3 mycode.py</code>
@@ -18559,7 +17226,7 @@ or <code>python mycode.py</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Documentation-and-comments">Documentation and comments<a class="anchor-link" href="#Documentation-and-comments">&#182;</a></h4><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; This is a doc-string explaining what the purpose of this function/module is &quot;&quot;&quot;</span>
+<h3 id="Documentation-and-comments">Documentation and comments<a class="anchor-link" href="#Documentation-and-comments">&#182;</a></h3><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot; This is a doc-string explaining what the purpose of this function/module is &quot;&quot;&quot;</span>
 </pre></div>
 <div class="highlight"><pre><span></span><span class="c1"># This is a comment that helps understanding the code</span>
 </pre></div>
@@ -18616,7 +17283,7 @@ or <code>python mycode.py</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Why-programming?">Why programming?<a class="anchor-link" href="#Why-programming?">&#182;</a></h4><p>Endless possibilities!</p>
+<h3 id="Why-programming?">Why programming?<a class="anchor-link" href="#Why-programming?">&#182;</a></h3><p>Endless possibilities!</p>
 <ul>
 <li>reverse complement DNA</li>
 <li>custom filtering of VCF files</li>
@@ -18634,7 +17301,7 @@ or <code>python mycode.py</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Why-programming?">Why programming?<a class="anchor-link" href="#Why-programming?">&#182;</a></h4><ul>
+<h3 id="Why-programming?">Why programming?<a class="anchor-link" href="#Why-programming?">&#182;</a></h3><ul>
 <li>Computers are fast</li>
 <li>Computers don't get bored</li>
 <li>Computers don't get sloppy</li>
@@ -18668,7 +17335,7 @@ or <code>python mycode.py</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Final-advice">Final advice<a class="anchor-link" href="#Final-advice">&#182;</a></h4><ul>
+<h3 id="Final-advice">Final advice<a class="anchor-link" href="#Final-advice">&#182;</a></h3><ul>
 <li>Take a moment to think before you start coding<ul>
 <li>use pseudocode</li>
 <li>use top-down programming</li>
@@ -18703,11 +17370,12 @@ or <code>python mycode.py</code></p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Final-advice-(for-real)">Final advice (for real)<a class="anchor-link" href="#Final-advice-(for-real)">&#182;</a></h4><ul>
+<h3 id="Final-advice-(for-real)">Final advice (for real)<a class="anchor-link" href="#Final-advice-(for-real)">&#182;</a></h3><ul>
 <li>Getting help<ul>
 <li>ask colleauges</li>
 <li>try talk about your problem (get a rubber duck <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">https://en.wikipedia.org/wiki/Rubber_duck_debugging</a>)</li>
 <li>search the web</li>
+<li>Ask AI (chatGPT)</li>
 <li><a href="https://nbis.se/events/">NBIS drop-ins</a></li>
 </ul>
 </li>
@@ -18725,7 +17393,8 @@ or <code>python mycode.py</code></p>
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Now-you-know-Python!"><center>Now you know Python!</center><a class="anchor-link" href="#Now-you-know-Python!">&#182;</a></h3><p><br></p>
 <center><font size=20> 🎉 </font></center><br>
-<center><font size=20>    Well done!</font></center><h5 id="Just-a-small-quiz-to-finish-the-day">Just a small quiz to finish the day<a class="anchor-link" href="#Just-a-small-quiz-to-finish-the-day">&#182;</a></h5>
+<center><font size=20>    Well done!</font></center><h5 id="Just-a-small-exercise-to-finish-the-day">Just a small exercise to finish the day<a class="anchor-link" href="#Just-a-small-exercise-to-finish-the-day">&#182;</a></h5><p>Canvas -&gt; Module -&gt; Day 5 -&gt; Exercise 3 - day 5</p>
+
 </div>
 </div>
 </div>
