@@ -1,4 +1,4 @@
-#/usr/bin/env python
+#!/usr/bin/env python
 import sys
 
 print("size of sys.argv = ", len(sys.argv))
