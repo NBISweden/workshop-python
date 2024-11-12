@@ -1,12 +1,17 @@
+#!/usr/bin/env python
+
 import matplotlib.patches as mpatches
 import matplotlib.pylab as plt
+import os
 
 daylist = ['Mon','Tue', 'Wed', 'Thu', 'Fri']
 colors  = {'Lecture': 'pink', 'Exercise':'lightgreen', 'Project': 'lightblue', 'Lunch':'white', 'PyQuiz':'wheat', 'break': 'white'}
 
 #colors = ['pink', 'lightgreen', 'lightblue', 'wheat', 'salmon']
 
-input_file = '../files/schedule.csv'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+input_file = os.path.join(script_dir, '../files/schedule.csv')
+output_file = os.path.join(script_dir, '../schedule.png')
 day_label  = 'Schedule'
 
 fig = plt.figure(figsize=(15,9.89))
@@ -54,4 +59,4 @@ plt.title(day_label,y=1.07)
 handles = [mpatches.Patch(color=c, label=l) for l,c in colors.items() if c != 'white']
 plt.legend(handles=handles, bbox_to_anchor=(1.05, 1), loc='upper left')
 
-plt.savefig('../schedule.png', bbox_inches='tight')
+plt.savefig(output_file, bbox_inches='tight')

@@ -57,18 +57,17 @@ Day,starthour,startmin,length,type,text
 4,14,00,40,Exercise,Pandas exercise
 4,14,40,20,PyQuiz,PyQuiz!
 4,15,00,120,Project,Project
-5,9,0,10,Lecture,Review
-5,9,10,10,Exercise,Review answers
-5,9,20,30,Lecture,Recap & Intro to regex
-5,9,50,30,Exercise,ex 1
-5,10,20,10,break,
-5,10,30,30,Lecture,Regex in Python
-5,11,0,30,Exercise,ex 2
-5,11,30,10,break,
-5,11,40,20,PyQuiz,PyQuiz!
+5,9,0,15,PyQuiz,Review
+5,9,15,15,Lecture,Review answers
+5,9,30,30,Lecture,Recap & Intro to regex
+5,10,0,30,Exercise,Ex 1: Regex
+5,10,30,10,break,
+5,10,40,30,Lecture,Regex in Python
+5,11,10,30,Exercise,Ex 2: Regex
+5,11,40,10,break,
+5,11,50,10,PyQuiz,PyQuiz 5.1
 5,12,0,60,Lunch,LUNCH
 5,13,0,40,Lecture,Sum up
 5,13,40,10,break,
-5,13,50,30,Exercise, Quiz
-5,14,20,40,Lecture, Review Quiz
-5,15,0,120,Project,Project
+5,13,50,40,Exercise,Ex3
+5,14,20,160,Project,Project
