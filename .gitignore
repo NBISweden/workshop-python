@@ -20,5 +20,10 @@ tmpimgtmp/*
 
 assignment/data/*.fa
 assignment/data/*.gtf
+assignment/*.txt
+lectures/build_*.sh
 exercises/day*/*.html
+exercises/build_*.sh
+files/out*.txt
+bak/
 
