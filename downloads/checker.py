@@ -81,7 +81,7 @@ def final(output):
     result = 'is a python programmer!'.split()
     vars = "{maybeis} {chr(the_sum)} {the_snake} {word}{chr(the_length)}".split()
     errs = []
-    for corr, word, var in zip(result, output.split()[1:], vars):
+    for corr, word, var in zip(result, output.split()[-4:], vars):
         if corr != word:
             errs.append('the value for "{}" is "{}", which does not seem correct'.format(var, word))
     assert not errs, '\n'.join(errs)
