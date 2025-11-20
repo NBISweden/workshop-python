@@ -14,19 +14,18 @@ Day,starthour,startmin,length,type,text
 1,15,25,20,PyQuiz,PyQuiz!
 1,15,45,15,break,
 1,16,0,60,Project,Project
-2,9,0,5,Lecture,Intro
-2,9,5,30,PyQuiz,Review
+2,9,0,30,PyQuiz,Review
 2,9,30,30,Lecture,Review answers
 2,10,0,15,break,
-2,10,15,25,Lecture,Pseudocode
-2,10,40,50,Exercise,Ex 1
+2,10,15,30,Lecture,Process VCF file
+2,10,45,45,Exercise,Ex 1
 2,11,30,10,break,
 2,11,40,20,PyQuiz,PyQuiz!
 2,12,0,60,Lunch,LUNCH
-2,13,0,30,Lecture,Functions/Methods
+2,13,0,30,Lecture,Useful functions and methods
 2,13,30,30,Exercise,Ex 2
 2,14,0,10,break,
-2,14,25,35,Exercise,Ex 3: IMDb
+2,14,25,35,Exercise,Ex 3: IMDb - day2
 2,14,10,15,PyQuiz,PyQuiz!
 2,15,0,120,Project,Project
 3,9,0,20,PyQuiz,Review
