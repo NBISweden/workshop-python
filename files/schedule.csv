@@ -22,7 +22,7 @@ Day,starthour,startmin,length,type,text
 2,11,30,10,break,
 2,11,40,20,PyQuiz,PyQuiz!
 2,12,0,60,Lunch,LUNCH
-2,13,0,30,Lecture,Useful functions and methods
+2,13,0,30,Lecture,Functions and methods
 2,13,30,30,Exercise,Ex 2
 2,14,0,10,break,
 2,14,25,35,Exercise,Ex 3: IMDb - day2
