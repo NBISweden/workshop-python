@@ -50,6 +50,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
+.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -14495,6 +14496,9 @@ a.anchor-link {
 .reveal {
   font-size: 160%;
 }
+.reveal table {
+  font-size: var(--jp-ui-font-size1);
+}
 .reveal pre {
   width: inherit;
   padding: 0.4em;
@@ -14538,6 +14542,23 @@ div.jp-OutputPrompt {
   margin: 5px 5px 0 0;
 }
 
+.reveal div.highlight {
+  margin: 0;
+}
+
+.reveal div.highlight > pre {
+  margin: 0;
+  width: 100%;
+  font-size: var(--jp-code-font-size);
+}
+
+.reveal div.jp-OutputArea-output > pre {
+  margin: 0;
+  width: 90%;
+  font-size: var(--jp-code-font-size);
+  box-shadow: none;
+}
+
 /* Reveal navigation controls */
 
 .reveal .controls .navigate-left,
@@ -14578,17 +14599,14 @@ div.jp-OutputPrompt {
 
 /* Scrollbars */
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar *
-{
-  background:transparent;
+::-webkit-scrollbar * {
+  background: transparent;
 }
-::-webkit-scrollbar-thumb
-{
+::-webkit-scrollbar-thumb {
   background: #727272 !important;
 }
 </style>
@@ -14615,12 +14633,12 @@ div.jp-OutputPrompt {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: { 
-                    automatic: true 
+                    linebreaks: {
+                    automatic: true
                     }
                 }
             });
-        
+
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14655,8 +14673,8 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Practical-issues">Practical issues<a class="anchor-link" href="#Practical-issues">&#182;</a></h3><ul>
 <li>Course website:
-<a href="https://uppsala.instructure.com/courses/99844">https://uppsala.instructure.com/courses/99844</a> </li>
-<li>Course lectures streamed from Uppsala and Umeå</li>
+<a href="https://uppsala.instructure.com/courses/113769">https://uppsala.instructure.com/courses/113769</a> </li>
+<li>Course lectures streamed from Uppsala, Umeå, and Lund</li>
 <li>TAs on each site</li>
 <li>Short lectures with many breaks</li>
 <li>Schedule times are approximate</li>
@@ -14830,7 +14848,7 @@ div.jp-OutputPrompt {
 </tr>
 <tr>
 <td>Python 2.7 - July 3, 2010</td>
-<td></td>
+<td>Python 3.14 - October 2025</td>
 </tr>
 </tbody>
 </table>
@@ -14921,6 +14939,7 @@ div.jp-OutputPrompt {
 <p><u>How to seek help:</u></p>
 <ul>
 <li>Google</li>
+<li>Ask AI</li>
 <li>Ask your neighbour</li>
 <li>Ask an assistant</li>
 </ul>
@@ -14981,7 +15000,7 @@ div.jp-OutputPrompt {
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">u</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;u is&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'u is'</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">u</span><span class="p">))</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
@@ -15073,8 +15092,8 @@ u is11
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;this is a string&#39;</span>
-<span class="s2">&quot;this is also a string&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">'this is a string'</span>
+<span class="s2">"this is also a string"</span>
 <span class="mi">3</span>       <span class="c1"># here we can put a comment so we know that this is an integer</span>
 <span class="mf">3.14</span>    <span class="c1"># this is a float</span>
 <span class="kc">True</span>    <span class="c1"># this is a boolean</span>
@@ -15133,9 +15152,9 @@ u is11
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">99</span><span class="p">]</span>       <span class="c1"># this is a list of integers</span>
 
-<span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">)</span>   <span class="c1"># this is a tuple of strings</span>
-<span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">}</span>        <span class="c1"># this is a set of strings</span>
-<span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>  <span class="c1"># this is a dictionary with strings as keys and integers as values</span>
+<span class="p">(</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'d'</span><span class="p">)</span>   <span class="c1"># this is a tuple of strings</span>
+<span class="p">{</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">}</span>        <span class="c1"># this is a set of strings</span>
+<span class="p">{</span><span class="s1">'a'</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>  <span class="c1"># this is a dictionary with strings as keys and integers as values</span>
 
 <span class="nb">type</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">99</span><span class="p">])</span>
 </pre></div>
@@ -15190,10 +15209,10 @@ u is11
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">&#39;a string&#39;</span><span class="o">+</span><span class="s1">&#39; another string&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="s1">'a string'</span><span class="o">+</span><span class="s1">' another string'</span>
 <span class="mi">2</span> <span class="o">+</span> <span class="mf">3.4</span>
-<span class="s1">&#39;a string &#39;</span> <span class="o">*</span> <span class="mi">3</span>
-<span class="s1">&#39;a string &#39;</span> <span class="o">*</span> <span class="mf">3.4</span>
+<span class="s1">'a string '</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="s1">'a string '</span> <span class="o">*</span> <span class="mf">3.4</span>
 </pre></div>
 
      </div>
@@ -15296,8 +15315,8 @@ string &emsp; &emsp; &emsp; &ensp; &nbsp;           + </em></p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">width</span>  <span class="o">=</span> <span class="mi">42</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mi">20</span>
 
-<span class="n">snpname</span> <span class="o">=</span> <span class="s1">&#39;rs56483 &#39;</span>
-<span class="n">snplist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rs12345&#39;</span><span class="p">,</span><span class="s1">&#39;rs458782&#39;</span><span class="p">]</span>
+<span class="n">snpname</span> <span class="o">=</span> <span class="s1">'rs56483 '</span>
+<span class="n">snplist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'rs12345'</span><span class="p">,</span><span class="s1">'rs458782'</span><span class="p">]</span>
 
 <span class="n">snpname</span> <span class="o">*</span> <span class="mi">3</span>
 <span class="n">width</span> <span class="o">*</span> <span class="n">height</span>
@@ -15451,8 +15470,8 @@ Here we format everything to a string before printing it</p>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">width</span>  <span class="o">=</span> <span class="mi">5</span>
 <span class="n">height</span> <span class="o">=</span> <span class="mf">3.6</span>
-<span class="n">snps</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;rs123&#39;</span><span class="p">,</span> <span class="s1">&#39;rs5487&#39;</span><span class="p">]</span>
-<span class="n">snp</span>    <span class="o">=</span> <span class="s1">&#39;rs2546&#39;</span>
+<span class="n">snps</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">'rs123'</span><span class="p">,</span> <span class="s1">'rs5487'</span><span class="p">]</span>
+<span class="n">snp</span>    <span class="o">=</span> <span class="s1">'rs2546'</span>
 <span class="n">active</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">nums</span>   <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
 
@@ -15627,10 +15646,10 @@ Here we format everything to a string before printing it</p>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">x</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">5</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span><span class="s1">'b'</span><span class="p">,</span><span class="s1">'c'</span><span class="p">]</span>
 
 <span class="mi">2</span> <span class="ow">in</span> <span class="n">x</span>
-<span class="mi">4</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">and</span> <span class="s1">&#39;d&#39;</span> <span class="ow">in</span> <span class="n">y</span>
+<span class="mi">4</span> <span class="ow">in</span> <span class="n">x</span> <span class="ow">and</span> <span class="s1">'d'</span> <span class="ow">in</span> <span class="n">y</span>
 </pre></div>
 
      </div>
@@ -15676,7 +15695,7 @@ Here we format everything to a string before printing it</p>
 <span class="n">even</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">num</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;num is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;. Is this number even? &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span> <span class="ow">in</span> <span class="n">even</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'num is '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s1">'. Is this number even? '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span> <span class="ow">in</span> <span class="n">even</span><span class="p">))</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
@@ -15730,7 +15749,7 @@ num is 11. Is this number even? False
 <span class="n">even</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="n">num</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;num is &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;. Is this number even and below 5? &#39;</span><span class="o">+</span>\
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'num is '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span><span class="o">+</span><span class="s1">'. Is this number even and below 5? '</span><span class="o">+</span>\
           <span class="nb">str</span><span class="p">(</span><span class="n">num</span> <span class="ow">in</span> <span class="n">even</span> <span class="ow">and</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">))</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
@@ -15925,15 +15944,15 @@ num is 11. Is this number even and below 5? False
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
-<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;some longrandomstring&#39;</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">'some longrandomstring'</span>
 
-<span class="c1">#&#39;o&#39; in s</span>
+<span class="c1">#'o' in s</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span>
 <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">s</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">l</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;S&#39;</span>
+<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">'S'</span>
 </pre></div>
 
      </div>
@@ -16089,7 +16108,7 @@ Input <span class="ansi-green-fg">In [42]</span>, in <span class="ansi-cyan-fg">
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="s1">&#39;pear&#39;</span><span class="p">,</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;grapes&#39;</span><span class="p">,</span> <span class="s1">&#39;pears&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="s1">'pear'</span><span class="p">,</span><span class="s1">'banana'</span><span class="p">,</span><span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'grapes'</span><span class="p">,</span> <span class="s1">'pears'</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">fruits</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
@@ -16140,11 +16159,11 @@ pears
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="s1">&#39;pear&#39;</span><span class="p">,</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="s1">&#39;grapes&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="s1">'pear'</span><span class="p">,</span><span class="s1">'banana'</span><span class="p">,</span><span class="s1">'orange'</span><span class="p">,</span> <span class="s1">'grapes'</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;DONE!&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'DONE!'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16222,8 +16241,8 @@ DONE!
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="s1">&#39;pear&#39;</span><span class="p">,</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">]</span>
-<span class="n">mystring</span> <span class="o">=</span> <span class="s1">&#39;mylongstring&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="s1">'pear'</span><span class="p">,</span><span class="s1">'banana'</span><span class="p">,</span><span class="s1">'orange'</span><span class="p">]</span>
+<span class="n">mystring</span> <span class="o">=</span> <span class="s1">'mylongstring'</span>
 
 <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
@@ -16279,7 +16298,7 @@ orange
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="s1">&#39;pear&#39;</span><span class="p">,</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="s1">'pear'</span><span class="p">,</span><span class="s1">'banana'</span><span class="p">,</span><span class="s1">'orange'</span><span class="p">]</span>
 
 <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">fruits</span><span class="p">):</span>
@@ -16386,10 +16405,10 @@ orange
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bread&#39;</span><span class="p">,</span> <span class="s1">&#39;egg&#39;</span><span class="p">,</span> <span class="s1">&#39;butter&#39;</span><span class="p">,</span> <span class="s1">&#39;milk&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'bread'</span><span class="p">,</span> <span class="s1">'egg'</span><span class="p">,</span> <span class="s1">'butter'</span><span class="p">,</span> <span class="s1">'milk'</span><span class="p">]</span>
 
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Go shopping!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Go shopping!'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16428,19 +16447,19 @@ orange
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;bread&#39;</span><span class="p">,</span> <span class="s1">&#39;egg&#39;</span><span class="p">,</span> <span class="s1">&#39;butter&#39;</span><span class="p">,</span> <span class="s1">&#39;milk&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'bread'</span><span class="p">,</span> <span class="s1">'egg'</span><span class="p">,</span> <span class="s1">'butter'</span><span class="p">,</span> <span class="s1">'milk'</span><span class="p">]</span>
 <span class="n">tired</span>         <span class="o">=</span> <span class="kc">False</span>
 
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">shopping_list</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">tired</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Go shopping!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Go shopping!'</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Too tired, I</span><span class="se">\&#39;</span><span class="s1">ll do it later&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Too tired, I</span><span class="se">\'</span><span class="s1">ll do it later'</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">tired</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Better get it over with today anyway&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Better get it over with today anyway'</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nah! I</span><span class="se">\&#39;</span><span class="s1">ll do it tomorrow!&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Nah! I</span><span class="se">\'</span><span class="s1">ll do it tomorrow!'</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -16534,7 +16553,7 @@ orange
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span><span class="s1">&#39;pear&#39;</span><span class="p">,</span><span class="s1">&#39;banana&#39;</span><span class="p">,</span><span class="s1">&#39;orange&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'apple'</span><span class="p">,</span><span class="s1">'pear'</span><span class="p">,</span><span class="s1">'banana'</span><span class="p">,</span><span class="s1">'orange'</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>
@@ -16591,7 +16610,7 @@ orange
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../files/fruits.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'../files/fruits.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fh</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
@@ -16656,7 +16675,7 @@ orange
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span>   <span class="o">=</span> <span class="s1">&#39;  an example string to split with whitespace in end   &#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span>   <span class="o">=</span> <span class="s1">'  an example string to split with whitespace in end   '</span>
 <span class="n">sw</span>  <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
 <span class="n">sw</span>
 <span class="n">swl</span> <span class="o">=</span> <span class="n">sw</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
@@ -16714,7 +16733,7 @@ orange
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../files/fruits.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'../files/fruits.txt'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">'utf-8'</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fh</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
@@ -16785,7 +16804,7 @@ How much money is spent on ICA?</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>    <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../files/bank_statement.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>    <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../files/bank_statement.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">"utf-8"</span><span class="p">)</span>
 
 <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -16793,11 +16812,11 @@ How much money is spent on ICA?</p>
     <span class="n">expenses</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># split line into list</span>
     <span class="n">store</span>    <span class="o">=</span> <span class="n">expenses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>           <span class="c1"># save what store</span>
     <span class="n">price</span>    <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">expenses</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>    <span class="c1"># save the price</span>
-    <span class="k">if</span> <span class="n">store</span> <span class="o">==</span> <span class="s1">&#39;ICA&#39;</span><span class="p">:</span>               <span class="c1"># only count the price if store is ICA</span>
+    <span class="k">if</span> <span class="n">store</span> <span class="o">==</span> <span class="s1">'ICA'</span><span class="p">:</span>               <span class="c1"># only count the price if store is ICA</span>
         <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">price</span>
 <span class="n">fh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Total amount spent on ICA is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Total amount spent on ICA is: '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -16860,24 +16879,24 @@ How much money is spent on ICA?</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>    <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../files/bank_statement_extended.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fh</span>    <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../files/bank_statement_extended.txt"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">"utf-8"</span><span class="p">)</span>
 
 <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fh</span><span class="p">:</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;store&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">'store'</span><span class="p">):</span>
         <span class="n">expenses</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
         <span class="n">store</span>    <span class="o">=</span> <span class="n">expenses</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">year</span>     <span class="o">=</span> <span class="n">expenses</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
         <span class="n">month</span>    <span class="o">=</span> <span class="n">expenses</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
         <span class="n">day</span>      <span class="o">=</span> <span class="n">expenses</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
         <span class="n">price</span>    <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">expenses</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
-        <span class="k">if</span> <span class="n">store</span> <span class="o">==</span> <span class="s1">&#39;ICA&#39;</span> <span class="ow">and</span> <span class="n">month</span> <span class="o">==</span> <span class="s1">&#39;09&#39;</span><span class="p">:</span>   <span class="c1"># store has to be ICA and month september</span>
+        <span class="k">if</span> <span class="n">store</span> <span class="o">==</span> <span class="s1">'ICA'</span> <span class="ow">and</span> <span class="n">month</span> <span class="o">==</span> <span class="s1">'09'</span><span class="p">:</span>   <span class="c1"># store has to be ICA and month september</span>
             <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">price</span>
 <span class="n">fh</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 
-<span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;../files/bank_statement_results.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">)</span>   <span class="c1"># open a file for writing the results to</span>
-<span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Total amount spent on ICA in september is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
+<span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"../files/bank_statement_results.txt"</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">"utf-8"</span><span class="p">)</span>   <span class="c1"># open a file for writing the results to</span>
+<span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'Total amount spent on ICA in september is: '</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>
 <span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 
@@ -16894,8 +16913,8 @@ How much money is spent on ICA?</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="s2">&quot;../files/&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">file</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">),</span> <span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">scandir</span><span class="p">(</span><span class="s2">"../files/"</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">ctime</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">stat</span><span class="p">(</span><span class="n">file</span><span class="p">)</span><span class="o">.</span><span class="n">st_mtime</span><span class="p">),</span> <span class="s1">'</span><span class="se">\t</span><span class="s1">'</span><span class="p">,</span> <span class="n">file</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
 </pre></div>
 
      </div>
