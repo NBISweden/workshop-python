@@ -20,13 +20,13 @@ Day,starthour,startmin,length,type,text
 2,10,15,30,Lecture,Process VCF file
 2,10,45,45,Exercise,Ex 1
 2,11,30,10,break,
-2,11,40,20,PyQuiz,PyQuiz!
+2,11,40,20,PyQuiz,PyQuiz 2.1!
 2,12,0,60,Lunch,LUNCH
 2,13,0,30,Lecture,Functions and methods
 2,13,30,30,Exercise,Ex 2
 2,14,0,10,break,
 2,14,25,35,Exercise,Ex 3: IMDb - day2
-2,14,10,15,PyQuiz,PyQuiz!
+2,14,10,15,PyQuiz,PyQuiz 2.2!
 2,15,0,120,Project,Project
 3,9,0,20,PyQuiz,Review
 3,9,20,20,Lecture,Review answers + set
