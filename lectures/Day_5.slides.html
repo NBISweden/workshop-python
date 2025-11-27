@@ -7459,6 +7459,22 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Yesterday's-Key-Takeaways">Yesterday's Key Takeaways<a class="anchor-link" href="#Yesterday's-Key-Takeaways">¶</a></h2><ul>
+<li>Error handling using <code>try..except</code>, which helps you catch problems and prevent your program from crashing.</li>
+<li>Keyword arguments and positional arguments, which give you more control, readability, and flexibility when calling functions.</li>
+<li>Docstrings and comments, which provide clear documentation and make your code more understandable and maintainable.</li>
+<li>Pandas, a powerful and widely used library for working with tabular data.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Day-5">Day 5<a class="anchor-link" href="#Day-5">¶</a></h3><ul>
 <li><strong>Session 1</strong><ul>
 <li>Quiz: Review of Day 4</li>
@@ -7475,6 +7491,7 @@ main {
 </li>
 <li><strong>Session 3</strong><ul>
 <li>Lecture: Sum up</li>
+<li>Presentation about NBIS</li>
 <li>Ex3: Final exercise</li>
 </ul>
 </li>
@@ -7699,12 +7716,8 @@ main {
 <div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">myMoudle</span>
 </pre></div>
 <p>and then update <code>myMoudle</code> and then reload with <code>import myMoudle</code> in Jupyter notebook, the module will not be updated. You will need to run</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">importlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">reload</span>
-<span class="n">reload</span><span class="p">(</span><span class="n">myModule</span><span class="p">)</span>
-</pre></div>
-<p>or</p>
-<div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">'myMoudle'</span><span class="p">]</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">myMoudle</span>
+<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">importlib</span>
+<span class="n">importlib</span><span class="o">.</span><span class="n">reload</span><span class="p">(</span><span class="n">myModule</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7786,7 +7799,7 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="New-topic:-Regular-Expressions">New topic: Regular Expressions<a class="anchor-link" href="#New-topic:-Regular-Expressions">¶</a></h2><ul>
 <li>A regular expression (regex or regexp) is a sequence of characters that defines a search pattern.</li>
-<li>Use case: Regular expressions are used in text processing for searching, matching, and manipulating strings</li>
+<li>Use case: regular expressions are used in text processing for searching, matching, and manipulating strings</li>
 </ul>
 </div>
 </div>
@@ -7810,7 +7823,7 @@ main {
 <li>catalyze, catalyse, catalyzed...</li>
 </ul>
 </li>
-<li>A pattern in a VCF file<ul>
+<li>A pattern in a VCF or GTF file<ul>
 <li>a digit appearing after a tab</li>
 </ul>
 </li>
@@ -7931,8 +7944,13 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><code>\w+</code>
-<img alt="regex_w" height="100" src="img/regex_w.png" width="800"/></p>
+<p><code>\w+</code></p>
+<pre><code>def functionName(arg1, arg2, arg3):
+    final_value = 0
+    # comments
+    return final_value 
+</code></pre>
+<p><img alt="regex_w" height="100" src="img/regex_w.png" width="800"/></p>
 </div>
 </div>
 </div>
@@ -8059,7 +8077,7 @@ saltpet
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Some-regular-expressions-are-equivalent,-choose-based-on-your-preference">Some regular expressions are equivalent, choose based on your preference<a class="anchor-link" href="#Some-regular-expressions-are-equivalent,-choose-based-on-your-preference">¶</a></h3><table>
+<h3 id="Some-regular-expressions-are-equivalent;-choose-the-one-that-you-prefer">Some regular expressions are equivalent; choose the one that you prefer<a class="anchor-link" href="#Some-regular-expressions-are-equivalent;-choose-the-one-that-you-prefer">¶</a></h3><table>
 <thead>
 <tr>
 <th>Shorthand</th>
@@ -8209,6 +8227,31 @@ saltpet
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Example-from-the-project-(with-GTF-file):">Example from the project (with GTF file):<a class="anchor-link" href="#Example-from-the-project-(with-GTF-file):">¶</a></h3><h4 id="how-many-transcripts-can-the-CFTR-gene-(ENSG00000001626)-generate?">how many transcripts can the CFTR gene (ENSG00000001626) generate?<a class="anchor-link" href="#how-many-transcripts-can-the-CFTR-gene-(ENSG00000001626)-generate?">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">"transcript.*ENSG00000001626"</span><span class="w"> </span>../assignment/data/Homo_sapiens.GRCh38.93.gtf<span class="w">  </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="w"> </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Cheat-sheet">Cheat sheet<a class="anchor-link" href="#Cheat-sheet">¶</a></h3><ul>
 <li><code>.</code> matches any character (once)</li>
 <li><code>?</code> repeat previous pattern 0 or 1 times</li>
@@ -8292,22 +8335,8 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Import module</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r.*"</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r.*"</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s2">"The colour of the wall is very vibrant, but the color of the sky is even more spectacular."</span>
 <span class="c1"># Try to find a hit</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
@@ -8387,8 +8416,7 @@ saltpet
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># How if we only want to search for the words "colour", "color"? </span>
 <span class="c1"># pattern = "col[ou]+r.*"</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s2">"The colour of the wall is very vibrant, but the color of the sky is even more spectacular."</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\w*"</span>
-<span class="c1"># pattern = r"col[ou]+r\b"</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\b"</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found text: '</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
@@ -8432,7 +8460,7 @@ saltpet
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"The colour of the wall is very vibrant, but the color of the sky is even more spectacular."</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\w*"</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\b"</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
@@ -8447,7 +8475,7 @@ saltpet
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="How-to-find-all-occurences-of-%22color%22-variations-with-their-location-in-the-text?">How to find all occurences of "color" variations with their location in the text?<a class="anchor-link" href="#How-to-find-all-occurences-of-%22color%22-variations-with-their-location-in-the-text?">¶</a></h3>
+<h3 id="How-to-find-all-occurences-of-%22color%22-variations-with-their-positions-in-the-text?">How to find all occurences of "color" variations with their positions in the text?<a class="anchor-link" href="#How-to-find-all-occurences-of-%22color%22-variations-with-their-positions-in-the-text?">¶</a></h3>
 </div>
 </div>
 </div>
@@ -8472,7 +8500,7 @@ saltpet
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"The colour of the wall is very vibrant, but the color of the sky is even more spectacular."</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\w*"</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\b"</span>
 
 <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">re</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Find word: </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s2"> at </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">span</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -8501,10 +8529,24 @@ saltpet
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"The colour of the wall is very vibrant, but the color of the sky is even more spectacular."</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\w*"</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r\b"</span>
 <span class="n">p_find_colour</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span>
 <span class="n">p_find_colour</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 <span class="c1"># re.search(pattern, text)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">p_find_colour</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8525,20 +8567,6 @@ saltpet
 </div>
 </div>
 </div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">p_find_colour</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
 </div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8547,9 +8575,9 @@ saltpet
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Benefits-of-using-re.compile">Benefits of using <code>re.compile</code><a class="anchor-link" href="#Benefits-of-using-re.compile">¶</a></h3><ul>
-<li>Improved performance - saves time by compiling the regex once</li>
+<li>Improved performance - saves time by compiling the regex only once</li>
 <li>Reusability - the compiled regex can be used multiple times</li>
-<li>Early error detection - syntax error of the pattern can be detected at the compiling stage instead of mixed with the other re functions</li>
+<li>Early error detection - syntax error of the pattern can be detected at the compiling stage instead of mixed with the other <code>re</code> functions</li>
 </ul>
 </div>
 </div>
@@ -8625,9 +8653,8 @@ saltpet
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"The first full stop is here: ."</span>
-<span class="n">p_find_fullstop</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"."</span><span class="p">)</span>
 
-<span class="n">result</span> <span class="o">=</span> <span class="n">p_find_fullstop</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"."</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s2"> at position </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">start</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8642,10 +8669,8 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Use escape character to search</span>
-<span class="n">p_find_fullstop</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">'\.'</span><span class="p">)</span>
-
-<span class="n">result</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Use the escape character \</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">"\."</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s2"> at position </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">start</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8907,11 +8932,15 @@ saltpet
 <div class="highlight"><pre><span></span>    <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">()</span>
 </pre></div>
 <pre><code> </code></pre>
-<p>- Searching</p>
+<ul>
+<li>Searching</li>
+</ul>
 <div class="highlight"><pre><span></span>    <span class="n">p</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 <pre><code> </code></pre>
-<p>- Substitution</p>
+<ul>
+<li>Substitution</li>
+</ul>
 <div class="highlight"><pre><span></span>    <span class="n">p</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">replacement</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8925,10 +8954,11 @@ saltpet
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p><strong>Typical code structure for text matching:</strong></p>
-<div class="highlight"><pre><span></span><span class="n">cpattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span> <span class="o">...</span> <span class="p">)</span>
-<span class="n">match</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">'string goes here'</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">match</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">'Match found: '</span><span class="p">,</span> <span class="n">match</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
+<div class="highlight"><pre><span></span><span class="n">pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">"regex"</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">pattern</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">'string goes here'</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Match found: '</span><span class="p">,</span> <span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">'No match'</span><span class="p">)</span>
 </pre></div>
@@ -9370,13 +9400,13 @@ saltpet
 <h3 id="Lists">Lists<a class="anchor-link" href="#Lists">¶</a></h3><ul>
 <li>Ordered!</li>
 </ul>
-<div class="highlight"><pre><span></span>        <span class="n">todolist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"work"</span><span class="p">,</span> <span class="s2">"sleep"</span><span class="p">,</span> <span class="s2">"eat"</span><span class="p">,</span> <span class="s2">"work"</span><span class="p">]</span>
+<div class="highlight"><pre><span></span>        <span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 
-        <span class="n">todolist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-        <span class="n">todolist</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-        <span class="n">todolist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-        <span class="n">todolist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">todolist</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+        <span class="n">mylist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="n">mylist</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+        <span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">mylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -9389,7 +9419,7 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">todolist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"work"</span><span class="p">,</span> <span class="s2">"sleep"</span><span class="p">,</span> <span class="s2">"eat"</span><span class="p">,</span> <span class="s2">"work"</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -9403,8 +9433,8 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">todolist</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9418,8 +9448,8 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">todolist</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9433,7 +9463,7 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -9447,7 +9477,7 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -9461,13 +9491,55 @@ saltpet
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">todolist</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 </div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="List-multiplication-by-an-integer-replicates-the-list-elements-the-specified-number-of-times.">List multiplication by an integer replicates the list elements the specified number of times.<a class="anchor-link" href="#List-multiplication-by-an-integer-replicates-the-list-elements-the-specified-number-of-times.">¶</a></h3><h4 id="Question-from-Day-2">Question from Day 2<a class="anchor-link" href="#Question-from-Day-2">¶</a></h4>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="n">myarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myarray</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">myarray</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10187,18 +10259,7 @@ or <code>python mycode.py</code></p>
 </div>
 </div>
 </div>
-</div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Type-hinting-does-not-change-how-Python-interprets-your-code">Type hinting does not change how Python interprets your code<a class="anchor-link" href="#Type-hinting-does-not-change-how-Python-interprets-your-code">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div></div></section></section><section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -10206,13 +10267,26 @@ or <code>python mycode.py</code></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">show_new_age</span><span class="p">(</span><span class="mf">13.3</span><span class="p">,</span> <span class="mf">5.3</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mf">30.0</span>
+<span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Bob"</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h4 id="Type-hinting-does-not-change-how-Python-interprets-your-code">Type hinting does not change how Python interprets your code<a class="anchor-link" href="#Type-hinting-does-not-change-how-Python-interprets-your-code">¶</a></h4>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -10280,20 +10354,6 @@ or <code>python mycode.py</code></p>
 <h4 id="Just-a-small-exercise-to-finish-the-day-and-have-fun!">Just a small exercise to finish the day and have fun!<a class="anchor-link" href="#Just-a-small-exercise-to-finish-the-day-and-have-fun!">¶</a></h4><p>Canvas -&gt; Module -&gt; Day 5 -&gt; Exercise 3 - day 5</p>
 <hr/>
 <p><strong><a href="https://forms.gle/hTRxG7EohqeWziKu6">Google Form for anonymous evaluation</a></strong></p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
 </div>
 </div>
 </div>
