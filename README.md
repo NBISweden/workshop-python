@@ -12,12 +12,12 @@ scratch and to customize more complex code to fit their needs.
 
 | Application | Date |
 |------------:|:-----|
-| ...opens on | June 11<sup>th</sup>, 2024 |
-| ...closes on | September 24<sup>th</sup>, 2024 |
-| ...is accepted/denied on | October 2<sup>nd</sup>, 2024 |
+| ...opens on | June 4<sup>th</sup>, 2026 |
+| ...closes on | September 11<sup>th</sup>, 2026 |
+| ...is accepted/denied on | September 14<sup>th</sup>, 2026 |
 
 > Register for the course, using
-[this form](https://forms.gle/fWmvBxfkj7v5M6j87)
+[this form](https://forms.gle/fV1YGKdochqQqoZF6)
 
 If you don’t receive information according to the above dates, please
 contact <a href="mailto:edu.intro-python@nbis.se?subject=[Python HT24]
@@ -32,8 +32,7 @@ Registration">edu.intro-python@nbis.se</a>
   prompt. We will not teach Unix in detail: Other course are available
   at SciLifeLab for it.
 * Bring your own laptop with python installed for the practical
-  exercises. Otherwise, please contact <a
-  href="mailto:dimitrios.bampalikis@nbis.se?subject=[Python HT24] I need a laptop">Dimitris Bampalikis</a> before the course starts.
+  exercises.
 * Due to limited space the course can accommodate maximum of 25 participants in Uppsala and 15 in Umeå and Lund.
   If we receive more applications, participants will be selected based on
   several criteria. Selection criteria include correct entry requirements,
