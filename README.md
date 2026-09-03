@@ -63,7 +63,7 @@ After this course you should be able to:
 
 * This course runs in parallel on-site in Uppsala, Umeå and Lund. Lectures will be streamed from our Uppsala site
 * Presentations and demonstrations
-* Practical exercises (both as lab assignments with assistants in the calssroom and on your own)
+* Practical exercises (both as lab assignments with assistants in the classroom and on your own)
 
 Main teachers: Nina Norgren, Dimitrios Bampalikis, Nanjiang Shu
 
