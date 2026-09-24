@@ -1,0 +1,32 @@
+flowchart LR
+    subgraph D1["Day 1: Foundations"]
+        direction TB
+        A1["Intro & Data types"] --> A2["Operators"]
+        A2 --> A3["Loops & Logic"]
+        A3 --> A4["Basic File Processing"]
+    end
+
+    subgraph D2["Day 2: Parsing & Methods"]
+        direction TB
+        B1["Process VCF File"] --> B2["Functions vs. Methods"]
+        B2 --> B3["Stand-alone Scripts"]
+    end
+
+    subgraph D3["Day 3: Advanced Structures"]
+        direction TB
+        C1["Sets & Dictionaries"] --> C2["Function Syntax"]
+        C2 --> C3["sys.argv & Formatting"]
+    end
+
+    subgraph D4["Day 4: Robustness & Pandas"]
+        direction TB
+        D1_1["Terminal & Error Handling"] --> D2_1["Docstrings & kw.args"]
+        D2_1 --> D3_1["Pandas & Plotting"]
+    end
+
+    subgraph D5["Day 5: Regex & Wrap-Up"]
+        direction TB
+        E1["Regex Syntax"] --> E2["Wrap-Up & Post-Course Learning"]
+    end
+
+    D1 --> D2 --> D3 --> D4 --> D5
