@@ -2,10 +2,10 @@ name: workshop
 channels:
   - conda-forge
 dependencies:
-  - python=3.9.4
+  - python=3.14.7
   - pandas
   - matplotlib
-  - spyder=4.2.0
+  - spyder
   - pyreadline
   - biopython
   - jupyter
