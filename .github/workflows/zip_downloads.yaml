@@ -1,12 +1,12 @@
 name: Zip Downloads Folder
 
-# Trigger the workflow when there's a push to the ht24 branch, specifically for changes in the downloads folder
+# Trigger when there's a push to any branch starting with ht for changes in downloads/
 on:
   push:
     branches:
-      - ht24
+      - 'ht*'
     paths:
-      - 'downloads/**'   # Watch for changes in the downloads folder
+      - 'downloads/**'  # Watch for changes in the downloads folder
 
 jobs:
   zip-folder:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Zip downloads folder
       run: |
@@ -25,9 +25,9 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git add downloads.zip
-        git commit -m "Auto update downloads.zip"
-        git push origin ht24
+        # [skip ci] prevents the action from triggering itself repeatedly
+        git diff-index --quiet HEAD || git commit -m "Auto update downloads.zip [skip ci]"
+        # Pushes dynamically to whichever ht* branch triggered the run
+        git push origin ${{ github.ref_name }}
       env:
-        # Necessary for pushing changes back to the repository
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
