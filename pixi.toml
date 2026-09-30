@@ -1,0 +1,23 @@
+[workspace]
+authors = ["mattis <mattis.knulst@med.lu.se>"]
+channels = ["conda-forge"]
+name = "workshop-python"
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.9.4"
+pandas = ">=3.0.6,<4"
+matplotlib = ">=3.11.2,<4"
+biopython = ">=1.88,<2"
+notebook = ">=7.6.3,<8"
+rise = ">=5.7.1,<6"
+beautifulsoup4 = ">=4.15.0,<5"
+fsspec = ">=2026.9.0,<2027"
+openpyxl = ">=3.1.5,<4"
+scikit-learn = ">=1.9.1,<2"
+
+[pypi-dependencies]
+jupyter-contrib-nbextensions = ">=0.7.0, <0.8"

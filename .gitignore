@@ -27,3 +27,6 @@ exercises/build_*.sh
 files/out*.txt
 bak/
 
+# pixi environments
+.pixi/*
+!.pixi/config.toml
