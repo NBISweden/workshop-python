@@ -1,6 +1,5 @@
 """Question 2: print average movie runtime per genre (in minutes)."""
 
-from collections import defaultdict
 from sys import argv
 
 
@@ -15,15 +14,22 @@ def parse_movie_line(line):
 
 
 def average_runtime_per_genre(imdb_path):
-    runtime_totals = defaultdict(int)
-    genre_counts = defaultdict(int)
+    runtime_totals = {}
+    genre_counts = {}
 
     with open(imdb_path, "r", encoding="utf-8") as imdb_file:
         for line in imdb_file:
             if line.startswith("#"):
                 continue
+
             movie = parse_movie_line(line)
+
             for genre in movie["genres"]:
+                if genre not in runtime_totals:
+                    runtime_totals[genre] = 0
+                if genre not in genre_counts:
+                    genre_counts[genre] = 0
+
                 runtime_totals[genre] += movie["runtime_seconds"]
                 genre_counts[genre] += 1
 

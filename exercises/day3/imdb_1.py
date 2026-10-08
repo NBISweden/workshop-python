@@ -1,6 +1,5 @@
 """Question 1: print number of movies per genre in 250.imdb."""
 
-from collections import defaultdict
 from sys import argv
 
 
@@ -14,14 +13,21 @@ def parse_movie_line(line):
 
 
 def count_movies_per_genre(imdb_path):
-	counts = defaultdict(int)
+	counts = {}
+
 	with open(imdb_path, "r", encoding="utf-8") as imdb_file:
 		for line in imdb_file:
 			if line.startswith("#"):
 				continue
+
 			movie = parse_movie_line(line)
-			for genre in movie["genres"]:
+			genres = movie["genres"]
+
+			for genre in genres:
+				if genre not in counts:
+					counts[genre] = 0
 				counts[genre] += 1
+
 	return counts
 
 

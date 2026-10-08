@@ -29,17 +29,34 @@ def get_top_movies_for_genre(imdb_path, requested_genre, limit=10):
             if requested_genre in movie["genres"]:
                 matches.append(movie)
 
-    matches.sort(key=lambda movie: movie["rating"], reverse=True)
-    return matches[:limit]
+    top_movies = []
+
+    for movie in matches:
+        inserted = False
+
+        for index in range(len(top_movies)):
+            if movie["rating"] > top_movies[index]["rating"]:
+                top_movies.insert(index, movie)
+                inserted = True
+                break
+
+        if not inserted:
+            top_movies.append(movie)
+
+        if len(top_movies) > limit:
+            top_movies.pop()
+
+    return top_movies
 
 
 def infer_separator(output_path):
+    separator = "\t"
     lowered = output_path.lower()
     if lowered.endswith(".tsv"):
-        return "\t"
-    if lowered.endswith(".csv"):
-        return ","
-    return "\t"
+        separator = "\t"
+    elif lowered.endswith(".csv"):
+        separator = ","
+    return separator
 
 
 def write_movies(output_path, movies):
