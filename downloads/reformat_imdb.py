@@ -8,11 +8,11 @@ Script that reformats an imdb file and writes it to another file
 def FormatSec(seconds):    # formats seconds to hours and minutes
     hours     = seconds/3600
     minutes   = (seconds - (3600*int(hours)))/60   
-    return str(int(hours))+'h'+str(round(minutes))+'min'
+    return f"{int(hours)}h{round(minutes)}min"
 
 
 def FormatMovie(movie):    # returns a string with the correct format for writing to file
-    formMovie = str(movie[0])+'\t'+movie[1]+' ('+str(movie[2])+') ['+movie[3]+']\n'
+    formMovie = f"{movie[0]}\t{movie[1]} ({movie[2]}) [{movie[3]}]\n"
     return formMovie
 
 
@@ -30,7 +30,7 @@ def CreateDict(infile):
             genre  = cols[5].strip()
             glist  = genre.split(',')
             for entry in glist:
-                if not entry.lower() in genreDict:              # if genre in dictionary, add first movie
+                if entry.lower() not in genreDict:              # if genre in dictionary, add first movie
                     genreDict[entry.lower()] = []
                 genreDict[entry.lower()].append([rating, movie, year, FormatSec(length)])
     fh.close()
@@ -40,16 +40,22 @@ def CreateDict(infile):
 def ReformatFile(genreDict, outfile):
     out = open(outfile, 'w', encoding = 'utf-8')
     for genre in genreDict:
-        out.write('> '+genre.capitalize()+'\n')
+        out.write(f"> {genre.capitalize()}\n")
         for movie in genreDict[genre]:
             out.write(FormatMovie(movie))
     out.close()
 
 
-if len(sys.argv) == 3:
-    genreDict = CreateDict(sys.argv[1])
-    ReformatFile(genreDict, sys.argv[2])
-else:
-    print('Number of arguments does not match')
+usage = f"{sys.argv[0]} inputFile outputFile"
+
+if len(sys.argv) < 3:
+    print(usage)
+    sys.exit(1)
+
+input_file = sys.argv[1]
+output_file = sys.argv[2]
+
+genreDict = CreateDict(input_file)
+ReformatFile(genreDict, output_file)
     
     
