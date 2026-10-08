@@ -29,20 +29,20 @@ Day,starthour,startmin,length,type,text
 2,14,10,15,PyQuiz,PyQuiz 2.2!
 2,15,0,120,Project,Project
 3,9,0,20,PyQuiz,Review
-3,9,20,20,Lecture,Review answers + set
-3,9,40,30,Exercise,Ex1: IMDb
+3,9,20,20,Lecture,Review answers
+3,9,40,30,Exercise,Ex1: Functions and f-strings
 3,10,10,10,break,
-3,10,20,20,Lecture,Dictionaries
-3,10,40,50,Exercise,Ex2: IMDb
-3,11,40,20,PyQuiz,PyQuiz 3.1
+3,10,20,20,Lecture,Command-line arguments (sys.argv)
+3,10,40,30,Exercise,Ex2: Greeter + sys.argv
+3,11,10,20,PyQuiz,PyQuiz 3.1
 3,12,0,60,Lunch,LUNCH
-3,13,0,30,Lecture,Functions
-3,13,30,30,Exercise,Ex 3: Functions
-3,14,0,10,break,
-3,14,10,20,Lecture,sys.argv + formatting
-3,14,30,30,Exercise,Ex 4: IMDb
-3,15,0,20,PyQuiz,PyQuiz 3.2
-3,15,20,100,Project,Project
+3,13,0,40,Lecture,Parse a data file (IMDb)
+3,13,40,30,Exercise,Ex 3: Parse IMDb records
+3,14,10,10,break,
+3,14,20,40,Lecture,Search and filter parsed records
+3,15,00,30,Exercise,Ex 4: IMDb search/filter
+3,15,30,20,PyQuiz,PyQuiz 3.2
+3,15,50,100,Project,Project
 4,9,0,20,Exercise,Review
 4,9,20,20,Lecture,Review answers
 4,9,40,30,Lecture,Terminal and error handling
