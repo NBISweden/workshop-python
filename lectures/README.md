@@ -18,12 +18,25 @@ conda activate python_workshop
 jupyter notebook
 ```
 
-## Select standard theme
-The theme used in the course is part of the nbextensions and can be activated with the following sequence:
-* Enable the nbextensions for the respective tab
-* Select RISE in from the possible extensions
-* Change the theme parameter to beige
-* Load the notebook you want and enter the presentation mode
+## Rise usage
+### Jupyter notebook 7
+For having access to RISE go to View → Right Sidebar → Show Notebook Tools.
+Then in the common tools one can choose the slide type.
+
+### JupyterLab
+Open the Property inspector on the top right and then choose the slide type.
+
+## Presentation mode
+Slideshows use RISE (`jupyterlab_rise`). The course theme (beige) is stored in each lecture notebook's metadata, so nothing needs to be configured:
+* Load the notebook you want
+* Enter presentation mode with `Alt+R`
+
+If you create a new lecture notebook, add the theme to its metadata (Right sidebar → Advanced Tools → Notebook metadata):
+```json
+"rise": {
+  "theme": "beige"
+}
+```
 
 You should be ready to go!
 
