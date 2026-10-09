@@ -26,6 +26,17 @@ body.rise-enabled,
 }
 
 /*********************************************
+ * LAYOUT
+ * Keep slide content in a centred column (text stays left-aligned),
+ * instead of hugging the left edge on wide screens.
+ *********************************************/
+.reveal .slides section > .jp-Cell {
+  max-width: min(1200px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*********************************************
  * MARKDOWN TEXT
  * JupyterLab resets rendered markdown to a 14px system font, so set one
  * base size here and size everything inside it in em.
