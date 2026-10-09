@@ -29,8 +29,9 @@ body.rise-enabled,
  * LAYOUT
  * Keep slide content in a centred column (text stays left-aligned),
  * instead of hugging the left edge on wide screens.
+ * Not a direct-child selector: RISE wraps fragment cells in div.fragment.
  *********************************************/
-.reveal .slides section > .jp-Cell {
+.reveal .slides section .jp-Cell {
   max-width: min(1200px, 92vw);
   margin-left: auto;
   margin-right: auto;
