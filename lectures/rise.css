@@ -114,3 +114,25 @@ body.rise-enabled,
   border: 0;
   box-shadow: none;
 }
+
+/* =========================================
+   Remove JupyterLab cell selection styling
+   from RISE presentations (Notebook 7)
+   ========================================= */
+
+.reveal .jp-Cell,
+.reveal .jp-Cell.jp-mod-active,
+.reveal .jp-Cell.jp-mod-selected {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.reveal .jp-Cell::before,
+.reveal .jp-Cell::after {
+    display: none !important;
+}
+
+.reveal .jp-Cell .jp-Collapser {
+    display: none !important;
+}
