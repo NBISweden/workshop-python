@@ -19,9 +19,6 @@ fsspec = ">=2026.9.0,<2027"
 openpyxl = ">=3.1.5,<4"
 scikit-learn = ">=1.9.1,<2"
 
-[pypi-dependencies]
-jupyter-contrib-nbextensions = ">=0.7.0, <0.8"
-
 [environments.teacher.dependencies]
 python = ">=3.11.17,<3.12"
 pytest = ">=9.1.1,<10"
@@ -29,3 +26,12 @@ ruff = ">=0.17.0,<0.18"
 ipython = ">=9.17.1,<10"
 jupyter = ">=1.1.1,<2"
 quarto = ">=1.9.38,<2"
+pandas = ">=3.0.6,<4"
+matplotlib = ">=3.11.2,<4"
+biopython = ">=1.88,<2"
+notebook = ">=7.6.3,<8"
+jupyterlab_rise = ">=0.43.1,<0.44"
+beautifulsoup4 = ">=4.15.0,<5"
+fsspec = ">=2026.9.0,<2027"
+openpyxl = ">=3.1.5,<4"
+scikit-learn = ">=1.9.1,<2"
