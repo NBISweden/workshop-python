@@ -26,6 +26,18 @@ body.rise-enabled,
 }
 
 /*********************************************
+ * LAYOUT
+ * Keep slide content in a centred column (text stays left-aligned),
+ * instead of hugging the left edge on wide screens.
+ * Not a direct-child selector: RISE wraps fragment cells in div.fragment.
+ *********************************************/
+.reveal .slides section .jp-Cell {
+  max-width: min(1200px, 92vw);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*********************************************
  * MARKDOWN TEXT
  * JupyterLab resets rendered markdown to a 14px system font, so set one
  * base size here and size everything inside it in em.
@@ -101,4 +113,26 @@ body.rise-enabled,
 .reveal section img.plain {
   border: 0;
   box-shadow: none;
+}
+
+/* =========================================
+   Remove JupyterLab cell selection styling
+   from RISE presentations (Notebook 7)
+   ========================================= */
+
+.reveal .jp-Cell,
+.reveal .jp-Cell.jp-mod-active,
+.reveal .jp-Cell.jp-mod-selected {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.reveal .jp-Cell::before,
+.reveal .jp-Cell::after {
+    display: none !important;
+}
+
+.reveal .jp-Cell .jp-Collapser {
+    display: none !important;
 }
