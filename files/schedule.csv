@@ -26,9 +26,10 @@ Day,starthour,startmin,length,type,text
 2,13,0,30,Lecture,Functions and methods
 2,13,30,30,Exercise,Ex 2
 2,14,0,10,break,
-2,14,25,35,Exercise,Ex 3: IMDb - day2
-2,14,10,15,PyQuiz,PyQuiz 2.2!
-2,15,0,120,Project,Project
+2,14,10,15,Lecture,Standalone script
+2,14,25,15,PyQuiz,PyQuiz 2.2!
+2,14,40,35,Exercise,Ex 3: IMDb - day2
+2,15,15,105,Project,Project
 3,9,0,20,PyQuiz,Review
 3,9,20,20,Lecture,Review answers
 3,9,40,30,Exercise,Ex1: Functions and f-strings
