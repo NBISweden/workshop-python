@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Day_2_Exercise_ChatGPT</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Day_2_Exercise_AIcoding</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7808,19 +7808,18 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><span style="color:green; font-size:30px">ChatGPT</span><span style="color:red; font-size:30px"> Exercise</span></p>
+<p><span style="color:green; font-size:30px">AI-Assisted Coding</span><span style="color:red; font-size:30px"> Exercise</span></p>
 <br/>
-ChatGPT can be a tremendous help in writing and understanding code. But, ChatGPT often makes mistakes, and you cannot always trust the result. However, we should try to use it as a tool in the work we do.
-
-<p>In this exercise you will be given a piece of code that is much more complex than what you have worked with so far. As there are no comments explaining what this code does, we will use ChatGPT to help us understand what it does, and modify the code. It often happens that you receive code, or find some code online that you would want to use, but you don't understand it fully. Here, ChatGPT comes in handy.</p>
-<p>This exercise has some different levels of difficulty, try around with a few of the tasks below:</p>
+<p>AI coding tools can be a tremendous help in writing and understanding code. However, AI models sometimes make mistakes, and you cannot always trust the output blindly. Nevertheless, learning to use AI as an assistant is a valuable skill for modern software development.</p>
+<p>In this exercise, you will be given a piece of code that is much more complex than what you have worked with so far. Because there are no comments explaining what the code does, you will use an AI coding assistant (e.g., ChatGPT, Gemini, or Claude) to help you analyze and modify it. It often happens that you receive existing code, or find code online that you want to use, but do not fully understand—this is where AI assistants come in handy.</p>
+<p>This exercise has a few different levels of difficulty. Try working through as many of the tasks below as you can:</p>
 <ol>
-<li>Input the code below to ChatGPT, and have it explain, line by line, what the code does</li>
-<li>Modify the code (on your own, not using ChatGPT) to use 4 clusters instead of 2, and write the results to a file instead of printing it</li>
-<li>Use ChatGPT to see if you can generate code that clusters the data into 2 clusters, of which you further cluster the biggest of those clusters into 3 subclusters</li>
-<li>Use ChatGPT to see if you can use t-sne to plot the results of the results from both question 2 and question 3. Try using the cluster groups as colors</li>
+<li>Input the code below into your AI assistant and ask it to explain, line by line, what the code does.</li>
+<li>Modify the code on your own (without using AI) to use 4 clusters instead of 2, and save the results to a file instead of printing them.</li>
+<li>Use your AI assistant to generate code that clusters the data into 2 clusters, and then further clusters the larger of those 2 clusters into 3 sub-clusters.</li>
+<li>Use your AI assistant to see if you can use t-SNE to plot the clustering results from both Task 2 and Task 3. Try using the cluster labels as color categories in the plot.</li>
 </ol>
-<p>And if there are parts ChatGPT says that you do not understand, try prompting it for further explanations.</p>
+<p><i>If the AI assistant provides explanations or code parts that you do not understand, try prompting it for further clarification or simpler breakdowns.</i></p>
 </div>
 </div>
 </div>
@@ -7855,11 +7854,15 @@ ChatGPT can be a tremendous help in writing and understanding code. But, ChatGPT
     <span class="k">return</span> <span class="s1">''</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">nucleotides</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">length</span><span class="p">))</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Set seed so all students generate the exact same sequences</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
     <span class="n">sequences</span> <span class="o">=</span> <span class="p">[</span><span class="n">generate_random_dna_sequence</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">)]</span>
 
     <span class="n">encoded_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">one_hot_encode</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span> <span class="k">for</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="n">sequences</span><span class="p">]</span>
 
-    <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    <span class="c1"># Explicitly set n_init=10 to suppress scikit-learn warnings in newer versions</span>
+    <span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
     <span class="n">clusters</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">encoded_data</span><span class="p">)</span>
 
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">sequence</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sequences</span><span class="p">):</span>
