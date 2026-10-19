@@ -18,6 +18,7 @@ beautifulsoup4 = ">=4.15.0,<5"
 fsspec = ">=2026.9.0,<2027"
 openpyxl = ">=3.1.5,<4"
 scikit-learn = ">=1.9.1,<2"
+ipython = ">=9.17.1,<10"
 
 [environments.teacher.dependencies]
 python = ">=3.11.17,<3.12"
