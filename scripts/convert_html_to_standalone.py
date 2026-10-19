@@ -17,7 +17,9 @@ def convert(infile, outfile, css = False):
         soup = bs4.BeautifulSoup(txt, 'html.parser')
         
     for a in soup.find_all('img'):
-        src = a.attrs['src']
+        src = a.attrs.get('src', '')
+        if src.startswith('data:'):
+            continue
         if os.path.exists(src):
             with open(src, "rb") as img_file:
                 prepend = "data:image/jpeg;base64,"

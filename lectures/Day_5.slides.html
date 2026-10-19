@@ -6,7 +6,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
 <title>Day_5 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
-  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
+  import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.10.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
 <!-- General and theme style sheets -->
@@ -7459,7 +7459,8 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Yesterday's-Key-Takeaways">Yesterday's Key Takeaways<a class="anchor-link" href="#Yesterday's-Key-Takeaways">¶</a></h2><ul>
+<h2 id="Yesterday's-Key-Takeaways">Yesterday's Key Takeaways<a class="anchor-link" href="#Yesterday's-Key-Takeaways">¶</a></h2><p><img alt="flowchart" src="../course_learning_flowchart.png" style="width: 1000px; max-width: 100%;"/></p>
+<ul>
 <li>Error handling using <code>try..except</code>, which helps you catch problems and prevent your program from crashing.</li>
 <li>Keyword arguments and positional arguments, which give you more control, readability, and flexibility when calling functions.</li>
 <li>Docstrings and comments, which provide clear documentation and make your code more understandable and maintainable.</li>
@@ -8337,14 +8338,15 @@ saltpet
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
-<span class="n">pattern</span> <span class="o">=</span> <span class="s2">"col[ou]+r.*"</span>
+<span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"col[ou]+r.*"</span>
 <span class="n">text</span> <span class="o">=</span> <span class="s2">"The colour of the wall is very vibrant,</span><span class="se">\</span>
 <span class="s2">but the color of the sky is even more spectacular."</span>
 <span class="c1"># Try to find a hit</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
     <span class="c1"># print(result.group())</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">span</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">span</span><span class="p">())</span>
+    <span class="c1"># print(result.span()[0])</span>
     <span class="c1"># print(result.start())</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"No match found"</span><span class="p">)</span>
@@ -8397,6 +8399,7 @@ saltpet
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"The colour of the wall is very vibrant, but the color of the sky is even more spectacular."</span>
 <span class="n">pattern</span> <span class="o">=</span> <span class="s2">"</span><span class="se">\b</span><span class="s2">the</span><span class="se">\b</span><span class="s2">"</span> <span class="c1"># \b matches the word boundary, try with and without r""</span>
+                    <span class="c1"># without 'r', \b is interpreted as ASCII backspace \x08</span>
 <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">())</span>
@@ -8742,39 +8745,6 @@ saltpet
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Find word '</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s2">' at position </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">span</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"No match found"</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<left>
-<code>salt<font color="red">?</font>pet<font color="red">(</font>er<font color="red">|</font>re<font color="red">)</font> <font color="red">|</font> nit<font color="red">(</font>er<font color="red">|</font>re<font color="red">)</font> <font color="red">|</font> KNO3</code>
-</left>
-</div>
-</div>
-</div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">"saltepter or salpeter88 or KNO3 or niter or nitre, </span><span class="se">\</span>
-<span class="s2">just too many forms of salpeter!"</span>
-
-<span class="n">p_find_salpeter</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">'salt?pet(er|re)|nit(er|re)|KNO3'</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">p_find_salpeter</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Find word '</span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">group</span><span class="p">()</span><span class="si">}</span><span class="s2">' at </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">span</span><span class="p">()</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -9549,48 +9519,6 @@ saltpet
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="List-multiplication-by-an-integer-replicates-the-list-elements-the-specified-number-of-times.">List multiplication by an integer replicates the list elements the specified number of times.<a class="anchor-link" href="#List-multiplication-by-an-integer-replicates-the-list-elements-the-specified-number-of-times.">¶</a></h3><h4 id="Question-from-Day-2">Question from Day 2<a class="anchor-link" href="#Question-from-Day-2">¶</a></h4>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">mylist</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">myarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">myarray</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">myarray</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Dictionaries">Dictionaries<a class="anchor-link" href="#Dictionaries">¶</a></h3><ul>
 <li>List of key value pairs</li>
 </ul>
@@ -9969,13 +9897,15 @@ saltpet
 <span class="n">key</span> <span class="o">=</span> <span class="s2">""</span>
 <span class="n">max_try</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">key</span> <span class="o">!=</span> <span class="s2">"python2025"</span><span class="p">:</span>
+<span class="n">TARGET_KEY</span> <span class="o">=</span> <span class="s2">"python2026"</span>
+<span class="k">while</span> <span class="n">key</span> <span class="o">!=</span> <span class="n">TARGET_KEY</span><span class="p">:</span>
     <span class="n">key</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your key: "</span><span class="p">)</span>
     <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="n">cnt</span> <span class="o">&gt;</span> <span class="n">max_try</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">cnt</span> <span class="o">&gt;</span> <span class="n">max_try</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"WARNING!! Too many failures!"</span><span class="p">)</span>
         <span class="k">break</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Correct key!"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="n">TARGET_KEY</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Correct key!"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -10295,16 +10225,17 @@ or <code>python mycode.py</code></p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">name</span>  <span class="o">=</span> <span class="s2">"Bob"</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">"Bob"</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">show_new_age</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">show_new_age</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="c1"># 'age' is expected to be an integer</span>
     <span class="c1"># 'name' is expected to be a string</span>
     <span class="c1"># The function is expected to return an integer</span>
-    <span class="n">new_age</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">10</span>
+    <span class="n">new_age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">age</span> <span class="o">+</span> <span class="mi">10</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"New age of </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is </span><span class="si">{</span><span class="n">new_age</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">new_age</span>
+
 <span class="n">show_new_age</span><span class="p">(</span><span class="n">age</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 </pre></div>
 </div>
