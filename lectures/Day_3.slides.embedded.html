@@ -7809,14 +7809,14 @@ Writing down the steps you intend to include in your code in more general langua
 </div>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Functions-and-f-strings">Functions and f-strings<a class="anchor-link" href="#Functions-and-f-strings">¶</a></h1><h2 id="Code-with-me-Session-1:-Make-a-greeter">Code with me Session 1: Make a greeter<a class="anchor-link" href="#Code-with-me-Session-1:-Make-a-greeter">¶</a></h2><p>Write a function that accepts a name and returns a greeting string. Then call it for two different names.</p>
+<h2 id="Functions-and-f-strings">Functions and f-strings<a class="anchor-link" href="#Functions-and-f-strings">¶</a></h2><h3 id="Code-with-me-Session-1:-Make-a-greeter">Code with me Session 1: Make a greeter<a class="anchor-link" href="#Code-with-me-Session-1:-Make-a-greeter">¶</a></h3><p>Write a function that accepts a name and returns a greeting string. Then call it for two different names.</p>
 <p>Pull up relevant documentation:<br/>
 For reference:<br/>
 functions: <a href="https://www.w3schools.com/python/python_functions.asp">https://www.w3schools.com/python/python_functions.asp</a><br/>
@@ -7827,7 +7827,7 @@ f-strings: <a href="https://www.w3schools.com/python/python_string_formatting.as
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7859,7 +7859,7 @@ Greetings, Kalle Karlsson!
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7870,14 +7870,14 @@ Greetings, Kalle Karlsson!
 </div>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Using-functions-to-break-up-complexity">Using functions to break up complexity<a class="anchor-link" href="#Using-functions-to-break-up-complexity">¶</a></h1><ul>
+<h3 id="Using-functions-to-break-up-complexity">Using functions to break up complexity<a class="anchor-link" href="#Using-functions-to-break-up-complexity">¶</a></h3><ul>
 <li>Rule of thumb: more than 3 levels of indentation --&gt; break into functions</li>
 </ul>
 <p>When doing this:</p>
@@ -7887,6 +7887,16 @@ Greetings, Kalle Karlsson!
             <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
                 <span class="c1"># do something</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Try this:</p>
 <div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">parse_words</span><span class="p">(</span><span class="n">line</span><span class="p">):</span>
     <span class="n">words</span> <span class="o">=</span> <span class="p">[]</span>
@@ -7907,33 +7917,37 @@ Greetings, Kalle Karlsson!
 </div>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Session-2:-Make-the-greeter-reusable-from-the-command-line">Session 2: Make the greeter reusable from the command line<a class="anchor-link" href="#Session-2:-Make-the-greeter-reusable-from-the-command-line">¶</a></h2><p><strong>Problem:</strong> run the same greeting program for different people without editing the source each time.</p>
+<h2 id="Session-2:-Make-the-greeter-reusable-from-the-command-line-~20-minutes">Session 2: Make the greeter reusable from the command line ~20 minutes<a class="anchor-link" href="#Session-2:-Make-the-greeter-reusable-from-the-command-line-~20-minutes">¶</a></h2><p><strong>Problem:</strong> run the same greeting program for different people without editing the source each time.</p>
+<ul>
+<li>break into pairs</li>
+<li>see if you can figure out how to use argv based on the script behavior and content</li>
+<li>then create a script according to instructions below (also found in exercise 2)</li>
+<li>its OK to ask for help if you get stuck!</li>
+</ul>
 <p>First inspect <code>downloads/print_argv.py</code> and predict what each command will pass to the program:</p>
 <div class="highlight"><pre><span></span>pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>downloads/print_argv.py
 pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>downloads/print_argv.py<span class="w"> </span>Mattis
 pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </span>downloads/print_argv.py<span class="w"> </span>Kalle<span class="w"> </span>Karlsson
 </pre></div>
 <p>In a new file called <code>greet.py</code>, copy your <code>hello</code> function from Session 1, then use <code>sys.argv</code> to collect the name. Run it from the workspace root with <code>python greet.py Mattis</code>.</p>
-<p><strong>Design Pattern:</strong> break up logic into atomic functions, collect functions inside scripts, functions are building blocks and scripts are user-interfaces</p>
 </div>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Compare-with-one-possible-greet.py">Compare with one possible <code>greet.py</code><a class="anchor-link" href="#Compare-with-one-possible-greet.py">¶</a></h3><p>example solution:</p>
-<div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sys</span><span class="w"> </span><span class="kn">import</span> <span class="n">argv</span>
+<h3 id="example-solution:">example solution:<a class="anchor-link" href="#example-solution:">¶</a></h3><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sys</span><span class="w"> </span><span class="kn">import</span> <span class="n">argv</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">hello</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
     <span class="k">return</span> <span class="sa">f</span><span class="s2">"Greetings, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!"</span>
@@ -7944,7 +7958,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7958,7 +7972,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7989,7 +8003,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8000,7 +8014,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8026,7 +8040,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8037,7 +8051,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8073,43 +8087,18 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Step-2:-Open-the-file">Step 2: Open the file<a class="anchor-link" href="#Step-2:-Open-the-file">¶</a></h3><blockquote>
-<p>Same idea as above: avoid unnecessary nesting by splitting responsibilities into small functions.</p>
-</blockquote>
-<p>When doing this:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_movies</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="n">movies</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">movie_file</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">movie_file</span><span class="p">:</span>
-            <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"#"</span><span class="p">):</span>
-                <span class="n">movies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parse_movie_line</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">movies</span>
-</pre></div>
-<p>Try this:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">parse_movie_lines</span><span class="p">(</span><span class="n">movie_file</span><span class="p">):</span>
-    <span class="n">movies</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">movie_file</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"#"</span><span class="p">):</span>
-            <span class="k">continue</span>
-        <span class="n">movies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">parse_movie_line</span><span class="p">(</span><span class="n">line</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">movies</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">load_movies</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span> <span class="k">as</span> <span class="n">movie_file</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">parse_movie_lines</span><span class="p">(</span><span class="n">movie_file</span><span class="p">)</span>
-</pre></div>
-<p><code>load_movies</code> handles file opening, while <code>parse_movie_lines</code> handles line parsing.</p>
+<h3 id="Step-2:-Open-the-file">Step 2: Open the file<a class="anchor-link" href="#Step-2:-Open-the-file">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8158,7 +8147,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8169,18 +8158,18 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Problem-A:-Find-every-movie-tied-for-the-highest-rating">Problem A: Find every movie tied for the highest rating<a class="anchor-link" href="#Problem-A:-Find-every-movie-tied-for-the-highest-rating">¶</a></h3><p>Implement <code>find_highest_rated(movie_records)</code> so it returns a list of movie dictionaries and does not print inside the function.</p>
+<h3 id="Problem-A:-Find-every-movie-tied-for-the-highest-rating">Problem A: Find every movie tied for the highest rating<a class="anchor-link" href="#Problem-A:-Find-every-movie-tied-for-the-highest-rating">¶</a></h3><p>Implement <code>find_highest_rated(movie_records)</code> so it returns a list of movie dictionaries.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8224,7 +8213,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8235,7 +8224,7 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8263,18 +8252,18 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Problem-B:-How-many-distinct-genres-are-in-the-dataset?">Problem B: How many distinct genres are in the dataset?<a class="anchor-link" href="#Problem-B:-How-many-distinct-genres-are-in-the-dataset?">¶</a></h3><p>A movie can have multiple genres, and many movies share genres. Collect each genre in a set, then inspect the count and sorted values. The set is useful here because it can only contain unique items.</p>
+<h3 id="Problem-B:-How-many-distinct-genres-are-in-the-dataset?">Problem B: How many distinct genres are in the dataset?<a class="anchor-link" href="#Problem-B:-How-many-distinct-genres-are-in-the-dataset?">¶</a></h3><p>A movie can have multiple genres, and many movies share genres. Collect each genre in a set, then inspect the count and sorted values. The set is useful here because it can only contain unique items. <a href="https://www.w3schools.com/python/python_sets.asp">https://www.w3schools.com/python/python_sets.asp</a></p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8327,18 +8316,18 @@ pixi<span class="w"> </span>run<span class="w"> </span>python<span class="w"> </
 </div>
 </div>
 </div>
-</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Problem-C:-Filter-records-by-a-genre">Problem C: Filter records by a genre<a class="anchor-link" href="#Problem-C:-Filter-records-by-a-genre">¶</a></h3><p>Use membership testing to keep only movies whose genre list contains <code>thriller</code>. This is filtering: a set is useful for collecting distinct genre names, while a loop and a condition select matching records.</p>
+<h3 id="Problem-C:-Filter-records-by-a-genre">Problem C: Filter records by a genre<a class="anchor-link" href="#Problem-C:-Filter-records-by-a-genre">¶</a></h3><p>Use membership testing to keep only movies whose genre list contains <code>thriller</code>.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8383,7 +8372,7 @@ Inception
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8411,7 +8400,7 @@ Inception
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Day-3,-Exercise-4-(~30-min)">Day 3, Exercise 4 (~30 min)<a class="anchor-link" href="#Day-3,-Exercise-4-(~30-min)">¶</a></h3><ul>
+<h3 id="Day-3,-Exercise-3-(~30-min)">Day 3, Exercise 3 (~30 min)<a class="anchor-link" href="#Day-3,-Exercise-3-(~30-min)">¶</a></h3><ul>
 <li><h4 id="Restructure-and-write-the-output-to-a-new-file">Restructure and write the output to a new file<a class="anchor-link" href="#Restructure-and-write-the-output-to-a-new-file">¶</a></h4></li>
 <li><p>Canvas -&gt; Modules -&gt; Day 3 -&gt; IMDb exercise - day 3 -&gt; 4</p>
 </li>
