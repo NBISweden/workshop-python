@@ -8635,20 +8635,19 @@ by checkint their definition.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Summary">Summary<a class="anchor-link" href="#Summary">¶</a></h2><ul>
-<li><code>return</code> gives a value back, so you can save it in a variable and use it later<ul>
-<li><code>print()</code> only shows a value on the screen, it does not give it back</li>
+<li><code>return</code> gives a value back, so you can repurpose it<ul>
 <li>a function can return several values at once: <code>return a, b</code></li>
 <li>a function without <code>return</code> gives back <code>None</code></li>
+<li></li>
 </ul>
 </li>
-<li><code>None</code> is Python's value for <em>nothing</em> or <em>missing</em>, and it is not the same as <code>0</code>, <code>False</code> or <code>''</code></li>
-<li>Arguments can be given by position or by keyword: <code>open('file.txt', mode='w')</code><ul>
-<li>keyword arguments make the call easier to read, and their order does not matter</li>
-<li>positional arguments must come <strong>before</strong> keyword arguments</li>
+<li>Types of arguments:<ul>
+<li>positional (<strong>before</strong> keyword)</li>
+<li>keyword (<strong>after</strong> positional)</li>
+<li>default (can be skipped)</li>
+<li>optional (can be also skipped)</li>
 </ul>
 </li>
-<li>Default arguments have a value already: <code>def format_sentence(subject, end='.')</code>, so you can skip them</li>
-<li>Optional arguments use <code>None</code> as default</li>
 </ul>
 </div>
 </div>
@@ -8661,8 +8660,6 @@ by checkint their definition.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Exercise-1-(~30-40-minutes)">Exercise 1 (~30-40 minutes)<a class="anchor-link" href="#Exercise-1-(~30-40-minutes)">¶</a></h3><ul>
-<li><p>Notebook Day_4_Exercise_1</p>
-</li>
 <li><p>Go to Canvas, <code>Modules -&gt; Day 4 -&gt; Exercise 1 - day 4</code></p>
 </li>
 <li><p>Extra reading:</p>
@@ -9262,36 +9259,6 @@ print("more code follows")   # never reached
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Multiple-inputs">Multiple inputs<a class="anchor-link" href="#Multiple-inputs">¶</a></h3>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">s1</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">"s1: "</span><span class="p">)</span>
-<span class="n">s2</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">"s2: "</span><span class="p">)</span>
-<span class="n">s3</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">"s3: "</span><span class="p">)</span>
-<span class="n">s4</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">"s4: "</span><span class="p">)</span>
-<span class="n">students_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span><span class="p">,</span> <span class="n">s4</span><span class="p">]</span>
-<span class="n">students_list</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Type-of-input">Type of input<a class="anchor-link" href="#Type-of-input">¶</a></h3>
 </div>
 </div>
@@ -9388,21 +9355,18 @@ print(f"Thank you! You gave the number {number}")
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="Summary">Summary<a class="anchor-link" href="#Summary">¶</a></h2><ul>
-<li>Docstrings (<code>"""..."""</code>) are for <strong>users</strong>: what the function does, its parameters and what it returns<ul>
-<li>read them with <code>help()</code></li>
+<li>Documentation<ul>
+<li>Docstrings (<code>"""..."""</code>) are for <strong>users</strong>: what the function does</li>
+<li>Comments (<code>#</code>) are for <strong>developers</strong>: explain <em>why</em>, not <em>what</em></li>
 </ul>
 </li>
-<li>Comments (<code>#</code>) are for <strong>developers</strong>: explain <em>why</em>, not <em>what</em><ul>
-<li>when you change the code, update the comment too</li>
-</ul>
-</li>
-<li><code>try..except</code> catches an error, so your program does not crash<ul>
+<li>Error handling Comments (<code>#</code>) are for <strong>developers</strong>: explain <em>why</em>, not <em>what</em><ul>
+<li><code>try..except</code> catches an error, so your program does not crash</li>
 <li>name the error you expect: <code>except ValueError:</code></li>
 <li><code>except ValueError as err:</code> gives you Python's own error message</li>
+<li><code>raise</code> stops the program with your own error: <code>raise TypeError("The number is not integer")</code></li>
 </ul>
 </li>
-<li><code>with open(...)</code> closes the file for you, even when an error happens</li>
-<li><code>raise</code> stops the program with your own error: <code>raise TypeError("The number is not integer")</code></li>
 <li><code>input()</code> asks the user for a value, and it <strong>always</strong> gives a string<ul>
 <li>convert it with <code>int()</code> or <code>float()</code></li>
 </ul>
@@ -9419,7 +9383,6 @@ print(f"Thank you! You gave the number {number}")
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Exercise-2-(~20-30-minutes)">Exercise 2 (~20-30 minutes)<a class="anchor-link" href="#Exercise-2-(~20-30-minutes)">¶</a></h3><ul>
-<li>Notebook Day_4_Exercise_2</li>
 <li>Go to Canvas, <code>Modules -&gt; Day 4 -&gt; Exercise 2 - day 4</code></li>
 </ul>
 </div>
@@ -11463,18 +11426,9 @@ Tree 2 grows fastest.
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Exercise-3-(~30-minutes)">Exercise 3 (~30 minutes)<a class="anchor-link" href="#Exercise-3-(~30-minutes)">¶</a></h3><ul>
 <li>Go to Canvas, <code>Modules -&gt; Day 4 -&gt; Exercise 3 - day 4</code></li>
-<li>Realistic data: RNA-seq results in an <strong>Excel</strong> file, cells in normal vs low oxygen</li>
-<li><strong>Everyone</strong>: Parts 1 and 2<ul>
-<li>Explore the samples and the results with pandas</li>
-<li>Make bar plots and a histogram</li>
 </ul>
-</li>
-<li><strong>Want more?</strong> Part 3<ul>
-<li>Volcano plot, your own function, MA plot</li>
-</ul>
-</li>
-<li>Stuck? Use <code>Day_4_exercise_3_hints.ipynb</code></li>
-</ul>
+<p><strong>INFO</strong>:
+Re-download <code>downloads.zip</code> from the pre-course material if you do not have the <code>hypoxia_rnaseq.xlsx</code> in the downloads folder</p>
 </div>
 </div>
 </div>
