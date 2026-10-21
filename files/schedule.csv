@@ -45,19 +45,19 @@ Day,starthour,startmin,length,type,text
 3,15,00,30,Exercise,Ex 4: IMDb search/filter
 3,15,30,20,PyQuiz,PyQuiz 3.2
 3,15,50,70,Project,Project
-4,9,0,20,Exercise,Review
-4,9,20,20,Lecture,Review answers
-4,9,40,30,Lecture,Terminal and error handling
+4,9,0,20,PyQuiz,Review
+4,9,20,10,Lecture,Review answers
+4,9,30,40,Lecture,Func: return and arguments
 4,10,10,10,break,
-4,10,20,40,Exercise,ex 1
-4,11,00,30,Lecture,kw.args and documentation
-4,11,30,10,break,
-4,11,40,20,PyQuiz,PyQuiz!
-4,12,0,60,Lunch,LUNCH
-4,13,0,50,Lecture,Pandas and plotting
-4,13,50,10,break,
-4,14,00,40,Exercise,Pandas exercise
-4,14,40,20,PyQuiz,PyQuiz!
+4,10,20,30,Exercise,Ex 1
+4,10,50,30,Lecture,Doc and Error handling
+4,11,20,10,break,
+4,11,30,20,Exercise,Ex 2
+4,11,50,70,Lunch,LUNCH
+4,13,00,60,Lecture,Pandas and plotting
+4,14,00,10,break,
+4,14,10,40,Exercise,Ex 3
+4,14,50,10,break,
 4,15,00,120,Project,Project
 5,9,0,15,PyQuiz,Review
 5,9,15,15,Lecture,Review answers
