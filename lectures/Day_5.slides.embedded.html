@@ -7520,11 +7520,11 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="1.-What-happens-if-you-declare-a-variable-with-the-same-name-inside-and-outside-a-function?">1. What happens if you declare a variable with the same name inside and outside a function?<a class="anchor-link" href="#1.-What-happens-if-you-declare-a-variable-with-the-same-name-inside-and-outside-a-function?">¶</a></h3><p>The variable inside the function has a separate scope and does not affect the one outside</p>
+<h3 id="1.-What-will-be-printed-when-you-run-the-following-code?">1. What will be printed when you run the following code?<a class="anchor-link" href="#1.-What-will-be-printed-when-you-run-the-following-code?">¶</a></h3>
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7532,18 +7532,18 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">"Max"</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">changeName</span><span class="p">():</span>
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">"Niko"</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"name inside the function: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="n">changeName</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"name outside of the function: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">gc_count</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'G'</span><span class="p">)</span> <span class="o">+</span> <span class="n">seq</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'C'</span><span class="p">))</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">gc_count</span><span class="p">(</span><span class="s1">'ATGC'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7682,9 +7682,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="6.-Which-of-these-import-statements-would-avoid-a-name-conflict-if-there%E2%80%99s-a-local-variable-math-in-the-same-script?">6. Which of these import statements would avoid a name conflict if there’s a local variable <code>math</code> in the same script?<a class="anchor-link" href="#6.-Which-of-these-import-statements-would-avoid-a-name-conflict-if-there%E2%80%99s-a-local-variable-math-in-the-same-script?">¶</a></h3><ul>
-<li>import math as m</li>
-</ul>
+<h3 id="6.-What-will-be-printed-when-you-run-the-following-code?">6. What will be printed when you run the following code?<a class="anchor-link" href="#6.-What-will-be-printed-when-you-run-the-following-code?">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7696,9 +7694,15 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">m</span>
-<span class="n">math</span> <span class="o">=</span> <span class="s2">"great"</span>
-<span class="n">m</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'10'</span><span class="p">,</span> <span class="s1">'abc'</span><span class="p">,</span> <span class="s1">'20'</span><span class="p">]</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="nb">int</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">'Skipping'</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7711,13 +7715,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="7.-What-will-happen-if-you-import-the-same-module-multiple-times-in-a-Python-script?">7. What will happen if you import the same module multiple times in a Python script?<a class="anchor-link" href="#7.-What-will-happen-if-you-import-the-same-module-multiple-times-in-a-Python-script?">¶</a></h3><ul>
-<li>Python ignores subsequent imports of the same module in the same script</li>
-</ul>
-<p>If you run</p>
-<div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">myMoudle</span>
-</pre></div>
-<p>and then update <code>myMoudle</code> and then reload with <code>import myMoudle</code> in Jupyter notebook, the module will not be updated.</p>
+<h3 id="7.-The-user-types-42-when-the-following-code-runs.-What-is-the-type-of-x?">7. The user types 42 when the following code runs. What is the type of x?<a class="anchor-link" href="#7.-The-user-types-42-when-the-following-code-runs.-What-is-the-type-of-x?">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7729,46 +7727,14 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">mylib</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mylib</span><span class="o">.</span><span class="n">add2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'Give a number: '</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Update mylib.py, add a new function multi2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mylib</span><span class="o">.</span><span class="n">multi2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="s1">'mylib'</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
-    <span class="k">del</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="s1">'mylib'</span><span class="p">]</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">mylib</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">mylib</span><span class="o">.</span><span class="n">multi2</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -7791,8 +7757,8 @@ main {
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'Charlie'</span><span class="p">,</span> <span class="s1">'David'</span><span class="p">],</span>
-    <span class="s1">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
+    <span class="s1">'Tree'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="s1">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
     <span class="s1">'height'</span><span class="p">:</span> <span class="p">[</span><span class="mf">165.4</span><span class="p">,</span> <span class="mf">175.3</span><span class="p">,</span> <span class="mf">168.5</span><span class="p">,</span> <span class="mf">180.6</span><span class="p">]</span>
 <span class="p">})</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
@@ -7809,10 +7775,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="9.-If-you-want-to-rename-multiple-columns-in-a-DataFrame-df,-which-method-should-you-use?">9. If you want to rename multiple columns in a DataFrame <code>df</code>, which method should you use?<a class="anchor-link" href="#9.-If-you-want-to-rename-multiple-columns-in-a-DataFrame-df,-which-method-should-you-use?">¶</a></h3><ul>
-<li>df.rename(columns={'old_col1': 'new_col1', 'old_col2': 'new_col2'})</li>
-</ul>
-<p>If you don't specify the key <code>columns</code>, it renames the rows</p>
+<h3 id="9.-Which-command-selects-the-rows-where-Tree-is-1-and-age-is-greater-than-500?">9. Which command selects the rows where Tree is 1 and age is greater than 500?<a class="anchor-link" href="#9.-Which-command-selects-the-rows-where-Tree-is-1-and-age-is-greater-than-500?">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7824,13 +7787,8 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">'name'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'Alice'</span><span class="p">,</span> <span class="s1">'Bob'</span><span class="p">,</span> <span class="s1">'Charlie'</span><span class="p">,</span> <span class="s1">'David'</span><span class="p">],</span>
-    <span class="s1">'age'</span><span class="p">:</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">40</span><span class="p">],</span>
-    <span class="s1">'height'</span><span class="p">:</span> <span class="p">[</span><span class="mf">165.4</span><span class="p">,</span> <span class="mf">175.3</span><span class="p">,</span> <span class="mf">168.5</span><span class="p">,</span> <span class="mf">180.6</span><span class="p">]</span>
-<span class="p">})</span>
-<span class="n">df</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">'name'</span><span class="p">:</span> <span class="s1">'SuperStar'</span><span class="p">,</span> <span class="s1">'age'</span><span class="p">:</span> <span class="s1">'TooOld'</span><span class="p">},</span> <span class="n">index</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="s2">"special"</span><span class="p">})</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[[</span><span class="n">df</span><span class="p">[</span><span class="s1">'Tree'</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">'age'</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">]]</span>
 </pre></div>
 </div>
 </div>
@@ -7858,7 +7816,7 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>*.py
+<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
@@ -7975,7 +7933,7 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">colou</span><span class="err">?</span><span class="n">r</span><span class="o">.*</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">colou</span><span class="err">?</span><span class="n">r</span><span class="o">.*</span> <span class="n">colou</span>  <span class="p">[</span><span class="n">u</span><span class="p">]</span>   <span class="n">colu</span>
 </pre></div>
 </div>
 </div>
@@ -7995,6 +7953,20 @@ main {
 <li><code>\s</code> matches any whitespace (spaces, tabs, ...)</li>
 <li><code>\S</code> matches any non-whitespace</li>
 </ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8038,6 +8010,20 @@ main {
 <h4 id="More-common-operations---classes-of-characters">More common operations - classes of characters<a class="anchor-link" href="#More-common-operations---classes-of-characters">¶</a></h4><ul>
 <li><code>\d</code> matches any digit</li>
 </ul>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -8266,7 +8252,7 @@ Three cats and 11 dogs run fast across grass fields.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>grep<span class="w"> </span>-E<span class="w"> </span><span class="s2">".*\s1/1:.*\s1/1:.*"</span><span class="w"> </span>../downloads/genotypes_small.vcf<span class="w">  </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">E</span> <span class="s2">".*\s1/1:.*\s1/1:.*"</span> <span class="o">../</span><span class="n">downloads</span><span class="o">/</span><span class="n">genotypes_small</span><span class="o">.</span><span class="n">vcf</span>  <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
 </pre></div>
 </div>
 </div>
