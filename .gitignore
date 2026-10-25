@@ -21,6 +21,7 @@ tmpimgtmp/*
 assignment/data/*.fa
 assignment/data/*.gtf
 assignment/*.txt
+assignment/data.zip
 lectures/build_*.sh
 exercises/day*/*.html
 exercises/build_*.sh
