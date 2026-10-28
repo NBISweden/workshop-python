@@ -38,6 +38,24 @@ body.rise-enabled,
 }
 
 /*********************************************
+ * SCROLLING
+ * A slide taller than the screen (e.g. after running a cell with a long
+ * output) scrolls inside itself. Without this, JupyterLab's notebook panel
+ * scrolls instead and keeps that position on the next slide, which then
+ * shows up off screen as an empty slide.
+ * Short slides stay vertically centred (top/bottom 0 + margin auto).
+ *********************************************/
+.reveal .slides > section > section.present {
+  top: 0 !important;
+  bottom: 0 !important;
+  height: fit-content !important;
+  max-height: 100% !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  overflow-y: auto !important;
+}
+
+/*********************************************
  * MARKDOWN TEXT
  * JupyterLab resets rendered markdown to a 14px system font, so set one
  * base size here and size everything inside it in em.
@@ -99,6 +117,14 @@ body.rise-enabled,
   width: auto;
   margin: 0.5em 0;
   box-shadow: none;
+}
+
+/*********************************************
+ * DATAFRAMES (HTML tables in cell outputs)
+ * JupyterLab gives them the small UI font size; scale it like code.
+ *********************************************/
+.reveal .jp-OutputArea .jp-RenderedHTMLCommon table {
+  font-size: calc(1.75 * var(--jp-ui-font-size1));
 }
 
 /*********************************************
